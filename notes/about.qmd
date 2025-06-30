@@ -7,15 +7,13 @@ This site contains materials the course *Introduction to Semantics* given by [Ju
 ## About the instructor
 
 [Julian Grove](http://juliangrove.github.io/) is an assistant professor in the [Linguistics Department](https://lin.ufl.edu/).
-You can check out his website [here](https://juliangrove.github.io/).
 Long story short, he is interested in combining computational tools from Bayesian data analysis and programming language theory and bringing them to semantics.
+You can find out more about his research interests by checking out his [papers](https://juliangrove.github.io/papers.html), [slides](https://juliangrove.github.io/slides.html), or perhaps even his [cv](https://juliangrove.github.io/cv.html).
 
 ## About the site
 
 The site itself is built using [Quarto](https://quarto.org/).
 The source files for this site are available on github at [`juliangrove/intro-semantics`](https://github.com/juliangrove/intro-semantics.git).
-
-## Acknowledgments
 
 ## License <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/80x15.png" /></a>
 
