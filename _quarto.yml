@@ -1,0 +1,24 @@
+project:
+  type: website
+  output-dir: docs
+
+format:
+  html:
+    theme: [lux,tufte]
+    highlight-style: gruvbox-dark
+    css: notes/styles.css
+    toc: true
+    code-tools: true
+  revealjs:
+    theme: default
+    highlight-style: gruvbox-dark
+    slide-number: true
+    chalkboard: true
+    incremental: true
+    preview-links: auto
+    css: slides/styles.css
+    footer: "Intro. Semantics"
+
+projects:
+  - notes
+  - slides
