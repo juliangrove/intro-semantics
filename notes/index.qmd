@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Semantics"
+title: "Syllabus"
 bibliography: ../semantics.bib
 ---
 
@@ -7,46 +7,47 @@ bibliography: ../semantics.bib
 
 ## Calendar
 
-| Date           | Topic                          | Reading | Assignment |
-|----------------|--------------------------------|---------|------------|
-| Fri., Aug. 22  | Intro.                         | ---     | ---        |
-| Mon., Aug. 25  | Convention                     |         |            |
-| Wed., Aug. 27  | Convention                     |         |            |
-| Fri., Aug. 29  | Speech acts                    |         |            |
-| Wed., Sept. 3  | Speech acts                    |         |            |
-| Fri., Sept. 5  | Speech acts                    |         |            |
-| Mon., Sept. 8  | Speaker meaning                |         |            |
-| Wed., Sept 10  | Diagnosing inference           |         |            |
-| Fri., Sept. 12 | Diagnosing inference           |         |            |
-| Mon., Sept. 15 | Sets and set theory            |         |            |
-| Wed., Sept. 17 | Functions and relations        |         |            |
-| Fri., Sept. 19 | Models                         |         |            |
-| Mon., Sept. 22 | Arabic numeral arithmetic      |         |            |
-| Wed., Sept. 24 | Arabic numeral arithmetic      |         |            |
-| Fri., Sept. 26 | Lambda notation and types      |         |            |
-| Mon., Sept. 29 | Lambda notation and types      |         |            |
-| Wed., Oct. 1   | Intransitive verbs             |         |            |
-| Fri., Oct. 3   | Intransitive verbs             |         |            |
-| Mon., Oct. 6   | Transitive verbs               |         |            |
-| Wed., Oct. 8   | Transitive verbs               |         |            |
-| Fri., Oct. 10  | Applicative categorial grammar |         |            |
-| Mon., Oct. 13  | Applicative categorial grammar |         |            |
-| Wed., Oct. 15  | Grammars and models            |         |            |
-| Fri., Oct. 17  | Predicates and arguments redux |         |            |
-| Mon., Oct. 20  | Predicates and arguments redux |         |            |
-| Wed., Oct. 22  | Coordinators                   |         |            |
-| Fri., Oct. 24  | Coordinators                   |         |            |
-| Mon., Oct. 27  | Adjectives                     |         |            |
-| Wed., Oct. 29  | Adjectives                     |         |            |
-| Fri., Oct. 31  | Adjectives                     |         |            |
-| Mon., Nov. 3   | Pronouns                       |         |            |
-| Wed., Nov. 5   | Pronouns                       |         |            |
-| Fri., Nov. 7   | Pronouns                       |         |            |
-| Mon., Nov. 10  | Quantifiers                    |         |            |
-| Wed., Nov. 12  | Quantifiers                    |         |            |
-| Fri., Nov. 14  | Quantifiers                    |         |            |
-| Mon., Nov. 17  | Negative polarity items        |         |            |
-| Wed., Nov. 19  | Quantifiers and binding        |         |            |
-| Fri., Nov. 21  | Quantifiers and binding        |         |            |
-| Mon., Dec. 1   | Quantifiers and binding        |         |            |
-| Wed., Dec. 3   | TBD                            |         |            |
+| Date           | Topic                                    | Reading | Assignment |
+|----------------|------------------------------------------|---------|------------|
+| Fri., Aug. 22  | Introduction                             | ---     | ---        |
+| Mon., Aug. 25  | Convention                               |         |            |
+| Wed., Aug. 27  | Convention                               |         |            |
+| Fri., Aug. 29  | Speech acts                              |         |            |
+| Wed., Sept. 3  | Speech acts                              |         |            |
+| Fri., Sept. 5  | Speech acts                              |         |            |
+| Mon., Sept. 8  | Speaker meaning                          |         |            |
+| Wed., Sept 10  | Diagnosing inference                     |         |            |
+| Fri., Sept. 12 | Diagnosing inference                     |         |            |
+| Mon., Sept. 15 | What should go into a theory of meaning? |         |            |
+| Wed., Sept. 17 | Sets and set theory                      |         |            |
+| Fri., Sept. 19 | Functions and relations                  |         |            |
+| Mon., Sept. 22 | Models                                   |         |            |
+| Wed., Sept. 24 | Arabic numeral arithmetic                |         |            |
+| Fri., Sept. 26 | Arabic numeral arithmetic                |         |            |
+| Mon., Sept. 29 | Lambda notation and types                |         |            |
+| Wed., Oct. 1   | Lambda notation and types                |         |            |
+| Fri., Oct. 3   | Intransitive verbs                       |         |            |
+| Mon., Oct. 6   | Intransitive verbs                       |         |            |
+| Wed., Oct. 8   | Transitive verbs                         |         |            |
+| Fri., Oct. 10  | Transitive verbs                         |         |            |
+| Mon., Oct. 13  | Applicative categorial grammar           |         |            |
+| Wed., Oct. 15  | Applicative categorial grammar           |         |            |
+| Fri., Oct. 17  | Grammars and models                      |         |            |
+| Mon., Oct. 20  | Predicates and arguments redux           |         |            |
+| Wed., Oct. 22  | Predicates and arguments redux           |         |            |
+| Fri., Oct. 24  | Coordinators                             |         |            |
+| Mon., Oct. 27  | Coordinators                             |         |            |
+| Wed., Oct. 29  | Adjectives                               |         |            |
+| Fri., Oct. 31  | Adjectives                               |         |            |
+| Mon., Nov. 3   | Adjectives                               |         |            |
+| Wed., Nov. 5   | Pronouns                                 |         |            |
+| Fri., Nov. 7   | Pronouns                                 |         |            |
+| Mon., Nov. 10  | Pronouns                                 |         |            |
+| Wed., Nov. 12  | Quantifiers                              |         |            |
+| Fri., Nov. 14  | Quantifiers                              |         |            |
+| Mon., Nov. 17  | Quantifiers                              |         |            |
+| Wed., Nov. 19  | Negative polarity items                  |         |            |
+| Fri., Nov. 21  | Quantifiers and binding                  |         |            |
+| Mon., Dec. 1   | Quantifiers and binding                  |         |            |
+| Wed., Dec. 3   | Quantifiers and binding                  |         |            |
+|                |                                          |         |            |
