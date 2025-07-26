@@ -11,6 +11,19 @@ website:
     contents:
     - about.qmd
     - index.qmd
+    - section: "Convention"
+    - section: "Speech acts"
+    - section: "Speaker meaning"
+    - section: "Diagnosing inference"
+    - section: "Theories of meaning"
+    - section: "Formal preliminaries"
+    - section: "Models"
+    - section: "Applicative categorial grammar"
+    - section: "Verbs"
+    - section: "Coordinators"
+    - section: "Adjectives"
+    - section: "Pronouns"
+    - section: "Quantification"
 
 format:
   html:
