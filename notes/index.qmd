@@ -8,8 +8,8 @@ Welcome to Intro to Semantics!^[Listed as both LIN4803 and LIN6804 at [one.uf.ed
 I'm [Julian Grove](https://juliangrove.github.io/) - I'm an assistant professor in [Linguistics Department](https://lin.ufl.edu/) (where this course is offered).
 (Check out the [About](/about.html) page for more info about me and this site.)
 
-The goals of this course are to acquaint you with the study of meaning in natural language.
-Specifically, the course's aim is to equip you with a certain vocabulary of concepts, as well as a certain collection of methodological tools.
+The goals of this course are to acquaint you with the study of meaning in natural language;
+specifically, to equip you with a certain vocabulary of concepts, as well as a certain collection of theoretical and methodological tools.
 This vocabulary and these tools will allow you to:
 
 - collect linguistic data and determine whether and how it is relevant to meaning;
@@ -38,15 +38,16 @@ Your work in this course will consist of [sixteen (16) short written assignments
 Each written assignments will be a collection of responses to questions:
 some of these responses will have a mini-essay format, and some will be more like answers to problem sets (it'll be clear in any given case what the expectation is).
 Each assignment will be available on this site, at the end of the set of notes to which the assignment corresponds.
-Please turn in a physical copy of your responses at the beginning of the class on which an assignment is due.
+Please turn in a physical copy of your responses at the beginning of the class on which the assignment is due.
 
 The written assignments will be graded on a 5-point scale, using the following rubric:
 
 - 5: you thoroughly engage with each question on the assignment.
-  This means that you justify each of your responses (well!), as well as indicate that you have thought about its implications (e.g., if the truth of your response is likely to have any unintuitive consequences, you should note and explain these).
-  Doing this well will be challenging and require you to think a lot.
+  This means that you justify each of your responses (well!), as well as indicate that you have thought about its implications.
+  For example, if the truth of your response is likely to have any unintuitive consequences, you should note and explain these.
+  Doing this well will sometimes be challenging and require you to think a lot.
   
-  If the assignment has questions requiring the application of analytical techniques that we have introduced in the course, you should apply these techniques correctly for full credit.
+  If the assignment has questions requiring the application of analytical techniques that we have introduced in the course, "thorough engagement", for current purposes, means applying these techniques in the right way.
 - 4: you thoroughly engage with most, but not all, of the questions.
 - 3: you thoroughly engage with only a small part of the assignment and give shallow or cursory answers to most of it.
 - 2: you give shallow or cursory answers to all of the questions on the assignment.
