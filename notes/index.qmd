@@ -112,8 +112,8 @@ Students with disabilities should follow this procedure as early as possible in 
 | Date           | Topic                                    | Reading                                                           | Assignment |
 |----------------|------------------------------------------|-------------------------------------------------------------------|------------|
 | Fri., Aug. 22  | Introduction                             | @frankfurt_bullshit_1986; @hicks_chatgpt_2024                     |            |
-| Mon., Aug. 25  | Convention                               | @lewis_languages_1975 (pp. 3--12)                                 | TBD        |
-| Wed., Aug. 27  | Convention                               | @grice_meaning_1957                                               |            |
+| Mon., Aug. 25  | Convention                               | @lewis_languages_1975 (pp. 3--12)                                 |            |
+| Wed., Aug. 27  | Convention                               | @grice_meaning_1957                                               | TBD        |
 | Fri., Aug. 29  | Speech acts                              | @bach_speech_2006 (pp. 147--155)                                  |            |
 | Wed., Sept. 3  | Speech acts                              |                                                                   |            |
 | Fri., Sept. 5  | Speaker meaning                          | @grice_logic_1975                                                 |            |
