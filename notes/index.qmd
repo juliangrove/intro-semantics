@@ -35,7 +35,7 @@ You'll get more out of the class if you do, and it'll be more fun.
 
 ### Grading
 
-Your work in this course will consist of [ten (10) short written assignments]{.underline}---sometimes based on assigned readings---as well as an [in-person final exam]{.underline}.
+Your work in this course will consist of [nine (9) short written assignments]{.underline}---sometimes based on assigned readings---as well as an [in-person final exam]{.underline}.
 Each written assignments will be a collection of responses to questions:
 some of these responses will have a mini-essay format, and some will be more like answers to problem sets (it'll be clear in any given case what the expectation is).
 Each assignment will be available on this site, at the end of the set of notes to which the assignment corresponds.
@@ -151,4 +151,4 @@ Students with disabilities should follow this procedure as early as possible in 
 | Wed., Nov. 19  | Negative polarity items                  |                                                                   |            |
 | Fri., Nov. 21  | Quantifiers and binding                  |                                                                   |            |
 | Mon., Dec. 1   | Quantifiers and binding                  |                                                                   |            |
-| Wed., Dec. 3   | Quantifiers and binding                  |                                                                   | TBD        |
+| Wed., Dec. 3   | Quantifiers and binding                  |                                                                   |            |
