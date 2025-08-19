@@ -10,7 +10,7 @@ I'm [Julian Grove](https://juliangrove.github.io/) - I'm an Assistant Professor 
 
 Here is my contact info:
 
-- Office: 4015 Turlington
+- Office: 4108 Turlington
 - Phone: (352) 294-7456
 - Email: first name dot last name at ufl dot edu
 - Office hours: TBD and by appointment
@@ -87,7 +87,17 @@ The following grading scale will be used to determine course grades:
 
 Late work will not be accepted unless you've arranged with me beforehand.
 If you need an extension, ask for one---just do it prior to the due date.
-No extra credit, sorry.
+
+### Extra credit
+
+If you like, you can get extra credit, accounting for up to an additional 2% of your course grade, in one of two ways:
+
+1. You can earn up to two credits by participating in linguistics studies through the Linguistics Department's SONA account (so, one percentage point of your grade per credit).
+   [This document](https://docs.google.com/document/d/1e2P7ubMYnsfhV9Ycj47kc8niPRBPAyhh/edit?tab=t.0) has more information;
+   so does [this video](https://mediasite.video.ufl.edu/Mediasite/Play/7f3d951f0471439387079e4096f08a591d).
+   If you go this route, please participate in the studies before November 22.
+2. You can read and summarize the main arguments of a (short) semantics paper, i.e., published in a journal.
+   I'll provide some suggestions of papers soon, but you can also summarize one of your choosing, so long as you consult with me about it first.
 
 ## Zulip
 

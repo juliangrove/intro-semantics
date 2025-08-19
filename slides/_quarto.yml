@@ -2,6 +2,7 @@ project:
   type: website
   output-dir: ../docs/slides
   render:
+    - aug22/index.qmd
 
 format:
   revealjs:
@@ -12,4 +13,4 @@ format:
     incremental: true
     preview-links: auto
     css: styles.css
-    footer: "Intro. Semantics"
+    footer: "Introduction to Semantics"

@@ -1,0 +1,108 @@
+---
+title: "Introduction to Semantics"
+bibliography: ../../semantics.bib
+# format:
+  # revealjs:
+    # css: ../styles.css
+    # html-math-method: mathjax
+    # mathjax-config:
+      # loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      # tex:
+        # packages: {'[+]': ['bussproofs','bbox','colorbox']}
+---
+
+# What is meaning?
+
+## Meaning
+
+(@ex-raining) It's raining.
+
+::: {.fragment}
+::: {style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;"}
+<span style="font-size: 2em;">⇒</span>
+
+Something in the world...<br>
+![](images/raining.jpg)
+:::
+:::
+
+---
+
+## Meaning
+
+::: {.nonincremental}
+(@ex-raining) It's raining.
+
+::: {style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;"}
+<span style="font-size: 2em;">⇒</span>
+
+![](images/brain.webp)
+:::
+:::
+
+---
+
+::: {.nonincremental}
+(@ex-raining) It's raining.
+
+<span style="font-size: 2em;">⇒</span><br>
+
+::: {style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;"}
+![](images/brain.webp)
+
+<span style="font-size: 2em;">⇒</span>
+
+![](images/raining.jpg)
+:::
+:::
+
+---
+
+::: {.nonincremental}
+(@ex-raining) It's raining.
+
+<span style="font-size: 2em;">⇒</span><br>
+
+::: {style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;"}
+![](images/raining.jpg)
+
+<span style="font-size: 2em;">⇒</span>
+
+![](images/brain.webp)
+:::
+:::
+
+---
+
+## Twin Earth
+
+@putnam_meaning_1973
+
+![](images/twin_earths.jpg)
+
+---
+
+# On "bullshit"
+
+---
+
+## Some examples
+
+(From the Corpus of Contemporary American English)
+
+- "And they say, But she's completely herself. There's no **bullshit**, she knows what she wants. She's like a heat-seeking missile." (LA Times, 2017)
+
+- "...I won't testify against you." I said, "**Bullshit**, Kate, you've got nothing to testify about." (SanFranChron, 1995)
+
+- "And indeed, there are those folks who think the Oscars are total **bullshit**. They consider the award to be the real-life equivalent to the Montgomery Burns Award for Outstanding Achievement in the Field of Excellence" (Salon, 2016)
+
+---
+
+## What is bullshit?
+
+- Lying?
+- Saying things that are false?
+
+---
+
+### References
