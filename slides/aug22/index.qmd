@@ -45,7 +45,7 @@ Something in the world...<br>
 ::: {.nonincremental}
 (@ex-raining) It's raining.
 
-<span style="font-size: 2em;">⇒</span><br>
+<span style="font-size: 2em;">⇓</span><br>
 
 ::: {style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;"}
 ![](images/brain.webp)
@@ -61,12 +61,12 @@ Something in the world...<br>
 ::: {.nonincremental}
 (@ex-raining) It's raining.
 
-<span style="font-size: 2em;">⇒</span><br>
+<span style="font-size: 2em;">⇓</span><br>
 
 ::: {style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;"}
 ![](images/raining.jpg)
 
-<span style="font-size: 2em;">⇒</span>
+<span style="font-size: 2em;">⇐</span>
 
 ![](images/brain.webp)
 :::
