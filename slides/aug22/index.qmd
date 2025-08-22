@@ -36,6 +36,21 @@ Something in the world...<br>
 ::: {style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;"}
 <span style="font-size: 2em;">⇒</span>
 
+A property of something that can be verified...<br>
+![](images/verificationism.jpg){width=700}
+:::
+:::
+
+---
+
+## Meaning
+
+::: {.nonincremental}
+(@ex-raining) It's raining.
+
+::: {style="display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px;"}
+<span style="font-size: 2em;">⇒</span>
+
 ![](images/brain.webp)
 :::
 :::
@@ -168,6 +183,12 @@ But this does not mean that he necessarily gets them wrong.*
 
 - @hicks_chatgpt_2024 argue that ChatGPT does not hallucinate.
   - Hallucination involves a non-standard perceptual experience, despite well-designed perceptual equipment.
+
+---
+
+## Office hours
+
+![](images/w2m.png){fig-align="center"}
 
 ---
 

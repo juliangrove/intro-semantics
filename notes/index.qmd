@@ -83,6 +83,16 @@ The following grading scale will be used to determine course grades:
 | 86.5 ≤ B+ < 89.5 | 83.5 ≤ B < 86.5  | 79.5 ≤ B- < 83.5 |
 | 76.5 ≤ C+ < 79.5 | 74.5 ≤ C < 76.5  | 69.5 ≤ C < 74.5  |
 
+### Collaboration (including with chatbots)
+
+We'll talk about this in class.
+Basically:
+
+- Please actually do the readings yourself.
+- Please complete assignments yourself.
+- If you worked with someone else in the class (or a chatbot) on an assignment, please indicate that you did.
+  If you used a chatbot, please include a note with your assignment describing how you used it.
+
 ### Missed or late work
 
 Late work will not be accepted unless you've arranged with me beforehand.
