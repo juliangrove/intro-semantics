@@ -1,6 +1,6 @@
 ---
 title: "Intro. to Semantics"
-bibliography: ../../semantics.bib
+bibliography: ../semantics.bib
 # format:
   # revealjs:
     # css: ../styles.css
@@ -186,9 +186,85 @@ But this does not mean that he necessarily gets them wrong.*
 
 ---
 
-## Office hours
+# Convention
 
-![](images/w2m.png){fig-align="center"}
+## Traffic signals
+
+![](images/traffic.jpeg)
+
+## @lewis_languages_1975 on convention
+
+Some criteria:
+
+- Everyone conforms.
+- Everyone believes the others conform.
+- The others conforming provides a reason to conform.
+- Preference for conformity (as opposed to non-conformity).
+- Common knowledge of the above.
+
+::: {.fragment}
+Possible to be unaware of any or all of these.
+:::
+
+---
+
+## Different from "rules"
+
+Rules (according to Lewis):
+
+- Promulgated by an authority
+- Enforced by means of sanctions
+- Codified somewhere
+
+![](images/constitution.jpg){width=800}
+
+---
+
+## Tipping
+
+![](images/tipping.jpg)
+
+---
+
+# Linguistic conventions
+
+## @lewis_languages_1975 on language
+
+What are *languages*?
+
+- Lewis: collections of pairs of forms and meanings
+  - Form: sign, sound, mark, etc.
+  - Meaning: set (i.e., collection) of possible states of affairs, things in the world, etc.
+
+::: {.fragment}
+What is *language*?
+
+- A human social activity in which people produce certain forms.
+:::
+
+## Relating them
+
+Lewis introduces a convention to define language use:
+
+- "...a population P uses a language £ is a convention of truthfulness and trust in ξ."
+  - Truthfulness:
+	try never to utter sentences of ξ that are not true in ξ.
+  - Trust in ξ:
+	impute truthfulness in ξ to others.
+	Believe the things that others tell you.
+
+---
+
+## "Language use"
+
+These are *pragmatic* conventions.
+
+::: {.fragment}
+What about conventions relating to form?
+
+- syntax, morphology, phonology, phonetics, etc.
+- sociolinguistic conventions: using a particular register/dialect in particular social setting
+:::
 
 ---
 
