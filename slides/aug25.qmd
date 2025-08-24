@@ -200,6 +200,7 @@ Some criteria:
 - Everyone believes the others conform.
 - The others conforming provides a reason to conform.
 - Preference for conformity (as opposed to non-conformity).
+- Optional or arbitrary---there are possible alternatives.
 - Common knowledge of the above.
 
 ::: {.fragment}
@@ -220,9 +221,19 @@ Rules (according to Lewis):
 
 ---
 
-## Tipping
+## Tipping?
 
 ![](images/tipping.jpg)
+
+---
+
+## Other candidates...
+
+- Brushing your teeth?
+- Knocking on the door before you enter a room?
+- Looking both ways before crossing the street?
+- Using an umbrella when it's raining?
+- Making WiFi available at coffee shops?
 
 ---
 
