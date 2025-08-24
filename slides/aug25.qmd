@@ -188,7 +188,7 @@ But this does not mean that he necessarily gets them wrong.*
 
 # Convention
 
-## Traffic signals
+## E.g., traffic signals
 
 ![](images/traffic.jpeg)
 
