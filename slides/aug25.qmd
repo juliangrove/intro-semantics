@@ -257,7 +257,7 @@ What is *language*?
 
 Lewis introduces a convention to define language use:
 
-- "...a population P uses a language £ is a convention of truthfulness and trust in ξ."
+- "...a population P uses a language ξ is a convention of truthfulness and trust in ξ."
   - Truthfulness:
 	try never to utter sentences of ξ that are not true in ξ.
   - Trust in ξ:
