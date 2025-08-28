@@ -12,6 +12,10 @@ website:
     - about.qmd
     - index.qmd
     - section: "Convention"
+      contents:
+        - convention/defining_convention.qmd
+        - convention/defining_meaning.qmd
+        - convention/assignment.qmd
     - section: "Speech acts"
     - section: "Speaker meaning"
     - section: "Diagnosing inference"

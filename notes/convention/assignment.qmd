@@ -1,0 +1,74 @@
+---
+title: "Assignment"
+bibliography: ../../semantics.bib
+---
+
+Due on Friday, September 5th.
+
+### Part 1
+
+Pick one of the other practices that were brought up in class, and give an analysis of whether or not it meets criteria 1-5 outlined in [Defining convention](convention/defining_convention.html).
+To remind you, these practices were:
+
+- Knocking on the door before entering a room
+- Looking both ways before crossing the street
+- Using an umbrella when it's raining
+- Making WiFi free available to customers at coffee shops
+
+Alternatively, pick your own practice to analyze, and do the same.
+(Please don't use one of the ones that @lewis_languages_1975 mentions, e.g., driving on a particular side of the road in a particular country.)
+You might use the discussion in these notes of 'brushing your teeth' as a model.
+Note---following those notes---that some aspects of the practice might appear to be conventional, while other aspects might seem less so.
+If you notice that this is true of the practice you analyze, please point it out.
+
+Please consider and provide a response to the following question:
+is your analysis of the practice you've chosen consistent with your own intuitions about whether or not the practice is a convention?
+
+### Part 2
+
+Consider the following state of affairs.
+Jo utters the sentence in (@ex-jo-damn) after her laptop freezes.
+
+(@ex-jo-damn) This damn computer is so slow!
+
+There are a number of inferences you might draw based on this utterance.
+For example:
+
+- There is a computer.
+- The computer exceeds some degree of slowness, perhaps salient in the context of utterance, which is particularly high.
+- Jo is frustrated by her computer.
+
+The last inference---that Jo is frustrated---appears to be triggered by her use of the word *damn*.
+In general, such words (called *expressives*) give rise to inferences of this kind, e.g., about an attitude held by the person who utters them;
+in this case, we draw an inference about Jo's attitude toward her laptop.
+
+This inference---that the utterer is frustrated---appears, in some sense to *mean* that Jo is frustrated.
+Do you think that this notion of meaning is meaning$_{N}$ or meaning$_{NN}$?
+That is, which of these relates utterances of (@ex-jo-damn)---or sentences containing the word *damn*, more generally---to inferences about frustration?
+Explain why, using the criteria for meaning$_{NN}$ that Grice discusses.
+
+### Part 3
+
+Consider the following different state of affairs.
+Bo maintains two forms of the verb *be* that he uses in the antecedents of counterfactual conditional sentences.
+For example, sometimes he utters sentences like (@ex-bo-was)
+
+(@ex-bo-was) If I was buying ice cream, I would probably get chocolate.
+
+while at other times he utters sentences like (@ex-bo-were).
+
+(@ex-bo-were) If I were buying ice cream, I would probably get chocolate.
+
+In the first set of cases (exemplified by (@ex-bo-was)), he inflects *be* as *was* when the subject is *I*, *he*, *she*, or a singular noun phrase, and as *were* when the subject is *we*, *you*, *they*, or a plural noun phrase.
+Meanwhile, in the second set of cases, (exemplified by (@ex-bo-were)), he inflects *be* as *were* regardless of the person or number of the subject.
+
+Importantly, he tends to use these forms of *be* in this way in somewhat different social contexts.
+He is more likely to utter sentences like (@ex-bo-was) (*be* -> *was*) when he is with his friends or family or buying something at the grocery store (i.e., "informal" settings);
+while he is more likely to utter sentences like (@ex-bo-were) (*be* -> *were*) when he is answering a question in class or writing a paper (i.e., "formal" settings).
+In both cases, he appears to be signaling, in one way or another, something about his identity as a speaker of English and his relationship to his interlocutors.
+In the first set of contexts, he is not trying to speak "correctly" according to a received standard about spoken or written English, while in the second set of contexts, it is important to him that his English sound "correct", and that his interlocutors draw the inference that he speaks English according to a particular formal standard.
+
+Do you think that the inference about Jo's "correct" use of English in these contexts, i.e., when he uses *were* in cases in which he might otherwise use *was*  is related to meaning$_{N}$ or meaning$_{NN}$?
+In other words, in which sense  of *mean* does Bo's use of the form of the verb *be* [mean]{.underline} that he uses English "correctly"?
+In the sense of natural meaning, or in the sense of non-natural meaning?
+Again, explain why, using the criteria outlined by Grice.

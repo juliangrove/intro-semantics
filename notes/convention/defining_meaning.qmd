@@ -1,0 +1,90 @@
+---
+title: "Defining meaning"
+bibliography: ../../semantics.bib
+---
+
+### Defining meaning via conceptual analysis
+
+Like @lewis_languages_1975, @grice_meaning_1957 is engaged in conceptual analysis, but of the English word 'meaning'.
+To help pump our intuitions about the distinct ways this word is used, he provides examples analogous to the following:
+
+(@ex-weather) This rainy weather _means_ we'll probably be taxiing for a while.
+
+(@ex-gesture) Jo's gesture _means_ that she wants you to walk over.
+
+(@ex-beans) "Bo devoured the beans" _means_ that Bo ate the beans aggressively.
+
+The differences among the uses of *mean* in (@ex-weather-@ex-beans) may not be obvious at a single glance, but Grice introduces a number of tests that seem to tease these uses apart.
+
+We'll go through these again now, starting with what I'll call the *contraction test*.
+
+#### The contradiction test
+
+This test coordinates the original sentence with a sentence that contradicts the clause selected by *mean* in the original. 
+
+(@ex-weather) \#This rainy weather means we'll probably be taxiing for a while, but in fact, we won't be taxiing for a while.
+
+(@ex-gesture) Jo's gesture means that she wants you to walk over, but in fact, she doesn't want you to walk over.
+
+(@ex-beans) "Bo devoured the beans" means that Bo ate the beans aggressively, but in fact, Bo didn't eat the beans aggressively.
+
+I've marked (@ex-weather) with a '\#' in order to indicate that it is perceived as odd;
+in particular, it appears to be a contradiction:
+the use of *mean* seems to imply the truth of the clause that it selects (*we'll probably be taxiing for a while*), while the coordinated clause contradicts it.
+Meanwhile, (@ex-gesture) and (@ex-beans) don't coincide with similar oddness, which suggests that the coordinated clause does *not* result in a contradiction.
+(You might feel that the second sentence of (@ex-gesture) is unexpected, but this is likely due to the fact that it describes an odd state of affairs---one in which Jo made the gesture accidentally or as a form of trickery---rather than because it is an odd sentence.)
+
+#### The passive test
+
+What I'll call the *passive test* involves passivizing the verb *mean* from the original sentences.
+The verb is also placed inside the subject of a pseudo-cleft construction, though other tests that involve passivizing and pseud-clefting on their own would suggest that it is really the passive that distinguishes the different uses of *mean*.^[
+	Pseudo-cleft constructions are phrases like *what Jo bought was apples* (an *identificational* pseudo-cleft) or *what Jo bought was tasty* (a *predicational* pseudo-cleft).
+	They generally have the form 'free relative clause + copula + post-copular phrase'. 
+]
+
+(@ex-weather) \#What is meant by this rainy weather is that we'll be taxiing for a while.
+
+(@ex-gesture) What is meant by Jo's gesture is that she wants you to walk over.
+
+(@ex-beans) What is meant by "Bo devoured the beans" is that Bo ate the beans aggressively.
+
+Here again, (@ex-weather) pulls apart from (@ex-gesture) and (@ex-beans).
+
+#### The agentivity test
+
+Last, but not least, is what I'll call the *agentivity test*.
+This test modifies the original sentences by combining *mean* with an agentive subject (and putting the original subject into a *by*-phrase).
+
+(@ex-weather) \#Someone meant by this rainy weather that we'll probably be taxiing for a while.
+
+(@ex-gesture) Jo meant by her gesture that she wants you to walk over.
+
+(@ex-beans) Someone meant by "Bo devoured the beans" that Bo ate the beans aggressively.
+
+Hey check it out! (@ex-weather) again pulls apart from (@ex-gesture) and (@ex-beans).
+
+### So what?
+
+@grice_meaning_1957 takes these tests seriously as providing a diagnostic of what kind of relation between one thing and another *mean* picks out in each case.
+In (@ex-weather), *mean* seems to describe something like a consequence relation:
+what is implied by (@ex-weather) is that the rainy weather somehow causes us to taxi for a while---the rain makes the runway slippery so that the plane can't take off; 
+meanwhile, the only viable alternative is taxiing.
+Grice calls this relation [natural meaning]{.underline} (or *meaning*$_{N}$).
+
+In (@ex-gesture) and (@ex-beans), *mean* seems to describe some other relation, whose character Grice spends most of the paper investigating.
+He calls this relation [non-natural meaning]{.underline} (or *meaning*$_{NN}$).
+Ultimately, he comes to the definition of this relation in (@ex-meaning-def).^[
+	Though, see the paper---this is my attempt to paraphrase Grice's definition.
+]
+
+(@ex-meaning-def) Someone---the author of some utterance $X$---_means_$_{NN}$ that $p$ by $X$ if they intend that:
+- their audience comes to believe $p$ (in part) because of $X$,
+- their audience recognizes the author's intention, and
+- their audience comes to believe that $p$ specifically *because* they have recognized the author's intention.
+
+Thus for example, the original (@ex-gesture) might be true in a situation in which Jo wants her gesture to create the belief in the person she is gesturing toward that she wants that person to walk over;
+but crucially, she also wants that person to recognize that that is how she is using the gesture---she's signaling at them.
+
+The original (@ex-beans), on the other hand, seems to characterize something more timeless:
+it is a claim about the linguistic community of English speakers.
+Perhaps, then, we can say that (@ex-beans) is true because it is a convention---in the sense of @lewis_languages_1975---for users of English to use the sentence *Jo devoured the beans* in order to *mean*---in the sense of (@ex-meaning-def)---that Jo ate the beans aggressively.
