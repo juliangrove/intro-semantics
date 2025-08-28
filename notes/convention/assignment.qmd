@@ -16,6 +16,8 @@ To remind you, these practices were:
 - Making WiFi free available to customers at coffee shops
 
 Alternatively, pick your own practice to analyze, and do the same.
+Whatever practice you choose need not be well-known, and we need not generally be consciously aware of its existence.
+It just needs to be something that people do within some community with which you're familiar.
 (Please don't use one of the ones that @lewis_languages_1975 mentions, e.g., driving on a particular side of the road in a particular country.)
 You might use the discussion in these notes of 'brushing your teeth' as a model.
 Note---following those notes---that some aspects of the practice might appear to be conventional, while other aspects might seem less so.
@@ -70,5 +72,5 @@ In the first set of contexts, he is not trying to speak "correctly" according to
 
 Do you think that the inference about Jo's "correct" use of English in these contexts, i.e., when he uses *were* in cases in which he might otherwise use *was*  is related to meaning$_{N}$ or meaning$_{NN}$?
 In other words, in which sense  of *mean* does Bo's use of the form of the verb *be* [mean]{.underline} that he uses English "correctly"?
-In the sense of natural meaning, or in the sense of non-natural meaning?
-Again, explain why, using the criteria outlined by Grice.
+In the sense relevant to natural meaning, or in the sense relevant to non-natural meaning?
+Again, explain why, making reference to the criteria outlined by Grice.
