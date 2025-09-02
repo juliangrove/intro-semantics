@@ -7,7 +7,7 @@ Due on Friday, September 5th.
 
 ### Part 1
 
-Pick one of the other practices that were brought up in class, and give an analysis of whether or not it meets criteria 1-5 outlined in [Defining convention](convention/defining_convention.html).
+Pick one of the other practices that were brought up in class, and give an analysis of whether or not it meets criteria 1-5 outlined in [Defining convention](defining_convention.html).
 To remind you, these practices were:
 
 - Knocking on the door before entering a room
@@ -44,7 +44,7 @@ The last inference---that Jo is frustrated---appears to be triggered by her use 
 In general, such words (called *expressives*) give rise to inferences of this kind, e.g., about an attitude held by the person who utters them;
 in this case, we draw an inference about Jo's attitude toward her laptop.
 
-This inference---that the utterer is frustrated---appears, in some sense to *mean* that Jo is frustrated.
+This use of the word *damn*, which causes the frustration inference, appears, in some sense to *mean* that Jo is frustrated.
 Do you think that this notion of meaning is meaning$_{N}$ or meaning$_{NN}$?
 That is, which of these relates utterances of (@ex-jo-damn)---or sentences containing the word *damn*, more generally---to inferences about frustration?
 Explain why, using the criteria for meaning$_{NN}$ that Grice discusses.
@@ -70,7 +70,7 @@ while he is more likely to utter sentences like (@ex-bo-were) (*be* -> *were*) w
 In both cases, he appears to be signaling, in one way or another, something about his identity as a speaker of English and his relationship to his interlocutors.
 In the first set of contexts, he is not trying to speak "correctly" according to a received standard about spoken or written English, while in the second set of contexts, it is important to him that his English sound "correct", and that his interlocutors draw the inference that he speaks English according to a particular formal standard.
 
-Do you think that the inference about Jo's "correct" use of English in these contexts, i.e., when he uses *were* in cases in which he might otherwise use *was*  is related to meaning$_{N}$ or meaning$_{NN}$?
+Do you think that the inference about Bo's "correct" use of English in these contexts, i.e., when he uses *were* in cases in which he might otherwise use *was*  is related to meaning$_{N}$ or meaning$_{NN}$?
 In other words, in which sense  of *mean* does Bo's use of the form of the verb *be* [mean]{.underline} that he uses English "correctly"?
 In the sense relevant to natural meaning, or in the sense relevant to non-natural meaning?
 Again, explain why, making reference to the criteria outlined by Grice.

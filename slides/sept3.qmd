@@ -1,0 +1,127 @@
+---
+title: "Intro. to Semantics"
+bibliography: ../semantics.bib
+# format:
+  # revealjs:
+    # css: ../styles.css
+    # html-math-method: mathjax
+    # mathjax-config:
+      # loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      # tex:
+        # packages: {'[+]': ['bussproofs','bbox','colorbox']}
+---
+
+# Speech acts (cont'd)
+
+## Last time
+
+How @austin_how_1962 classifies speech acts:
+
+- as **locutionary acts**
+- in terms of their **illocutionary effects**
+- in terms of their **perlocutionary effects**
+ 
+::: {.fragment}
+Some examples:
+
+- 
+:::
+
+---
+
+## Peformatives (cont'd)
+
+(@ex-apology) I [apologize]{.underline}.
+	- apology
+	- uptake: <span class="fragment">apology accepted</span>
+
+(@ex-marriage) I do.
+	- illocutionary act: vow
+	- uptake: <span class="fragment">obligation registered</span>
+	
+(@ex-bet) I bet you $300 that it will rain tomorrow.
+	- illocutionary act: bet
+	- uptake: bet accepted
+	
+---
+
+## Felicity conditions
+
+You can't just perform any speech act haphazardly.
+
+![](images/boat_names.jpg){fig-align="center"}
+
+---
+
+## Felicity conditions
+
+(@ex-apology) I apologize.
+	- The speaker should have done something that requires an apology.
+	
+(@ex-marriage) I do.
+	- There should be a vow at stake ("...till death do us part?").
+	
+(@ex-command) Open the window!
+	- The utterer should have the relevant authority.
+
+
+(@ex-bet) I bet you $300 that it will rain tomorrow.
+	- The utterer should have the means to procure $300.
+
+---
+
+## Felicity conditions
+
+In general:
+
+- It must be allowable, by convention, for the speech act to have the illocutionary effect that it is intended to have.
+- The circumstances prior to the act have to be appropriate.
+
+---
+
+## Performatives redux
+
+Question 1
+
+- What do performatives and other speech acts have in common?
+
+::: {.fragment}
+Question 2
+
+- How does illocutionary effect fit into the distinction of @grice_meaning_1957 between meaning$_{NN}$ and meaning$_{N}$?
+:::
+
+---
+
+## More on felicity conditions
+
+- Performatives tend to have felicity conditions.
+- What about other types of speech act?
+
+(@ex-lights) Jo: Is Pascal's closed? <br> Bo: The lights are out.
+	- Implies there are lights.
+	- (May also imply that Pascal's is closed.)
+
+---
+
+## Presupposition
+
+A well-studied type of felicity condition on speech acts.
+
+<br>
+
+::: {.fragment}
+Apparently affects them uniformly.
+:::
+
+(@ex-lights-q) Are the lights are out?
+
+(@ex-lights-imp) Turn out the lights!
+
+::: {.fragment}
+Both imply that there are lights.
+:::
+
+---
+
+### References
