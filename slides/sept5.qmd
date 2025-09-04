@@ -17,26 +17,42 @@ format:
 
 Things we've looked at:
 
-- Things that people do:
+- **Things that people do**:
   use expressions of their language to create certain (conventional) social effects.
   - Categorization of illocutionary effects:
 	- performative, assertion, question, ...
 
 ::: {.fragment}
-Things we haven't looked at:
+Things we *haven't* looked at:
 
-- How they do it:
-  how can we get from locutionary act to illocutionary act?
+- **How they do it**:
+  how do we get from locutionary act to illocutionary act?
 :::
 
 ---
 
 ## General strategy
 
-Work backwards.
+What we need:
+
+- a (systematic, predictive, comprehensive) story about how people use expressions to perform illocutionary acts
+
+::: {.fragment}
+We can work backwards.
 
 - Illocutionary act [↓]{.gb-blue}
   - [Locutionary act]{.gb-blue}
+	- syntax
+	- semantics
+:::
+
+---
+
+## Some illocutionary acts
+
+(@ex-relevance) Jo: Is Pascal's closed? <br>
+	Bo: The lights are out. <br>
+	<span class="fragment">↝ Pascal's is closed.</span>
 
 ---
 
