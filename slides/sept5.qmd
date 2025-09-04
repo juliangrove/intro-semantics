@@ -1,0 +1,40 @@
+---
+title: "Intro. to Semantics"
+bibliography: ../semantics.bib
+# format:
+  # revealjs:
+    # css: ../styles.css
+    # html-math-method: mathjax
+    # mathjax-config:
+      # loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      # tex:
+        # packages: {'[+]': ['bussproofs','bbox','colorbox']}
+---
+
+# Speaker meaning
+
+## Overview
+
+Things we've looked at:
+
+- Things that people do:
+  use expressions of their language to create certain (conventional) social effects.
+  - Categorization of illocutionary effects:
+	- performative, assertion, question, ...
+
+::: {.fragment}
+Things we haven't looked at:
+
+- How they do it:
+  how can we get from locutionary act to illocutionary act?
+:::
+
+---
+
+## General strategy
+
+Work backwards.
+
+---
+
+### References
