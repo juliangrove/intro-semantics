@@ -1,9 +1,9 @@
 ---
 title: "Intro. to Semantics"
 bibliography: ../semantics.bib
-# format:
-  # revealjs:
-    # css: ../styles.css
+format:
+  revealjs:
+    css: styles.css
     # html-math-method: mathjax
     # mathjax-config:
       # loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
@@ -34,6 +34,9 @@ Things we haven't looked at:
 ## General strategy
 
 Work backwards.
+
+- Illocutionary act [↓]{.gb-blue}
+  - [Locutionary act]{.gb-blue}
 
 ---
 
