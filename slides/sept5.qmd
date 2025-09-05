@@ -295,4 +295,31 @@ How? <span class="fragment">Flouted.</span>
 
 ---
 
+## A few more
+
+(@ex-quantity) John devoured some of the beans.
+
+<br>
+
+(@ex-manner-1) Bo walked to his desk, sat down, and got up.
+
+<br>
+
+(@ex-manner-2) Jo got the car to start.
+
+---
+
+## Questions
+
+1. How should we understand the CP and the maxims?
+   - Do they tell us how to behave?
+
+2. How do they fit into Grice's notion of meaning$_{NN}$?
+   - Implicatures:
+	 just inferred, or genuinely communicated?
+
+3. Variation?
+
+---
+
 ### References
