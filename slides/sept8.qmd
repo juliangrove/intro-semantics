@@ -1,0 +1,106 @@
+---
+title: "Intro. to Semantics"
+bibliography: ../semantics.bib
+format:
+  revealjs:
+    css: styles.css
+    # html-math-method: mathjax
+    # mathjax-config:
+      # loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      # tex:
+        # packages: {'[+]': ['bussproofs','bbox','colorbox']}
+---
+
+# Speaker meaning (continued)
+
+## Last time
+
+Grice's maxims:
+Quality, Quantity, Relation, and Manner.
+
+- Quality:
+  be truthful.
+- Quantity:
+  say enough (and not too much).
+- Relation:
+  be relevant.
+- Manner:
+  be brief, unambiguous, orderly, clear.
+
+---
+
+## Implicature
+
+Two kinds typically recognized.
+
+- Implicatures from the maxims:
+  **conversational implicatures**.
+  
+- Another category of implicature:
+  **conventional implicatures**.
+  (@ex-but) The class is fun but difficult.
+  (@ex-nom-appos) Jo, a linguist, enjoys syntax.
+  (@ex-which) The instructor, who is a linguist, enjoys syntax.
+
+---
+
+## Conversational vs. conventional
+
+Conversational implicatures:
+
+- **Non-detachable** [@grice_logic_1975].
+  (@ex-non-detachable) {Some, a few, several, many} linguists like syntax.
+- Context-dependent.
+  - Especially, **particularized** conversational implicatures.
+  - @grice_logic_1975 distinguishes these from **generalized** conversational impicatures.			
+
+---
+
+## Conversational vs. conventional
+
+Conventional implicatures:
+
+- Generally, **detachable**.
+  (@ex-detachable) The class is fun {but, and} difficult.
+- Generally, not context-dependent.
+  - Arise from particular lexical items and syntactic constructions.
+
+---
+
+## Issue: how to evaluate the maxims?
+
+Quantity:
+give the right amount of information.
+
+- How much is enough/too much?
+
+::: {.fragment}
+Manner:
+be relevant.
+
+- Relevant to what?
+:::
+
+---
+
+## Issue: the symmetry problem
+
+(@ex-quantity) John devoured some of the beans.
+- Quantity implicature: John didn't devour all of the beans.
+- But why not: John didn't devour *only* some of the beans?
+
+::: {.fragment}
+We need some notion of "possible alternative".
+:::
+
+---
+
+## Questions under discussion
+
+---
+
+## Choosing alternatives
+
+---
+
+### References
