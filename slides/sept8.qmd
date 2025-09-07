@@ -29,6 +29,49 @@ Quality, Quantity, Relation, and Manner.
 
 ---
 
+## Reasoning through some examples
+
+(@ex-quantity) Jo did some of the readings.
+
+- **Quantity implicature**: Jo did not do all of the readings.
+
+::: {.fragment}
+Reasoning:
+
+::: {.smaller}
+> - Speaker is being truthful (Quality) and providing as much information as required (Quantity).
+> - Therefore: if they thought that Jo did all of the readings, they would say so.
+> - They didn't say so, so Jo must not have done all of the readings.
+:::
+:::
+
+---
+
+## Reasoning through some examples
+
+(@ex-relation) [**Context**: Jo is writing a letter of recommendation for Bo's linguistics instructor application.]{.smaller} <br>
+	<span class="fragment">[**Jo**: To whom it may concern: Bo has great handwriting. He's quite punctual. He kicked my ass at Hungry Hungry Hippos]{.smaller}.</span>
+	
+:::: {.columns}
+
+::: {.column width="70%" .smaller}
+- **Implicature**: You should not hire Bo.
+:::
+
+::: {.column width="30%" .fragment .smaller}
+Reasoning:
+:::
+
+::::
+
+::: {.smaller}
+> - Jo typically provides truthful (Quality) and relevant information (Relation).
+> - She has obviously flouted Relation.
+> - So, satisfying both must require violating some other principle.
+:::
+
+---
+
 ## Implicature
 
 Two kinds typically recognized.
@@ -67,6 +110,20 @@ Conventional implicatures:
 
 ---
 
+## Detachability?
+
+Examples from @coppock_superlative_2016:
+
+(@ex-more) I'm in my sixties and had more than two parents growing up.
+
+<br>
+
+(@ex-at-least) I'm in my sixties and had at least three parents growing up.
+
+---
+
+# Some issues
+
 ## Issue: how to evaluate the maxims?
 
 Quantity:
@@ -75,7 +132,7 @@ give the right amount of information.
 - How much is enough/too much?
 
 ::: {.fragment}
-Manner:
+Relation:
 be relevant.
 
 - Relevant to what?
@@ -85,21 +142,104 @@ be relevant.
 
 ## Issue: the symmetry problem
 
-(@ex-quantity) John devoured some of the beans.
-- Quantity implicature: John didn't devour all of the beans.
-- But why not: John didn't devour *only* some of the beans?
+(@ex-quantity) Jo did some of the readings.
+- **Quantity implicature**: Jo didn't do all of the readings.
+- But why not: Jo didn't do *only* some of the readings?
 
 ::: {.fragment}
-We need some notion of "possible alternative".
+What we need:
+some notion of "possible alternative".
 :::
 
 ---
 
 ## Questions under discussion
 
+Asking a question:
+add the question onto an ongoing record of questions that need to be answered.
+
+<br>
+
+::: {.fragment}
+Discourse---at least involving assertions---always has the goal of answering some question [@roberts_information_2012].
+
+- There is always a Question Under Discussion (QUD).
+:::
+
 ---
 
-## Choosing alternatives
+## Example from last class
+
+:::: {.columns}
+
+::: {.column width="75%"}
+
+::: {.nonincremental}
+(@ex-relation) **Context**: Jo and Bo are outside Pascal's, looking in the window. <br> 
+	**Jo**: No one's at the cash register. <br>
+	**Bo**: The lights are on.
+:::
+
+::: {.fragment}
+QUD?
+
+- Is Pascal's open?
+:::
+
+:::
+
+::: {.column width="25%"}
+![](images/pascals.jpg){width="300px" height="400px"}
+:::
+
+::::
+
+---
+
+## Does this help with evaluating the maxims?
+
+::: {.fragment}
+Relation:
+
+- Help resolve the QUD.
+:::
+
+::: {.fragment}
+Quantity (Part 1):
+
+- Resolve it as much as possible.
+:::
+
+---
+
+## On the right track?
+
+(@ex-quantity-qud) **Jo**: How many cookies did Mary eat? <br>
+	**Bo**: Mary ate some of the cookies.
+	
+::: {.fragment}
+::: {.nonincremental}
+(@ex-no-quantity-qud) **Jo**: Is there any evidence against them? <br>
+	**Bo**: Some of their identity documents are forgeries.
+:::
+	
+(Based on example from @levinson_presumptive_2000.)
+:::
+
+---
+
+## Dealing with the symmetry problem
+
+Possibility:
+certain lexical items are associated with *scales* [@horn_semantic_1972].
+
+- none < some < all, every
+- one < two < three
+- decent < great < fantastic!
+
+::: {.fragment}
+How might this help with the symmetry problem?
+:::
 
 ---
 
