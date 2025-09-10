@@ -107,7 +107,10 @@ If you like, you can get extra credit, accounting for up to an additional 2% of 
    so does [this video](https://mediasite.video.ufl.edu/Mediasite/Play/7f3d951f0471439387079e4096f08a591d).
    If you go this route, please participate in the studies before November 22.
 2. You can read and summarize the main arguments of a (short) semantics paper, i.e., published in a journal, collection, or conference proceedings.
-   I'll provide some suggestions of papers soon, but you can also summarize one of your choosing, so long as you consult with me about it first.
+   Here are some paper suggestions (which I will continue to add to during the semester), but note that you can also summarize a paper of your choosing, so long as you consult with me about it first.
+   
+   - @klecha_diagnosing_2014
+   - @steinert-threlkeld_semantic_2023
 
 ## Zulip
 
@@ -160,7 +163,7 @@ Available here:
 | Wed., Sept. 3  | Speech acts                              |                                                                   |                                    |
 | Fri., Sept. 5  | Speaker meaning                          | @grice_logic_1975                                                 |                                    |
 | Mon., Sept. 8  | Speaker meaning                          |                                                                   |                                    |
-| Wed., Sept 10  | Diagnosing inference                     | @winter_elements_2016 (Ch. 3, pp. 12--16)                         |                                    |
+| Wed., Sept 10  | Diagnosing inference                     | @winter_elements_2016 (Ch. 2, pp. 12--16)                         |                                    |
 | Fri., Sept. 12 | Diagnosing inference                     | @coppock_invitation_2025 (Ch. 1, pp. 13--41; Ch. 8, pp. 315--322) | TBD                                |
 | Mon., Sept. 15 | Sets and set theory                      |                                                                   |                                    |
 | Wed., Sept. 17 | Functions, relations, and languages      |                                                                   |                                    |
