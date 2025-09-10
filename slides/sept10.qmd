@@ -214,6 +214,10 @@ Some types of inference observable in natural language:
 
 (@ex-at-least-contd) \#Jo has at least three siblings, {and, but} she doesn't have at least two siblings.
 
+(@ex-reflexive-pred) \# Jo is Bo's sibling, {and, but} Jo and Bo aren't siblings.
+
+(@ex-no-one) \#No one came to class, {and, but} it's not the case that Julian didn't come to class.
+
 ---
 
 ## Conversational implicature
@@ -227,6 +231,11 @@ Some types of inference observable in natural language:
 ## Defeasibility of conversational implicatures
 
 (@ex-quantity-canceled) Jo did some of the readings. In fact, she did all of them.
+
+(@ex-ignorance-canceled) I want something with lots of caffeine. In fact, I want a matcha latte.
+
+(@ex-relation-canceled) **Context**: Jo is writing a letter of rec. for Bo for the ling. instructor position. <br>
+	**Jo**: Bo is very punctual. He has great handwriting. Last, but not least, he'd be a great ling. instructor!
 
 ---
 
@@ -243,6 +252,12 @@ Some types of inference observable in natural language:
 ## Non-defeasibility of presuppositions
 
 (@ex-stop-contd) \#Jo stopped smoking, {and, but} she didn't used to smoke.
+
+(@ex-factive) \#Jo loves that it's raining, {and, but} it's not raining.
+
+(@ex-definite) \#Bo failed the assignment, {and, but} there isn't an assignment.
+
+(@ex-iterative) \#Bo failed the assignment again, {and, but} he hasn't failed it before.
 
 ---
 
