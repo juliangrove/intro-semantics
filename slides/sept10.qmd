@@ -193,8 +193,8 @@ Where do inferences come from?
 Some types of inference observable in natural language:
 
 - entailment
-- presupposition
 - conversational implicature
+- presupposition
 - conventional implicature
 :::
 
@@ -202,18 +202,56 @@ Some types of inference observable in natural language:
 
 ## Entailment
 
-- A relationship between sentences.
+- A relationship between declarative sentences.
 - If $S_{1}$ entails $S_{2}$, then whenever $S_{1}$ is true, $S_{2}$ *must* be true.
   (@ex-at-least) Jo has at least three siblings. <br>
 	  ↝ Jo has at least two siblings.
+- Entailments are **non-defeasible**.
+	  
+---
+
+## Non-defeasibility of entailments
+
+(@ex-at-least-contd) \#Jo has at least three siblings, {and, but} she doesn't have at least two siblings.
+
+---
+
+## Conversational implicature
+
+- Typically a relationship between utterances of declarative sentences.
+- If an utterance of $S_{1}$ *conversationally implicates* $S_{2}$, then the utterance *means*$_{NN}$ $S_{2}$.
+- Conversational implicatures are **defeasible**.
+
+---
+
+## Defeasibility of conversational implicatures
+
+(@ex-quantity-canceled) Jo did some of the readings. In fact, she did all of them.
 
 ---
 
 ## Presupposition
 
+- A relationship between an expression and a declarative sentence.
+- If $E$ presupposes $S$, then whenever an utterance of $E$ is felicitous, $S$ is true.
+  (@ex-stop) Jo stopped smoking. <br>
+	  ↝ Jo used to smoke.
+- Presuppositions are **non-defeasible**.
+
 ---
 
-## Conversational implicature
+## Non-defeasibility of presuppositions
+
+(@ex-stop-contd) \#Jo stopped smoking, {and, but} she didn't used to smoke.
+
+---
+
+## Summary
+
+|                 | entailment | conv. impl. | presupposition   |
+|-----------------|------------|-------------|------------------|
+| **between**     | sentences  | utterances  | expr. + sentence |
+| **defeasible?** | no         | yes         | no               |
 
 ---
 
