@@ -108,11 +108,11 @@ Quantity (Part 1):
 
 (@ex-quantity) Jo did some of the readings.
 - **Quantity implicature**: Jo didn't do all of the readings.
-- But why not: Jo didn't do *only* some of the readings?
+- **But why not**: Jo did all of the readings?
 
 ::: {.fragment}
 What we need:
-some notion of "possible alternative".
+some notion of "possible alternative utterance".
 :::
 
 ---
@@ -134,12 +134,86 @@ How might this help with the symmetry problem?
 ## Summary
 
 - **Speech acts**:
-  utterances that use a particular locution with a conventional meaning to achieve a social effect.
+  utterances that use a particular locution with a conventional meaning to achieve a certain social effect.
 - **Conversational implicatures**:
-  inferences tied to particular speech acts.
-  These rely on:
+  inferences tied to particular speech acts, based on:
   - general principles of rational, cooperative communication [@grice_logic_1975];
-  - [literal meanings]{.gb-blue}.
+  - [conventional meanings]{.gb-blue}.
+
+---
+
+## Where do we go next?
+
+::: {.fragment}
+→ conventional meaning
+:::
+
+<br>
+
+- First, we need to develop methods for observing and classifying inference types.
+- Then, we can focus on the conventional stuff:
+  - study how it is encoded in linguistic expressions.
+
+---
+
+## Defining inference
+
+What is an inference?
+
+- A relation between expressions of a language.
+  - $E_{1} ↝ E_{2}$
+	- Typically, $E_{2}$ is a declarative sentence.
+
+(@ex-quantity) Jo did some of the readings. <br>
+	↝ Jo didn't do all of the readings.
+	
+(@ex-definite) Could you bring the dog inside? <br>
+	↝ There is a dog.
+
+## Data collection
+
+Where do inferences come from?
+
+- Speakers of the language!
+  - Your friends.
+  - Laboratory experiments.
+  - Large crowd-sourced inference judgment studies.
+
+## This class
+
+[Semantics]{.gb-blue} is the study of conventional meaning in natural language.
+
+- Goal:
+  give a ridiculously precise account of the inferences that linguistic expressions trigger.
+- If we can do this, then we have captured what these expressions *mean*$_{NN}$.
+
+## A taxonomy of inference types
+
+::: {.fragment}
+Some types of inference observable in natural language:
+
+- entailment
+- presupposition
+- conversational implicature
+- conventional implicature
+:::
+
+---
+
+## Entailment
+
+- A relationship between sentences.
+- If $S_{1}$ entails $S_{2}$, then whenever $S_{1}$ is true, $S_{2}$ *must* be true.
+  (@ex-at-least) Jo has at least three siblings. <br>
+	  ↝ Jo has at least two siblings.
+
+---
+
+## Presupposition
+
+---
+
+## Conversational implicature
 
 ---
 
