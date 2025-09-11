@@ -1,0 +1,98 @@
+---
+title: "Intro. to Semantics"
+bibliography: ../semantics.bib
+format:
+  revealjs:
+    css: styles.css
+    # html-math-method: mathjax
+    # mathjax-config:
+      # loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      # tex:
+        # packages: {'[+]': ['bussproofs','bbox','colorbox']}
+---
+
+# Diagnosing inferences
+
+## Types of inference
+
+::: {.nonincremental}
+- entailment
+- conversational implicature
+- presupposition
+- conventional implicature
+:::
+
+---
+
+## From last time
+
+|                 | entailment | conv. impl. | presupposition   |
+|-----------------|------------|-------------|------------------|
+| **between**     | sentences  | utterances  | expr. + sentence |
+| **defeasible?** | no         | yes         | no               |
+
+---
+
+## Things to address
+
+- Difference between entailment and presupposition.
+- Conventional implicature versus the others inference types.
+
+---
+
+## Entailment vs. presupposition
+
+First pass:
+
+- Presuppositions encode background information, needed to make sense of some expression.
+  - Express what must already be in the common ground [@stalnaker_assertion_1978].
+- Entailments encode information about what is said.
+  - Express information, e.g., which is being added to the common ground.
+
+---
+
+## The negation test
+
+Second pass:
+
+- Presuppositions **project**, whereas entailments do not.
+
+(@ex-believe-love) a. Jo demonstrated that she's good at Go. <br>
+	b. Jo loves that she's good at Go.
+	
+(@ex-believe-love-not) a. Jo didn't demonstrate that she's good at Go. <br>
+	b. Jo doesn't love that she's good at Go.
+	
+---
+
+## More!
+
+(@ex-indef-def) a. Bo brought a dog to his place of work. <br>
+	b. Bo brought the dog to his place of work.
+	
+(@ex-indef-def-not) a. Bo didn't bring a dog to his place of work. <br>
+	b. Bo didn't bring the dog to his place of work.
+
+---
+
+## The question test
+
+(@ex-believe-love-q) a. Did Jo demonstrate that she's good at Go?
+	b. Does Jo love that she's good at Go?
+	
+(@ex-indef-def-q) a. Did Jo bring a dog to his place of work? <br>
+	b. Did Jo bring the dog to his place of work?
+
+---
+
+## The conditional test
+
+(@ex-believe-love-cond) a. If Jo demonstrated that she's good at Go, she'll have to join the Go league. <br>
+	b. If Jo loves that she's good at Go, she'll have to join the Go league.
+
+(@ex-indef-def-cond) a. If Bo brought a dog to his place of work, the boss will be mad. <br>
+	b. If Bo brought the dog to his place of work, the boss will be mad.
+
+---
+
+### References
