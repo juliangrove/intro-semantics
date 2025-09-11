@@ -164,11 +164,11 @@ Available here:
 | Fri., Sept. 5  | Speaker meaning                          | @grice_logic_1975                                                 |                                    |
 | Mon., Sept. 8  | Speaker meaning                          |                                                                   |                                    |
 | Wed., Sept 10  | Diagnosing inference                     | @winter_elements_2016 (Ch. 2, pp. 12--16)                         |                                    |
-| Fri., Sept. 12 | Diagnosing inference                     | @coppock_invitation_2025 (Ch. 1, pp. 13--41; Ch. 8, pp. 315--322) | TBD                                |
-| Mon., Sept. 15 | Sets and set theory                      |                                                                   |                                    |
+| Fri., Sept. 12 | Diagnosing inference                     | @coppock_invitation_2025 (Ch. 1, pp. 13--41; Ch. 8, pp. 315--322) |                                    |
+| Mon., Sept. 15 | Sets and set theory                      |                                                                   | TBD                                |
 | Wed., Sept. 17 | Functions, relations, and languages      |                                                                   |                                    |
-| Fri., Sept. 19 | Models                                   | @winter_elements_2016 (Ch. 2, pp. 17--27)                         | TBD                                |
-| Mon., Sept. 22 | Arabic numeral arithmetic                |                                                                   |                                    |
+| Fri., Sept. 19 | Models                                   | @winter_elements_2016 (Ch. 2, pp. 17--27)                         |                                    |
+| Mon., Sept. 22 | Arabic numeral arithmetic                |                                                                   | TBD                                |
 | Wed., Sept. 24 | Arabic numeral arithmetic                |                                                                   |                                    |
 | Fri., Sept. 26 | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         |                                    |
 | Mon., Sept. 29 | Lambda notation and types                | @winter_elements_2016 (Ch. 3, pp. 44--64)                         | TBD                                |
