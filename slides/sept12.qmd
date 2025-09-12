@@ -36,7 +36,7 @@ format:
 ## Things to address
 
 - Difference between entailment and presupposition.
-- Conventional implicature versus the others inference types.
+- Conventional implicature versus the other inference types.
 
 ---
 
@@ -57,41 +57,150 @@ Second pass:
 
 - Presuppositions **project**, whereas entailments do not.
 
-(@ex-believe-love) a. Jo demonstrated that she's good at Go. <br>
-	b. Jo loves that she's good at Go.
+(@ex-believe-love) a. Jo [[demonstrated]{.gb-blue}]{.gb-blue} that she's good at Go. <br>
+	b. Jo [loves]{.gb-orange} that she's good at Go.
 	
-(@ex-believe-love-not) a. Jo didn't demonstrate that she's good at Go. <br>
-	b. Jo doesn't love that she's good at Go.
+(@ex-believe-love-not) a. Jo didn't [demonstrate]{.gb-blue} that she's good at Go. <br>
+	b. Jo doesn't [love]{.gb-orange} that she's good at Go.
 	
 ---
 
 ## More!
 
-(@ex-indef-def) a. Bo brought a dog to his place of work. <br>
-	b. Bo brought the dog to his place of work.
+(@ex-indef-def) a. Bo brought [a dog]{.gb-blue} to his place of work. <br>
+	b. Bo brought [the dog]{.gb-orange} to his place of work.
 	
-(@ex-indef-def-not) a. Bo didn't bring a dog to his place of work. <br>
-	b. Bo didn't bring the dog to his place of work.
+(@ex-indef-def-not) a. Bo didn't bring [a dog]{.gb-blue} to his place of work. <br>
+	b. Bo didn't bring [the dog]{.gb-orange} to his place of work.
 
 ---
 
 ## The question test
 
-(@ex-believe-love-q) a. Did Jo demonstrate that she's good at Go?
-	b. Does Jo love that she's good at Go?
+(@ex-believe-love-q) a. Did Jo [demonstrate]{.gb-blue} that she's good at Go?
+	b. Does Jo [love]{.gb-orange} that she's good at Go?
 	
-(@ex-indef-def-q) a. Did Jo bring a dog to his place of work? <br>
-	b. Did Jo bring the dog to his place of work?
+(@ex-indef-def-q) a. Did Jo bring [a dog]{.gb-blue} to his place of work? <br>
+	b. Did Jo bring [the dog]{.gb-orange} to his place of work?
 
 ---
 
 ## The conditional test
 
-(@ex-believe-love-cond) a. If Jo demonstrated that she's good at Go, she'll have to join the Go league. <br>
-	b. If Jo loves that she's good at Go, she'll have to join the Go league.
+(@ex-believe-love-cond) a. If Jo [[demonstrated]{.gb-blue}]{.gb-blue} that she's good at Go, she'll have to join the Go league. <br>
+	b. If Jo [loves]{.gb-orange} that she's good at Go, she'll have to join the Go league.
 
-(@ex-indef-def-cond) a. If Bo brought a dog to his place of work, the boss will be mad. <br>
-	b. If Bo brought the dog to his place of work, the boss will be mad.
+(@ex-indef-def-cond) a. If Bo brought [a dog]{.gb-blue} to his place of work, the boss will be mad. <br>
+	b. If Bo brought [the dog]{.gb-orange} to his place of work, the boss will be mad.
+
+---
+
+## Families of sentences
+
+These tests are known as **family-of-sentence** tests [@chierchia_meaning_1990].
+
+::: {.fragment}
+Given a sentence $S_{1}$, from which you can infer $S_{2}$:
+
+- negate $S_{1}$;
+- question $S_{1}$;
+- put $S_{1}$ into the antecedent of a conditional.
+:::
+
+::: {.fragment}
+If $S_{2}$ survives (i.e., **projects**), probably a presupposition.
+:::
+
+---
+
+## Hey, wait a minute!
+
+The **hey, wait a minute** test [@von_fintel_would_2004].
+
+(@ex-hwam-test) **Bo**: You [love]{.gb-orange} that you're good at Go. <br>
+	**Jo**: Hey, wait a minute! I'm not good at Go!
+
+(@ex-hwam-test-fail) **Bo**: You [demonstrated]{.gb-blue} that you're good at Go! <br>
+	**Jo**: No, I didn't! / \#Hey, wait a minute! I'm not good at Go!
+
+---
+
+## Hey, wait a minute!
+
+(@ex-hwam-test2) **Jo**: You brought [the dog]{.gb-orange} to your place of work! <br>
+	**Bo**: Hey, wait a minute! There isn't a dog!
+
+---
+
+## Interim summary
+
+Distinguishing entailments and presuppositions from conversational implicatures:
+
+- defeasibility/contradiction test
+
+::: {.fragment}
+Distinguishing entailments from presuppositions:
+
+- family-of-sentence tests
+- "hey wait a minute" test
+:::
+
+---
+
+## Now you try it!
+
+(@ex-pretend) Mo forgot that he went to class. <br>
+	↝ Mo went to class.
+	
+<br>	
+
+(@ex-pretend) Mo forgot to eat breakfast. <br>
+	↝ Mo didn't eat breakfast.
+
+---
+
+## Question
+
+<br>
+
+Why do presuppositions "project"?
+
+---
+
+## Disappearing presuppositions
+
+(@ex-def-conditional) If Bo has a dog, he brought [the dog]{.gb-orange} to his place of work.
+
+(@ex-love-conditional) If Jo is actually good at Go, she [loves]{.gb-orange} that she's good at Go.
+
+<br>
+
+(@ex-def-negated) It's not true that Bo has a dog and that he brought [the dog]{.gb-orange} to his place of work.
+
+(@ex-love-conditional) It's not true that Jo is good at Go and that she [loves]{.gb-orange} that she's good at Go.
+
+---
+
+## Changing presuppositions
+
+(@ex-def-conditionalized) If Jo has any friends in Gainesville, she loves that she gets to see them. <br>
+	<span class="fragment">↝ If Jo has any friends in Gainesville, she gets to see them.</span>
+
+---
+
+## Conventional implicatures
+
+(@ex-nrrc) The class is taught by Julian[, who enjoys syntax]{.gb-red}. <br>
+	↝ Julian enjoys syntax.
+	
+(@ex-nrrc-negated) The class isn't taught by Julian[, who enjoys syntax]{.gb-red}. <br>
+	↝ Julian enjoys syntax.
+	
+---
+
+## Can they disappear?
+
+(@ex-nrrc-conditional) \#If Julian enjoys syntax, then the class is taught by Julian[, who enjoys syntax]{.gb-red}.
 
 ---
 
