@@ -118,17 +118,18 @@ If $S_{2}$ survives (i.e., **projects**), probably a presupposition.
 The **hey, wait a minute** test [@von_fintel_would_2004].
 
 (@ex-hwam-test) **Bo**: You [love]{.gb-orange} that you're good at Go. <br>
-	**Jo**: Hey, wait a minute! I'm not good at Go!
+	**Jo**: <span class="fragment">Hey, wait a minute! I'm not good at Go!</span>
 
 (@ex-hwam-test-fail) **Bo**: You [demonstrated]{.gb-blue} that you're good at Go! <br>
-	**Jo**: No, I didn't! / \#Hey, wait a minute! I'm not good at Go!
-
+	<span class="fragment">**Jo**: \#Hey, wait a minute! I'm not good at Go!</span> <br>
+    <span class="fragment">**Jo**: No, I didn't!</span>
+	
 ---
 
 ## Hey, wait a minute!
 
 (@ex-hwam-test2) **Jo**: You brought [the dog]{.gb-orange} to your place of work! <br>
-	**Bo**: Hey, wait a minute! There isn't a dog!
+	<span class="fragment">**Bo**: Hey, wait a minute! There isn't a dog!</span>
 
 ---
 
@@ -191,16 +192,37 @@ Why do presuppositions "project"?
 ## Conventional implicatures
 
 (@ex-nrrc) The class is taught by Julian[, who enjoys syntax]{.gb-red}. <br>
-	↝ Julian enjoys syntax.
+	<span class="fragment">↝ Julian enjoys syntax.</span>
 	
 (@ex-nrrc-negated) The class isn't taught by Julian[, who enjoys syntax]{.gb-red}. <br>
-	↝ Julian enjoys syntax.
+	<span class="fragment">↝ Julian enjoys syntax.</span>
 	
 ---
 
 ## Can they disappear?
 
 (@ex-nrrc-conditional) \#If Julian enjoys syntax, then the class is taught by Julian[, who enjoys syntax]{.gb-red}.
+
+---
+
+## Summary
+
+::: {.nonincremental}
+[Distinguishing entailments/presuppositions from conv. implicatures:]{.smaller}
+
+- [defeasibility/contradiction test]{.smaller}
+
+[Distinguishing entailments from presuppositions:]{.smaller}
+
+- [family-of-sentence tests]{.smaller}
+- ["hey wait a minute" test]{.smaller}
+:::
+
+::: {.fragment}
+[Distinguishing presuppositions from conventional implicatures:]{.smaller}
+
+- [conventional implicatures always project (?)]{.smaller}
+:::
 
 ---
 
