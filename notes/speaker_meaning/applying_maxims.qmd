@@ -2,3 +2,62 @@
 title: "Applying the maxims"
 bibliography: ../../semantics.bib
 ---
+
+@grice_logic_1975 gives several examples of inferences that appear to result from the maxims, given particular utterances.
+These inferences are called *conversational implicatures*.
+Here, I'll give a few of my own.
+
+### Manner
+
+Here's one:
+
+(@ex-manner-1) Bo walked to his desk, sat down, and got up.
+
+This sentence, when uttered, appears to imply that Bo first walked to his desk, then sat down, then got up, rather than that he might have done those things in some other order;
+though, people tend to say that (@ex-manner-1) is still *true*, even if he did.
+This inference might be viewed as arising from the maxim of Manner, insofar as this maxim prescribes that the order in which predicates describing events are conjoined should mirror the order in which the events described are implied to have transpired.
+
+Why would Manner prescribe this?
+Unclear, perhaps;
+but one idea might be that understanding an event description involves, in some sense, constructing a mental representation of the event described, and mental representations of sequences of events are easier for people to update with events that are hypothesized to occur later in time than any events currently in the sequence than those which are hypothesized to occur earlier in time than some events currently in the sequence.
+If this is true, and people know it is, then they might try to make their utterances easier to understand, given this fact.
+
+
+### Quantity
+
+Here's an example which appears to rely on Quantity:
+
+(@ex-quantity) Jo did some of the readings.
+
+An utterance of this sentence seems to imply that Jo did not do all of the readings.
+One might reason about why this inference is produced as follows:
+
+ - The person making the utterance usually follows Quantity and therefore provides as much information as needed (say, given the QUD).
+ - They opted not to make the stronger statement that Jo did all of the readings.
+ - Therefore, another principle---in particular, Quality (which they also follow)---must have prevented them from doing so:
+   they must not have enough evidence that Jo did all of the readings, perhaps they believe it is false.
+
+In case the inference made from this reasoning is merely that the speaker doesn't have enough evidence to say *all*, one would conclude that there is an *ignorance implicature*:
+the speaker doesn't know whether or not Jo did all of the readings, which is why they opted for the weaker *some*.
+In case the inference made is that the speaker believes it is false that Jo did all of the readings, one draws a *scalar* implicature:
+the speaker believes Jo did *not* do all of the readings, which is why they opted for the weaker *some*.
+
+Note that this situation seems to differ slightly from one in which Bo makes the utterance in (@ex-ignorance).
+
+(@ex-ignorance) Jo: What do you want? <br>
+	Bo: Something with a lot of caffeine.
+	
+Here, we don't get the inference, say, that Bo doesn't want a matcha latte.
+Instead, we seem to observe an ignorance implicature;
+i.e., that Bo doesn't know what he wants (only that it should contain caffeine).
+
+### Relation
+
+Recall the interaction in which Jo and Bo are outside a coffee shop, looking in through the window.
+
+(@ex-relation) Jo: There's no one at the cash register. <br>
+	Bo: The lights are on.
+	
+Here, it's easy to draw the inference that Jo thinks the coffee shop might be closed, while Bo thinks it might be open.
+We might use relation to help explain this inference if we that Jo and Bo are addressing the question of whether or not the coffee shop is open and, hence, attempting to make utterances which are relevant to this question.
+If so, then Jo can be understood as offering up evidence for the coffee shop being closed, while Bo can be seen as providing evidence for it being open.
