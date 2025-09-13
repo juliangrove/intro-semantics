@@ -20,6 +20,18 @@ That is, *Jo has at least three siblings* entails *Jo has at least two siblings*
 *Jo is Bo's sibling* entails *Jo and Bo are siblings*;
 and *no one came to class* entails *Julian didn't come to class*.
 
+### The non-defeasibility of presuppositions
+
+Like entailments, presuppositions also appear to be non-defeasible.
+
+(@ex-stop-contd) \#Jo stopped smoking, {and, but} she didn't used to smoke.
+
+(@ex-factive) \#Jo loves that it's raining, {and, but} it's not raining.
+
+(@ex-definite) \#Bo failed the assignment, {and, but} there isn't an assignment.
+
+(@ex-iterative) \#Bo failed the assignment again, {and, but} he hasn't failed it before.
+
 ### The defeasibility of conversational implicatures
 
 (@ex-quantity-canceled) Jo did some of the readings. In fact, she did all of them.

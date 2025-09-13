@@ -2,3 +2,77 @@
 title: "Presuppositions versus entailments"
 bibliography: ../../semantics.bib
 ---
+
+### Families of sentences
+
+Entailments and presuppositions are typically distinguished by *family-of -sentence* tests [@chierchia_meaning_1990].
+Given a sentence which appears to have some entailment or presupposition, one may negate the sentence, turn it into a polar question, or place it into the antecedent of a conditional.
+If the inference *projects* (or *survives*), then we have evidence that it is a presupposition;
+if it does not, then we have evidence that it is an entailment.
+
+For example, both the clause-selecting verbs *love* and *demonstrate* appear to give rise to the inference that the clause they select is true;
+
+(@ex-believe-love) a. Jo [[demonstrated]{.gb-blue}]{.gb-blue} that she's good at Go. <br>
+	b. Jo [loves]{.gb-orange} that she's good at Go.
+	
+but the following examples illustrate that these inferences behave differently under negation.
+	
+(@ex-believe-love-not) a. Jo didn't [demonstrate]{.gb-blue} that she's good at Go. <br>
+	b. Jo doesn't [love]{.gb-orange} that she's good at Go.
+
+Likewise, under questioning:
+
+(@ex-believe-love-q) a. Did Jo [demonstrate]{.gb-blue} that she's good at Go?
+	b. Does Jo [love]{.gb-orange} that she's good at Go?
+	
+Similarly, when we place the original sentences into the antecedent of a larger conditional sentence:
+
+(@ex-believe-love-cond) a. If Jo [[demonstrated]{.gb-blue}]{.gb-blue} that she's good at Go, she'll have to join the Go league. <br>
+	b. If Jo [loves]{.gb-orange} that she's good at Go, she'll have to join the Go league.
+
+We observe the same pattern when exchanging an indefinite determiner in some sentence with a definite determiner, suggesting that when an indefinite determiner trigger an entailment, an indefinite determiner triggers a corresponding presupposition.
+
+(@ex-indef-def) a. Bo brought [a dog]{.gb-blue} to his place of work. <br>
+	b. Bo brought [the dog]{.gb-orange} to his place of work.
+
+In both of these sentences, we observe the inference that there is a dog.
+If we negate both
+
+(@ex-indef-def-not) a. Bo didn't bring [a dog]{.gb-blue} to his place of work. <br>
+	b. Bo didn't bring [the dog]{.gb-orange} to his place of work.
+	
+We observe that the inference persists only for when there is a definite determiner.
+Likewise when we question the original sentences or place them into the antecedents of conditional sentences.
+
+(@ex-indef-def-q) a. Did Bo bring [a dog]{.gb-blue} to his place of work? <br>
+	b. Did Bo bring [the dog]{.gb-orange} to his place of work?
+	
+(@ex-indef-def-cond) a. If Bo brought [a dog]{.gb-blue} to his place of work, the boss will be mad. <br>
+	b. If Bo brought [the dog]{.gb-orange} to his place of work, the boss will be mad.
+
+### Hey, wait a minute!
+
+Another test one can deploy (carefully!) is the "hey wait a minute" test [@von_fintel_would_2004].
+To apply this test, one constructs a dialogue in which person A utters a a sentence containing the expression of interest, and then person B utters the declarative sentence which is hypothesized to be a presupposition, preceded by "Hey, wait a minute!".
+For example,
+
+(@ex-hwam-test) **Bo**: You [love]{.gb-orange} that you're good at Go. <br>
+	**Jo**: Hey, wait a minute! I'm not good at Go!
+
+this dialogue sounds okay, presumably because the inference that Jo is good at Go is a presupposition.
+Meanwhile,
+
+(@ex-hwam-test-fail) **Bo**: You [demonstrated]{.gb-blue} that you're good at Go! <br>
+	**Jo**: \#Hey, wait a minute! I'm not good at Go! <br>
+    **Jo**: No, I didn't!
+
+when we have *demonstrated* instead of *love*, it becomes noticeably odder.
+This difference is chalked up to *love* triggering the inference as a presupposition, while *demonstrate* triggers it only as an entailment.
+
+Sometimes the test can give a somewhat weird result, even when the relevant inference is not an entailment, as (@ex-hwam-test2) shows.
+
+(@ex-hwam-test2) **Jo**: You brought [the dog]{.gb-orange} to your place of work! <br>
+	**Bo**: Hey, wait a minute! There isn't a dog!
+
+Thus this test doesn't work as reliably as the family-of-sentence tests---it seems to be a bit more sensitive to factors apparently unrelated to whether or not the relevant inference is a presupposition;
+it therefore must be deployed carefully.
