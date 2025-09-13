@@ -18,9 +18,19 @@ website:
         - convention/assignment.qmd
     - section: "Speech acts"
     - section: "Speaker meaning"
+      contents:
+        - speaker_meaning/maxims.qmd
+        - speaker_meaning/applying_maxims.qmd
     - section: "Diagnosing inference"
-    - section: "Theories of meaning"
+      contents:
+        - diagnosing_inference/overview.qmd
+        - diagnosing_inference/entailment.qmd
+        - diagnosing_inference/conversational_implicature.qmd
+        - diagnosing_inference/presupposition.qmd
+        - diagnosing_inference/conventional_implicature.qmd
+        - diagnosing_inference/assignment.qmd
     - section: "Formal preliminaries"
+    - section: "Theories of meaning"
     - section: "Models"
     - section: "Applicative categorial grammar"
     - section: "Verbs"

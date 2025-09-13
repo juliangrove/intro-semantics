@@ -17,7 +17,7 @@ format:
     incremental: true
     preview-links: auto
     css: slides/styles.css
-    footer: "Intro. Semantics"
+    footer: "Introduction to Semantics"
 
 projects:
   - notes
