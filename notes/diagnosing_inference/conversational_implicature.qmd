@@ -1,4 +1,0 @@
----
-title: "Conversational implicature"
-bibliography: ../../semantics.bib
----

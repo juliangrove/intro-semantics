@@ -1,4 +1,0 @@
----
-title: "Conventional implicature"
-bibliography: ../../semantics.bib
----

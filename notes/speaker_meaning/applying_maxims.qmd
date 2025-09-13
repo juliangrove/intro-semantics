@@ -13,14 +13,14 @@ Here's one:
 
 (@ex-manner-1) Bo walked to his desk, sat down, and got up.
 
-This sentence, when uttered, appears to imply that Bo first walked to his desk, then sat down, then got up, rather than that he might have done those things in some other order;
+This sentence, when uttered, appears to imply that Bo first walked to his desk, then sat down, and then got up, rather than that he might have done these things in some other order;
 though, people tend to say that (@ex-manner-1) is still *true*, even if he did.
 This inference might be viewed as arising from the maxim of Manner, insofar as this maxim prescribes that the order in which predicates describing events are conjoined should mirror the order in which the events described are implied to have transpired.
 
 Why would Manner prescribe this?
 Unclear, perhaps;
-but one idea might be that understanding an event description involves, in some sense, constructing a mental representation of the event described, and mental representations of sequences of events are easier for people to update with events that are hypothesized to occur later in time than any events currently in the sequence than those which are hypothesized to occur earlier in time than some events currently in the sequence.
-If this is true, and people know it is, then they might try to make their utterances easier to understand, given this fact.
+but one idea might be that understanding an event description involves, in some sense, constructing a mental representation of the event described, and it is easier for people to update mental representations of sequences of events with new events that are hypothesized to occur later in time than any events currently in the sequence than it is to for people to update them with new events that are hypothesized to occur earlier in time than some events currently in the sequence.
+If this is true, and people know that it is true, then they might try to make their utterances easier to understand, given this fact.
 
 
 ### Quantity

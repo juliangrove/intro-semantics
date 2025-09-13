@@ -1,4 +1,0 @@
----
-title: "Entailment"
-bibliography: ../../semantics.bib
----

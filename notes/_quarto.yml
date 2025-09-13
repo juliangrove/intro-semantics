@@ -24,10 +24,9 @@ website:
     - section: "Diagnosing inference"
       contents:
         - diagnosing_inference/overview.qmd
-        - diagnosing_inference/entailment.qmd
-        - diagnosing_inference/conversational_implicature.qmd
-        - diagnosing_inference/presupposition.qmd
-        - diagnosing_inference/conventional_implicature.qmd
+        - diagnosing_inference/entailments_conv_impl.qmd
+        - diagnosing_inference/presuppositions_entailments.qmd
+        - diagnosing_inference/conventional_implicatures_presuppositions.qmd
         - diagnosing_inference/assignment.qmd
     - section: "Formal preliminaries"
     - section: "Theories of meaning"

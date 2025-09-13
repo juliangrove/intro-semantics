@@ -1,0 +1,35 @@
+---
+title: "Entailments and presuppositions versus conversational implicatures"
+bibliography: ../../semantics.bib
+---
+
+The most prominent difference between entailments and presuppositions on the one hand, and conversational implicatures on the other, is that the latter tend to be *defeasible*, while the former tend not to be.
+Conversational implicatures are defined as arising from the maxims, after all, so you can always just claim you weren't actually following them!
+
+### The non-defeasability of entailments
+
+(@ex-at-least-contd) \#Jo has at least three siblings, {and, but} she doesn't have at least two siblings.
+
+(@ex-reflexive-pred) \# Jo is Bo's sibling, {and, but} Jo and Bo aren't siblings.
+
+(@ex-no-one) \#No one came to class, {and, but} it's not the case that Julian didn't come to class.
+
+Each of these examples seems to be weird and contradictory.
+That's because an entailment of the first clause in each example is negated in the second clause.
+That is, *Jo has at least three siblings* entails *Jo has at least two siblings*;
+*Jo is Bo's sibling* entails *Jo and Bo are siblings*;
+and *no one came to class* entails *Julian didn't come to class*.
+
+### The defeasibility of conversational implicatures
+
+(@ex-quantity-canceled) Jo did some of the readings. In fact, she did all of them.
+
+(@ex-ignorance-canceled) I want something with lots of caffeine. In fact, I want a matcha latte.
+
+(@ex-relation-canceled) **Context**: Jo is writing a letter of recommendation for Bo for a linguistics instructor position. <br>
+	**Jo**: Bo is very punctual. He has great handwriting. He kicked my ass in Hungry Hungry Hippos. Last, but not least, he'd be a great instructor in your linguistics program!
+
+These examples illustrate that conversational implicatures, unlike entailments, may be *canceled*.
+In (@ex-quantity-canceled), the implicature that Jo did not do all of the readings is canceled;
+in (@ex-ignorance-canceled), the ignorance implicature is canceled;
+and in (@ex-relation-canceled), the implicature that Bo should not be hired as a linguistics instructor that arises when Jo flouts relation is canceled.
