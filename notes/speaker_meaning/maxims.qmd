@@ -2,3 +2,69 @@
 title: "The Gricean maxims"
 bibliography: ../../semantics.bib
 ---
+
+Since our general goal is to give an account of conventional meaning---the type of meaning that users of a language associate with expressions by *convention* in a way that allows them to deploy the expressions to communicate in real conversational settings---it would be useful to first get a handle on some general conversational principles about *how* expressions with certain meanings are deployed.
+Doing this can help us determine---from the inferences that we observe in real-life language use---which of those inferences are related to conventional meaning and which are related to general (and perhaps, to some extent, non-linguistic) social conventions about conversation itself.
+
+With this aim partly in mind, @grice_logic_1975 proposes a principle that he takes to regulate real conversation:
+the Cooperative Principle.
+
+(@ex-cp) The Cooperative Principle: <br>
+	*"Make your conversational contribution, such as is required, at the stage at which it occurs, by the accepted purpose or direction of the talk exchange in which you are engaged"* (p. 45).
+
+(Will do 😅!)
+More seriously, Grice thinks that this principle should be seen as implicitly regulating what people decide to say to one another, and he tries to give the principle a little bit of heft by saying what maxims people appear to follow in order to adhere to it.
+
+He describes four maxims:
+
+- Quality
+- Quantity
+- Relation
+- Manner
+
+### Quality
+
+The maxim of Quality has two parts:
+first, don't say things that you think are false;
+and second, only say things that you have enough evidence for.
+
+Grice doesn't say much about what, in general, constitutes "enough evidence"---presumably this is meant to be understood as somewhat context-dependent.
+For example, if you're a surgeon in an operating room, the standard of evidence for certain kinds of assertions would likely be pretty high ("The tibial plateau is misaligned by three degrees."), whereas if you're a contestant on Jeopardy, it's generally likely to be lower.
+Indeed (as is the case for all of Grice's maxims), there are many details to fill in here!
+But we can still get a certain amount of reasoning about why certain utterances mean what they do off the ground, even with while leaving a lot underspecified.
+
+### Quantity
+
+The maxim of Quantity is also stated by Grice as having two parts:
+first, be as informative as necessary;
+second, don't overdo it!
+
+Again, Grice leaves out crucial information about how this maxim ought to be evaluated---what counts as "as informative as necessary" or "overdo[ing] it"?
+As we saw, it's possible to give a more systematic account of what counts as too little or too much information if we have access to the notion of a *question under discussion* (QUD; @roberts_information_2012).
+For example, if the question is *how many children does John have?*, an answer which is under-informative might be *John has between three and five children*, while an answer that might be over-informative might be *John has exactly three children, and they all go to the same high school*.
+Intriguingly, it is perhaps also possible for an answer to both under- and over-informative, e.g., *John has between three and five children, and they all go to the same high school*.
+The answer which is "just right", given the question, might then be *John has exactly three children*.
+
+Important to note is that this addition really only works if we have two things.
+First, we need a way of knowing when some question is the QUD of a particular conversation or discourse;
+and second, we need a definition of when a given statement *answers* a question, either partially or completely.
+The problem of *identifying QUDs* is a matter of ongoing research in both computational and experimental pragmatics---it's hard (though language users might generally seem to solve it fairly effortlessly).
+
+Meanwhile, the problem of defining when a statement answers a question is perhaps somewhat easier, insofar as there are several theories of question meanings on the market, and any of them might in principle tell us what the possible complete and partial answers to a QUD are, once one has been identified.
+
+### Relation
+
+The maxim of Relation is stated as follows:
+be relevant.
+
+That is, don't be like [zombie kid](https://www.youtube.com/watch?v=CMNry4PE93Y&t=2s).
+This maxim can also be made a little more systematic by taking it to constraint the relationship between statements made in some conversation and the QUD of the conversation:
+it can be viewed as saying that one should make statements that answer the QUD, at least partially.
+
+### Manner
+
+The maxim of Manner is taken by Grice to dictate that one should be clear, unambiguous, brief, and orderly.
+
+Whether or not a particular utterance adheres to this maxim might seem to be somewhat in the eye of the beholder.
+For example, what counts as "brief"---should we count the number of segments, syllables, words, constituent phrases used (does it depend?)?
+Ideally, such criteria would be open to empirical investigation.
