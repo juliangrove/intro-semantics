@@ -3,10 +3,10 @@ title: "The Gricean maxims"
 bibliography: ../../semantics.bib
 ---
 
-Since our general goal is to give an account of conventional meaning---the type of meaning that users of a language associate with expressions by *convention* in a way that allows them to deploy the expressions to communicate in real conversational settings---it would be useful to first get a handle on some general conversational principles about *how* expressions with certain meanings are deployed.
-Doing this can help us determine---from the inferences that we observe in real-life language use---which of those inferences are related to conventional meaning and which are related to general (and perhaps, to some extent, non-linguistic) social conventions about conversation itself.
+Since our general goal is to give an account of conventional meaning---the type of meaning that users of a language associate with expressions by *convention*, in a way that allows them to deploy those expressions to communicate in real conversational settings---it would be useful to first get a handle on some general conversational principles about *how* expressions with certain meanings are deployed.
+Having observed inferences in real-life language use, we can hopefully then work out which of those inferences are related to conventional meaning and which are related to general (and perhaps, to some extent, non-linguistic) social conventions about conversation itself.
 
-With this aim partly in mind, @grice_logic_1975 proposes a principle that he takes to regulate real conversation:
+With this aim partly in mind, @grice_logic_1975 proposes a principle that he takes to regulate real-life conversation:
 the Cooperative Principle.
 
 (@ex-cp) The Cooperative Principle: <br>
@@ -15,7 +15,7 @@ the Cooperative Principle.
 (Will do 😅!)
 More seriously, Grice thinks that this principle should be seen as implicitly regulating what people decide to say to one another, and he tries to give the principle a little bit of heft by saying what maxims people appear to follow in order to adhere to it.
 
-He describes four maxims:
+He proposes four general maxims:
 
 - Quality
 - Quantity
@@ -31,7 +31,7 @@ and second, only say things that you have enough evidence for.
 Grice doesn't say much about what, in general, constitutes "enough evidence"---presumably this is meant to be understood as somewhat context-dependent.
 For example, if you're a surgeon in an operating room, the standard of evidence for certain kinds of assertions would likely be pretty high ("The tibial plateau is misaligned by three degrees."), whereas if you're a contestant on Jeopardy, it's generally likely to be lower.
 Indeed (as is the case for all of Grice's maxims), there are many details to fill in here!
-But we can still get a certain amount of reasoning about why certain utterances mean what they do off the ground, even with while leaving a lot underspecified.
+But we can still get a certain amount of reasoning off the ground about why certain utterances mean what they do, even with while leaving a lot underspecified.
 
 ### Quantity
 
@@ -57,9 +57,9 @@ Meanwhile, the problem of defining when a statement answers a question is perhap
 The maxim of Relation is stated as follows:
 be relevant.
 
-That is, don't be like [zombie kid](https://www.youtube.com/watch?v=CMNry4PE93Y&t=2s).
+That is, don't be like [zombie kid](https://www.youtube.com/watch?v=CMNry4PE93Y&t).
 This maxim can also be made a little more systematic by taking it to constraint the relationship between statements made in some conversation and the QUD of the conversation:
-it can be viewed as saying that one should make statements that answer the QUD, at least partially.
+it seems to say that one should make statements that answer the QUD, at least partially.
 
 ### Manner
 
