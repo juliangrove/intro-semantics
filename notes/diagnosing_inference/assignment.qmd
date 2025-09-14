@@ -2,3 +2,46 @@
 title: "Assignment"
 bibliography: ../../semantics.bib
 ---
+
+Due on Monday, September 22nd.
+
+### Part 1
+
+Consider the sentences in (@ex-conditional) and (@ex-politeness).
+
+(@ex-conditional) If it's raining outside, I'll bring my raincoat.
+
+(@ex-politeness) Jo: What did you think of the movie? <br>
+	Bo: It was interesting.
+
+Each of these examples can be understood as involving a conversational implicature.
+(@ex-conditional) appears to give rise to the implicature that the speaker doesn't know if it's raining outside.
+Meanwhile, (@ex-politeness) seems to imply that Bo may have found the movie less than fantastic.
+Assuming these implicatures are intended, what conversational maxims are involved in generating them?
+For either one, are there other principles, besides the four conversational maxims, that might be in play?
+
+### Part 2
+
+Recall [where I mentioned](http://localhost:5630/speaker_meaning/applying_maxims.html#quantity) that the sentence in (@ex-quantity) appears to give rise to a scalar implicature, while the sentence in (@ex-ignorance) appears to give rise to an ignorance implicature.
+The reasoning that is typically hypothesized to generate both implicatures is similar;
+for example, both the Quantity and Quality maxims are invoked.
+
+(@ex-quantity) Jo did some of the readings.
+
+(@ex-ignorance) Jo: What do you want? <br>
+	Bo: Something with a lot of caffeine.
+
+What difference(s) between these examples might help explain why you observe *only* an ignorance implicature in (@ex-ignorance)?
+
+### Part 3
+
+Consider the examples in (@ex-prove) and (@ex-frankly).
+
+(@ex-prove) Jo proved that her trunk was empty. <br>
+	↝ Jo's trunk was empty.
+
+(@ex-frankly) Bo doesn't like his sandwich. <br>
+	↝ Bo dislikes his sandwich.
+
+What is the status of each of these inferences?
+That is, is it an entailment, a conversational implicature, a presupposition, a conentional implicature, or not obviously any of these?
