@@ -18,11 +18,12 @@ Each of these examples can be understood as involving a conversational implicatu
 (@ex-conditional) appears to give rise to the implicature that the speaker doesn't know if it's raining outside.
 Meanwhile, (@ex-politeness) seems to imply that Bo may have found the movie less than fantastic.
 Assuming these implicatures are intended, what conversational maxims are involved in generating them?
+How are the conversational maxims deployed in each case---go through the reasoning involved (kind of like I did [here](../speaker_meaning/applying_maxims.html)).
 For either one, are there other principles, besides the four conversational maxims, that might be in play?
 
 ### Part 2
 
-Recall [where I mentioned](http://localhost:5630/speaker_meaning/applying_maxims.html#quantity) that the sentence in (@ex-quantity) appears to give rise to a scalar implicature, while the sentence in (@ex-ignorance) appears to give rise to an ignorance implicature.
+Recall [where I mentioned](../speaker_meaning/applying_maxims.html#quantity) that the sentence in (@ex-quantity) appears to give rise to a scalar implicature, while Bo's utterance in (@ex-ignorance) appears to give rise to an ignorance implicature.
 The reasoning that is typically hypothesized to generate both implicatures is similar;
 for example, both the Quantity and Quality maxims are invoked.
 
@@ -32,6 +33,7 @@ for example, both the Quantity and Quality maxims are invoked.
 	Bo: Something with a lot of caffeine.
 
 What difference(s) between these examples might help explain why you observe *only* an ignorance implicature in (@ex-ignorance)?
+How does this difference affect the reasoning involved in deriving the implicatures?
 
 ### Part 3
 

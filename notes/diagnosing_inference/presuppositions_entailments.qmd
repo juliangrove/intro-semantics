@@ -12,7 +12,7 @@ if it does not, then we have evidence that it is an entailment.
 
 For example, both the clause-selecting verbs *love* and *demonstrate* appear to give rise to the inference that the clause they select is true;
 
-(@ex-believe-love) a. Jo [[demonstrated]{.gb-blue}]{.gb-blue} that she's good at Go. <br>
+(@ex-believe-love) a. Jo [demonstrated]{.gb-blue} that she's good at Go. <br>
 	b. Jo [loves]{.gb-orange} that she's good at Go.
 	
 but the following examples illustrate that these inferences behave differently under negation.
@@ -27,8 +27,10 @@ Likewise, under questioning:
 	
 Similarly, when we place the original sentences into the antecedent of a larger conditional sentence:
 
-(@ex-believe-love-cond) a. If Jo [[demonstrated]{.gb-blue}]{.gb-blue} that she's good at Go, she'll have to join the Go league. <br>
+(@ex-believe-love-cond) a. If Jo [demonstrated]{.gb-blue} that she's good at Go, she'll have to join the Go league. <br>
 	b. If Jo [loves]{.gb-orange} that she's good at Go, she'll have to join the Go league.
+
+In each case, the inference that the clause selected by [love]{.gb-orange} is true survives, while the inference that the clause selected by [demonstrate]{.gb-blue} is true does not.
 
 We observe the same pattern when exchanging an indefinite determiner in some sentence with a definite determiner, suggesting that when an indefinite determiner trigger an entailment, an indefinite determiner triggers a corresponding presupposition.
 
@@ -36,13 +38,13 @@ We observe the same pattern when exchanging an indefinite determiner in some sen
 	b. Bo brought [the dog]{.gb-orange} to his place of work.
 
 In both of these sentences, we observe the inference that there is a dog.
-If we negate both
+If we negate both sentences,
 
 (@ex-indef-def-not) a. Bo didn't bring [a dog]{.gb-blue} to his place of work. <br>
 	b. Bo didn't bring [the dog]{.gb-orange} to his place of work.
 	
-We observe that the inference persists only for when there is a definite determiner.
-Likewise when we question the original sentences or place them into the antecedents of conditional sentences.
+we observe that the inference persists only when there is a definite determiner.
+Analogous results obtain when we question the original sentences or place them into the antecedents of conditional sentences.
 
 (@ex-indef-def-q) a. Did Bo bring [a dog]{.gb-blue} to his place of work? <br>
 	b. Did Bo bring [the dog]{.gb-orange} to his place of work?
@@ -66,7 +68,7 @@ Meanwhile,
 	**Jo**: \#Hey, wait a minute! I'm not good at Go! <br>
     **Jo**: No, I didn't!
 
-when we have *demonstrated* instead of *love*, it becomes noticeably odder.
+when we have *demonstrated* instead of *love*, it becomes noticeably odder (IMO).
 This difference is chalked up to *love* triggering the inference as a presupposition, while *demonstrate* triggers it only as an entailment.
 
 Sometimes the test can give a somewhat weird result, even when the relevant inference is not an entailment, as (@ex-hwam-test2) shows.
@@ -74,5 +76,8 @@ Sometimes the test can give a somewhat weird result, even when the relevant infe
 (@ex-hwam-test2) **Jo**: You brought [the dog]{.gb-orange} to your place of work! <br>
 	**Bo**: Hey, wait a minute! There isn't a dog!
 
-Thus this test doesn't work as reliably as the family-of-sentence tests---it seems to be a bit more sensitive to factors apparently unrelated to whether or not the relevant inference is a presupposition;
+Thus this test doesn't work as reliably as the family-of-sentence tests do---it seems to be a bit more sensitive to factors apparently unrelated to whether or not the relevant inference is a presupposition;^[
+  What are these factors?
+  If I had a nickel for every time I've wondered this, I would be a rich man.
+]
 it therefore must be deployed carefully.

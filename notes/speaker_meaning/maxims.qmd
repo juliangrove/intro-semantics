@@ -59,7 +59,7 @@ be relevant.
 
 That is, don't be like [zombie kid](https://www.youtube.com/watch?v=CMNry4PE93Y&t).
 This maxim can also be made a little more systematic by taking it to constraint the relationship between statements made in some conversation and the QUD of the conversation:
-it seems to say that one should make statements that answer the QUD, at least partially.
+it seems to say that one should make statements that answer the QUD, or at least partially answer it.
 
 ### Manner
 

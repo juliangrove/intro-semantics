@@ -4,13 +4,13 @@ bibliography: ../../semantics.bib
 ---
 
 The most prominent difference between entailments and presuppositions on the one hand, and conversational implicatures on the other, is that the latter tend to be *defeasible*, while the former tend not to be.
-Conversational implicatures are defined as arising from the maxims, after all, so you can always just claim you weren't actually following them!
+Conversational implicatures are defined as arising from the maxims, after all---so you can always just claim that you weren't actually following them!
 
 ### The non-defeasability of entailments
 
 (@ex-at-least-contd) \#Jo has at least three siblings, {and, but} she doesn't have at least two siblings.
 
-(@ex-reflexive-pred) \# Jo is Bo's sibling, {and, but} Jo and Bo aren't siblings.
+(@ex-reflexive-pred) \#Jo is Bo's sibling, {and, but} Jo and Bo aren't siblings.
 
 (@ex-no-one) \#No one came to class, {and, but} it's not the case that Julian didn't come to class.
 
