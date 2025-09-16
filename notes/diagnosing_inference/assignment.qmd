@@ -46,4 +46,4 @@ Consider the examples in (@ex-prove) and (@ex-frankly).
 	↝ Bo dislikes his sandwich.
 
 What is the status of each of these inferences?
-That is, is it an entailment, a conversational implicature, a presupposition, a conentional implicature, or not obviously any of these?
+That is, is it an entailment, a conversational implicature, a presupposition, a conventional implicature, or not obviously any of these?
