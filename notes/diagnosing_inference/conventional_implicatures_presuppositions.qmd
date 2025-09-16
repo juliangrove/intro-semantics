@@ -47,7 +47,7 @@ that is, what may make this conditional sentence odd is that it triggers the inf
 So, on the one hand, the utterer believes Julian enjoys syntax (i.e., the conventional implicature), while on the other hand, they are conversationally implicating that they don't know whether or not he does.
 (Or something along those lines :).)
 
-The point here is that this apparent difference between presuppositions and conversational implicatures can provide a kind of test that helps distinguish between them.
+The point here is that this apparent difference between presuppositions and conventional implicatures can provide a kind of test that helps distinguish between them.
 For a given candidate presupposition or conventional implicature $S$, ask yourself, "Can I place $S$ into the consequent of a conditional sentence in the way described above, so that it is canceled?"
 If so, you may have a presupposition.
 If not (because the result is weird), you may have a conventional implicature.
