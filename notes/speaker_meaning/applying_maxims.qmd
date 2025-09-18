@@ -20,7 +20,7 @@ This inference might be viewed as arising from the maxim of Manner, insofar as t
 Why would the maxim of Manner prescribe this?
 Not totally obvious, perhaps;
 but one idea might be that understanding an event description involves, in some sense, constructing a mental representation of the event which is being described.
-And it might be easier for people to update mental representations of sequences of events with new events that are hypothesized to occur *later* in time than any events currently in the sequence than it is to for people to update such sequences with new events that are hypothesized to occur earlier in time than some events currently in the sequence.
+And it might be easier for people to update mental representations of sequences of events with new events that are hypothesized to occur *later* in time than any events currently in the sequence than it is for people to update such sequences with new events that are hypothesized to occur earlier in time than some events currently in the sequence.
 If this is true, and people (implicitly) know that it is true, then they might try to make their utterances easier to understand, in view of this general fact;
 that is, they might try to utter event descriptions in an order that allows people to more easily update their existing mental representation with a representation of a new event.
 
