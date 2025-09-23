@@ -1,0 +1,37 @@
+---
+title: "Assignment"
+bibliography: ../../semantics.bib
+---
+
+Due on Monday, September 29th.
+
+### Part 1
+
+Taken from @partee_mathematical_1990.
+
+Consider the following sets:
+
+$$S_{1} = \{\{\varnothing\}, \{A\}, A\}$$
+$$S_{2} = A$$
+$$S_{3} = \{A\}$$
+$$S_{4} = \{\{A\}\}$$
+$$S_{5} = \{\{A\}, A\}$$
+$$S_{6} = \varnothing$$
+$$S_{7} = \{\varnothing\}$$
+$$S_{8} = \{\{\varnothing\}\}$$
+$$S_{9} = \{\varnothing, \{\varnothing\}\}$$
+
+- Of the sets $S_{1}$ through $S_{9}$, which are members of $S_{1}$?
+- Which are subsets of $S_{1}$?
+- Which are members of $S_{9}$?
+- Which are subsets of $S_{9}$?
+- Which are members of $S_{4}$?
+- Which are subsets of $S_{4}$?
+
+### Part 2
+
+Show that $A ∩ B ⊆ A$ for any arbitrary sets $A$ and $B$.
+
+### Part 3
+
+Show that if $A ⊆ B$, then $A = A ∩ B$ for any arbitrary sets $A$ and $B$.

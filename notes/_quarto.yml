@@ -29,6 +29,14 @@ website:
         - diagnosing_inference/conventional_implicatures_presuppositions.qmd
         - diagnosing_inference/assignment.qmd
     - section: "Formal preliminaries"
+      contents:
+        - formal_preliminaries/sets.qmd
+        - formal_preliminaries/products.qmd
+        - formal_preliminaries/relations.qmd
+        - formal_preliminaries/functions.qmd
+        - formal_preliminaries/languages.qmd
+        - formal_preliminaries/examples.qmd
+        - formal_preliminaries/assignment.qmd
     - section: "Theories of meaning"
     - section: "Models"
     - section: "Applicative categorial grammar"

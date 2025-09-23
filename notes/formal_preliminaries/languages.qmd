@@ -1,0 +1,19 @@
+---
+title: "Languages"
+bibliography: ../../semantics.bib
+---
+
+We write `$A^n$' to refer to the result of taking the product of the set $A$ with itself $n$ times.
+As a matter of convention, we will adopt the following equivalences.
+$$\begin{align*}
+A^0 &=_{def} \{\varnothing\}\\
+A^1 &=_{def} A\\
+A^n &=_{def} A^{n-1} × A
+\end{align*}$$
+To define a language, we first define a set $Σ$, which we call the *alphabet*, *words*, or *lexicon* of the language.
+These can be anything, in principle (phonetic forms, sets of syntactic features, blades of grass, etc.).
+Then, a *language* over the alphabet $Σ$ is some set $L$ such that
+$$L ⊆ ⋃ \{Σ^{i} ∣ i ∈ ℕ\}$$
+Thus $L$ is a set of $n$-tuples of words from $Σ$ of any length $n$.
+When we talk about languages, we will refer to tuples as *strings* and adopt the convention of writing, e.g., the string ⟨ *the*, *dog*, *is*, *friendly* ⟩ simply as *the dog is friendly* (or as "the dog is friendly" when I'm writing on the chalkboard).
+Note that $L$ may include $\varnothing$, which we will regard as the empty string (the string of length 0), which we write '$ϵ$' in this context.

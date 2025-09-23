@@ -1,0 +1,20 @@
+---
+title: "Products"
+bibliography: ../../semantics.bib
+---
+
+Given two sets $A$ and $B$, we take their binary Cartesian product $$(A × B)$$ to be the set of pairs of elements $⟨a, b⟩$, where $a ∈ A$ and $b ∈ B$.
+We call $a$ the first *component* (or *projection*) of such a pair and $b$ the second component.
+Given a pair $p$, we will sometimes write '$p_{1}$' to refer to its first component and '$p_{2}$' to refer to its second component.
+In particular:
+$$⟨x, y⟩_{1} = x$$
+$$⟨x, y⟩_{2} = y$$
+
+The following statement is also true:
+$$⟨x_{1}, x_{2}⟩ = x$$
+That is, if you take the first and second components of a pair and pair them back up, you haven't done anything!
+	
+We can generalize binary products to $n$-ary products by considering the former to correspond to the special case where $n = 2$.
+For the general case $$A₁ × ... × A_{n-1} × Aₙ$$ we can encode this product as $$(...(A₁ × ... × A_{n-1}) × Aₙ)$$
+For example, $A × B × C$ is just $((A × B) × C)$;
+its members are, therefore, pairs $⟨⟨a, b⟩, c⟩$, which is just how we can encode 3-tuples $⟨a, b, c⟩$.

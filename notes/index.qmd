@@ -169,7 +169,7 @@ Available here:
 | Mon., Sept. 15 | Sets and set theory                      |                                                                   | [View](diagnosing_inference/assignment.html) |
 | Wed., Sept. 17 | Functions, relations, and languages      |                                                                   |                                              |
 | Fri., Sept. 19 | Models                                   | @winter_elements_2016 (Ch. 2, pp. 17--27)                         |                                              |
-| Mon., Sept. 22 | Arabic numeral arithmetic                |                                                                   | TBD                                          |
+| Mon., Sept. 22 | Arabic numeral arithmetic                |                                                                   | [View](formal_preliminaries/assignment.html) |
 | Wed., Sept. 24 | Arabic numeral arithmetic                |                                                                   |                                              |
 | Fri., Sept. 26 | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         |                                              |
 | Mon., Sept. 29 | Lambda notation and types                | @winter_elements_2016 (Ch. 3, pp. 44--64)                         | TBD                                          |

@@ -1,0 +1,82 @@
+---
+title: "Sets"
+bibliography: ../../semantics.bib
+---
+
+### What's a set?
+
+A set is, intuitively speaking, a collection of objects, which we call the *elements* or *members* of the set.
+Any talk about sets is understood in the context of some universe of discourse.
+All sets inhabit this universe, as do any of the objects which we may consider to be members of a set.
+We may, for example, want to have things like words or natural numbers inhabit this universe.
+When analyzing the semantics of English, we may include other things too, like entities or individuals.
+	
+For any set $A$ and any object $a$ in the universe, either one of the following two things is true.
+$$\begin{align*}
+a ∈ A \tag{$a$ is a member of $A$}\\
+a ∉ A \tag{$a$ is not a member of $A$}
+\end{align*}$$
+Moreover, sets are defined by their members.
+That means that, for every $a$ in the universe, if $a ∈ A$ if and only if $a ∈ B$, then $A$ and $B$ are the same set.
+This is the principle of *extensionality* for sets.
+
+We will generally help ourselves to two kinds of notation for specifying sets:
+list notation and predicate (or "set-comprehension", or "set-builder") notation.
+In list notation, we define a set by enumerating its elements between curly braces.
+For example,
+$$\{1, 2, 3, George Washington\}$$
+is just the set $A$ such that $1 ∈ A$, $2 ∈ A$, $3 ∈ A$, and nothing else is $∈ A$.
+Because of extensionality, $\{1, 2, 3, GW\}$ is the same set as $\{1, 1, 2, 3, GW\}$ is the same set as $\{3, GW, 2, 2, 1\}$, etc.
+Using predicate notation, we can specify the very same set as
+$$\{x ∣ x = 1 \text{ or } x = 2 \text{ or } x = 3 \text{ or } x = GW\}$$
+In general, in writing '$\{a$ $|$ $φ\}$', $a$ will be an expression with some number of *variables* occurring in it (things like $x$, $y$, $z$, and so on), and $φ$ will be a sentence expressing a condition on the values of these variables.
+Any number of the variables in $a$, and generally *only these*, can occur in $φ$.
+In the example above, $a$ just was the variable $x$, and the condition expressed was that the value of $x$ be either 1, 2, 3, or George.
+	
+But we could also use predicate notation, as in $$\{x + 1 ∣ x = 1 \text{ or } x = 2 \text{ or } x = 3\}$$ where $a$ is the complex expression '$x +
+1$', to specify the set $\{2, 3, 4\}$.
+
+Importantly, there is an empty set, which we'll write '$\varnothing$'.
+It has no members.
+As a result, $a ∉ \varnothing$ for any $a$ in the universe.
+The empty set can also be specified in list notation as `$\{\}$'.
+
+### Set-forming operations
+
+Given any two sets $A$ and $B$, we can use the following set-forming operations.
+$$\begin{align*}
+&a ∈ A \cup B &\textit{if $a ∈ A$ or $a ∈ B$}\tag{union}\\
+&a ∈ A \cap B &\textit{if $a ∈ A$ and $a ∈ B$}\tag{intersection}\\
+&a ∈ A - B &\textit{if $a ∈ A$ and $a ∉ B$}\tag{set difference}
+\end{align*}$$
+In addition, we say one set $A$ is a *subset* of another set $B$
+$$A ⊆ B$$
+just in case every $a ∈ A$ is also $∈ B$.
+If, in addition, there is some $b ∈ B$ such that $b ∉ A$, we may write
+$$A ⊂ B$$ ($A$ is a *proper subset* of $B$) to indicate this.
+Note that because of extensionality, $A = B$ just in case both $A ⊆ B$ and $B ⊆ A$.
+	
+We may sometimes refer to sets using notation for *generalized* intersection
+and union.
+If $S$ is a set all of whose members are *also* sets, we write $$⋃ S$$ to mean $\{x$ $|$ $x ∈ A$ for some $A ∈ S\}$;
+that is, we squash $S$ into the union of all of its members.
+
+For example, let's define $ℕ = \{0, 1, 2, ...\}$ (i.e., the set of "natural numbers").
+Then, we can define the set $\{\{x\} ∣ x ∈ ℕ\}$---this is just the set of sets with only one member, and whose single member is one of the natural numbers;
+i.e., $\{\{0\}, \{1\}, \{3\}, ...\}$.
+Now, we can define the set $⋃\{\{x\} ∣ x ∈ ℕ\}$---this set is just $ℕ$!
+
+Likewise, we write $$⋂ S$$ to mean $\{x$ $|$ $x ∈ A$ for every $A ∈ S\}$;
+that is, we squash $S$ into the intersection of all of its members.
+If we did this for the set defined above, i.e., $⋃\{\{x\} ∣ x ∈ ℕ\}$, we'd get back the empty set ($\varnothing$)---none of the sets in the original set has any members in common!
+
+### Powerset
+
+Given a set $A$, we may take its *powerset*, which is often written '$2^A$'
+The powerset of $A$ is defined as
+$$2^A = \{B ∣ B ⊆ A\}$$
+That is, it is the set of subsets of $A$.
+
+The power set of $ℕ$, for example is $\{\{1\}, \{7, 223423, 2\}, ... \text{all the ways of putting natural numbers into sets}\}$.
+Indeed, the set $\{\{x\} ∣ x ∈ ℕ\}$ that we talked about above is a *subset* of the powerset of $ℕ$.
+(Why?)

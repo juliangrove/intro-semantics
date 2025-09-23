@@ -1,0 +1,29 @@
+---
+title: "Examples"
+bibliography: ../../semantics.bib
+---
+ 
+Here are some examples of *proofs* of some basic facts about sets.
+ 
+### First example
+
+Show that $A ⊆ A ∪ B$.
+
+The definition of subset says that this holds if everything in $A$ is also in $A ∪ B$.
+The definition of union says that any $x ∈ A ∪ B$ if $x ∈ A$ or $x ∈ B$.
+Thus any $x ∈ A$ is such that $x ∈ A ∪ B$, as needed.
+
+### Second example
+
+Let $A, B ⊆ C$, and let's introduce the notation '$¬X$' for $C - X$.
+
+Show that $¬(A ∪ B) ⊆ ¬A ∩ ¬B$.
+
+Assume $x ∈ ¬(A ∪ B)$ (for arbitrary $x$);
+then, our goal is show that $x$ *must* be in $¬A ∩ ¬B$.
+By definition, $x ∈ C$, but $x ∉ A ∪ B$.
+Hence, $x ∉ A$ (or else, we would have that $x ∈ A ∪ B$).
+But because, by hypothesis, $x ∈ C$, we now have that $x ∈ ¬A$.
+A similar argument applies to $¬B$!
+Thus $x ∈ ¬A ∩ ¬B$.
+Since $x$ is arbitrary, the argument extends to any element of $¬(A ∪ B)$, as needed to show that the two sets are in a subset relation.

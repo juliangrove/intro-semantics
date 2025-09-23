@@ -1,0 +1,33 @@
+---
+title: "Functions"
+bibliography: ../../semantics.bib
+---
+
+A function from a set $A$ to a set $B$ is a map from elements of $A$ to elements of $B$ which pairs each element of $A$ with exactly one element of
+$B$.
+If $f$ is such a function, we write $$f : A → B$$ to indicate this.
+We call $A$ the *domain* of the function, and we call $B$ the *codomain* of the function.
+If $a ∈ A$, then we write $$f(a)$$ to pick out the unique $b ∈ B$ that $f$ pairs $a$ up with.
+In case $f(a) = b$ (for some $a$ and $b$), we call $a$ the *argument* of the function $f$, and we call $b$ the *value* of the function $f$ on $a$.
+	
+Kind of like with relations, the definition of (unary) functions can be generalized to that for *n*-ary functions by considering the latter to be a map from the product of $n$ sets $A₁, ..., Aₙ$ to a set $B$.
+If $f$ is such an $n$-ary function, we write $$f : A_1 × ... × A_n → B$$ to indicate this.
+Given $n$ arguments $a₁ ∈ A₁, ..., aₙ ∈ Aₙ$, we write $$f(a_1, ..., a_n)$$ to pick out out the $b ∈ B$ that $f$ maps $a₁, ..., aₙ$ to.
+
+<!-- Two properties of functions are sometimes important for certain purposes: if -->
+<!-- a function $f$ from $A$ (or $A₁, ..., Aₙ$) to $B$ pairs each element $a ∈ A$ -->
+<!-- (or \(n\)-tuple $a₁ ∈ A₁, ..., aₙ ∈ Aₙ$) with a different element $b ∈ B$, we -->
+<!-- call $f$ an /injection/ (or a /one-to-one/ function). If for each $b ∈ B$, $f$ -->
+<!-- pairs some or other $a ∈ A$ (or \(n\)-tuple $a₁, ..., aₙ$) with it, we call -->
+<!-- $f$ a /surjection/ (or an /onto/ function). If $f$ is both an injection and a -->
+<!-- surjection, we call it a /bijection/ from $A$ (or $A₁, ..., Aₙ$) to $B$.[fn::A -->
+<!-- function $f : A → B$ can be considered to be a relation on $A$ and $B$ where, -->
+<!-- for each $a ∈ A$, there is exactly one $b ∈ B$ such that $⟨a, b⟩ ∈ f$. More -->
+<!-- generally, an \(n\)-ary function can be considered an \((n+1)\)-ary relation. -->
+<!-- This is just a particular way of encoding functions as relations --- it isn't -->
+<!-- the /definition/ of a function, i.e., a map between sets, as above.] -->
+
+Importantly, there is a corresponding notion of *function composition*.
+We need only consider functions from $A$ to $B$ a type of relation on $A$ and $B$---one that relations *every* element in $A$ to exactly one element in $B$.
+Given functions $f : A → B$ and $g : B → C$, their composition $g ∘ f : A → C$ is such that $(g ∘ f)(x) = g(f(x))$, for any $x ∈ A$.
+<!-- In the same vein, if $f : A → A$, then we may write `$fⁿ$' to denote the function which ``applies $f$ to an element of $A$ $n$ times''. -->
