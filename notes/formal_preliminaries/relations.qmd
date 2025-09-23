@@ -3,8 +3,8 @@ title: "Relations"
 bibliography: ../../semantics.bib
 ---
 
-If we have a collection of non-empty sets $A₁$ through $Aₙ$ (i.e., each of them has at least one member), then we can take an $n$-ary *relation* on those sets. 
-An $n$-ary *relation* on the sets $A₁, ..., Aₙ$ is a set $R$ such that $R ⊆ A₁ × ... × Aₙ$.
+If we have a collection of sets $A_{1}$ through $A_{n}$, then we can take an $n$-ary *relation* on those sets. 
+An $n$-ary *relation* on the sets $A_{1}, ..., A_{n}$ is a set $R$ such that $R ⊆ A_{1} × ... × A_{n}$.
 In the special case of a binary relation on two sets $A$ and $B$, $R$ is a set of pairs $⟨a, b⟩$, such that $a ∈ A$ and $b ∈ B$.
 That is, $R ⊆ A × B$.
 For $n$-ary relations $R$, if the $n$-tuple $⟨a₁, ..., aₙ⟩$ is a member of $R$, we can indicate this by writing $$R(a₁, ..., aₙ)$$
