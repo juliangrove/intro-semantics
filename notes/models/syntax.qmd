@@ -1,0 +1,35 @@
+---
+title: "Arabic numeral arithmetic"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\True{\ct{T}}
+\def\False{\ct{F}}
+$$
+:::
+
+The central technical notion that we'll rely on in this course is that of a model.
+A model is, in short, a way of associating the most basic expressions of whatever language we are studying with meanings.
+It can be useful to think of a model as encoding a *way that things could be*, or---in the parlance of possible world semantics---a *possible world*.
+For example, if we're assigning meanings to a language that has the verb *runs* as one of its basic expressions, then we might associate this verb with a set---specifically, the set of people (or other entities) that run.
+In one model, Jo and Bo might be the ones who run (so that the set of people who run is $\{\ct{j}, \ct{b}\}$);
+in another, Bo and Mo ($\{\ct{b}, \ct{m}\}$);
+in yet another, nobody runs ($\varnothing$);
+and so on.
