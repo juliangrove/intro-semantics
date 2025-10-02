@@ -172,11 +172,11 @@ Available here:
 | Fri., Sept. 19 | Models                                   | @winter_elements_2016 (Ch. 2, pp. 17--27)                         |                                              |
 | Mon., Sept. 22 | Arabic numeral arithmetic                |                                                                   | [View](formal_preliminaries/assignment.html) |
 | Wed., Sept. 24 | Arabic numeral arithmetic                |                                                                   |                                              |
-| Fri., Sept. 26 | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         |                                              |
-| Mon., Sept. 29 | Lambda notation and types                | @winter_elements_2016 (Ch. 3, pp. 44--64)                         | TBD                                          |
-| Wed., Oct. 1   | Lambda notation and types                | @winter_elements_2016 (Ch. 3, pp. 64-72)                          |                                              |
-| Fri., Oct. 3   | Intransitive verbs                       |                                                                   |                                              |
-| Mon., Oct. 6   | Intransitive verbs                       |                                                                   |                                              |
+| Fri., Sept. 26 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 44--64)                         |                                              |
+| Mon., Sept. 29 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 64-72)                          |                                              |
+| Wed., Oct. 1   | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         | TBD                                          |
+| Fri., Oct. 3   | Lambda notation and types                |                                                                   |                                              |
+| Mon., Oct. 6   | Lambda notation and types                |                                                                   |                                              |
 | Wed., Oct. 8   | Transitive verbs                         |                                                                   |                                              |
 | Fri., Oct. 10  | Transitive verbs                         |                                                                   | TBD                                          |
 | Mon., Oct. 13  | Applicative categorial grammar           | @jurafsky_speech_2025 (Appendix E)                                |                                              |

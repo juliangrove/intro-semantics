@@ -1,0 +1,51 @@
+---
+title: "Overview"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\True{\ct{T}}
+\def\False{\ct{F}}
+$$
+:::
+
+The central technical notion that we'll rely on in this course is that of a model.
+A model is, in short, a way of associating the most basic expressions of whatever language we are studying with interpretations.
+It can be useful to think of a model as encoding a *way that things could be*, or---in the parlance of possible world semantics---a "possible world".
+For example, if we're assigning meanings to a language that has the verb *runs* as one of its basic expressions, then we might associate this verb with a set---specifically, the set of people (or other entities) that run.
+In one model, Jo and Bo might be the ones who run (so that the set of people who run is $\{\ct{j}, \ct{b}\}$);
+in another, the interpretation of *runs* might be the set containing Bo and Mo ($\{\ct{b}, \ct{m}\}$);
+in yet another, maybe nobody runs ($\varnothing$);
+and so on.
+
+Technically, a model $\mathcal{M}$ is a structure that consists of a pair of a *domain* $D$ and an interpretation function $I$---something which takes *atoms* (i.e., the most basic expressions, whatever those are) of the language onto elements of a set $M$ ('$M$' for "meanings"):
+
+(@ex-model-def) Definition: <br> 
+	a model $\mathcal{M}$ is a tuple $⟨D, \{\True, \False\}, I⟩$ of a non-empty set $D$, the set of truth values $\True$ and $\False$, a function $I : atom → M$.
+
+In (@ex-model-def), $atom$ is just whatever the set of atoms is chosen to be.
+
+Exactly how $M$ is chosen will vary by case---but in general, it is something "constructed" out of $D$, the domain.
+For example, it might be $D$ itself;
+or it might be $D ∪ 2^{D}$ (the set containing all the elements of $D$, as well as all the subsets of $D$);
+or it might be something else more complicated.
+
+Further, the way the set $atom$ is chosen will also vary by case.
+For example, if we are defining a language $L$ over some alphaet $Σ$, $atom$ might be chosen to be $Σ$ itself---or perhaps some subset of $Σ$.
+The way we decide what $atom$ is depends on how we decide we want to construct the interpretations of more complex expressions out of the meanings of more basic expressions.

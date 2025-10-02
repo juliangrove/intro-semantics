@@ -37,8 +37,10 @@ website:
         - formal_preliminaries/languages.qmd
         - formal_preliminaries/examples.qmd
         - formal_preliminaries/assignment.qmd
-    - section: "Theories of meaning"
     - section: "Models"
+      contents:
+        - models/overview.qmd
+        - models/ana_syntax.qmd
     - section: "Applicative categorial grammar"
     - section: "Verbs"
     - section: "Coordinators"
