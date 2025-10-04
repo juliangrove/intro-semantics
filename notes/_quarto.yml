@@ -43,6 +43,7 @@ website:
         - models/ana_syntax.qmd
         - models/ana_semantics.qmd
         - models/ana_examples.qmd
+        - models/assignment.qmd
     - section: "Applicative categorial grammar"
     - section: "Verbs"
     - section: "Coordinators"

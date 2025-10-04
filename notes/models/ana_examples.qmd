@@ -25,4 +25,85 @@ $$
 $$
 :::
 
-Let's illustrate with some examples!
+It's example time.
+
+
+### Example 1
+
+For the first example let's show that $⌜537⌝$ is an $np$ (and that it has a particular interpretation in $\mathcal{M}_{ANA}$).
+
+\begin{prooftree}
+\AxiomC{$⟨⌜5⌝, I_{ANA}(⌜5⌝)⟩ ⊢ atom$}
+\RightLabel{Rule 2}\UnaryInfC{$⟨⌜5⌝, I_{ANA}(⌜5⌝)⟩ ⊢ n$}
+\AxiomC{$⟨⌜3⌝, I_{ANA}(⌜3⌝)⟩ ⊢ atom$}
+\RightLabel{Rule 2}\UnaryInfC{$⟨⌜3⌝, I_{ANA}(⌜3⌝)⟩ ⊢ n$}
+\AxiomC{$⟨⌜7⌝, I_{ANA}(⌜7⌝)⟩ ⊢ atom$}
+\RightLabel{Rule 2}\UnaryInfC{$⟨⌜7⌝, I_{ANA}(⌜7⌝)⟩ ⊢ n$}
+\RightLabel{Rule 3}\BinaryInfC{$⟨⌜37⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ n$}
+\RightLabel{Rule 3}\BinaryInfC{$⟨⌜537⌝, I_{ANA}(⌜5⌝) * 10^{length(⌜37⌝)} + I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ n$}
+\RightLabel{Rule 4}\UnaryInfC{$⟨⌜537⌝, I_{ANA}(⌜5⌝) * 10^{length(⌜37⌝)} + I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ np$}
+\end{prooftree}
+
+The thing we've proved is the statement in the very last line of this derivation:
+that the string $⌜537⌝$ has the interpretation
+$$I_{ANA}(⌜5⌝) * 10^{length(⌜37⌝)} + I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)$$
+and the category $np$.
+Since we know that
+
+- $I_{ANA}(⌜5⌝) = 5$,
+- $I_{ANA}(⌜3⌝) = 3$, and
+- $I_{ANA}(⌜7⌝) = 7$
+
+as well as what $length(⌜37⌝)$ and $length(⌜7⌝)$ are---$2$ and $1$, respectively---the very last line of this proof/derivation can be rewritten as
+
+$$5 * 10^{2} + 3 * 10^{1} + 7$$
+
+which, of course, is $537$.
+
+### Example 2
+
+For the second example, we'll show that $⌜((37 + 1) × 0) = 5⌝$ is an $s$, and also what its interpretation in $\mathcal{M}_{ANA}$ is.
+
+\begin{prooftree}
+\AxiomC{$⟨⌜3⌝, I_{ANA}(⌜3⌝)⟩ ⊢ atom$}
+\RightLabel{Rule 2}\UnaryInfC{$⟨⌜3⌝, I_{ANA}(⌜3⌝)⟩ ⊢ n$}
+\AxiomC{$⟨⌜7⌝, I_{ANA}(⌜7⌝)⟩ ⊢ atom$}
+\RightLabel{Rule 2}\UnaryInfC{$⟨⌜7⌝, I_{ANA}(⌜7⌝)⟩ ⊢ n$}
+\RightLabel{Rule 3}\BinaryInfC{$⟨⌜37⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ n$}
+\RightLabel{Rule 4}\UnaryInfC{$⟨⌜37⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ np$}
+\AxiomC{$⟨⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ atom$}
+\RightLabel{Rule 2}\UnaryInfC{$⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ n$}
+\RightLabel{Rule 4}\UnaryInfC{$⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ np$}
+\RightLabel{Rule 5}\BinaryInfC{$⟨⌜(37 + 1)⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)⟩ ⊢ np$}
+\AxiomC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ atom$}
+\RightLabel{Rule 2}\UnaryInfC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ n$}
+\RightLabel{Rule 4}\UnaryInfC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ np$}
+\RightLabel{Rule 5}\BinaryInfC{$⟨⌜((37 + 1) × 0)⌝, (I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)) * I_{ANA}(⌜0⌝)⟩ ⊢ np$}
+\AxiomC{$⟨⌜5⌝, I_{ANA}(⌜5⌝)⟩ ⊢ atom$}
+\RightLabel{Rule 2}\UnaryInfC{$⟨⌜5⌝, I_{ANA}(⌜5⌝)⟩ ⊢ n$}
+\RightLabel{Rule 4}\UnaryInfC{$⟨⌜5⌝, I_{ANA}(⌜5⌝)⟩ ⊢ np$}
+\RightLabel{Rule 6}\BinaryInfC{$⟨⌜((37 + 1) × 0) = 5⌝, (I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)) * I_{ANA}(⌜0⌝) = I_{ANA}(⌜5⌝)⟩ ⊢ s$}
+\end{prooftree}
+
+Indeed, we've proved that $⌜((37 + 1) × 0 = 5⌝$ is an $s$.
+What we've also shown is that the interpretation of this $s$ is $\True$ just in case
+
+$$(I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)) * I_{ANA}(⌜0⌝)$$
+
+is equal to $I_{ANA}(⌜5⌝)$.
+
+In fact, since we know that
+$$I_{ANA}(⌜0⌝) = 0$$
+and that multiplying anything by $0$ gives you $0$, we can determine that 
+
+$$(I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)) * I_{ANA}(⌜0⌝)$$
+
+is equal to $0$ without even worrying about what
+
+$$I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)$$
+
+evaluates to.
+Though, if we were to evaluate it, we'd of course find that it evaluates to $38$.
+
+Since $I_{ANA}(⌜5⌝)$ is $5$, the interpretation of this sentence is $\True$ if and only if $0$ and $5$ are the same number.
+They're not, so the interpretation is $\False$.

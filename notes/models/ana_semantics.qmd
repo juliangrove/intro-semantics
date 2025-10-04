@@ -38,10 +38,11 @@ That is, $D$ is defined to be $ℕ$---i.e., the set $\{0, 1, 2, ...\}$.
 What can we say about the model's interpretation function, $I_{ANA}$?
 Well, because we defined $atom$ ([here](ana_syntax.html)) to be the set $\{⌜0⌝, ..., ⌜9⌝\}$, we know that this set is the *domain* of $I_{ANA}$:
 it is the job of the model's interpretation function to map things from this set onto interpretations of some kind.
-Meanwhile, we'll choose the *codomain* of $I_{ANA}$, to be $ℕ$:
+What about the codomain?
+Since we're having $I_{ANA}$ map elements *from* the set $\{⌜0⌝, ..., ⌜9⌝\}$, we should choose the *codomain* of $I_{ANA}$---the set it maps these symbols *to*---to be $ℕ$:
 the interpretation of any of the symbols $⌜0⌝$ through $⌜9⌝$ is just a natural number!
 
-More specifically, here's how we'll interpret the symbols in $atom$.
+Specifically, we'll define $I_{ANA}$ as in (@ex-ana_atom_interp).
 
 (@ex-ana_atom_interp) $I_{ANA} : atom → ℕ$ <br><br> 
 	$I_{ANA}(⌜0⌝) = 0$ <br>
@@ -56,18 +57,25 @@ More specifically, here's how we'll interpret the symbols in $atom$.
 	$I_{ANA}(⌜9⌝) = 9$ <br>
 
 Hopefully, none of these choices is particularly surprising!
-Still, it's important to point out that---while it looks a bit like we are using the interpretation function to simply "remove the corner brackets ($⌜, ⌝$)"---that's just a result of the fact that we are employing the very language that we are interpreting as part of our *metalanguage*.^[
+Still, it's important to point out that---while it looks a bit like we are using the interpretation function to simply "remove the corner brackets ($⌜, ⌝$)"---that's just due to the fact that we are employing the very language that we are interpreting as part of our *metalanguage*.^[
 	Recall that our metalanguage is just the language that we're using to conduct Introduction to Semantics (LIN4803/LIN6804).
 	It consists of our natural language idiolects (as spoken and written) and a little bit of set-theoretic notation.
 	I'm assuming our idiolects (as written) make Arabic numeral arithmetic available.
 ]
-Said one more time and in another way:
+Said once more and in another way:
 there is nothing special about the symbol $⌜1⌝$ that makes it a particularly good candidate for being mapped onto the number 1.
 The choice reflects how we *use* the language $L_{ANA}$, but it is arbitrary nonetheless---a genuine Lewis-style convention.
 
 Alright.
-The time has come to define our interpretation function (or "interpretation brackets", "denotation function", what have you) $⟦·⟧_{\mathcal{M}}$ over the entirety of $L_{ANA}$.
-We will show how to do this using two different presentations.
+The time has come to define our interpretation function (or "interpretation brackets", "denotation function", what have you) $⟦·⟧_{\mathcal{M}_{ANA}}$ over the entirety of $L_{ANA}$.
+We will show how to do this using two different presentations.^[
+	After all, according to @keenan_mathematical_2016, "if you can't say something two ways, you can't say it at all".
+	Not sure if this is what they had in mind.
+]
+One presentation uses English and provides the rules mostly as conditional *if then* statements.
+The other presentation is a bit more formally systematic:
+it provides formal rules for constructing *proofs*.
+Both presentations say exactly the same thing.
 
 ### Rules in English
 
@@ -89,22 +97,22 @@ This presentation is given in (@ex-ana-semantics).
 
 Note that we are using quite a lot of mathematical notation in the metalanguage!
 That's fine---there is no point in pretending that we don't know how to add and multiply, etc.
-One thing to note is the use of the function called '$length$'.
-This is a function that maps *numerals* onto *natural numbers*---coincidentally, just like the interpretation function!
+One thing to note is the use of the function called '$length$' in Rule 3.
+This is a function that maps *numerals* onto *natural numbers*---coincidentally, just like the interpretation function does!
 That is:
 
 (@ex-length-function) $length : n → ℕ$
 
-But of course, it does not behave like the interpretation function at all.
-For instance, the $length(⌜12⌝)$ is not $12$---it is $2$!
+But of course, aside from its domain and codomain, it does not behave like the interpretation function at all.
+For instance, $length(⌜12⌝)$ is not $12$---it is $2$!
 
 ### Rules as proof constructors
 
 On the second presentation, we'll present the *exact same collection of rules*, but using a slightly different notation.
 Rather than writing out each rule in English, we'll encode it as a kind of rule for constructing *proofs*.
-Here, each proof is just a proof that some string in $L_{ANA}$ has a particular *category*, as well as a particular *interpretation*.
+Here, each proof, or *derivation*, is just a proof that some string in $L_{ANA}$ has a particular *category*, as well as a particular *interpretation*.
 
-(@ex-ana-semantics) 1. \begin{prooftree}\AxiomC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ atom$}\end{prooftree} <br>
+(@ex-ana-proofs) 1. \begin{prooftree}\AxiomC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ atom$}\end{prooftree} <br>
 	\begin{prooftree}\AxiomC{$⟨⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ atom$}\end{prooftree} <br>
 	\begin{prooftree}\AxiomC{⋮}\end{prooftree} <br>
 	\begin{prooftree}\AxiomC{$⟨⌜9⌝, I_{ANA}(⌜9⌝)⟩ ⊢ atom$}\end{prooftree}
@@ -137,3 +145,6 @@ Here, each proof is just a proof that some string in $L_{ANA}$ has a particular 
 		\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
 		\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜{=}⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} = ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ s$}
 		\end{prooftree}
+
+It is worth---that is, I highly recommend---reading each of the rules in (@ex-ana-proofs) carefully and comparing it to its corresponding rule in (@ex-ana-semantics), in order to convince yourself that the two versions of the rule say exactly the same thing.
+Note that the closure clause is only implied on the proof-based presentation.
