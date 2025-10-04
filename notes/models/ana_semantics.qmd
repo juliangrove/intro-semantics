@@ -1,0 +1,139 @@
+---
+title: "Arabic numeral arithmetic: semantics"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\True{\ct{T}}
+\def\False{\ct{F}}
+$$
+:::
+
+What we would like to do is figure out a way of associating elements of $L_{ANA}$ with *meanings*.
+In order to do this, we have to make use of a *model*---that is, one of the things that we introduced [here](overview.html).
+
+Which model, exactly, should we be using to *interpret* $L_{ANA}$?
+We'll follow the standard way of doing things and say that the model of $L_{ANA}$ is the one defined in (@ex-ana-model), which has as its domain the set $ℕ$ of natural numbers.
+
+(@ex-ana-model) $\mathcal{M}_{ANA} = ⟨ℕ, \{\True, \False\}, I_{ANA}⟩$
+
+That is, $D$ is defined to be $ℕ$---i.e., the set $\{0, 1, 2, ...\}$.
+
+What can we say about the model's interpretation function, $I_{ANA}$?
+Well, because we defined $atom$ ([here](ana_syntax.html)) to be the set $\{⌜0⌝, ..., ⌜9⌝\}$, we know that this set is the *domain* of $I_{ANA}$:
+it is the job of the model's interpretation function to map things from this set onto interpretations of some kind.
+Meanwhile, we'll choose the *codomain* of $I_{ANA}$, to be $ℕ$:
+the interpretation of any of the symbols $⌜0⌝$ through $⌜9⌝$ is just a natural number!
+
+More specifically, here's how we'll interpret the symbols in $atom$.
+
+(@ex-ana_atom_interp) $I_{ANA} : atom → ℕ$ <br><br> 
+	$I_{ANA}(⌜0⌝) = 0$ <br>
+	$I_{ANA}(⌜1⌝) = 1$ <br>
+	$I_{ANA}(⌜2⌝) = 2$ <br>
+	$I_{ANA}(⌜3⌝) = 3$ <br>
+	$I_{ANA}(⌜4⌝) = 4$ <br>
+	$I_{ANA}(⌜5⌝) = 5$ <br>
+	$I_{ANA}(⌜6⌝) = 6$ <br>
+	$I_{ANA}(⌜7⌝) = 7$ <br>
+	$I_{ANA}(⌜8⌝) = 8$ <br>
+	$I_{ANA}(⌜9⌝) = 9$ <br>
+
+Hopefully, none of these choices is particularly surprising!
+Still, it's important to point out that---while it looks a bit like we are using the interpretation function to simply "remove the corner brackets ($⌜, ⌝$)"---that's just a result of the fact that we are employing the very language that we are interpreting as part of our *metalanguage*.^[
+	Recall that our metalanguage is just the language that we're using to conduct Introduction to Semantics (LIN4803/LIN6804).
+	It consists of our natural language idiolects (as spoken and written) and a little bit of set-theoretic notation.
+	I'm assuming our idiolects (as written) make Arabic numeral arithmetic available.
+]
+Said one more time and in another way:
+there is nothing special about the symbol $⌜1⌝$ that makes it a particularly good candidate for being mapped onto the number 1.
+The choice reflects how we *use* the language $L_{ANA}$, but it is arbitrary nonetheless---a genuine Lewis-style convention.
+
+Alright.
+The time has come to define our interpretation function (or "interpretation brackets", "denotation function", what have you) $⟦·⟧_{\mathcal{M}}$ over the entirety of $L_{ANA}$.
+We will show how to do this using two different presentations.
+
+### Rules in English
+
+On the first presentation, we'll append additional clauses to the syntactic rules that were stated [here](ana_syntax.html).
+This presentation is given in (@ex-ana-semantics).
+
+(@ex-ana-semantics) 1. $atom = \{⌜0⌝, ..., ⌜9⌝\}$, and for any $x ∈ atom$, $⟦x⟧_{\mathcal{M}_{ANA}} = I_{ANA}(x)$.
+	2. $atom ⊆ n$.
+	3. If $x, y ∈ n$, then $x^{⌢}y ∈ n$, and $⟦x^{⌢}y⟧_{\mathcal{M}_{ANA}} = ⟦x⟧_{\mathcal{M}_{ANA}} * 10^{length(y)} + ⟦y⟧_{\mathcal{M}_{ANA}}$.
+	4. $n ⊆ np$.
+	5. If $x, y ∈ np$, then $⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝, ⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝ ∈ np$, and also:
+		
+	- $⟦⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝⟧_{\mathcal{M}_{ANA}} =⟦x⟧_{\mathcal{M}_{ANA}} + ⟦y⟧_{\mathcal{M}_{ANA}}$
+	- $⟦⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝⟧_{\mathcal{M}_{ANA}} =⟦x⟧_{\mathcal{M}_{ANA}} * ⟦y⟧_{\mathcal{M}_{ANA}}$
+	6. If $x, y ∈ np$, then $x^{⌢}⌜{=}⌝^{⌢}y ∈ s$, and $⟦x^{⌢}⌜{=}⌝^{⌢}y⟧_{\mathcal{M}_{ANA}} = \True$ if $⟦x⟧_{\mathcal{M}_{ANA}}$ and $⟦y⟧_{\mathcal{M}_{ANA}}$ are the same number;
+		otherwise, $⟦x^{⌢}⌜{=}⌝^{⌢}y⟧_{\mathcal{M}_{ANA}} = \False$.
+	7. Closure clause:
+		nothing else is in $n$, $np$, or $s$.
+
+Note that we are using quite a lot of mathematical notation in the metalanguage!
+That's fine---there is no point in pretending that we don't know how to add and multiply, etc.
+One thing to note is the use of the function called '$length$'.
+This is a function that maps *numerals* onto *natural numbers*---coincidentally, just like the interpretation function!
+That is:
+
+(@ex-length-function) $length : n → ℕ$
+
+But of course, it does not behave like the interpretation function at all.
+For instance, the $length(⌜12⌝)$ is not $12$---it is $2$!
+
+### Rules as proof constructors
+
+On the second presentation, we'll present the *exact same collection of rules*, but using a slightly different notation.
+Rather than writing out each rule in English, we'll encode it as a kind of rule for constructing *proofs*.
+Here, each proof is just a proof that some string in $L_{ANA}$ has a particular *category*, as well as a particular *interpretation*.
+
+(@ex-ana-semantics) 1. \begin{prooftree}\AxiomC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ atom$}\end{prooftree} <br>
+	\begin{prooftree}\AxiomC{$⟨⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ atom$}\end{prooftree} <br>
+	\begin{prooftree}\AxiomC{⋮}\end{prooftree} <br>
+	\begin{prooftree}\AxiomC{$⟨⌜9⌝, I_{ANA}(⌜9⌝)⟩ ⊢ atom$}\end{prooftree}
+	2. \begin{prooftree}
+		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ atom$}
+		\UnaryInfC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
+		\end{prooftree}
+	3. \begin{prooftree}
+		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
+		\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
+		\BinaryInfC{$⟨x^{⌢}y, ⟦x⟧_{\mathcal{M}_{ANA}} * 10^{length(y)} + ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
+		\end{prooftree}
+	4. \begin{prooftree}
+		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
+		\UnaryInfC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\end{prooftree}
+	5. 
+	- \begin{prooftree}
+		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} + ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\end{prooftree}
+	- \begin{prooftree}
+		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} * ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\end{prooftree}
+	6. \begin{prooftree}
+		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜{=}⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} = ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ s$}
+		\end{prooftree}
