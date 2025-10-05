@@ -1,0 +1,84 @@
+---
+title: "A first approximation of English"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\True{\ct{T}}
+\def\False{\ct{F}}
+$$
+:::
+
+As our second case study, let's begin developing a syntax and semantics for a small fragment of English.
+Recall that we are regarding English---just like Arabic numeral arithmetic---as a *language* (in the formal sense discussed [here](../formal_preliminaries/languages.html)).
+Thus one of the things we would like to do is define a particular set of strings---the "grammatical" strings of (some small fragment of) English.
+We can call this set (i.e., language) '$L_{\textit{Eng.}}$'.
+
+As usual, to define a language, we need an *alphabet*.
+For now, let's define our alphabet to be the one in (@ex-english-alphabet).
+
+(@ex-english-alphabet) $Σ_{\textit{Eng.}} = \{\textit{Ziggy}, \textit{Bella}, \textit{runs}, \textit{run}, \textit{jumps}, \textit{jump}, \textit{doesn't}, \textit{and}\}$
+
+Conveniently, the alphabet can also act as our set of atomic expressions---so that when we define the interpretation function $I_{\textit{Eng.}}$, we can say that the *domain* of this function is simply the set $Σ_{\textit{Eng.}}$.
+
+Without saying anything more for now about our model for English---$\mathcal{M}_{\textit{Eng.}}$---let's say a little about the lexicon.
+Let us work with the lexicon in (@ex-english-lexicon).
+
+(@ex-english-lexicon) $⟨\textit{Ziggy}, I_{\textit{Eng.}}(Ziggy)⟩ ⊢ np$ <br>
+	$⟨\textit{Bella}, I_{\textit{Eng.}}(Bella)⟩ ⊢ np$ <br>
+	$⟨\textit{runs}, I_{\textit{Eng.}}(runs)⟩ ⊢ vp$ <br>
+	$⟨\textit{run}, I_{\textit{Eng.}}(runs)⟩ ⊢ bvp$ <br>
+	$⟨\textit{jumps}, I_{\textit{Eng.}}(jumps)⟩ ⊢ vp$ <br>
+	$⟨\textit{jump}, I_{\textit{Eng.}}(jump)⟩ ⊢ bvp$ <br>
+	$⟨\textit{doesn't}, I_{\textit{Eng.}}(doesn't)⟩ ⊢ aux$ <br>
+	$⟨\textit{and}, I_{\textit{Eng.}}(and)⟩ ⊢ con$ <br>
+
+That is:
+$\textit{Ziggy}$ and $\textit{Bella}$ are our noun phrases;
+$\textit{runs}$ and $\textit{jumps}$ are our basic verb phrases;
+$\textit{run}$ and $\textit{jump}$ are our basic bare verb phrases;
+$\textit{doesn't}$ is our one auxiliary;
+and $\textit{and}$ is our one connective.
+
+Let us now provide our full set of grammatical rules.
+These rules will allow us, all at once, (i) to prove that particular strings are *expressions* of English, and (ii) to show, for any of these expressions, what its *meaning* is.
+
+(@ex-english-semantics)
+	\begin{prooftree}
+	\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{\textit{Eng.}}}⟩ ⊢ np$}
+	\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{\textit{Eng.}}}⟩ ⊢ vp$}
+	\RightLabel{Rule 1}\BinaryInfC{$⟨x^{⌢}y, ⟦y⟧_{\mathcal{M}_{\textit{Eng.}}}(⟦x⟧_{\mathcal{M}_{\textit{Eng.}}})⟩ ⊢ s$}
+	\end{prooftree} <br>
+	\begin{prooftree}
+	\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{\textit{Eng.}}}⟩ ⊢ aux$}
+	\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{\textit{Eng.}}}⟩ ⊢ bvp$}
+	\RightLabel{Rule 2}\BinaryInfC{$⟨x^{⌢}y, ⟦x⟧_{\mathcal{M}_{\textit{Eng.}}}(⟦y⟧_{\mathcal{M}_{\textit{Eng.}}})⟩ ⊢ vp$}
+	\end{prooftree} <br>
+	\begin{prooftree}
+	\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{\textit{Eng.}}}⟩ ⊢ bvp$}
+	\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{\textit{Eng.}}}⟩ ⊢ con$}
+	\AxiomC{$⟨z, ⟦z⟧_{\mathcal{M}_{\textit{Eng.}}}⟩ ⊢ bvp$}
+	\RightLabel{Rule 3}\TrinaryInfC{$⟨x^{⌢}y^{⌢}z, ⟦y⟧_{\mathcal{M}_{\textit{Eng.}}}(⟦x⟧_{\mathcal{M}_{\textit{Eng.}}}, ⟦z⟧_{\mathcal{M}_{\textit{Eng.}}})⟩ ⊢ bvp$}
+	\end{prooftree} <br>
+	\begin{prooftree}
+	\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{\textit{Eng.}}}⟩ ⊢ vp$}
+	\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{\textit{Eng.}}}⟩ ⊢ con$}
+	\AxiomC{$⟨z, ⟦z⟧_{\mathcal{M}_{\textit{Eng.}}}⟩ ⊢ vp$}
+	\RightLabel{Rule 4}\TrinaryInfC{$⟨x^{⌢}y^{⌢}z, ⟦y⟧_{\mathcal{M}_{\textit{Eng.}}}(⟦x⟧_{\mathcal{M}_{\textit{Eng.}}}, ⟦z⟧_{\mathcal{M}_{\textit{Eng.}}})⟩ ⊢ vp$}
+	\end{prooftree}

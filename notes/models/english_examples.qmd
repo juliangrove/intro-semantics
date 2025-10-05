@@ -1,0 +1,49 @@
+---
+title: "An English model and example"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\True{\ct{T}}
+\def\False{\ct{F}}
+$$
+:::
+
+Let's now say a bit more about the model, $\mathcal{M}_{\textit{Eng.}}$.
+
+(@ex-english-model-definition) $\mathcal{M}_{\textit{Eng.}} = ⟨D_{\textit{Eng.}}, \{\True, \False\}, I_{\textit{Eng.}}⟩$
+
+The domain, $D_{\textit{Eng.}}$, we can take to be the set $\{\ct{z}, \ct{b}\}$:
+
+$$D_{\textit{Eng.}} = \{\ct{z}, \ct{b}\}$$
+
+Let us also say a thing or two about the interpretation function, $I_{\textit{Eng.}}$, now.
+
+(@ex-english-interp)
+	$I_{\textit{Eng.}}(\textit{Ziggy}) = \ct{z}$ <br>
+	$I_{\textit{Eng.}}(\textit{Bella}) = \ct{b}$ <br>
+	$I_{\textit{Eng.}}(\textit{runs}) = \{\ct{z}, \ct{b}\}_{CF}$ <br>
+	$I_{\textit{Eng.}}(\textit{run}) = \{\ct{z}, \ct{b}\}_{CF}$ <br>
+	$I_{\textit{Eng.}}(\textit{jumps}) = \{\ct{z}\}_{CF}$ <br>
+	$I_{\textit{Eng.}}(\textit{jump}) = \{\ct{z}\}_{CF}$ <br>
+	$I_{\textit{Eng.}}(\textit{doesn't}) = (λf.(λx.(¬f(x))))$ <br>
+	$I_{\textit{Eng.}}(\textit{and}) = (λf.(λg.(λx.f(x) = g(x) = \True)))$
+
+
+Here's a derivation of the expression $\textit{Ziggy doesn't jump and runs}$.

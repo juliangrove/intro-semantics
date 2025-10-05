@@ -51,13 +51,13 @@ First, the alphabet:
 
 Now, for the syntax:
 
-(@ex-ana-syntax) 1. $atom = \{⌜0⌝, ..., ⌜9⌝\}$.
-	2. $atom ⊆ n$.
-	3. If $x, y ∈ n$, then $x^{⌢}y ∈ n$.
-	4. $n ⊆ np$.
-	5. If $x, y ∈ np$, then $⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝, ⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝ ∈ np$.
-	6. If $x, y ∈ np$, then $x^{⌢}⌜{=}⌝^{⌢}y ∈ s$.
-	7. Closure clause:
+(@ex-ana-syntax) Rule 1. $atom = \{⌜0⌝, ..., ⌜9⌝\}$. <br>
+	Rule 2. $atom ⊆ n$. <br>
+	Rule 3. If $x, y ∈ n$, then $x^{⌢}y ∈ n$. <br>
+	Rule 4. $n ⊆ np$. <br>
+	Rule 5. If $x, y ∈ np$, then $⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝, ⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝ ∈ np$. <br>
+	Rule 6. If $x, y ∈ np$, then $x^{⌢}⌜{=}⌝^{⌢}y ∈ s$. <br>
+	Rule 7. Closure clause:
 		nothing else is in $n$, $np$, or $s$.
 
 In words, these rules say (respectively):

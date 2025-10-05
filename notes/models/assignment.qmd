@@ -44,11 +44,13 @@ As it happens, a group within the larger population uses a system a lot like Ara
 This group uses a base-7 number system, and the atomic numerals have different meanings than they do in Arabic numeral arithmetic.
 We can call the language they use for arithmetic calculations $L_{NANA}$ (not Arabic numeral arithmetic).
 
-To be more precise, for this group within the population which lives on the planet orbiting Proxima Centauri (and which definitely exists since I would never lie to you), the set of atomic numerals is as follows:
+To be more precise, for this group within the population which lives on the planet orbiting Proxima Centauri,^[
+	It really exists!
+] the set of *atomic* numerals is the following one:
 
 $$atom = \{⌜1⌝, ⌜2⌝, ⌜3⌝, ⌜4⌝, ⌜5⌝, ⌜6⌝, ⌜7⌝\}$$
 
-and the interpretation function of the model, $I_{NANA}$, is as follows:
+Meanwhile, the interpretation function of the model employed by this group, $I_{NANA}$, is the following:
 
 $$I_{NANA}(⌜1⌝) = 6$$
 $$I_{NANA}(⌜2⌝) = 5$$
@@ -58,21 +60,25 @@ $$I_{NANA}(⌜5⌝) = 2$$
 $$I_{NANA}(⌜6⌝) = 1$$
 $$I_{NANA}(⌜7⌝) = 0$$
 
-The model of $L_{NANA}$ employed by this group is thus
+The full model of $L_{NANA}$ employed by this group is thus:
 
 $$\mathcal{M}_{NANA} = ⟨ℕ, \{\True, \False\}, I_{NANA}⟩$$
 
 One more thing.
-Instead of the Rule 3 which we defined [here](ana_semantics.html), these guys use the following alternative Rule 3:
+Instead of the Rule 3 which we defined [here](ana_semantics.html), these guys use the following *alternative* Rule 3:
 
-3. \begin{prooftree}
-   \AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
-   \AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
-   \BinaryInfC{$⟨x^{⌢}y, ⟦x⟧_{\mathcal{M}_{ANA}} * 7^{length(y)} + ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
-   \end{prooftree}
+\begin{prooftree}
+\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
+\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
+\RightLabel{Rule 3}\BinaryInfC{$⟨x^{⌢}y, ⟦x⟧_{\mathcal{M}_{ANA}} * 7^{length(y)} + ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
+\end{prooftree}
 
 The rules of for generating strings of $L_{NANA}$ and their interpretations are otherwise identical to those for generating strings of $L_{ANA}$ and their interpretations.
 
-Show that $⌜((53 + 6) × 5) = 24⌝$ is a sentence (i.e., an $s$) of $L_{NANA}$, as well as what it's interpretation is.
+Show that $⌜((53 + 6) × 5) = 24⌝$ is a sentence (i.e., an $s$) of $L_{NANA}$, and show what its interpretation is.
 
 ### Part 3
+
+Using the English grammar fragment defined [here](english.html) in conjunction with the model defined [here](english_examples.html), show that the string in (@ex-bella) is a sentence (i.e., an $s$), and show what its interpretation is.
+
+(@ex-bella) Bella doesn't jump and run.

@@ -82,17 +82,19 @@ Both presentations say exactly the same thing.
 On the first presentation, we'll append additional clauses to the syntactic rules that were stated [here](ana_syntax.html).
 This presentation is given in (@ex-ana-semantics).
 
-(@ex-ana-semantics) 1. $atom = \{⌜0⌝, ..., ⌜9⌝\}$, and for any $x ∈ atom$, $⟦x⟧_{\mathcal{M}_{ANA}} = I_{ANA}(x)$.
-	2. $atom ⊆ n$.
-	3. If $x, y ∈ n$, then $x^{⌢}y ∈ n$, and $⟦x^{⌢}y⟧_{\mathcal{M}_{ANA}} = ⟦x⟧_{\mathcal{M}_{ANA}} * 10^{length(y)} + ⟦y⟧_{\mathcal{M}_{ANA}}$.
-	4. $n ⊆ np$.
-	5. If $x, y ∈ np$, then $⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝, ⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝ ∈ np$, and also:
-		
+(@ex-ana-semantics)
+	Rule 1. $atom = \{⌜0⌝, ..., ⌜9⌝\}$, and for any $x ∈ atom$, $⟦x⟧_{\mathcal{M}_{ANA}} = I_{ANA}(x)$. <br><br>
+	Rule 2. $atom ⊆ n$. <br><br>
+	Rule 3. If $x, y ∈ n$, then $x^{⌢}y ∈ n$, and $⟦x^{⌢}y⟧_{\mathcal{M}_{ANA}} = ⟦x⟧_{\mathcal{M}_{ANA}} * 10^{length(y)} + ⟦y⟧_{\mathcal{M}_{ANA}}$. <br><br>
+	Rule 4. $n ⊆ np$. <br><br>
+	Rule 5. If $x, y ∈ np$, then $⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝, ⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝ ∈ np$, and also:
+	
 	- $⟦⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝⟧_{\mathcal{M}_{ANA}} =⟦x⟧_{\mathcal{M}_{ANA}} + ⟦y⟧_{\mathcal{M}_{ANA}}$
 	- $⟦⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝⟧_{\mathcal{M}_{ANA}} =⟦x⟧_{\mathcal{M}_{ANA}} * ⟦y⟧_{\mathcal{M}_{ANA}}$
-	6. If $x, y ∈ np$, then $x^{⌢}⌜{=}⌝^{⌢}y ∈ s$, and $⟦x^{⌢}⌜{=}⌝^{⌢}y⟧_{\mathcal{M}_{ANA}} = \True$ if $⟦x⟧_{\mathcal{M}_{ANA}}$ and $⟦y⟧_{\mathcal{M}_{ANA}}$ are the same number;
-		otherwise, $⟦x^{⌢}⌜{=}⌝^{⌢}y⟧_{\mathcal{M}_{ANA}} = \False$.
-	7. Closure clause:
+	
+	Rule 6. If $x, y ∈ np$, then $x^{⌢}⌜{=}⌝^{⌢}y ∈ s$, and $⟦x^{⌢}⌜{=}⌝^{⌢}y⟧_{\mathcal{M}_{ANA}} = \True$ if $⟦x⟧_{\mathcal{M}_{ANA}}$ and $⟦y⟧_{\mathcal{M}_{ANA}}$ are the same number;
+		otherwise, $⟦x^{⌢}⌜{=}⌝^{⌢}y⟧_{\mathcal{M}_{ANA}} = \False$. <br><br>
+	Rule 7. Closure clause:
 		nothing else is in $n$, $np$, or $s$.
 
 Note that we are using quite a lot of mathematical notation in the metalanguage!
@@ -112,38 +114,39 @@ On the second presentation, we'll present the *exact same collection of rules*, 
 Rather than writing out each rule in English, we'll encode it as a kind of rule for constructing *proofs*.
 Here, each proof, or *derivation*, is just a proof that some string in $L_{ANA}$ has a particular *category*, as well as a particular *interpretation*.
 
-(@ex-ana-proofs) 1. \begin{prooftree}\AxiomC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ atom$}\end{prooftree} <br>
+(@ex-ana-proofs) Lexicon.
+	\begin{prooftree}\AxiomC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ atom$}\end{prooftree} <br>
 	\begin{prooftree}\AxiomC{$⟨⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ atom$}\end{prooftree} <br>
 	\begin{prooftree}\AxiomC{⋮}\end{prooftree} <br>
 	\begin{prooftree}\AxiomC{$⟨⌜9⌝, I_{ANA}(⌜9⌝)⟩ ⊢ atom$}\end{prooftree}
-	2. \begin{prooftree}
+	Rules.
+		\begin{prooftree}
 		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ atom$}
-		\UnaryInfC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
-		\end{prooftree}
-	3. \begin{prooftree}
+		\RightLabel{Rule 2}\UnaryInfC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
+		\end{prooftree} <br>
+		\begin{prooftree}
 		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
 		\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
-		\BinaryInfC{$⟨x^{⌢}y, ⟦x⟧_{\mathcal{M}_{ANA}} * 10^{length(y)} + ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
-		\end{prooftree}
-	4. \begin{prooftree}
+		\RightLabel{Rule 3}\BinaryInfC{$⟨x^{⌢}y, ⟦x⟧_{\mathcal{M}_{ANA}} * 10^{length(y)} + ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
+		\end{prooftree} <br>
+		\begin{prooftree}
 		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
-		\UnaryInfC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
-		\end{prooftree}
-	5. 
-	- \begin{prooftree}
+		\RightLabel{Rule 4}\UnaryInfC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\end{prooftree} <br>
+		\begin{prooftree}
 		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
 		\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
-		\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} + ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
-		\end{prooftree}
-	- \begin{prooftree}
+		\RightLabel{Rule 5}\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} + ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\end{prooftree} <br>
+		\begin{prooftree}
 		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
 		\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
-		\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} * ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
-		\end{prooftree}
-	6. \begin{prooftree}
+		\RightLabel{Rule 5}\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} * ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
+		\end{prooftree} <br>
+		\begin{prooftree}
 		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
 		\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
-		\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜{=}⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} = ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ s$}
+		\RightLabel{Rule 6}\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜{=}⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} = ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ s$}
 		\end{prooftree}
 
 It is worth---that is, I highly recommend---reading each of the rules in (@ex-ana-proofs) carefully and comparing it to its corresponding rule in (@ex-ana-semantics), in order to convince yourself that the two versions of the rule say exactly the same thing.
