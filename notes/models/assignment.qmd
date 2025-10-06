@@ -27,17 +27,17 @@ $$
 
 Due on Monday, October 13th.
 
+<!-- ### Part 1 -->
+
+<!-- According to the collection of syntactic rules provided [here](ana_semantics.html) in (5) (with semantics) and [here](ana_syntax.html) in (2) (without semantics), the $np$ $⌜537⌝$ is syntactically ambiguous. -->
+<!-- Either (a) $⌜5⌝$ combines with $⌜3⌝$ first, and then $⌜53⌝$ combines with $⌜7⌝$; -->
+<!-- or (b) $⌜3⌝$ and $⌜7⌝$ combine, and then $⌜37⌝$ combines with $⌜5⌝$. -->
+<!-- Example 1 in our [examples](ana_examples.html) shows the second way of doing things, where $⌜37⌝$ combines with $⌜5⌝$. -->
+
+<!-- Show the first way. -->
+<!-- Does doing things the first way change the interpretation? -->
+
 ### Part 1
-
-According to the collection of syntactic rules provided [here](ana_semantics.html) in (5) (with semantics) and [here](ana_syntax.html) in (2) (without semantics), the $np$ $⌜537⌝$ is syntactically ambiguous.
-Either (a) $⌜5⌝$ combines with $⌜3⌝$ first, and then $⌜53⌝$ combines with $⌜7⌝$;
-or (b) $⌜3⌝$ and $⌜7⌝$ combine, and then $⌜37⌝$ combines with $⌜5⌝$.
-Example 1 in our [examples](ana_examples.html) shows the second way of doing things, where $⌜37⌝$ combines with $⌜5⌝$.
-
-Show the first way.
-Does doing things the first way change the interpretation?
-
-### Part 2
 
 There is a planet orbiting [Proxima Centauri](https://en.wikipedia.org/wiki/Proxima_Centauri) that has a population of organisms which are very human-like.
 As it happens, a group within the larger population uses a system a lot like Arabic numeral arithmetic to perform arithmetic calculations, except that the syntax and semantics are slightly different.
@@ -77,8 +77,26 @@ The rules of for generating strings of $L_{NANA}$ and their interpretations are 
 
 Show that $⌜((53 + 6) × 5) = 24⌝$ is a sentence (i.e., an $s$) of $L_{NANA}$, and show what its interpretation is.
 
-### Part 3
+### Part 2
 
 Using the English grammar fragment defined [here](english.html) in conjunction with the model defined [here](english_examples.html), show that the string in (@ex-bella) is a sentence (i.e., an $s$), and show what its interpretation is.
 
 (@ex-bella) Bella doesn't jump and run.
+
+
+### Part 3
+
+As you know, English does not only have sentences like (@ex-bella).
+It *also* has sentences like (@ex-bella-two-clauses).
+
+(@ex-bella-two-clauses) Bella doesn't jump and Bella doesn't run.
+
+Let us propose that in addition to the word *and*, English has another word, *and2*, which is *pronounced* exactly the same way as *and* is pronounced (i.e., [æːnd]), but which coordinates sentences instead of verb phrases.
+Thus *and* is the variant of the coordinator that appears in (@ex-bella);
+meanwhile, *and2* is the variant of the coordinator that appears in (@ex-bella-two-clauses).
+
+Provide a lexical entry for the variant of the coordinator which appears in (@ex-bella-two-clauses)---something that can be added to the lexicon given in [A first approximation of English](english.html).
+Give a derivation showing that (@ex-bella-two-clauses) is a sentence with a meaning, using this lexical entry.
+Does your lexical entry ensure that (@ex-bella) and (@ex-bella-two-clauses) entail each other?
+(If so, how so?)
+

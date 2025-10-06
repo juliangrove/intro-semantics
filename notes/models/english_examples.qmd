@@ -33,7 +33,7 @@ The domain, $D_{\textit{Eng.}}$, we can take to be the set $\{\ct{z}, \ct{b}\}$:
 
 $$D_{\textit{Eng.}} = \{\ct{z}, \ct{b}\}$$
 
-Let us also say a thing or two about the interpretation function, $I_{\textit{Eng.}}$, now.
+Let us now also say a thing or two about the interpretation function, $I_{\textit{Eng.}}$.
 
 (@ex-english-interp)
 	$I_{\textit{Eng.}}(\textit{Ziggy}) = \ct{z}$ <br>
@@ -43,7 +43,7 @@ Let us also say a thing or two about the interpretation function, $I_{\textit{En
 	$I_{\textit{Eng.}}(\textit{jumps}) = \{\ct{z}\}_{CF}$ <br>
 	$I_{\textit{Eng.}}(\textit{jump}) = \{\ct{z}\}_{CF}$ <br>
 	$I_{\textit{Eng.}}(\textit{doesn't}) = (λf.(λx.(¬f(x))))$ <br>
-	$I_{\textit{Eng.}}(\textit{and}) = (λf.(λg.(λx.f(x) = g(x) = \True)))$
+	$I_{\textit{Eng.}}(\textit{and}) = (λ⟨f, g⟩.(λx.f(x) = g(x) = \True))$
 
 
 Here's a derivation of the expression $\textit{Ziggy doesn't jump and runs}$.
