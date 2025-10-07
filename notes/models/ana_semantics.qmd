@@ -38,7 +38,8 @@ That is, $D$ is defined to be $ℕ$---i.e., the set $\{0, 1, 2, ...\}$.
 What can we say about the model's interpretation function, $I_{ANA}$?
 Well, because we defined $atom$ ([here](ana_syntax.html)) to be the set $\{⌜0⌝, ..., ⌜9⌝\}$, we know that this set is the *domain* of $I_{ANA}$:
 it is the job of the model's interpretation function to map things from this set onto interpretations of some kind.
-What about the codomain?
+
+What about the codomain of $I_{ANA}$?
 Since we're having $I_{ANA}$ map elements *from* the set $\{⌜0⌝, ..., ⌜9⌝\}$, we should choose the *codomain* of $I_{ANA}$---the set it maps these symbols *to*---to be $ℕ$:
 the interpretation of any of the symbols $⌜0⌝$ through $⌜9⌝$ is just a natural number!
 
@@ -59,10 +60,10 @@ Specifically, we'll define $I_{ANA}$ as in (@ex-ana_atom_interp).
 Hopefully, none of these choices is particularly surprising!
 Still, it's important to point out that---while it looks a bit like we are using the interpretation function to simply "remove the corner brackets ($⌜, ⌝$)"---that's just due to the fact that we are employing the very language that we are interpreting as part of our *metalanguage*.^[
 	Recall that our metalanguage is just the language that we're using to conduct Introduction to Semantics (LIN4803/LIN6804).
-	It consists of our natural language idiolects (as spoken and written) and a little bit of set-theoretic notation.
+	It consists of our natural language idiolects (as spoken and written) and a little bit of set-theoretic notation, as well as certain other mathematical notation.
 	I'm assuming our idiolects (as written) make Arabic numeral arithmetic available.
 ]
-Said once more and in another way:
+Said another way:
 there is nothing special about the symbol $⌜1⌝$ that makes it a particularly good candidate for being mapped onto the number 1.
 The choice reflects how we *use* the language $L_{ANA}$, but it is arbitrary nonetheless---a genuine Lewis-style convention.
 
@@ -75,11 +76,11 @@ We will show how to do this using two different presentations.^[
 One presentation uses English and provides the rules mostly as conditional *if then* statements.
 The other presentation is a bit more formally systematic:
 it provides formal rules for constructing *proofs*.
-Both presentations say exactly the same thing.
+Importantly, both presentations *say* exactly the same thing.
 
 ### Rules in English
 
-On the first presentation, we'll append additional clauses to the syntactic rules that were stated [here](ana_syntax.html).
+On the first presentation, we'll append additional clauses to the syntactic rules that were stated in [Arabic numeral arithmetic: syntax](ana_syntax.html).
 This presentation is given in (@ex-ana-semantics).
 
 (@ex-ana-semantics)
@@ -100,12 +101,14 @@ This presentation is given in (@ex-ana-semantics).
 Note that we are using quite a lot of mathematical notation in the metalanguage!
 That's fine---there is no point in pretending that we don't know how to add and multiply, etc.
 One thing to note is the use of the function called '$length$' in Rule 3.
-This is a function that maps *numerals* onto *natural numbers*---coincidentally, just like the interpretation function does!
+This is a function that maps *strings* onto *natural numbers*---kind of like the interpretation function does!
 That is:
 
-(@ex-length-function) $length : n → ℕ$
+(@ex-length-function) $length : Σ_{ANA}^* → ℕ$
 
-But of course, aside from its domain and codomain, it does not behave like the interpretation function at all.
+That is, its domain is entire the set of strings over the alphabet (here I've used the ["Kleene star" notation](https://en.wikipedia.org/wiki/Kleene_star)), and its codomain is the set of natural numbers.
+
+Of course, $length$ does not *behave* like the interpretation function at all.
 For instance, $length(⌜12⌝)$ is not $12$---it is $2$!
 
 ### Rules as proof constructors
@@ -149,5 +152,5 @@ Here, each proof, or *derivation*, is just a proof that some string in $L_{ANA}$
 		\RightLabel{Rule 6}\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜{=}⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} = ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ s$}
 		\end{prooftree}
 
-It is worth---that is, I highly recommend---reading each of the rules in (@ex-ana-proofs) carefully and comparing it to its corresponding rule in (@ex-ana-semantics), in order to convince yourself that the two versions of the rule say exactly the same thing.
-Note that the closure clause is only implied on the proof-based presentation.
+It is worth---that is, I highly recommend---reading each of the rules in (@ex-ana-proofs) carefully and comparing it to its corresponding rule in (@ex-ana-semantics), in order to convince yourself that its two versions say exactly the same thing.
+Note that the closure clause is only implied on the second presentation.

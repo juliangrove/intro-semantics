@@ -54,7 +54,7 @@ $\textit{Ziggy}$ and $\textit{Bella}$ are our noun phrases;
 $\textit{runs}$ and $\textit{jumps}$ are our basic verb phrases;
 $\textit{run}$ and $\textit{jump}$ are our basic bare verb phrases;
 $\textit{doesn't}$ is our one auxiliary;
-and $\textit{and}$ is our one connective.
+and $\textit{and}$ is our one connective (for now).
 
 Let us now provide our full set of grammatical rules.
 These rules will allow us, all at once, (i) to prove that particular strings are *expressions* of English, and (ii) to show, for any of these expressions, what its *meaning* is.

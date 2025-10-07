@@ -33,13 +33,13 @@ The first are just symbols, currently meaningless, while the second are elements
 It's important to keep these two distinct:
 while the former are things in the language---the set that we are trying to define and give an interpretation to---the latter will be elements of the domain of the *model* for the language.
 
-In $L_{ANA}$ has a few different kinds of expressions which are useful to distinguish.
+$L_{ANA}$ has a few different kinds of expressions which are useful to distinguish.
 First, it has *numerals*.
-These are expressions like $⌜1⌝$, $⌜2⌝$, $⌜57⌝$, and so on.
+These are strings like $⌜1⌝$, $⌜2⌝$, $⌜57⌝$, and so on.
 Second, it has *complex expressions*.
-These are expressions involving the symbols for the addition and multiplication operators, like $⌜(1 + 2)⌝$, $⌜((3 × 4) + 7)⌝$, and so on.
+These are strings containing the symbols for the addition and multiplication operators, like $⌜(1 + 2)⌝$, $⌜((3 × 4) + 7)⌝$, and so on.
 Finally, it has equations.
-These are expressions involving the "equals" symbol, like $⌜37 = (5 × 6)⌝$.
+These are strings containing the "equals" symbol, like $⌜37 = (5 × 6)⌝$.
 
 The syntax of $L_{ANA}$ can be described by the rules in (@ex-ana-syntax) (based on the alphabet in (@ex-ana-alphabet)).
 Note that we have four categories total:

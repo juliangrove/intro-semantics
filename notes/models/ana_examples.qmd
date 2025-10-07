@@ -44,7 +44,7 @@ For the first example let's show that $⌜537⌝$ is an $np$ (and that it has a 
 \RightLabel{Rule 4}\UnaryInfC{$⟨⌜537⌝, I_{ANA}(⌜5⌝) * 10^{length(⌜37⌝)} + I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ np$}
 \end{prooftree}
 
-The thing we've proved is the statement in the very last line of this derivation:
+What's proved is the statement in the very last line of this derivation:
 that the string $⌜537⌝$ has the interpretation
 $$I_{ANA}(⌜5⌝) * 10^{length(⌜37⌝)} + I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)$$
 and the category $np$.

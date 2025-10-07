@@ -44,13 +44,11 @@ As it happens, a group within the larger population uses a system a lot like Ara
 This group uses a base-7 number system, and the atomic numerals have different meanings than they do in Arabic numeral arithmetic.
 We can call the language they use for arithmetic calculations $L_{NANA}$ (not Arabic numeral arithmetic).
 
-To be more precise, for this group within the population which lives on the planet orbiting Proxima Centauri,^[
-	It really exists!
-] the set of *atomic* numerals is the following one:
+To be more precise, for this group within the population which lives on the planet orbiting Proxima Centauri, the set of *atomic* numerals is the following one:
 
 $$atom = \{⌜1⌝, ⌜2⌝, ⌜3⌝, ⌜4⌝, ⌜5⌝, ⌜6⌝, ⌜7⌝\}$$
 
-Meanwhile, the interpretation function of the model employed by this group, $I_{NANA}$, is the following:
+Meanwhile, the interpretation function of the model employed by this group, $I_{NANA}$, is the following one:
 
 $$I_{NANA}(⌜1⌝) = 6$$
 $$I_{NANA}(⌜2⌝) = 5$$
@@ -65,7 +63,7 @@ The full model of $L_{NANA}$ employed by this group is thus:
 $$\mathcal{M}_{NANA} = ⟨ℕ, \{\True, \False\}, I_{NANA}⟩$$
 
 One more thing.
-Instead of the Rule 3 which we defined [here](ana_semantics.html), these guys use the following *alternative* Rule 3:
+Instead of the Rule 3 which we defined in [Arabic numeral arithmetic: semantics](ana_semantics.html), these guys use the following *alternative* Rule 3:
 
 \begin{prooftree}
 \AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ n$}
@@ -75,11 +73,11 @@ Instead of the Rule 3 which we defined [here](ana_semantics.html), these guys us
 
 The rules of for generating strings of $L_{NANA}$ and their interpretations are otherwise identical to those for generating strings of $L_{ANA}$ and their interpretations.
 
-Show that $⌜((53 + 6) × 5) = 24⌝$ is a sentence (i.e., an $s$) of $L_{NANA}$, and show what its interpretation is.
+Show that $⌜((53 + 6) × 5) = 24⌝$ is a sentence (i.e., an $s$) of $L_{NANA}$, and show what its interpretation in $\mathcal{M}_{NANA}$ is.
 
 ### Part 2
 
-Using the English grammar fragment defined [here](english.html) in conjunction with the model defined [here](english_examples.html), show that the string in (@ex-bella) is a sentence (i.e., an $s$), and show what its interpretation is.
+Using the English grammar fragment defined in [A first approximation of English](english.html) in conjunction with the model defined in [An English model and example](english_examples.html), show that the string in (@ex-bella) is a sentence (i.e., an $s$), and show what its interpretation is.
 
 (@ex-bella) Bella doesn't jump and run.
 
@@ -91,12 +89,11 @@ It *also* has sentences like (@ex-bella-two-clauses).
 
 (@ex-bella-two-clauses) Bella doesn't jump and Bella doesn't run.
 
-Let us propose that in addition to the word *and*, English has another word, *and2*, which is *pronounced* exactly the same way as *and* is pronounced (i.e., [æːnd]), but which coordinates sentences instead of verb phrases.
-Thus *and* is the variant of the coordinator that appears in (@ex-bella);
-meanwhile, *and2* is the variant of the coordinator that appears in (@ex-bella-two-clauses).
+Let us propose that in addition to the word *and*, English has another word, *and2*, which is *pronounced* exactly the same way as *and* is pronounced (i.e., [æːnd]), but which coordinates *sentences* instead of verb phrases.
+Thus *and* is the variant of the coordinator that appears in (@ex-bella), while *and2* is the variant of the coordinator that appears in (@ex-bella-two-clauses).
 
 Provide a lexical entry for the variant of the coordinator which appears in (@ex-bella-two-clauses)---something that can be added to the lexicon given in [A first approximation of English](english.html).
 Give a derivation showing that (@ex-bella-two-clauses) is a sentence with a meaning, using this lexical entry.
 Does your lexical entry ensure that (@ex-bella) and (@ex-bella-two-clauses) entail each other?
-(If so, how so?)
+If so, how does it ensure this?
 

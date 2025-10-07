@@ -25,6 +25,8 @@ $$
 $$
 :::
 
+#### The model
+
 Let's now say a bit more about the model, $\mathcal{M}_{\textit{Eng.}}$.
 
 (@ex-english-model-definition) $\mathcal{M}_{\textit{Eng.}} = ⟨D_{\textit{Eng.}}, \{\True, \False\}, I_{\textit{Eng.}}⟩$
@@ -34,6 +36,14 @@ The domain, $D_{\textit{Eng.}}$, we can take to be the set $\{\ct{z}, \ct{b}\}$:
 $$D_{\textit{Eng.}} = \{\ct{z}, \ct{b}\}$$
 
 Let us now also say a thing or two about the interpretation function, $I_{\textit{Eng.}}$.
+Consistent with our grammatical rules, we will:
+
+- interpret noun phrases as elements of the domain,
+- interpret verb phrases as characteristic functions of sets,
+- interpret auxiliaries as functions from characteristic functions to characteristic functions,
+- and interpret connectives as functions from pairs of characteristic functions to characteristic functions.
+
+Here we go:
 
 (@ex-english-interp)
 	$I_{\textit{Eng.}}(\textit{Ziggy}) = \ct{z}$ <br>
@@ -42,8 +52,156 @@ Let us now also say a thing or two about the interpretation function, $I_{\texti
 	$I_{\textit{Eng.}}(\textit{run}) = \{\ct{z}, \ct{b}\}_{CF}$ <br>
 	$I_{\textit{Eng.}}(\textit{jumps}) = \{\ct{z}\}_{CF}$ <br>
 	$I_{\textit{Eng.}}(\textit{jump}) = \{\ct{z}\}_{CF}$ <br>
-	$I_{\textit{Eng.}}(\textit{doesn't}) = (λf.(λx.(¬f(x))))$ <br>
+	$I_{\textit{Eng.}}(\textit{doesn't}) = (λf.(λx.¬f(x)))$ <br>
 	$I_{\textit{Eng.}}(\textit{and}) = (λ⟨f, g⟩.(λx.f(x) = g(x) = \True))$
 
+Recall the notation $(·)_{CF}$, which we use to form characteristic functions out of sets.
+Given any subset ($S$) of the domain $D$:
+
+$$S_{CF} ≝ (λx.x ∈ S)$$
+
+That is, a characteristic function of such a subset $D$ is a function whose domain is $D$ itself---$\{\ct{z}, \ct{b}\}$ above---and whose codomain is the set of truth values.
+Further, this function gives back $\True$ on any element of the domain which is a member of $S$ (otherwise, it gives back $\False$).
+
+Also recall the "negation" function $¬ : \{\True, \False\} → \{\True, \False\}$.
+This function just flips $\True$ to $\False$ and $\False$ to $\True$:
+
+$$¬\True = \False$$
+$$¬\False = \True$$
+
+Alright.
+It is time to apply our lexicon definition and grammatical rules from earlier---together with this model definition---to an example expression of English.
+
+#### Deriving an example
 
 Here's a derivation of the expression $\textit{Ziggy doesn't jump and runs}$.
+(Note that you may need to scroll right to see everything.)
+
+\begin{prooftree}
+\AxiomC{$⟨\textit{Ziggy}, I_{\textit{Eng.}}(Ziggy)⟩ ⊢ np$}
+\AxiomC{$⟨\textit{doesn't}, I_{\textit{Eng.}}(doesn't)⟩ ⊢ aux$}
+\AxiomC{$⟨\textit{jump}, I_{\textit{Eng.}}(jump)⟩ ⊢ bvp$}
+\RightLabel{Rule 2}\BinaryInfC{$⟨\textit{doesn't jump}, I_{\textit{Eng.}}(doesn't)(I_{\textit{Eng.}}(jump))⟩ ⊢ vp$}
+\AxiomC{$⟨\textit{and}, I_{\textit{Eng.}}(and)⟩ ⊢ con$}
+\AxiomC{$⟨\textit{runs}, I_{\textit{Eng.}}(runs)⟩ ⊢ vp$}
+\RightLabel{Rule 3}\TrinaryInfC{$⟨\textit{doesn't jump and runs}, I_{\textit{Eng.}}(and)(I_{\textit{Eng.}}(doesn't)(I_{\textit{Eng.}}(jump)), I_{\textit{Eng.}}(runs))⟩ ⊢ vp$}
+\RightLabel{Rule 1}\BinaryInfC{$⟨\textit{Ziggy doesn't jump and runs}, I_{\textit{Eng.}}(and)(I_{\textit{Eng.}}(doesn't)(I_{\textit{Eng.}}(jump)), I_{\textit{Eng.}}(runs))(I_{\textit{Eng.}}(Ziggy))⟩ ⊢ s$}
+\end{prooftree}
+
+#### Simplifying the result
+
+Now, all we have to do is substitute the cases in the definition of $I_{\textit{Eng.}}$ in (@ex-english-interp) for their occurrences in the last line of this derivation.
+If we do this we get:
+
+$$(λ⟨f, g⟩.(λx.f(x) = g(x) = \True))((λf.(λx.¬f(x)))(\{\ct{z}\}_{CF}), \{\ct{z}, \ct{b}\}_{CF})(\ct{z})$$
+
+This is a monster of a metalanguage expression!
+Fear not:
+it is quite straightforward to reduce it into something simple, as long as we are careful.
+One thing we need to be careful about is where all of the parentheses are!
+
+Note that this expression can be divided up into three main parts.
+First, there is a *function*:
+
+$$(λ⟨f, g⟩.(λx.f(x) = g(x) = \True))$$
+
+That's the first part.
+The second part is the function's *first argument*, which is a *pair*:
+
+$$⟨(λf.(λx.¬f(x)))(\{\ct{z}\}_{CF}), \{\ct{z}, \ct{b}\}_{CF}⟩$$
+
+And the third part is the function's *second argument*, which is just Ziggy:
+
+$$\ct{z}$$
+
+Importantly, the first argument of the function---the pair---is somewhat complex:
+it itself can be reduced into something simpler!
+Let's talk about that.
+
+#### Simplifying the first argument
+
+The first argument of the main expression above
+
+$$⟨(λf.(λx.¬f(x)))(\{\ct{z}\}_{CF}), \{\ct{z}, \ct{b}\}_{CF}⟩$$
+
+is a pair, so it has two components.
+The first component of this pair is itself a function applied to an argument;
+specifically, it is the interpretation of *doesn't* applied to the interpretation of *jump*:
+
+$$(λf.(λx.¬f(x)))(\{\ct{z}\}_{CF})$$
+
+Let us simplify this expression by first getting rid of the $λf$ at the beginning of the *function* and substituting the *argument*, $\{\ct{z}\}_{CF}$, for all occurrences of $f$ that appear inside of the function.
+Indeed, there is only one occurrence, and we get:
+
+$$(λx.¬\{\ct{z}\}_{CF}(x))$$
+
+Great!
+If we put this result back into the pair we started with, we end up with the following pair, which is *equivalent* to the one we needed to simplify:
+
+$$⟨(λx.¬\{\ct{z}\}_{CF}(x)), \{\ct{z}, \ct{b}\}_{CF}⟩$$
+
+#### Simplifying the main function applied to the first argument
+
+If we apply the main function to its (now simplified) first argument, we obtain:
+
+$$(λ⟨f, g⟩.(λx.f(x) = g(x) = \True))((λx.¬\{\ct{z}\}_{CF}(x)), \{\ct{z}, \ct{b}\}_{CF})$$
+
+This complex metalanguage expression may be reduced as well.
+In particular, we should substitute
+
+$$(λx.¬\{\ct{z}\}_{CF}(x))$$
+
+in for the $f$ component of the function's pair-shaped argument;
+and we should substitute
+
+$$\{\ct{z}, \ct{b}\}_{CF}$$
+
+for the $g$ component of this argument.
+As before, the substitution should occur *inside* the function itself, after we get rid of the $λ⟨f, g⟩$.
+If we do this complex substitution, we end up with
+
+$$(λx.(λx.¬\{\ct{z}\}_{CF}(x))(x) = \{\ct{z}, \ct{b}\}_{CF}(x) = \True)$$
+
+Having performed *this* substitution, we end up with *another* expression that can be simplified---specifically, the one to the left of the first equals sign:
+
+$$(λx.¬\{\ct{z}\}_{CF}(x))(x)$$
+
+This, too, is a function---$(λx.¬\{\ct{z}\}_{CF}(x))$---applied to an argument---$x$.
+In this case, we have to get rid of the $λx$ and---perhaps, unintuitively---substitute $x$ for the $x$ inside the function!
+No problem.
+If we do that, we get
+
+$$¬\{\ct{z}\}_{CF}(x)$$
+
+If we now try to recover the original function applied to its first argument---that is by replacing $(λx.¬\{\ct{z}\}_{CF}(x))(x)$ with its simplified version---we get
+
+$$(λx.¬\{\ct{z}\}_{CF}(x) = \{\ct{z}, \ct{b}\}_{CF}(x) = \True)$$
+
+It's much easier to see now that this is just a characteristic function of some set:
+it is the characteristic function of the set of elements of the domain ($\{\ct{z}, \ct{b}\}$) such that it is *true* that that element is not in the set $\{\ct{z}\}$ and it is *also* true that element *is* in the set $\{\ct{z}, \ct{b}\}$.
+That's just the characteristic function of the set containing $\ct{b}$---$\{\ct{b}\}_{CF}$!
+
+Since this is the result of applying the main function to its first argument, we now have to apply the main function---already applied to its first argument---to its *second* argument.
+
+#### Simplifying the main function (already applied to its first argument) applied to its second argument
+
+Now that we have the result of applying the main function to its first argument, we can recover the original function applied to *both* its arguments by replacing the relevant part with the result we got.
+If we do this, we get
+
+$$(λx.¬\{\ct{z}\}_{CF}(x) = \{\ct{z}, \ct{b}\}_{CF}(x) = \True)(\ct{z})$$
+
+Thus, all we have remaining is one more substitution.
+In this case, we need to get rid of the $λx$ and substitute $\ct{z}$ inside the function, getting
+
+$$¬\{\ct{z}\}_{CF}(\ct{z}) = \{\ct{z}, \ct{b}\}_{CF}(\ct{z}) = \True$$
+
+This whole expression evaluates to $\True$ just in case $¬\{\ct{z}\}_{CF}(\ct{z})$ and $\{\ct{z}, \ct{b}\}_{CF}(\ct{z})$ are both true.
+Well... because $\{\ct{z}\}_{CF}(\ct{z})$ is $\True$, we have that $¬\{\ct{z}\}_{CF}(\ct{z})$ is $\False$.
+So, the meaning of *Ziggy doesn't jump and runs* in $\mathcal{M}_{\textit{Eng.}}$ is $\False = \True = \True$.
+Otherwise, known as $\False$!
+
+#### Final thoughts
+
+It is worth going back up to the model definition and inspecting the meanings we provided for *jump* and *runs*.
+Hopefully, you can convince yourself that *Ziggy doesn't run and jumps* really [should]{.underline} be false---specifically, because Ziggy runs.
+I think it is then worth reflecting on the fact that we actually got this intuitive result in the end, simply by applying the rules of our grammar---carefully, but ultimately in a completely deterministic and mindless way---and then simplifying the resulting metalanguage expression.
