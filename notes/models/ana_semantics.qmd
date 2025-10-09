@@ -149,7 +149,7 @@ Here, each proof, or *derivation*, is just a proof that some string in $L_{ANA}$
 		\begin{prooftree}
 		\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
 		\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ np$}
-		\RightLabel{Rule 6}\BinaryInfC{$⟨⌜(⌝^{⌢}x^{⌢}⌜{=}⌝^{⌢}y^{⌢}⌜)⌝, ⟦x⟧_{\mathcal{M}_{ANA}} = ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ s$}
+		\RightLabel{Rule 6}\BinaryInfC{$⟨x^{⌢}⌜{=}⌝^{⌢}y, ⟦x⟧_{\mathcal{M}_{ANA}} = ⟦y⟧_{\mathcal{M}_{ANA}}⟩ ⊢ s$}
 		\end{prooftree}
 
 It is worth---that is, I highly recommend---reading each of the rules in (@ex-ana-proofs) carefully and comparing it to its corresponding rule in (@ex-ana-semantics), in order to convince yourself that its two versions say exactly the same thing.
