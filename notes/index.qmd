@@ -174,18 +174,18 @@ Available here:
 | Wed., Sept. 24 | Arabic numeral arithmetic                |                                                                   |                                              |
 | Fri., Sept. 26 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 44--64)                         |                                              |
 | Mon., Sept. 29 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 64-72)                          |                                              |
-| Wed., Oct. 1   | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         |                                           |
+| Wed., Oct. 1   | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         |                                              |
 | Fri., Oct. 3   | Lambda notation and types                |                                                                   |                                              |
-| Mon., Oct. 6   | Lambda notation and types                |                                                                   | [View](models/assignment.html)                                             |
+| Mon., Oct. 6   | Lambda notation and types                |                                                                   | [View](models/assignment.html)               |
 | Wed., Oct. 8   | Transitive verbs                         |                                                                   |                                              |
-| Fri., Oct. 10  | Transitive verbs                         |                                                                   | TBD                                          |
+| Fri., Oct. 10  | Transitive verbs                         |                                                                   |                                              |
 | Mon., Oct. 13  | Applicative categorial grammar           | @jurafsky_speech_2025 (Appendix E)                                |                                              |
-| Wed., Oct. 15  | Applicative categorial grammar           |                                                                   |                                              |
+| Wed., Oct. 15  | Applicative categorial grammar           |                                                                   | TBD                                          |
 | Fri., Oct. 17  | Grammars and models                      |                                                                   |                                              |
 | Mon., Oct. 20  | Verbs and arguments redux                |                                                                   |                                              |
-| Wed., Oct. 22  | Verbs and arguments redux                |                                                                   | TBD                                          |
+| Wed., Oct. 22  | Verbs and arguments redux                |                                                                   |                                              |
 | Fri., Oct. 24  | Coordinators                             | @winter_elements_2016 (Ch. 3, pp. 74--80)                         |                                              |
-| Mon., Oct. 27  | Coordinators                             |                                                                   |                                              |
+| Mon., Oct. 27  | Coordinators                             |                                                                   | TBD                                          |
 | Wed., Oct. 29  | Adjectives                               | @kennedy_adjectives_2012                                          |                                              |
 | Fri., Oct. 31  | Adjectives                               |                                                                   |                                              |
 | Mon., Nov. 3   | Adjectives                               |                                                                   | TBD                                          |
