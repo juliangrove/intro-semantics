@@ -181,7 +181,7 @@ Available here:
 | Fri., Oct. 10  | Transitive verbs                         |                                                                   |                                              |
 | Mon., Oct. 13  | Applicative categorial grammar           | @jurafsky_speech_2025 (Appendix E)                                |                                              |
 | Wed., Oct. 15  | Applicative categorial grammar           |                                                                   |                                              |
-| Mon., Oct. 20  | Grammars and models                      |                                                                   | TBD                                          |
+| Mon., Oct. 20  | Grammars and models                      |                                                                   | [View](applicative_cg/assignment.html)                                          |
 | Wed., Oct. 22  | Verbs and arguments redux                |                                                                   |                                              |
 | Fri., Oct. 24  | Verbs and arguments redux                |                                                                   |                                              |
 | Mon., Oct. 27  | Coordinators                             | @winter_elements_2016 (Ch. 3, pp. 74--80)                         |                                              |
