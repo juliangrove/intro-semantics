@@ -180,22 +180,21 @@ Available here:
 | Wed., Oct. 8   | Transitive verbs                         |                                                                   |                                              |
 | Fri., Oct. 10  | Transitive verbs                         |                                                                   |                                              |
 | Mon., Oct. 13  | Applicative categorial grammar           | @jurafsky_speech_2025 (Appendix E)                                |                                              |
-| Wed., Oct. 15  | Applicative categorial grammar           |                                                                   | TBD                                          |
-| Fri., Oct. 17  | Grammars and models                      |                                                                   |                                              |
-| Mon., Oct. 20  | Verbs and arguments redux                |                                                                   |                                              |
+| Wed., Oct. 15  | Applicative categorial grammar           |                                                                   |                                              |
+| Mon., Oct. 20  | Grammars and models                      |                                                                   | TBD                                          |
 | Wed., Oct. 22  | Verbs and arguments redux                |                                                                   |                                              |
-| Fri., Oct. 24  | Coordinators                             | @winter_elements_2016 (Ch. 3, pp. 74--80)                         |                                              |
-| Mon., Oct. 27  | Coordinators                             |                                                                   | TBD                                          |
-| Wed., Oct. 29  | Adjectives                               | @kennedy_adjectives_2012                                          |                                              |
-| Fri., Oct. 31  | Adjectives                               |                                                                   |                                              |
-| Mon., Nov. 3   | Adjectives                               |                                                                   | TBD                                          |
-| Wed., Nov. 5   | Pronouns                                 |                                                                   |                                              |
+| Fri., Oct. 24  | Verbs and arguments redux                |                                                                   |                                              |
+| Mon., Oct. 27  | Coordinators                             | @winter_elements_2016 (Ch. 3, pp. 74--80)                         |                                              |
+| Wed., Oct. 29  | Coordinators                             |                                                                   | TBD                                          |
+| Fri., Oct. 31  | Adjectives                               | @kennedy_adjectives_2012                                          |                                              |
+| Mon., Nov. 3   | Adjectives                               |                                                                   |                                              |
+| Wed., Nov. 5   | Adjectives                               |                                                                   | TBD                                          |
 | Fri., Nov. 7   | Pronouns                                 |                                                                   |                                              |
-| Mon., Nov. 10  | Pronouns                                 |                                                                   | TBD                                          |
-| Wed., Nov. 12  | Quantifiers                              | @winter_elements_2016 (Ch. 4, pp. 99--108)                        |                                              |
-| Fri., Nov. 14  | Quantifiers                              |                                                                   |                                              |
-| Mon., Nov. 17  | Quantifiers                              |                                                                   | TBD                                          |
-| Wed., Nov. 19  | Negative polarity items                  |                                                                   |                                              |
-| Fri., Nov. 21  | Quantifiers and binding                  |                                                                   |                                              |
+| Mon., Nov. 10  | Pronouns                                 |                                                                   |                                              |
+| Wed., Nov. 12  | Pronouns                                 |                                                                   | TBD                                          |
+| Fri., Nov. 14  | Quantifiers                              | @winter_elements_2016 (Ch. 4, pp. 99--108)                        |                                              |
+| Mon., Nov. 17  | Quantifiers                              |                                                                   |                                              |
+| Wed., Nov. 19  | Quantifiers                              |                                                                   | TBD                                          |
+| Fri., Nov. 21  | Negative polarity items                  |                                                                   |                                              |
 | Mon., Dec. 1   | Quantifiers and binding                  |                                                                   |                                              |
 | Wed., Dec. 3   | Quantifiers and binding                  |                                                                   |                                              |

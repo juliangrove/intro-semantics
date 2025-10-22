@@ -1,0 +1,227 @@
+---
+title: "Syntactic categories"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+The collection of syntactic categories introduced in the last section is pretty minimal.
+So far, there are only three categories:
+$np$, $pp$, and $s$!
+In addition to noun phrases, prepositional phrases, and sentences, we would very much like to have syntactic categories for verb phrases, transitive verbs, ditranstive verbs---you name it.
+So, let's introduce a system that allows us to take these three starting categories---which we can call *base* categories---and generate an infinite collection of *possible* syntactic categories.
+Each of these possible categories will encapsulate the syntactic distribution of whatever expression it is assigned to.
+Note that the way we treat syntactic categories here will be exactly analogous to what we did for semantic types, where we used $e$ and $t$ as our "base" (i.e., *atomic*) types and used the "arrow" operator to make new types out of old ones.
+
+So, just like we had a rule for forming "arrow" *types*, let's have a rule for forming what we can call *"slash" categories*.
+
+(@ex-slash-rule) If $α$ and $β$ are syntactic categories, then $(α/β)$ and $(β\backslash α)$ are also syntactic categories.
+
+Thus in addition to the base categories $np$, $pp$, and $s$, we have categories like $(pp/np)$, $(s\backslash pp)$, $((pp\backslash np)/(s/s))$, and so on.
+
+The idea behind a slash category is that it represents either what kind of expression can occur to something's right or what kind of expression can occur to something's left.
+For example, a verb phrase (e.g., *runs*)---something whose category we have been calling $vp$---allows a noun phrase (e.g., *Bella*) to occur to its left;
+and when this happens, the result is a sentence (e.g., *Bella runs*).
+To capture this fact about verb phrases, we should assign them the syntactic category $(np\backslash s)$.
+This category says:
+"if you stick an $np$ (the thing to the left of the '$\backslash$') to my left, then together, we can make an $s$!"
+
+This scheme for assigning categories to expressions allows them to (so to speak) *announce* what things they can occur to the left or to the right of. 
+While a verb phrase takes an $np$ to its left and, with it, makes an $s$, a preposition (e.g., *to*) takes an $np$ to its *right* and, with it, makes a $pp$.
+Thus a preposition like *to* can be assigned the syntactic category $(pp/np)$.
+This category says:
+"if you stick an $np$ (the thing to the right of the '$/$') to my right, then together, we can make a $pp$!"
+
+#### The syntactic structure of syntactic categories
+
+Syntactic categories formed with slashes (like $(np\backslash s)$ and $(pp/np)$) have an internal structure, which it is convenient to represent as a kind of syntactic tree structure (note that each slash annotating a node here is wrapped in parentheses for readability):
+
+```
+  (\)     (/)
+  / \     / \
+ np  s   pp np
+```
+
+Categories featuring multiple slashes can be represented this way, as well.
+Take the ditransitive verb *introduced* as an example, as in (@ex-introduced).
+
+(@ex-introduced) Jo introduced Bo to Mo.
+
+This verb [first]{.underline} takes a noun phrase to its right (*introduced [Bo]{.underline}*);
+[second](.underline), it takes a prepositional phrase to its right (*introduced Bo [to Mo]{.underline}*);
+and [third]{.underline}, it takes a noun phrase to its left (*[Jo]{.underline} introduced Bo to Mo*).
+The verb *introduced* therefore has the following syntactic category, in tree form:
+
+```
+      (/)
+      / \
+    (/)  np
+    / \
+  (\) pp
+  / \
+ np  s
+```
+The way to read this tree is by starting at the very top (or *root*) node and looking at the direction of the slash.
+If it is a right slash ($/$), then the child node on the *right* is the category of the first argument of an expression with this category.
+If it is a left slash ($\backslash$), then the child node on the *left* is the category of the first argument.
+Here, the root node is a right slash, so we look to the right child, which is $np$---that's the thing *introduce* combines with first.
+Meanwhile, the *left* child is the category of the expression that results once you combine *introduced* with this noun phrase.
+Hence, the string *introduced Bo* has the category represented by the *following* tree:
+```
+    (/)
+    / \
+  (\) pp
+  / \
+ np  s
+```
+Likewise---assuming that *to Bella* has the category $pp$---*introduced Bo to Bella* has the following category:
+
+```
+  (\)
+  / \
+ np  s
+```
+Finally---and in this case, we're dealing with a left slash ($\backslash$)---we can combine this expression with *Jo* to get *Jo introduced Bo to Bella*, which therefore has the category $s$.
+
+In the more usual notation, we would write this very same syntactic category out as $(((np\backslash s)/pp)/np)$.
+Both notations encode the *order* in which the verb takes its arguments, as well as whether each argument that it takes occurs to its left or to its right!
+
+#### The correspondence between syntactic categories and semantic types
+
+So now we have a whole *language* of syntactic categories, as well as a whole *language* of semantic types.
+Let's keep developing the chart that we started in [Semantic types](sem_types.html), in order to incorporate a few more syntactic categories.
+Now, we will have not only noun phrases, prepositional phrases, and sentences, but also:
+verb phrases, transitive verbs, ditransitive verbs that take two noun phrases (e.g., *show*), ditransitive verbs that take a noun phrase and a prepositional phrase (e.g., *introduce*), and prepositions.
+Respectively:
+
+| Syntactic category                                    | Semantic type         | Domain                      |
+|-------------------------------------------------------|-----------------------|-----------------------------|
+| $np$                                                  | $e$                   | $D_{e} = D$                 |
+| $pp$                                                  | $e$                   | $D_{e} = D$                 |
+| $s$                                                   | $t$                   | $D_{t} = \{\true, \false\}$ |
+| $(np\backslash s)$ <br> (previously $vp$)             | $(e → t)$             |                             |
+| $((np\backslash s)/np)$ <br> (previously $tv$)        | $(e → (e → t))$       |                             |
+| $(((np\backslash s)/np)/np)$ <br> (previously $dtv$)  | $(e → (e → (e → t)))$ |                             |
+| $(((np\backslash s)/pp)/np)$ <br> (previously $datV$) | $(e → (e → (e → t)))$ |                             |
+| $(pp/np)$ <br> (previously $p$)                       | $(e → e)$             |                             |
+
+By lining syntactic categories up with their semantic types, we can begin to see a correspondence.
+Specifically we have something like the following set of rules:
+
+- Wherever there is an $np$ or $pp$ in the syntactic category, there is an $e$ in the corresponding semantic type.
+- Wherever there is a left slash ($\backslash$) in the syntactic category, there is an arrow ($→$) in the semantic type.
+- Wherever there is a right slash ($/$) in the syntactic category, there is an arrow ($→$) in the semantic type;
+  but this time, the arrow is "pointing the other way"---that is, the thing that goes to the *right* of the right slash goes to the *left* of the arrow.
+
+Let's look at a couple of example of this correspondence, one simple, and one slightly more complex.
+
+##### First example
+
+First, let's look at the very last line of the table---the one which relates the category of prepositions to the semantic type $(e → e)$.
+In tree notation, the syntactic category and the semantic type can be rendered as follows:
+
+```
+ (/)     ─>
+ / \    / \
+pp np  e   e
+```
+Note that in this example, the $e$ which is the left child of the arrow corresponds to the $np$ which is the right child of the slash, since it is a right slash.
+Both correspond, in some sense, to an *argument*:
+while $np$ corresponds to the syntactic argument---the object of the preposition---$e$ corresponds to the semantic argument of the function *denoted* by the preposition.
+
+Meanwhile, the $e$ which is the *right* child of the arrow corresponds to the $pp$ which is the left child of the slash.
+Both correspond, in some sonse, to the *result*---either the result of concatenating the two expressions (in the case of the syntactic category), or the result of applying the function (in the case of the semantic type).
+
+##### Second example
+
+For a slightly more complex example, let's look at the fifth line of the table---the one for transitive verbs.
+In tree notation, we have the following syntactic category and semantic type:
+```
+   (/)         ─>
+   / \        / \
+ (\) np      e  ─>
+ / \           / \
+np  s         e   t
+```
+In this example, the $e$ which is the left child of the arrow at the root corresponds to the $np$ which is the *right* child of the slash, since it is a right slash.
+Meanwhile, the left child of this same slash corresponds to the type $(e → t)$ which is the *right* child of the arrow at the root of the semantic type.
+Since this left child in the syntactic category is a category formed from a *left* slash, its left child---the $np$---corresponds to the $e$, while its right child---the $s$---corresponds to the $t$.
+
+#### Rules
+
+Now that we have explored the structure of both syntactic categories and semantic types, as well as how these structures correspond to each other, let's formalize the way that syntactic categories may actually be *used*.
+That is, how do we use them to derive complex expressions?
+
+We need just two rules:
+one for allowing an expression to combine with something to its right (Right Application), and one for allowing an expression to combine with something to its left (Left Application).
+
+(@ex-applicative-cg-rules)
+	Right Application: <br><br>
+	$\begin{prooftree}
+	\AxiomC{\(⟨x, ⟦x⟧_{\mathcal{M}}⟩ ⊢ (a/b)\)}
+	\AxiomC{\(⟨y, ⟦y⟧_{\mathcal{M}}⟩ ⊢ b\)}
+	\RightLabel{\(/\)}\BinaryInfC{\(⟨x^{⌢}y, ⟦x⟧_{\mathcal{M}}(⟦y⟧_{\mathcal{M}})⟩ ⊢ a\)}
+	\end{prooftree}$ <br><br>
+	Left application: <br><br>
+	$\begin{prooftree}
+	\AxiomC{\(⟨x, ⟦x⟧_{\mathcal{M}}⟩ ⊢ a\)}
+	\AxiomC{\(⟨y, ⟦y⟧_{\mathcal{M}}⟩ ⊢ (b\backslash a)\)}
+	\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨x^{⌢}y, ⟦y⟧_{\mathcal{M}}(⟦x⟧_{\mathcal{M}})⟩ ⊢ a\)}
+	\end{prooftree}$
+
+In words, Right Application concatenates a string of category $(a/b)$ with a string of category $b$ to form a string of category $a$.
+At the same time, it applies the meaning of $x$---a function---to the meaning of $y$---its argument.
+
+Importantly, because of the correspondence between syntactic categories and their associated semantic types, we can actually *guarantee* that the function is the correct kind of thing to apply to the argument.
+That is, if the function denoted by $x$ takes entity arguments, then the meaning of $y$ *has* to be an entity;
+if it takes truth value arguments, then the meaning of $y$ *has* to be a truth value.
+The correspondence between syntactic categories and semantic types guarantees that these things will line up properly!
+
+##### Example derivation
+
+To illustrate these rules, let's derive the sentence in (@ex-bites), which features the transitive verb *bites* (and allows Ziggy to get her revenge).
+
+(@ex-bites) Ziggy bites Bella.
+
+$$\begin{prooftree}
+\AxiomC{\(⟨\textit{Ziggy}, \ct{z}⟩ ⊢ np\)}
+\AxiomC{\(⟨\textit{bites}, (λx.(λy.\{⟨\ct{b}, \ct{z}⟩, ⟨\ct{z}, \ct{b}⟩\}_{CF}(x, y)))⟩ ⊢ ((np\backslash s)/np)\)}
+\AxiomC{\(⟨\textit{Bella}, \ct{b}⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{bites Bella}, (λx.(λy.\{⟨\ct{b}, \ct{z}⟩, ⟨\ct{b}, \ct{z}⟩\}_{CF}(x, y)))(\ct{b})⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Ziggy bites Bella}, (λx.(λy.\{⟨\ct{b}, \ct{z}⟩, ⟨\ct{b}, \ct{z}⟩\}_{CF}(x, y)))(\ct{b})(\ct{z})⟩ ⊢ s\)}
+\end{prooftree}$$
+
+Note that I have assumed a denotation for *bites* here that makes it the case that Ziggy and Bella bite each other.
+Thus if we evaluate the resulting expression
+
+$$(λx.(λy.\{⟨\ct{b}, \ct{z}⟩, ⟨\ct{z}, \ct{b}⟩\}_{CF}(x, y)))(\ct{b})(\ct{z})$$
+
+by first plugging $\ct{b}$ in for $x$---
+
+$$(λy.\{⟨\ct{b}, \ct{z}⟩, ⟨\ct{z}, \ct{b}⟩\}_{CF}(\ct{b}, y))(\ct{z})$$
+
+---and then plugging $\ct{z}$ in for $y$---we end up with
+
+$$\{⟨\ct{b}, \ct{z}⟩, ⟨\ct{z}, \ct{b}⟩\}_{CF}(\ct{b}, \ct{z})$$
+
+which is $\true$!

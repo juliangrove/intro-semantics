@@ -47,6 +47,11 @@ website:
         - models/english_examples.qmd
         - models/assignment.qmd
     - section: "Applicative categorial grammar"
+      contents:
+        - applicative_cg/overview.qmd
+        - applicative_cg/sem_types.qmd
+        - applicative_cg/syn_types.qmd
+        - applicative_cg/assignment.qmd
     - section: "Verbs"
     - section: "Coordinators"
     - section: "Adjectives"

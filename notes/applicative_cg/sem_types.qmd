@@ -1,0 +1,169 @@
+---
+title: "Semantic types"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+Let's start with semantic types.
+
+We'll have two *atomic* types:
+$e$ and $t$.
+Recall that $e$ is the type of *entities*, or elements of the domain $D$, for whatever model $\mathcal{M}$ we happen to be using to interpret English.
+One way we can state this correspondence between types and what they mean is by saying that $D_{e}$---the *domain* of the type $e$---is just the domain $D$ of the model.
+
+Crucially, $e$ is the semantic type of noun phrases like *Ziggy* and *Bella*.
+This just amounts to saying that noun phrases take their interpretations from the domain of the type $e$:
+noun phrases are interpreted in $D_{e}$, the domain of the model.
+
+Likewise for prepositional phrases like *to Ziggy* and *to Bella*.
+Instead of saying that the preposition *to* itself has any interesting semantic function, we've been saying that it doesn't modify the meaning of the noun phrase that it takes as its syntactic complement:
+it takes that meaning in as an argument and spits it right back out.
+As a result, the whole prepositional phrase has semantic type $e$, just like its noun phrase complement.
+
+Meanwhile, $t$ is the type of *truth values*, $\true$ and $\false$.
+In turn, the *domain* of type $t$, $D_{t}$, is just the set $\{\true, \false\}$.
+Finally, $t$ is the semantic type of sentences like *Ziggy meows* and *Bella runs*---expressions that can be true or false in some model.
+
+Thus so far we have the following correspondence:
+
+| Syntactic category | Semantic type | Domain                      |
+|--------------------|---------------|-----------------------------|
+| $np$               | $e$           | $D_{e} = D$                 |
+| $pp$               | $e$           | $D_{e} = D$                 |
+| $s$                | $t$           | $D_{t} = \{\true, \false\}$ |
+
+But we would like to be able to have semantic types not just for noun phrases and sentences, but for *any* syntactic category that an expression might possibly have.
+So let's use our two atomic types $e$ and $t$ to generate a whole collection of types that we can pull from.
+
+Here is how we can do this.
+In addition to $e$ and $t$, let's have a rule for forming new types---the one in (@ex-arrow-rule).
+
+(@ex-arrow-rule) If $α$ and $β$ are types, then $(α → β)$ is also a type.
+
+For example, since $e$ and $t$ are types, then by (@ex-arrow-rule), so is $(e → t)$.
+But now that $(e → t)$ is a type, (@ex-arrow-rule) may apply again:
+we can use $e$, $t$, and $(e → t)$ to form a bunch more types, like $(e → (e → t))$, $((e → t) → t)$, $(e → (e → (e → t)))$, and an infinite number more!
+
+### Domains for arrow types
+
+What about the domains associated with these types---that is, types with arrows in them?
+To pair arrow types up with the domains they correspond to, we'll use the rule in (@ex-function-domains), where $x$ and $y$ can be any types at all.
+
+(@ex-function-domains) $D_{(x → y)} = \{f\ |\ \text{$f$ is a function from $D_{x}$ to $D_{y}$}\}$
+
+Thus the domain of an arrow type is a set of functions.
+Specifically, it is the set of functions from the domain of the type on the left-hand side of the arrow onto the domain of the type on the right-hand side of the arrow.
+
+#### Three examples 
+
+Let's look at a few examples of how the rule (@ex-function-domains) applies in practice, for three different semantic types:
+$(e → t)$, $(e → (e → t))$, and $((e → t) → t)$.
+
+##### First example
+
+Let's start with $(e → t)$.
+By (@ex-function-domains), $D_{(e → t)}$ is the following set of functions:
+
+$$D_{(e → t)} = \{f\ |\ \text{$f$ is a function from $D_{e}$ to $D_{t}$}\}$$
+
+This set is the set of functions from the domain $D$ of the model to the set of truth values ($\{\true, \false\}$).
+These functions are just characteristic functions of sets of elements of the domain.
+
+For example, if the domain of the model just has the two elements $\ct{z}$ and $\ct{b}$
+
+$$D = \{\ct{z}, \ct{b}\}$$
+
+then there are a total of four functions in the set $D_{(e → t)}$.
+One of the functions in this set is
+
+$$(λx.\{\ct{z}\}_{CF}(x))$$
+
+---the function that gives back $\true$ when its argument is $\ct{z}$, and which gives back $\false$ when its argument is $\ct{b}$.
+Another function in this set is
+
+$$(λx.\{\ct{b}\}_{CF}(x))$$
+
+---the function that gives back $\false$ when its argument is $\ct{z}$, and which gives back $\true$ when its argument is $\ct{b}$.
+Another one is 
+
+$$(λx.\true)$$
+
+which gives back $\true$ for all entities (it can therefore also be written as $(λx.\{\ct{z}, \ct{b}\}_{CF}(x))$).
+And finally, the function 
+
+$$(λx.\false)$$
+
+which gives back $\false$ for all entities (and which can therefore also be written as $(λx.\varnothing_{CF})$).
+
+##### Second example
+
+Let's consider the domain of the type $(e → (e → t)))$---that is, $D_{(e → (e → t))}$.
+Following the definition in (@ex-function-domains), we have
+
+$$D_{(e → (e → t))} = \{f\ |\ \text{$f$ is a function from $D_{e}$ to $D_{(e → t)}$}\}$$
+
+In other words, a function in the set $D_{(e → (e → t))}$ maps *entities* onto functions in the set $D_{(e → t)}$.
+
+But remember that we just said what $D_{(e → t)}$ is:
+it's the set which has four functions in it.
+Thus a function in $D_{(e → (e → t))}$ maps any entity onto one of these four functions.
+
+An example of such a function is 
+
+$$(λx.(λy.\{\ct{z}\}_{CF}(y)))$$
+
+This function maps either $\ct{z}$ or $\ct{b}$ onto the function $(λy.\{\ct{z}\}_{CF}(y))$---this result is just the first function described above!
+
+Another example is the function
+
+$$(λx.(λy.(x = y)))$$
+
+This function maps $\ct{z}$ onto the function $(λy.\{\ct{z}\}_{CF}(y))$, while it maps $\ct{b}$ onto the function $(λy.\{\ct{b}\}_{CF}(y))$.
+(Why is this true?)
+
+#### Third example
+
+Let's now consider the domain of the type $((e → t) → t)$---that is, $D_{((e → t) → t)}$.
+Again, following the definition in (@ex-function-domains), we have
+
+$$D_{((e → t) → t)} = \{f\ |\ \text{$f$ is a function from $D_{(e → t)}$ to $D_{t}$}\}$$
+
+That is, a function in $D_{((e → t) → t)}$ maps any of the functions in $D_{(e → t)}$ to the set $\{\true, \false\}$.
+Put differently, any function in this set is certain type of *characteristic function*!
+But instead of being a characteristic function of a subset of the domain of the model ($D_{e}$), it is a characteristic function of a subset of $D_{(e → t)}$.
+Using our running example, where $D_{(e → t)}$ has as elements four different functions, a function in $D_{((e → t) → t)}$ can be said to characterize a set containing any of these four.
+
+Here is an example of such a function:
+
+$$(λf.f(\ct{b}))$$
+
+This function takes as its argument one of the functions in $D_{(e → t)}$.
+It then applies this function---the one it took as its argument---to Bella and just gives back the truth value which results.
+
+If we apply this function to $(λx.\{\ct{z}, \ct{b}\}_{CF}(x))$, for example, we get:
+
+$$(λf.f(\ct{b}))(λx.\{\ct{z}, \ct{b}\}_{CF}(x))$$
+$$⇒ (λx.\{\ct{z}, \ct{b}\}_{CF}(x))(\ct{b})$$
+$$⇒ \{\ct{z}, \ct{b}\}_{CF}(\ct{b})$$
+$$⇒ \true$$

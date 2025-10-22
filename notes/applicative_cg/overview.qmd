@@ -1,0 +1,58 @@
+---
+title: "Overview"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+In the last few weeks, we've introduced syntactic and semantic rules for English that aim to characterize two things at once:
+(i) the *distributional properties* of English expressions (e.g., that the $np$ *Ziggy* can precede the $vp$ *meows*, in order to make an $s$);
+and (ii) the *semantic contributions* these expressions make to the meanings of the larger expressions that contain them.
+Further, our rules are stated to be sensitive to the *syntactic categories* of the expressions whose behavior they characterize.
+For example, the rule
+
+$$\begin{prooftree}
+\AxiomC{$⟨x, ⟦x⟧_{\mathcal{M}}⟩ ⊢ np$}
+\AxiomC{$⟨y, ⟦y⟧_{\mathcal{M}}⟩ ⊢ vp$}
+\BinaryInfC{$⟨x^{⌢}y, ⟦y⟧_{\mathcal{M}}(⟦x⟧_{\mathcal{M}})⟩ ⊢ s$}
+\end{prooftree}$$
+
+says:
+
+- that you can form an $s$ by sticking an $np$ to the left of a $vp$;
+- that you can get the meaning of the $s$ by applying the meaning of the $vp$ as a function to the meaning of the $np$ as an argument.
+
+So, syntactic categories have an important role:
+they say where things can go, and they also say what things can *do* (semantically) when they go there.
+
+These notes further develop this idea, in two directions.
+First, we introduce a language of *semantic types*.
+Semantic types tell us what kind of meaning an expression can have---for example, whether it is an entity, a truth value, or some type of function (and if so, what type).
+Second, we introduce a language of *syntactic categories* (or *syntactic types*, if you like).
+Syntactic categories tell us what an expression's distributional properties are---that is, what kinds of expressions can appear to its left and to its right.
+As we'll see, there is a close relation between syntactic categories and semantic types.
+This relation holds because of the fact that where an expression can go inside some larger expression *determines* what type of meaning it can have.
+
+We've already encoded a version of this idea in our grammar with categories like $np$, $vp$, and $tv$, where we had rules that were specific to these categories.
+Our new *language* of categories will make the idea completely general:
+we'll have an *infinite* number of possible syntactic categories, as well as an infinite number of possible semantic types, and each syntactic category will be seen to be associated with a semantic type.
+At the same time, we'll be able to pare down the number of rules we have to only two!
