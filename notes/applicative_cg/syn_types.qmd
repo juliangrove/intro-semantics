@@ -94,14 +94,14 @@ Hence, the string *introduced Bo* has the category represented by the *following
   / \
  np  s
 ```
-Likewise---assuming that *to Bella* has the category $pp$---*introduced Bo to Bella* has the following category:
+Likewise---assuming that *to Mo* has the category $pp$---*introduced Bo to Mo* has the following category:
 
 ```
   (\)
   / \
  np  s
 ```
-Finally---and in this case, we're dealing with a left slash ($\backslash$)---we can combine this expression with *Jo* to get *Jo introduced Bo to Bella*, which therefore has the category $s$.
+Finally---and in this case, we're dealing with a left slash ($\backslash$)---we can combine this expression with *Jo* to get *Jo introduced Bo to Mo*, which therefore has the category $s$.
 
 In the more usual notation, we would write this very same syntactic category out as $(((np\backslash s)/pp)/np)$.
 Both notations encode the *order* in which the verb takes its arguments, as well as whether each argument that it takes occurs to its left or to its right!
