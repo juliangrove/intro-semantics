@@ -129,6 +129,7 @@ By lining syntactic categories up with their semantic types, we can begin to see
 Specifically we have something like the following set of rules:
 
 - Wherever there is an $np$ or $pp$ in the syntactic category, there is an $e$ in the corresponding semantic type.
+  And wherever there is an $s$ in the syntactic category, there is a $t$ in the semantic type.
 - Wherever there is a left slash ($\backslash$) in the syntactic category, there is an arrow ($→$) in the semantic type.
 - Wherever there is a right slash ($/$) in the syntactic category, there is an arrow ($→$) in the semantic type;
   but this time, the arrow is "pointing the other way"---that is, the thing that goes to the *right* of the right slash goes to the *left* of the arrow.
