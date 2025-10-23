@@ -185,7 +185,7 @@ one for allowing an expression to combine with something to its right (Right App
 	\end{prooftree}$ <br><br>
 	Left application: <br><br>
 	$\begin{prooftree}
-	\AxiomC{\(⟨x, ⟦x⟧_{\mathcal{M}}⟩ ⊢ a\)}
+	\AxiomC{\(⟨x, ⟦x⟧_{\mathcal{M}}⟩ ⊢ b\)}
 	\AxiomC{\(⟨y, ⟦y⟧_{\mathcal{M}}⟩ ⊢ (b\backslash a)\)}
 	\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨x^{⌢}y, ⟦y⟧_{\mathcal{M}}(⟦x⟧_{\mathcal{M}})⟩ ⊢ a\)}
 	\end{prooftree}$
