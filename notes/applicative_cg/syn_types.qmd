@@ -193,8 +193,12 @@ one for allowing an expression to combine with something to its right (Right App
 In words, Right Application concatenates a string of category $(a/b)$ with a string of category $b$ to form a string of category $a$.
 At the same time, it applies the meaning of $x$---a function---to the meaning of $y$---its argument.
 
-Importantly, because of the correspondence between syntactic categories and their associated semantic types, we can actually *guarantee* that the function is the correct kind of thing to apply to the argument.
-That is, if the function denoted by $x$ takes entity arguments, then the meaning of $y$ *has* to be an entity;
+Left Application goes the other way:
+it concatenates a string of category $b$ with a string of category $(b\backslash a)$ to form a string of category $a$.
+And it applies the meaning of $y$---a function---to the mean of $x$---its argument.
+
+Importantly, because of the correspondence between syntactic categories and their associated semantic types, we can actually *guarantee* that in each case, the function is the correct kind of thing to apply to the argument.
+That is, if the function denoted by $x$ takes entity arguments (in the case of Right Application), then the meaning of $y$ *has* to be an entity;
 if it takes truth value arguments, then the meaning of $y$ *has* to be a truth value.
 The correspondence between syntactic categories and semantic types guarantees that these things will line up properly!
 
