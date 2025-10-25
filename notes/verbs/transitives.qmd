@@ -1,0 +1,66 @@
+---
+title: "Transitive verbs"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+Transitive verbs like *punches* increase the number of syntactic and semantic arguments of intransitives by one.
+To analyze the sentence in (@ex-punches),
+
+(@ex-punches) Tigress punches Po.
+
+we can assign a lexical entry like the one in (@ex-lexicon) to this verb.
+
+(@ex-lexicon) $⟨\textit{punches}, (λx.(λy.\ct{punch}(y, x)))⟩ ⊢ ((np\backslash s)/np)$
+
+In this case, we have a function of the following type:
+
+$$(λx.(λy.\ct{punch}(y, x))) : D_{e} → D_{e} → \{\true, \false\}$$
+
+This function is defined in terms of a relation on entities, $\ct{punch}$.
+That is, given two entities $x$ and $y$, $\ct{punch}(y, x)$ is a truth value.
+
+Then (given the obvious lexical entry for *Tigress*), we can derive the meaning and syntactic category of the sentence in (@ex-punches):
+
+$$\begin{prooftree}
+\AxiomC{\(⟨\textit{Tigress}, \ct{ti}⟩ ⊢ np\)}
+\AxiomC{\(⟨\textit{punches}, (λx.(λy.\ct{punch}(y, x)))⟩ ⊢ (np\backslash s)/np\)}
+\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{punches Po}, (λx.(λy.\ct{punch}(y, x)))(\ct{p})⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Tigress punches Po}, (λx.(λy.\ct{punch}(y, x)))(\ct{p})(\ct{ti})⟩ ⊢ s\)}
+\end{prooftree}$$
+
+Since $(λx.(λy.\ct{punch}(y, x)))$ takes two entities in order, the function
+
+$$(λx.(λy.\ct{punch}(y, x)))(\ct{p}) : D_{e} → t$$
+$$⇒ (λy.\ct{punch}(y, \ct{p})) : D_{e} → t$$
+
+is itself a characteristic function of a set of entities in $D_{e}$.
+As a result,
+
+$$(λx.(λy.\ct{punch}(y, x)))(\ct{p})(\ct{ti})$$
+$$⇒ (λy.\ct{punch}(x, \ct{p}))(\ct{ti})$$
+$$⇒ \ct{punch}(\ct{ti}, \ct{p})$$
+
+is a truth value.

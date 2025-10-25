@@ -1,0 +1,62 @@
+---
+title: "Intransitive verbs"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+In [Syntactic categories](../applicative_cg/syn_types.html), we said that intransitive verbs have the syntactic category $(np\backslash s)$:
+they take a noun phrase to their left, and together with it, they produce a sentence.
+And because they have this category, they have the semantic type $(e → t)$:
+they take an entity as their semantic argument, and they produce a truth value---that is, they denote characteristic functions.
+
+Take the verb *sleeps* as an example.
+
+(@ex-sleeps) Po sleeps.
+
+To derive the sentence in (@ex-sleeps), we can assign *Po* and *sleeps* the lexical entries in (@ex-lexicon).
+
+(@ex-lexicon) $⟨\textit{Po}, \ct{p}⟩ ⊢ np$ <br>
+	$⟨\textit{sleeps}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)$
+
+As usual, $\ct{p}$ is an entity---some element of the domain of whatever model we happen to be considering:
+$$\ct{p} ∈ D_{e}$$
+Meanwhile, $\ct{sleep}$ is a characteristic function of a set of elements of this domain:
+$$\ct{sleep} : D_{e} → \{\true, \false\}$$
+Which characteristic function is it?
+Who knows.
+Or rather, we're just using the expression '$\ct{sleep}$' to stand for $I_{\mathcal{M}}(\textit{sleeps})$, for whatever the model $\mathcal{M}$ happens to be.
+
+We can derive the sentence in (@ex-sleeps) in terms of this lexicon:
+
+$$\begin{prooftree}
+\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np\)}
+\AxiomC{\(⟨\textit{sleeps}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po sleeps}, (λx.\ct{sleep}(x))(\ct{p})⟩ ⊢ s\)}
+\end{prooftree}$$
+As we'd expect from the semantic type of $s$, the meaning derived for the entire sentence,
+
+$$(λx.\ct{sleep}(x))(\ct{p})$$
+$$⇒ \ct{sleep}(\ct{p})$$
+
+is a truth value---$\true$ or $\false$, depending on which value $\ct{sleep}$ maps $\ct{p}$ to.

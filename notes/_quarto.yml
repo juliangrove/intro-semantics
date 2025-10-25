@@ -53,6 +53,10 @@ website:
         - applicative_cg/syn_types.qmd
         - applicative_cg/assignment.qmd
     - section: "Verbs"
+      contents:
+        - verbs/intransitives.qmd
+        - verbs/transitives.qmd
+        - verbs/ditransitives.qmd
     - section: "Coordinators"
     - section: "Adjectives"
     - section: "Pronouns"
