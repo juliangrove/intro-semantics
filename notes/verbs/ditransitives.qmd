@@ -25,13 +25,60 @@ $$
 $$
 :::
 
-To illustrate ditransitive verbs, let's consider the two sentences in (@ex-show).
+Let's consider the two sentences in (@ex-showed), which, arguably, entail each other.
 
-(@ex-show) a. Po showed noodles to Tigress. <br>
+(@ex-showed) a. Po showed noodles to Tigress. <br>
 	b. Po showed Tigress noodles.
 
-These sentences, arguably, entail each other.
-To capture this fact, we might assign the ditransitive verb *showed* two distinct lexical entries, as in (@ex-lexicon).
+To capture this mutual entailment, we might assign the ditransitive verb *showed* two distinct lexical entries, as in (@ex-showed-lexicon).
 
-(@ex-lexicon) $⟨\textit{showed}, (λx.(λy.(λz.\ct{showed}(z, x, y))))⟩ ⊢ (((np\backslash s)/pp)/np)$ <br>
-	$⟨\textit{showed}, (λy.(λx.(λz.\ct{showed}(z, x, y))))⟩ ⊢ (((np\backslash s)/np)/np)$
+(@ex-showed-lexicon) $⟨\textit{showed}_{1}, (λx.(λy.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/pp)/np)$ <br>
+	$⟨\textit{showed}_{2}, (λy.(λx.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/np)/np)$
+
+We can also assign a lexical entry to the preposition *to* according to which it is interpreted as the identity function.
+
+(@ex-to-lexicon) $⟨\textit{to}, (λx.x)⟩ ⊢ (pp/np)$
+
+According to the first of these lexical entries, the verb combines with an object noun phrase, then a prepositional phrase, and then a subject noun phrase, to yield, e.g., (@ex-showed\-a).
+According to the second, it combines with an indirect-object noun phrase, a direct object-object noun phrase, and then the subject, to yield, e.g., (@ex-showed\-b).
+
+A derivation of (@ex-showed\-a) sentence would go:
+
+$$\begin{prooftree}
+\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np⟩\)}
+\AxiomC{\(⟨\textit{showed}_{1}, (λx.(λy.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/pp)/np)\)}
+\AxiomC{\(⟨\textit{noodles}, \ct{n}⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{1}\) noodles}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{n})⟩ ⊢ ((np\backslash s)/pp)\)}
+\AxiomC{\(⟨\textit{to}, (λx.x)⟩ ⊢ (pp/np)\)}
+\AxiomC{\(\textit{Tigress}, \ct{ti} ⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{to Tigress}, (λx.x)(\ct{ti})⟩ ⊢ pp\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{1}\) noodles to Tigress}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{n})((λx.x)(\ct{ti}))⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po showed\(_{1}\) noodles to Tigress}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{n})((λx.x)(\ct{ti}))(\ct{p})⟩ ⊢ s\)}
+\end{prooftree}$$
+
+At the end of the day, we end up with the following truth value as the meaning of this sentence:
+
+$$(λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{n})((λx.x)(\ct{ti}))(\ct{p})$$
+$$⇒ (λy.(λz.\ct{show}(z, \ct{n}, y))))((λx.x)(\ct{ti}))(\ct{p})$$
+$$⇒ (λz.\ct{show}(z, \ct{n}, (λx.x)(\ct{ti})))(\ct{p})$$
+$$⇒ \ct{show}(\ct{p}, \ct{n}, (λx.x)(\ct{ti}))$$
+$$⇒ \ct{show}(\ct{p}, \ct{n}, \ct{ti})$$
+
+Meanwhile, a derivation of (@ex-showed\-b) would go:
+
+$$\begin{prooftree}
+\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np⟩\)}
+\AxiomC{\(⟨\textit{showed}_{2}, (λy.(λx.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/np)/np)\)}
+\AxiomC{\(⟨\textit{Tigress}, \ct{ti}⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{2}\) Tigress}, (λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{ti})⟩ ⊢ ((np\backslash s)/np)\)}
+\AxiomC{\(⟨\textit{noodles}, \ct{n} ⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{2}\) Tigress noodles}, (λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{ti})(\ct{n})⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po showed\(_{2}\) Tigress noodles}, (λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{ti})(\ct{n})(\ct{p})⟩ ⊢ s\)}
+\end{prooftree}$$
+
+If we evaluate the result, we get:
+
+$$(λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{ti})(\ct{n})(\ct{p})$$
+$$⇒ (λx.(λz.\ct{show}(z, x, \ct{ti})))(\ct{n})(\ct{p})$$
+$$⇒ (λz.\ct{show}(z, \ct{n}, \ct{ti}))(\ct{p})$$
+$$⇒ \ct{show}(\ct{p}, \ct{n}, \ct{ti})$$

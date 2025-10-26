@@ -57,6 +57,7 @@ website:
         - verbs/intransitives.qmd
         - verbs/transitives.qmd
         - verbs/ditransitives.qmd
+        - verbs/note.qmd
     - section: "Coordinators"
     - section: "Adjectives"
     - section: "Pronouns"

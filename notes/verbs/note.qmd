@@ -1,0 +1,46 @@
+---
+title: "Characterizing entailments"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+Both of the sentences we analyzed in [Ditransitive verbs](ditransitives.html)
+
+(@ex-showed) a. Po showed noodles to Tigress. <br>
+	b. Po showed Tigress noodles.
+
+denote the same truth value---whatever $\ct{show}(\ct{p}, \ct{n}, \ct{ti})$ is.
+While this value is either $\true$ or $\false$, we cannot say which one until we know what model we are "in".
+What we do know, however, is that whenever the meaning of (@ex-showed\-a) is $\true$ in some model, then so is the meaning of (@ex-showed\-b)---and vice versa.
+
+What's important here is that we can account for the fact that the sentences in (@ex-showed\-a) and (@ex-showed\-b) entail each other.
+We account for this by ensuring that they mean the same thing *no matter what model is used to interpret them*.
+In particular we have the following relation between the *sets* of models in which (@ex-showed\-a) and (@ex-showed\-b) are true:
+
+$$\{\mathcal{M} ∣ ⟦\textit{Po showed noodles to Tigress}⟧_{\mathcal{M}} = \true\} ⊆ \{\mathcal{M} ∣ ⟦\textit{Po showed Tigress noodles}⟧_{\mathcal{M}} = \true\}$$
+$$\{\mathcal{M} ∣ ⟦\textit{Po showed Tigress noodles}⟧_{\mathcal{M}} = \true\} ⊆ \{\mathcal{M} ∣ ⟦\textit{Po showed noodles to Tigress}⟧_{\mathcal{M}} = \true\}$$
+
+In words:
+the set of models in which the interpretation of (@ex-showed\-a) is $\true$ is a *subset* of the set of models in which the interpretation of (@ex-showed\-b) is $\true$---and vice versa.
+In general, when one sentence of the language we are studying (e.g., English) entails another sentence of that language, we would like our semantic analysis of the two sentences to ensure that the set of models in which the first sentence comes out true is a subset of the set of models in which the second sentence comes out true.
