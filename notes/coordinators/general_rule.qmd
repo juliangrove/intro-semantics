@@ -43,9 +43,41 @@ Well, they should both have the same syntatic category:
 
 $$(((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$$
 
+Or in tree notation:
+
+```
+        (/)
+        / \
+       /   \
+      /     \
+    (\)     (\)
+    / \     / \
+   /   \   np  s
+ (\)   (\)
+ / \   / \
+np s  np  s
+```
+
 As a result, they should also both have the following semantic type:
 
 $$((e → t) → ((e → t) → (e → t)))$$
+
+Or in tree notation:
+
+```
+       ─>
+      / \
+     /   \
+    /     \
+   ─>      ─>
+  / \     / \
+ e   t   /   \
+        /     \
+       ─>      ─>
+      / \     / \
+	 e   t   e   t
+```
+
 
 Thus their meanings should each take two arguments in order, where both of these arguments are characteristic functions of sets of entities (functions of type $(e → t)$);
 and they should each give back a new characteristic function.
@@ -61,9 +93,51 @@ Transitive verbs have the syntactic category $((np\backslash s)/np)$, so *and* a
 
 $$((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$$
 
+Or in tree notation:
+
+```
+               (/)
+               / \
+              /   \
+	   	     /     \
+            /       \
+           /         \
+          /           \
+        (\)           (/)
+        / \           / \
+       /   \        (\)  np
+      /     \       / \
+    (/)     (/)    np  s
+    / \     / \
+  (\)  np (\)  np
+  / \     / \
+ np  s   np  s
+```
+
 Using the usual mapping from categories to types, we can see that they should therefore have the following semantic type:
 
 $$((e → (e → t)) → ((e → (e → t)) → (e → (e → t))))$$
+
+Or in tree notation:
+
+```
+        ─>
+       / \
+      /   \
+     /     \
+	/       \
+   /         \
+  ─>          ─>
+ / \         / \
+e  ─>       /   \
+  / \      /     \
+ e   t    ─>      ─>
+         / \     / \
+	    e   ─>  e   ─>
+	       / \     / \
+	      e   t   e   t
+
+```
 
 Again, their meanings each take two arguments in order, but now both of the arguments are functions of type $(e → (e → t))$---i.e., functions thta take two entities (in order) and give back a truth value.
 The lexical entries in (@ex-and-or-tvs) assign them meanings that do this.
