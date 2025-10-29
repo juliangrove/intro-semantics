@@ -24,3 +24,50 @@ $$
 \def\false{\ct{F}}
 $$
 :::
+
+To explain these facts, it would be useful to have a systematic account of the meanings of *and* and *or*.
+Let's start by providing the sentence-coordinator meanings in terms of some lexical entries.
+For each lexical entry, we'll annotate the word itself with a category name, just to keep coordinators of different categories distinct (e.g., we'll call the sentence-level *and* $\textit{and}_{s}$ and the sentence-level *or* $\textit{or}_{s}$).
+
+### Sentence coordinators
+
+Let's start with sentences.
+
+(@ex-and-or-sentences) a. $⟨\textit{and}_{s}, (λa.(λb.a = b = \true))⟩ ⊢ ((s\backslash s)/s)$
+	b. $⟨\textit{or}_{s}, (λa.(λb.¬(a = b = \false)))⟩ ⊢ ((s\backslash s)/s)$
+
+### Verb phrase coordinators
+
+What about the versions of *and* and *or* when they coordinate verb phrases?
+Well, they should both have the same syntatic category:
+
+$$(((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$$
+
+As a result, they should also both have the following semantic type:
+
+$$((e → t) → ((e → t) → (e → t)))$$
+
+Thus their meanings should each take two arguments in order, where both of these arguments are characteristic functions of sets of entities (functions of type $(e → t)$);
+and they should each give back a new characteristic function.
+The lexical entries in (@ex-and-or-vps) accomplish this.
+
+(@ex-and-or-vps) a. $⟨\textit{and}_{(np\backslash s)}, (λf.(λg.(λx.f(x) = g(x) = \true)))⟩ ⊢ (((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$
+	b. $⟨\textit{or}_{(np\backslash s)}, (λf.(λg.(λx.¬(f(x) = g(x) = \false))))⟩ ⊢ (((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$
+
+### Transitive verb coordinators
+
+What about when *and* and *or* coordinate transitive verbs?
+Transitive verbs have the syntactic category $((np\backslash s)/np)$, so *and* and *or* should have the following syntactic category in this case:
+
+$$((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$$
+
+Using the usual mapping from categories to types, we can see that they should therefore have the following semantic type:
+
+$$((e → (e → t)) → ((e → (e → t)) → (e → (e → t))))$$
+
+Again, their meanings each take two arguments in order, but now both of the arguments are functions of type $(e → (e → t))$---i.e., functions thta take two entities (in order) and give back a truth value.
+The lexical entries in (@ex-and-or-tvs) assign them meanings that do this.
+
+(@ex-and-or-tvs) a. $⟨\textit{and}_{((np\backslash s)/np)}, (λf.(λg.(λx.(λy.f(x)(y) = g(x)(y) = \true)))⟩ ⊢ ((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$
+	b. $⟨\textit{or}_{((np\backslash s)/np)}, (λf.(λg.(λx.(λy.¬(f(x) = g(x) = \false)))))⟩ ⊢ ((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$
+

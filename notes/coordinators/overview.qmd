@@ -32,7 +32,7 @@ For example, while we can coordinate sentences and verb phrases, like in (@ex-an
 (@ex-and-or-s-vp) a. Po slept {and, or} Tigress jumped.
 	a. Po slept {and, or} jumped.
 	
-we can also coordinate noun phrases, transitive verbs, intransitive verbs, prepositional phrases, and perhaps even other categories like prepositions, like in (@ex-and-or-others).
+we can also coordinate noun phrases, transitive verbs, prepositional phrases, and perhaps even other categories like prepositions, like in (@ex-and-or-others).
 
 (@ex-and-or-others) a. Po {and, or} Tigress slept.
 	b. Tigress punched {and, or} helped Po.
@@ -40,14 +40,14 @@ we can also coordinate noun phrases, transitive verbs, intransitive verbs, prepo
 	d. Po cooked noodles inside {and, or} outside the kitchen.
 
 Not only is it possible to coordinate strings of various categories, but when we do, a systematic pattern of inference seems arise.
-When we coordinate constituents smaller than sentences, what's produced is a sentence which seems to *mean the same thing* as a sentence-level coordination.
-For example, the sentence in (@ex-and-or-s-vp\-a) appears to mean the same thing as the sentence in (@ex-and-or-others\-a) when the same coordinator occurs in both---or at least the two sentences entail each other.
+Specifically:
+when we coordinate constituents smaller than sentences, what's produced is a sentence which seems to *mean the same thing* as a sentence-level coordination.
+For example, the sentences in (@ex-and-or-others) appear to mean the same things as the sentences in (@ex-and-or-paraphrases), respectively, when the same coordinator occurs in both.
 
-A similar situation holds for the other uses of *and* and *or*.
-For example (@ex-and-or-others\-b-d) appear to be in a mutual-entailment relation with the sentences in (@ex-and-or-rephrased\-a-c), respectively.
-
-(@ex-and-or-rephrased) a. Tigress punched Po {and, or} Tigress helped Po.
-	b. Po cooked noodles in the kitchen {and, or} Po cooked noodles for Tigress.
-	c. Po cooked noodles inside the kitchen {and, or} Po cooked noodles outside the kitchen.
+(@ex-and-or-paraphrases) a. Po slept {and, or} Tigress slept.
+	b. Tigress punched Po {and, or} Tigress helped Po.
+	c. Po cooked noodles in the kitchen {and, or} Po cooked noodles for Tigress.
+	d. Po cooked noodles inside the kitchen {and, or} Po cooked noodles outside the kitchen.
 	
+In each case, the (@ex-and-or-others) sentence entails the (@ex-and-or-paraphrases) sentence, and vice versa.
 How can we explain this?
