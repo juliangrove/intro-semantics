@@ -1,0 +1,91 @@
+---
+title: "Assignment"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+Due on Wednesday, November 5th.
+
+### Part 1
+
+This exercise is basically just like [Part 1](../applicative_cg/assignment.html#part-1) of [the previous assignment](../applicative_cg/assignment.html).
+I want you to have a chance to practice a bit more figuring out what syntactic category and semantic type something has, based on a description of its distribution.
+Importantly, none of the expression behaviors I will describe here necessarily correspond to anything you actually see in English or any other language.
+The point of the exercise is for you to get comfortable translating the informal description in English into a formal description of an expression's syntactic category and semantic type.
+
+Again, I will describe the behavior of an expression in English---what it can combine with, and what it makes as a result---and again, I want you to:
+
+- say what its syntactic category is in "parentheses" notation;
+- say what its syntactic category is in "tree" notation;
+- say what its semantic type is, assuming the category-type correspondence discussed in [Syntactic categories](../applicative_cg/syn_types.html) of the previous module.
+  As before, you can use either the usual notation or the "tree" notation for semantic types here.
+
+(1) This expression takes a preposition to its left, and then a ditransitive verb to its right, to form a noun phrase.
+
+(2) This expression combines with a coordinator of verb phrases to its right (e.g., *and*), and then a preposition to its left, to form a sentence.
+
+(3) This expression combines with an expression $X$ to its left, where $X$ is something that takes a coordinator of sentences on its left to form a verb phrase, and together with $X$, it forms a preposition.
+
+### Part 2
+
+English has a syntactic *voice* distinction between *active* verbs and *passive* verbs.
+This means that in addition to sentences like (@ex-eat-active), where we see the transitive verb *ate*,
+
+(@ex-eat-active) Tigress ate noodles.
+
+it is also possible to form sentences like (@ex-eat-passive), in which the very same verb has been passivized.
+
+(@ex-eat-passive) Noodles were eaten.
+
+To analyze sentences with passive verbs in them, let's assume that we have another base syntactic category:
+
+$$v_{\textit{pass.}}$$
+
+Assume that this base category is associated with the following semantic type:
+
+$$(e → t)$$
+
+Thus *semantically*, $v_{\textit{pass.}}$ is just like the syntactic category $(np\backslash s)$ of verb phrases!
+
+Further, let's assume that *ate* has the following lexical entry:
+
+$$⟨\textit{ate}, (λx.(λy.\ct{eat}(y, x)))⟩ ⊢ ((np\backslash s)/np)$$
+
+It takes two semantic arguments, one corresponding to the direct object and one corresponding to the subject, and it gives back $\true$ if the second argument eats the first argument (and it gives back $\false$, otherwise).
+
+To analyze the passive verb *eaten*, let's assume that it has the following lexical entry:
+
+$$⟨\textit{eaten}, (λx.\{y ∣ \ct{eat}(y, x)\} ≠ \varnothing)⟩ ⊢ v_{\textit{pass.}}$$
+
+In words, the interpretation of *eaten* is a characteristic function of some set of entities.
+Specifically, it is the characteristic function of the set of entities such that the set of things that eat them is *not* the empty set.
+
+Provide a lexical entry for the auxiliary verb *were* that allows you to derive the sentence in (@ex-eat-passive).
+
+### Part 3
+
+Assume, as usual, that Tigress is a noun phrase whose interpretation is $\ct{ti}$, and that *noodles* is a noun phrase whose interpretation is $\ct{n}$.
+Provide a derivation of the sentence in (@ex-eat-active).
+Use your lexical entry for *were* to provide a derivation for the sentence in (@ex-eat-passive).
+Do the meanings you obtain for the two sentences help explain the fact that (@ex-eat-active) *entails* (@ex-eat-passive)?

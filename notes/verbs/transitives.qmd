@@ -39,9 +39,9 @@ In this case, we have a function of the following type:
 $$(λx.(λy.\ct{punch}(y, x))) : D_{e} → D_{e} → \{\true, \false\}$$
 
 This function is defined in terms of a relation on entities, $\ct{punch}$.
-That is, given two entities $x$ and $y$, $\ct{punch}(y, x)$ is a truth value.
+That is, given two entities $x$ and $y$, $\ct{punch}(y, x)$ is some truth value.
 
-Then (given the obvious lexical entry for *Tigress*), we can derive the meaning and syntactic category of the sentence in (@ex-punches):
+Then, given the lexical entry for *Tigress* where it denotes $\ct{ti}$, we can derive the meaning and syntactic category of the sentence in (@ex-punches):
 
 $$\begin{prooftree}
 \AxiomC{\(⟨\textit{Tigress}, \ct{ti}⟩ ⊢ np\)}
@@ -51,16 +51,16 @@ $$\begin{prooftree}
 \RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Tigress punches Po}, (λx.(λy.\ct{punch}(y, x)))(\ct{p})(\ct{ti})⟩ ⊢ s\)}
 \end{prooftree}$$
 
-Since $(λx.(λy.\ct{punch}(y, x)))$ takes two entities in order, the function
+Since $(λx.(λy.\ct{punch}(y, x)))$ takes two entities in order, we can get a function takes *one* entity by applying it first to $\ct{p}$:
 
-$$(λx.(λy.\ct{punch}(y, x)))(\ct{p}) : D_{e} → t$$
-$$⇒ (λy.\ct{punch}(y, \ct{p})) : D_{e} → t$$
+$$(λx.(λy.\ct{punch}(y, x)))(\ct{p})$$
+$$⇒ (λy.\ct{punch}(y, \ct{p}))$$
 
-is itself a characteristic function of a set of entities in $D_{e}$.
-As a result,
+This function is itself a characteristic function of a set of entities in $D_{e}$.
+As a result, if we apply it to *two* entities, we get a truth value:
 
 $$(λx.(λy.\ct{punch}(y, x)))(\ct{p})(\ct{ti})$$
 $$⇒ (λy.\ct{punch}(x, \ct{p}))(\ct{ti})$$
 $$⇒ \ct{punch}(\ct{ti}, \ct{p})$$
 
-is a truth value.
+This result, $\ct{punch}(\ct{ti}, \ct{p})$, will be $\true$ or $\false$, depending on the model.

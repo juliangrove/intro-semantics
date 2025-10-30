@@ -35,14 +35,18 @@ To capture this mutual entailment, we might assign the ditransitive verb *showed
 (@ex-showed-lexicon) $⟨\textit{showed}_{1}, (λx.(λy.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/pp)/np)$ <br>
 	$⟨\textit{showed}_{2}, (λy.(λx.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/np)/np)$
 
-We can also assign a lexical entry to the preposition *to* according to which it is interpreted as the identity function.
+We can also assign a lexical entry to the preposition *to*, according to which it is interpreted as the identity function $(λx.x)$.
 
 (@ex-to-lexicon) $⟨\textit{to}, (λx.x)⟩ ⊢ (pp/np)$
 
-According to the first of these lexical entries, the verb combines with an object noun phrase, then a prepositional phrase, and then a subject noun phrase, to yield, e.g., (@ex-showed\-a).
-According to the second, it combines with an indirect-object noun phrase, a direct object-object noun phrase, and then the subject, to yield, e.g., (@ex-showed\-b).
+According to the first of these lexical entries, the verb *showed* combines with an object noun phrase;
+then it combines with a prepositional phrase;
+and then it combines with a subject noun phrase, yielding, e.g., (@ex-showed\-a).
+According to the second, it combines with an indirect-object noun phrase;
+then a direct-object noun phrase;
+and then the subject, yielding, e.g., (@ex-showed\-b).
 
-A derivation of (@ex-showed\-a) sentence would go:
+A derivation of the (@ex-showed\-a) sentence would go:
 
 $$\begin{prooftree}
 \AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np⟩\)}
@@ -64,6 +68,8 @@ $$⇒ (λz.\ct{show}(z, \ct{n}, (λx.x)(\ct{ti})))(\ct{p})$$
 $$⇒ \ct{show}(\ct{p}, \ct{n}, (λx.x)(\ct{ti}))$$
 $$⇒ \ct{show}(\ct{p}, \ct{n}, \ct{ti})$$
 
+(It can be helpful to check and make sure you understand each line as the above metalanguage expression is evaluated.)
+
 Meanwhile, a derivation of (@ex-showed\-b) would go:
 
 $$\begin{prooftree}
@@ -82,3 +88,12 @@ $$(λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{ti})(\ct{n})(\ct{p})$$
 $$⇒ (λx.(λz.\ct{show}(z, x, \ct{ti})))(\ct{n})(\ct{p})$$
 $$⇒ (λz.\ct{show}(z, \ct{n}, \ct{ti}))(\ct{p})$$
 $$⇒ \ct{show}(\ct{p}, \ct{n}, \ct{ti})$$
+
+(Again, check each line! :)
+
+Thankfully, the resulting interpretation is the same in both cases.
+Why "thankfully"?
+Well, because as we saw, the two sentences entail each other!
+
+And importantly, our analysis derives this result precisely because of how we designed the lexical enries for prepositional-dative *show* and double-object dative *show*.
+In particular, how we designed their meanings.

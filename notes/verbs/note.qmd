@@ -25,7 +25,7 @@ $$
 $$
 :::
 
-Both of the sentences we analyzed in [Ditransitive verbs](ditransitives.html)
+In other words, no matter what the model is, both of the sentences we analyzed in [Ditransitive verbs](ditransitives.html)
 
 (@ex-showed) a. Po showed noodles to Tigress. <br>
 	b. Po showed Tigress noodles.
@@ -42,5 +42,6 @@ $$\{\mathcal{M} ∣ ⟦\textit{Po showed noodles to Tigress}⟧_{\mathcal{M}} = 
 $$\{\mathcal{M} ∣ ⟦\textit{Po showed Tigress noodles}⟧_{\mathcal{M}} = \true\} ⊆ \{\mathcal{M} ∣ ⟦\textit{Po showed noodles to Tigress}⟧_{\mathcal{M}} = \true\}$$
 
 In words:
-the set of models in which the interpretation of (@ex-showed\-a) is $\true$ is a *subset* of the set of models in which the interpretation of (@ex-showed\-b) is $\true$---and vice versa.
+the set of models in which the interpretation of (@ex-showed\-a) is $\true$ is a *subset* of the set of models in which the interpretation of (@ex-showed\-b) is $\true$---*and* vice versa.
+
 In general, when one sentence of the language we are studying (e.g., English) entails another sentence of that language, we would like our semantic analysis of the two sentences to ensure that the set of models in which the first sentence comes out true is a subset of the set of models in which the second sentence comes out true.

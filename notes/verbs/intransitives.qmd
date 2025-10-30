@@ -41,13 +41,15 @@ To derive the sentence in (@ex-sleeps), we can assign *Po* and *sleeps* the lexi
 
 As usual, $\ct{p}$ is an entity---some element of the domain of whatever model we happen to be considering:
 $$\ct{p} ∈ D_{e}$$
-Meanwhile, $\ct{sleep}$ is a characteristic function of a set of elements of this domain:
+Meanwhile, $\ct{sleep}$ is a characteristic function of a set of elements of this very same domain:
 $$\ct{sleep} : D_{e} → \{\true, \false\}$$
+It takes an entity, and it gives you back a truth value ($\true$ or $\false$).
+
 Which characteristic function is it?
 Who knows.
 Or rather, we're just using the expression '$\ct{sleep}$' to stand for $I_{\mathcal{M}}(\textit{sleeps})$, for whatever the model $\mathcal{M}$ happens to be.
 
-We can derive the sentence in (@ex-sleeps) in terms of this lexicon:
+Using the lexical entries for *Po* and *sleeps*, we can now derive the sentence in (@ex-sleeps):
 
 $$\begin{prooftree}
 \AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np\)}
@@ -59,4 +61,4 @@ As we'd expect from the semantic type of $s$, the meaning derived for the entire
 $$(λx.\ct{sleep}(x))(\ct{p})$$
 $$⇒ \ct{sleep}(\ct{p})$$
 
-is a truth value---$\true$ or $\false$, depending on which value $\ct{sleep}$ maps $\ct{p}$ to.
+is a truth value---$\true$ or $\false$, depending on which of these values $\ct{sleep}$ maps $\ct{p}$ to.

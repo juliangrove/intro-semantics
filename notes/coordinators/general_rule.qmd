@@ -55,7 +55,7 @@ Or in tree notation:
    /   \   np  s
  (\)   (\)
  / \   / \
-np s  np  s
+np  s np  s
 ```
 
 As a result, they should also both have the following semantic type:
