@@ -26,20 +26,20 @@ $$
 :::
 
 These notes aim to get a better handle on the syntax and semantics of coordinators, like *and* and *or*.
-Something special about coordinators, at least in English, is their apparent ability to coordinate expressions of any category.
-For example, while we can coordinate sentences and verb phrases, like in (@ex-and-or-s-vp)
+Something special about coordinators, at least in English, is that (at least, apparently) they can coordinate expressions of any category.
+For example, while we can coordinate sentences and verb phrases, as in (@ex-and-or-s-vp)
 
 (@ex-and-or-s-vp) a. Po slept {and, or} Tigress jumped.
 	a. Po slept {and, or} jumped.
 	
-we can also coordinate noun phrases, transitive verbs, prepositional phrases, and perhaps even other categories like prepositions, like in (@ex-and-or-others).
+we can also coordinate noun phrases, transitive verbs, prepositional phrases, and perhaps even other categories like prepositions, as in (@ex-and-or-others).
 
 (@ex-and-or-others) a. Po {and, or} Tigress slept.
 	b. Tigress punched {and, or} helped Po.
 	c. Po cooked noodles in the kitchen {and, or} for Tigress.
 	d. Po cooked noodles inside {and, or} outside the kitchen.
 
-Not only is it possible to coordinate strings of various categories, but when we do, a systematic pattern of inference seems arise.
+Not only is it possible to coordinate strings of various categories, but when we do, a systematic pattern of inference arises.
 Specifically:
 when we coordinate constituents smaller than sentences, what's produced is a sentence which seems to *mean the same thing* as a sentence-level coordination.
 For example, the sentences in (@ex-and-or-others) appear to mean the same things as the sentences in (@ex-and-or-paraphrases), respectively, when the same coordinator occurs in both.

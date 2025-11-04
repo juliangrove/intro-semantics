@@ -60,6 +60,9 @@ website:
         - verbs/note.qmd
         - verbs/assignment.qmd
     - section: "Coordinators"
+      contents:
+      - coordinators/overview.qmd
+      - coordinators/general_rule.qmd
     - section: "Adjectives"
     - section: "Pronouns"
     - section: "Quantification"
