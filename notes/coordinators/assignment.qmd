@@ -1,0 +1,71 @@
+---
+title: "Assignment"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+Due on Wednesday, November 12th.
+
+### Part 1
+
+Provide a lexical entry for *or* that accounts for its occurrence in the sentence in (@ex-or-nps), and give a derivation for (@ex-or-nps).
+
+(@ex-or-nps) Tigress or Po jumped.
+
+Make sure that you unfold any relevant definitions gotten from the scheme discussed in [A general rule](general_rule.html), and that you end up with a representation of a truth value as the meaning of (@ex-or-nps).
+
+### Part 2
+
+In addition to subject noun phrases, we can also coordinate object noun phrases, as in (@ex-and-obj).
+
+(@ex-and-obj) Mantis punched Tigress and Po.
+
+Provide lexical entries for *Tigress* and *Po* that account for this fact, as well as the fact that (@ex-and-obj) entails (@ex-and-obj-full), and vice versa.
+
+(@ex-and-obj-full) Mantis punched Tigress and Mantis punched Po.
+
+The basic idea here is that you want an object noun phrase to take a transitive verb and give something back.
+
+You don't need to provide a derivation of (@ex-and-obj) for this exercise, but it might help to!
+
+### Part 3
+
+The sentence in (@ex-two-readings) is ambiguous;
+that is, it has two possible interpretations, or *readings*.
+
+(@ex-two-readings) Tigress and Po jumped or slept.
+
+On one reading, both Tigress and Po have to have done the same thing---that is, they both jumped *or* they both slept.
+To get at this reading, you might follow up (@ex-two-readings) by saying, "Tigress and Po jumped or slept---but I don't know which one they both did."
+Call this reading of the sentence in (@ex-two-readings) *Reading A*.
+
+There is another reading of (@ex-two-readings), however, which is *weaker* than Reading A.
+On this other reading, (@ex-two-readings) can be true if Tigress and Po both did one of the two activities of jumping and sleeping, but not necessarily the same one.
+For example, maybe Tigress only jumped, while Po only slept.
+It seems like (@ex-two-readings) can still be true in this scenario---it just means something different.
+Call this *Reading B*.
+
+Do the assumptions we have made about the meanings of *and*, *or*, and subject noun phrases allow us to account for the existence of both Reading A and Reading B?
+Or can we only explain one or the other?
+One way to figure out an answer to this question is by providing a derivation for (@ex-two-readings).

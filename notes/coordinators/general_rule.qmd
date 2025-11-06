@@ -25,181 +25,110 @@ $$
 $$
 :::
 
-To explain these facts, it would be useful to have a systematic account of the meanings of *and* and *or*.
-Let's start by providing the sentence-coordinator meanings in terms of some lexical entries.
-For each lexical entry, we'll annotate the word itself with a category name, just to keep coordinators of different categories distinct (e.g., we'll call the sentence-level *and* $\textit{and}_{s}$ and the sentence-level *or* $\textit{or}_{s}$).
+Taking stock of these distinct examples of expressions that can be coordinated---sentences, verb phrases, transitive verbs---one might wonder if there is a rule that might allow us to *derive* the meaning of a coordinator in any specific case, perhaps, from some collection of general principles.
 
-### Sentence coordinators
+### Sentence-level coordinators
 
-Let's start with sentences.
+Starting with the observation---made in [Overview](overview.html)---that each sentence that contains a coordination using *and* or *or* has some corresponding sentence that means the same thing, let's just start by repeating the sentence-coordinating meanings.
+We can call these meanings '$\ct{and}_{t}$' and '$\ct{or}_{t}$', respectively, to represent the fact that they coordinate sentences, whose meanings are truth values.
 
-(@ex-and-or-sentences) a. $⟨\textit{and}_{s}, (λa.(λb.a = b = \true))⟩ ⊢ ((s\backslash s)/s)$
-	b. $⟨\textit{or}_{s}, (λa.(λb.¬(a = b = \false)))⟩ ⊢ ((s\backslash s)/s)$
+$$\ct{and}_{t} = (λa.(λb.a = b = \true))$$
+$$\ct{or}_{t} = (λa.(λb.¬(a = b = \false)))$$
 
-Thus for example, the sentence in (@ex-po-tigress)
+Indeed, the lexical entries for sentence-coordinating *and* and *or* can now be stated a little bit more compactly.
+That is, instead of writing
 
-(@ex-po-tigress) Po slept or Tigress slept.
+$$⟨\textit{and}_{s}, (λa.(λb.a = b = \true))⟩ ⊢ ((s\backslash s)/s)$$
+$$⟨\textit{or}_{s}, (λa.(λb.¬(a = b = \false)))⟩ ⊢ ((s\backslash s)/s)$$
 
-has the following derivation:
+we may simply write
 
-$$\begin{prooftree}
-\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np\)}
-\AxiomC{\(⟨\textit{slept}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po slept}, (λx.\ct{sleep}(x))(\ct{p})⟩ ⊢  s\)}
-\AxiomC{\(⟨\textit{or}_{s}, (λa.(λb.¬(a = b = \false)))⟩ ⊢ ((s\backslash s)/s)\)}
-\AxiomC{\(⟨\textit{Tigress}, \ct{ti}⟩ ⊢ np\)}
-\AxiomC{\(⟨\textit{slept}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Tigress slept}, (λx.\ct{sleep}(x))(\ct{ti})⟩ ⊢  s\)}
-\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{or\(_{s}\) Tigress slept}, (λa.(λb.¬(a = b = \false)))((λx.\ct{sleep}(x))(\ct{ti}))⟩ ⊢  (s\backslash s)\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po slept or\(_{s}\) Tigress slept}, (λa.(λb.¬(a = b = \false)))((λx.\ct{sleep}(x))(\ct{ti}))((λx.\ct{sleep}(x))(\ct{p}))⟩ ⊢  s\)}
-\end{prooftree}$$
+$$⟨\textit{and}_{s}, \ct{and}_{t}⟩ ⊢ ((s\backslash s)/s)$$
+$$⟨\textit{or}_{s}, \ct{or}_{t}⟩ ⊢ ((s\backslash s)/s)$$
 
+### All other coordinators
 
-We should then evaluate the meaning representation on the very last line.
-Given that the category of the resulting string is $s$, the meaning should be a truth value.
+What about coordinators of verb phrases, transitive verbs, etc.?
+We should define meanings for these coordinators that depend only on the semantic types of the expressions that they take as their arguments.
+Thus we can define totally generic meanings, as follows:
 
-Taking things one step at a time---and evaluating the outermost expression before the innermost two---we obtain:
+$$\ct{and}_{(x → y)} = (λf.(λg.(λx.\ct{and}_{y}(f(x))(g(x)))))$$
+$$\ct{or}_{(x → y)} = (λf.(λg.(λx.\ct{or}_{y}(f(x))(g(x)))))$$
 
-$$(λa.(λb.¬(a = b = \false)))((λx.\ct{sleep}(x))(\ct{ti}))((λx.\ct{sleep}(x))(\ct{p}))$$
-$$⇒ (λb.¬((λx.\ct{sleep}(x))(\ct{ti}) = b = \false))((λx.\ct{sleep}(x))(\ct{p}))$$
-$$⇒ ¬((λx.\ct{sleep}(x))(\ct{ti}) = (λx.\ct{sleep}(x))(\ct{p}) = \false)$$
-$$⇒ ¬(\ct{sleep}(\ct{ti}) = (λx.\ct{sleep}(x))(\ct{p}) = \false)$$
-$$⇒ ¬(\ct{sleep}(\ct{ti}) = \ct{sleep}(\ct{p}) = \false)$$
+#### Example: verb phrases
 
-As we can see, the result is $\true$ just in case it is not false both that Tigress slept and that Po slept---that is, if at least one of them slept.
+So, now, what is the meaning of *and* when it coordinates two verb phrases?
+We can just give it the following lexical entry:
 
-### Verb phrase coordinators
+$$⟨\textit{and}_{(np\backslash s)}, \ct{and}_{(e → t)}⟩ ⊢ (((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$$
 
-What about the versions of *and* and *or* when they coordinate verb phrases?
-In this case, they should both have the same syntatic category:
+Why is its meaning $\ct{and}_{(e → t)}$?
+Well, because it coordinates verb phrases, and $(e → t)$ is the semantic type of verb phrases!
 
-$$(((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$$
+What is $\ct{and}_{(e → t)}$?
+To figure this out, we just have to apply the rule given above.
+Specifically:
 
-This category can be rendered in tree notation as follows:
+$$\ct{and}_{(e → t)} = (λf.(λg.(λx.\ct{and}_{t}(f(x))(g(x)))))$$
 
-```
-        (/)
-        / \
-       /   \
-      /     \
-    (\)     (\)
-    / \     / \
-   /   \   np  s
- (\)   (\)
- / \   / \
-np  s np  s
-```
-Because they have this category, $vp$-coordinating *and* and *or* should also have the following semantic type:
+And now, if we substitute in the definition of $\ct{and}_{t}$, we get:
 
-$$((e → t) → ((e → t) → (e → t)))$$
+$$\ct{and}_{(e → t)} = (λf.(λg.(λx.(λa.(λb.a = b = \true))(f(x))(g(x)))))$$
 
-Or in tree notation:
+This looks complicated, but we can evaluate it.
+Specifically, we should get rid of the '$λa$' and substitute $f(x)$ in for $a$: 
 
-```
-       ─>
-      / \
-     /   \
-    /     \
-   ─>      ─>
-  / \     / \
- e   t   /   \
-        /     \
-       ─>      ─>
-      / \     / \
-	 e   t   e   t
-```
-Thus analogous to the $s$-coordinators from above, the meanings of $vp$-coordinators should take two arguments in order;
-but this time, both of these arguments are characteristic functions of sets of entities (functions of type $(e → t)$).
-Furthermore, they should give back a new characteristic function.
+$$\ct{and}_{(e → t)} = (λf.(λg.(λx.(λb.f(x) = b = \true)(g(x)))))$$
 
-The lexical entries in (@ex-and-or-vps) accomplish this.
+Now, we should get rid of the '$λb$' and substitute $g(x)$ in for $b$:
 
-(@ex-and-or-vps) a. $⟨\textit{and}_{(np\backslash s)}, (λf.(λg.(λx.f(x) = g(x) = \true)))⟩ ⊢ (((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$
-	b. $⟨\textit{or}_{(np\backslash s)}, (λf.(λg.(λx.¬(f(x) = g(x) = \false))))⟩ ⊢ (((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$
+$$\ct{and}_{(e → t)} = (λf.(λg.(λx.f(x) = g(x) = \true)))$$
 
-Thus for example, the sentence in (@ex-po-slept-jumped)
+Fortunately, this is precisely the meaning of $\textit{and}_{(np\backslash s)}$ provided in [Verb phrase coordinators](examples.html#verb-phrase-coordinators).
 
-(@ex-po-slept-jumped) Po slept or jumped.
+#### Example: transitive verbs
 
-has the following derivation:
+What about when it coordinates two transitive verbs?
+In this case, *and* should have the following lexical entry:
 
-$$\begin{prooftree}
-\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np\)}
-\AxiomC{\(⟨\textit{slept}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
-\AxiomC{\(⟨\textit{or}_{(np\backslash s)}, (λf.(λg.(λx.¬(f(x) = g(x) = \false))))⟩ ⊢ (((np\backslash s)\backslash(np\backslash s))/(np\backslash s))\)}
-\AxiomC{\(⟨\textit{jumped}, (λx.\ct{jump}(x))⟩ ⊢ (np\backslash s)\)}
-\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))⟩ ⊢  ((np\backslash s)\backslash(np\backslash s))\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{slept or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))⟩ ⊢ (np\backslash s)\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po slept or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))(\ct{p})⟩ ⊢ s\)}
-\end{prooftree}$$
+$$⟨\textit{and}_{((np\backslash s)/np)}, \ct{and}_{(e → (e → t))}⟩ ⊢ ((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$$
 
-Again, we should evaluate the result:
+Why $\ct{and}_{(e → (e → t))}$?
+Well, because $(e → (e → t))$ is the semantic type of transitive verbs.
 
-$$(λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))(\ct{p})$$
-$$⇒ (λg.(λx.¬((λx.\ct{jump}(x))(x) = g(x) = \false)))((λx.\ct{sleep}(x)))(\ct{p})$$
-$$⇒ (λx.¬((λx.\ct{jump}(x))(x) = (λx.\ct{sleep}(x))(x) = \false))(\ct{p})$$
-$$⇒ ¬((λx.\ct{jump}(x))(\ct{p}) = (λx.\ct{sleep}(x))(\ct{p}) = \false)$$
-$$⇒ ¬(\ct{jump}(\ct{p}) = (λx.\ct{sleep}(x))(\ct{p}) = \false)$$
-$$⇒ ¬(\ct{jump}(\ct{p}) = \ct{sleep}(\ct{p}) = \false)$$
+And what is $\ct{and}_{(e → (e → t))}$.
+We can figure this one out, as well, by applying the rule above.
+The main difference is that this time, we apply the rule twice (once for each of the two $e$'s).
+Thus we get:
 
-In this case, the resulting truth value is $\true$ just in case it isn't false both that Po jumped and that Po slept---Po must have done at least one.
+$$\ct{and}_{(e → (e → t))} = (λf.(λg.(λx.\ct{and}_{(e → t)}(f(x))(g(x)))))$$
 
-### Transitive verb coordinators
+This meaning for *and* immediately uses the meaning we defined for verb-phrase-coordinator *and*---$\ct{and}_{(e → t)}$---so let's just that meaning in.
+Importantly, we should change up the names of our variables in the meaning we substitute, in order to help prevent them from getting mixed up with the other variables.
+So instead of writing in
 
-What about when *and* and *or* coordinate transitive verbs?
-Transitive verbs have the syntactic category $((np\backslash s)/np)$, so *and* and *or* should have the following syntactic category in this case:
+$$(λf.(λg.(λx.f(x) = g(x) = \true)))$$
 
-$$((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$$
+as the definition of $\ct{and}_{(e → t)}$
 
-Or in tree notation:
+we can instead write the following:
 
-```
-               (/)
-               / \
-              /   \
-	   	     /     \
-            /       \
-           /         \
-          /           \
-        (\)           (/)
-        / \           / \
-       /   \        (\)  np
-      /     \       / \
-    (/)     (/)    np  s
-    / \     / \
-  (\)  np (\)  np
-  / \     / \
- np  s   np  s
-```
+$$(λf^{\prime}.(λg^{\prime}.(λy.f^{\prime}(y) = g^{\prime}(y) = \true)))$$
 
-Using the usual mapping from categories to types, we can see that they should therefore have the following semantic type:
+Importantly, this is exactly the same function!
+We just changed the names of the variables.
 
-$$((e → (e → t)) → ((e → (e → t)) → (e → (e → t))))$$
+If we substitute this in, we get:
 
-Or in tree notation:
+$$\ct{and}_{(e → (e → t))} = (λf.(λg.(λx.(λf^{\prime}.(λg^{\prime}.(λy.f^{\prime}(y) = g^{\prime}(y) = \true)))(f(x))(g(x)))))$$
 
-```
-        ─>
-       / \
-      /   \
-     /     \
-	/       \
-   /         \
-  ─>          ─>
- / \         / \
-e  ─>       /   \
-  / \      /     \
- e   t    ─>      ─>
-         / \     / \
-	    e   ─>  e   ─>
-	       / \     / \
-	      e   t   e   t
+Following what we did above, we can simplify this definition a bit by performing some substitutions.
+First, let's substitute $f(x)$ in for $f^{\prime}$:
 
-```
+$$\ct{and}_{(e → (e → t))} = (λf.(λg.(λx.(λg^{\prime}.(λy.f(x)(y) = g^{\prime}(y) = \true))(g(x)))))$$
 
-Again, their meanings each take two arguments in order, but now both of the arguments are functions of type $(e → (e → t))$---i.e., functions thta take two entities (in order) and give back a truth value.
-The lexical entries in (@ex-and-or-tvs) assign them meanings that do this.
+Second, lets substitute $g(x)$ in for $g^{\prime}$:
 
-(@ex-and-or-tvs) a. $⟨\textit{and}_{((np\backslash s)/np)}, (λf.(λg.(λx.(λy.f(x)(y) = g(x)(y) = \true)))⟩ ⊢ ((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$
-	b. $⟨\textit{or}_{((np\backslash s)/np)}, (λf.(λg.(λx.(λy.¬(f(x) = g(x) = \false)))))⟩ ⊢ ((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$
+$$\ct{and}_{(e → (e → t))} = (λf.(λg.(λx.(λy.f(x)(y) = g(x)(y) = \true))))$$
 
+What we are left with is exactly the meaning for $\textit{and}_{((np\backslash s)/np)}$ that we posited in [Transitive verb coordinators](examples.html#transitive-verb-coordinators).

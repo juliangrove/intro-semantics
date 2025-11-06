@@ -1,0 +1,249 @@
+---
+title: "Some examples"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+To explain these facts, it would be useful to have a systematic account of the meanings of *and* and *or*.
+Let's start by providing the sentence-coordinator meanings in terms of some lexical entries.
+For each lexical entry, we'll annotate the word itself with a category name, just to keep coordinators of different categories distinct (e.g., we'll call the sentence-level *and* $\textit{and}_{s}$ and the sentence-level *or* $\textit{or}_{s}$).
+
+### Sentence coordinators
+
+Let's start with sentences.
+
+(@ex-and-or-sentences) a. $⟨\textit{and}_{s}, (λa.(λb.a = b = \true))⟩ ⊢ ((s\backslash s)/s)$
+	b. $⟨\textit{or}_{s}, (λa.(λb.¬(a = b = \false)))⟩ ⊢ ((s\backslash s)/s)$
+
+Thus for example, the sentence in (@ex-po-tigress)
+
+(@ex-po-tigress) Po slept or Tigress slept.
+
+has the following derivation:
+
+$$\begin{prooftree}
+\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np\)}
+\AxiomC{\(⟨\textit{slept}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po slept}, (λx.\ct{sleep}(x))(\ct{p})⟩ ⊢  s\)}
+\AxiomC{\(⟨\textit{or}_{s}, (λa.(λb.¬(a = b = \false)))⟩ ⊢ ((s\backslash s)/s)\)}
+\AxiomC{\(⟨\textit{Tigress}, \ct{ti}⟩ ⊢ np\)}
+\AxiomC{\(⟨\textit{slept}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Tigress slept}, (λx.\ct{sleep}(x))(\ct{ti})⟩ ⊢  s\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{or\(_{s}\) Tigress slept}, (λa.(λb.¬(a = b = \false)))((λx.\ct{sleep}(x))(\ct{ti}))⟩ ⊢  (s\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po slept or\(_{s}\) Tigress slept}, (λa.(λb.¬(a = b = \false)))((λx.\ct{sleep}(x))(\ct{ti}))((λx.\ct{sleep}(x))(\ct{p}))⟩ ⊢  s\)}
+\end{prooftree}$$
+
+
+We should then evaluate the meaning representation on the very last line.
+Given that the category of the resulting string is $s$, the meaning should be a truth value.
+
+Taking things one step at a time---and evaluating the outermost expression before the innermost two---we obtain:
+
+$$(λa.(λb.¬(a = b = \false)))((λx.\ct{sleep}(x))(\ct{ti}))((λx.\ct{sleep}(x))(\ct{p}))$$
+$$⇒ (λb.¬((λx.\ct{sleep}(x))(\ct{ti}) = b = \false))((λx.\ct{sleep}(x))(\ct{p}))$$
+$$⇒ ¬((λx.\ct{sleep}(x))(\ct{ti}) = (λx.\ct{sleep}(x))(\ct{p}) = \false)$$
+$$⇒ ¬(\ct{sleep}(\ct{ti}) = (λx.\ct{sleep}(x))(\ct{p}) = \false)$$
+$$⇒ ¬(\ct{sleep}(\ct{ti}) = \ct{sleep}(\ct{p}) = \false)$$
+
+As we can see, the result is $\true$ just in case it is not false both that Tigress slept and that Po slept---that is, if at least one of them slept.
+
+### Verb phrase coordinators
+
+What about the versions of *and* and *or* when they coordinate verb phrases?
+In this case, they should both have the same syntatic category:
+
+$$(((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$$
+
+This category can be rendered in tree notation as follows:
+
+```
+        (/)
+        / \
+       /   \
+      /     \
+    (\)     (\)
+    / \     / \
+   /   \   np  s
+ (\)   (\)
+ / \   / \
+np  s np  s
+```
+Because they have this category, $vp$-coordinating *and* and *or* should also have the following semantic type:
+
+$$((e → t) → ((e → t) → (e → t)))$$
+
+Or in tree notation:
+
+```
+       ─>
+      / \
+     /   \
+    /     \
+   ─>      ─>
+  / \     / \
+ e   t   /   \
+        /     \
+       ─>      ─>
+      / \     / \
+	 e   t   e   t
+```
+Thus analogous to the $s$-coordinators from above, the meanings of $vp$-coordinators should take two arguments in order;
+but this time, both of these arguments are characteristic functions of sets of entities (functions of type $(e → t)$).
+Furthermore, they should give back a new characteristic function.
+
+The lexical entries in (@ex-and-or-vps) accomplish this.
+
+(@ex-and-or-vps) a. $⟨\textit{and}_{(np\backslash s)}, (λf.(λg.(λx.f(x) = g(x) = \true)))⟩ ⊢ (((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$
+	b. $⟨\textit{or}_{(np\backslash s)}, (λf.(λg.(λx.¬(f(x) = g(x) = \false))))⟩ ⊢ (((np\backslash s)\backslash(np\backslash s))/(np\backslash s))$
+
+Thus for example, the sentence in (@ex-po-slept-jumped)
+
+(@ex-po-slept-jumped) Po slept or jumped.
+
+has the following derivation:
+
+$$\begin{prooftree}
+\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np\)}
+\AxiomC{\(⟨\textit{slept}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
+\AxiomC{\(⟨\textit{or}_{(np\backslash s)}, (λf.(λg.(λx.¬(f(x) = g(x) = \false))))⟩ ⊢ (((np\backslash s)\backslash(np\backslash s))/(np\backslash s))\)}
+\AxiomC{\(⟨\textit{jumped}, (λx.\ct{jump}(x))⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))⟩ ⊢  ((np\backslash s)\backslash(np\backslash s))\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{slept or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po slept or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))(\ct{p})⟩ ⊢ s\)}
+\end{prooftree}$$
+
+Again, we should evaluate the result:
+
+$$(λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))(\ct{p})$$
+$$⇒ (λg.(λx.¬((λx.\ct{jump}(x))(x) = g(x) = \false)))((λx.\ct{sleep}(x)))(\ct{p})$$
+$$⇒ (λx.¬((λx.\ct{jump}(x))(x) = (λx.\ct{sleep}(x))(x) = \false))(\ct{p})$$
+$$⇒ ¬((λx.\ct{jump}(x))(\ct{p}) = (λx.\ct{sleep}(x))(\ct{p}) = \false)$$
+$$⇒ ¬(\ct{jump}(\ct{p}) = (λx.\ct{sleep}(x))(\ct{p}) = \false)$$
+$$⇒ ¬(\ct{jump}(\ct{p}) = \ct{sleep}(\ct{p}) = \false)$$
+
+In this case, the resulting truth value is $\true$ just in case it isn't false both that Po jumped and that Po slept---Po must have done at least one.
+
+### Transitive verb coordinators
+
+What about when *and* and *or* coordinate transitive verbs?
+Transitive verbs have the syntactic category $((np\backslash s)/np)$, so the coordinators should have the following syntactic category, in this case:
+
+$$((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$$
+
+Or in tree notation:
+
+```
+               (/)
+               / \
+              /   \
+	   	     /     \
+            /       \
+           /         \
+          /           \
+        (\)           (/)
+        / \           / \
+       /   \        (\)  np
+      /     \       / \
+    (/)     (/)    np  s
+    / \     / \
+  (\)  np (\)  np
+  / \     / \
+ np  s   np  s
+```
+
+Using the usual mapping from categories to types, we can see that the two coordinators should therefore have the following semantic type:
+
+$$((e → (e → t)) → ((e → (e → t)) → (e → (e → t))))$$
+
+Or in tree notation:
+
+```
+        ─>
+       / \
+      /   \
+     /     \
+	/       \
+   /         \
+  ─>          ─>
+ / \         / \
+e  ─>       /   \
+  / \      /     \
+ e   t    ─>      ─>
+         / \     / \
+	    e   ─>  e   ─>
+	       / \     / \
+	      e   t   e   t
+
+```
+
+Again, their meanings each take two arguments in order, but now both of the arguments are functions of type $(e → (e → t))$:
+they are functions that each take two entities (in order) and give back a truth value.
+The lexical entries in (@ex-and-or-tvs) assign the coordinators meanings that do this.
+
+(@ex-and-or-tvs) a. $⟨\textit{and}_{((np\backslash s)/np)}, (λf.(λg.(λx.(λy.f(x)(y) = g(x)(y) = \true)))⟩ ⊢ ((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$
+	b. $⟨\textit{or}_{((np\backslash s)/np)}, (λf.(λg.(λx.(λy.¬(f(x) = g(x) = \false)))))⟩ ⊢ ((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))$
+
+Thus for example, the sentence in (@ex-po-cooked-ate)
+
+(@ex-po-cooked-ate) Po cooked or ate noodles.
+
+has the following derivation:
+
+$$\begin{prooftree}
+\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np\)}
+\AxiomC{\(⟨\textit{cooked}, (λx.(λy.\ct{cook}(y, x)))⟩ ⊢ ((np\backslash s)/np)\)}
+\AxiomC{\(⟨\textit{or}_{((np\backslash s)/np)}, (λf.(λg.(λx.(λy.¬(f(x)(y) = g(x)(y) = \false))))⟩ ⊢ ((((np\backslash s)/np)\backslash((np\backslash s)/np))/((np\backslash s)/np))\)}
+\AxiomC{\(⟨\textit{ate}, (λx.(λy.\ct{eat}(y, x)))⟩ ⊢ ((np\backslash s)/np)\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{or\(_{((np\backslash s)/np)}\) ate}, (λf.(λg.(λx.(λy.¬(f(x)(y) = g(x)(y) = \false)))))((λx.(λy.\ct{eat}(y, x))))⟩ ⊢  (((np\backslash s)/np)\backslash((np\backslash s)/np))\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{cooked or\(_{((np\backslash s)/np)}\) ate}, (λf.(λg.(λx.(λy.¬(f(x)(y) = g(x)(y) = \false)))))((λx.(λy.\ct{eat}(y, x))))((λx.(λy.\ct{cook}(y, x))))⟩ ⊢ ((np\backslash s)/np)\)}
+\AxiomC{\(⟨\textit{noodles}, \ct{n}⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{cooked or\(_{((np\backslash s)/np)}\) ate noodles}, (λf.(λg.(λx.(λy.¬(f(x)(y) = g(x)(y) = \false)))))((λx.(λy.\ct{eat}(y, x))))((λx.(λy.\ct{cook}(y, x))))(\ct{n})⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po cooked or\(_{((np\backslash s)/np)}\) ate noodles}, (λf.(λg.(λx.(λy.¬(f(x)(y) = g(x)(y) = \false)))))((λx.(λy.\ct{eat}(y, x))))((λx.(λy.\ct{cook}(y, x))))(\ct{n})(\ct{p})⟩ ⊢ s\)}
+\end{prooftree}$$
+
+The resulting meaning representation is quite grisly!
+But as usual, we can tame it---we just have to be careful when we substitute arguments for the variables that stand for them inside of the relevant functions.
+Going again from the outside in, we can evaluate the result by substituting in the four arguments of the function denoted by *or* (i.e., corresponding to the two verbs, the object, and the subject, respectively):
+
+$$(λf.(λg.(λx.(λy.¬(f(x)(y) = g(x)(y) = \false)))))((λx.(λy.\ct{eat}(y, x))))((λx.(λy.\ct{cook}(y, x))))(\ct{n})(\ct{p})$$
+$$⇒ (λg.(λx.(λy.¬((λx.(λy.\ct{eat}(y, x)))(x)(y) = g(x)(y) = \false)))))((λx.(λy.\ct{cook}(y, x))))(\ct{n})(\ct{p})$$
+$$⇒ (λx.(λy.¬((λx.(λy.\ct{eat}(y, x)))(x)(y) = (λx.(λy.\ct{cook}(y, x)))(x)(y) = \false)))(\ct{n})(\ct{p})$$
+$$⇒ (λy.¬((λx.(λy.\ct{eat}(y, x)))(\ct{n})(y) = (λx.(λy.\ct{cook}(y, x)))(\ct{n})(y) = \false))(\ct{p})$$
+$$⇒ ¬((λx.(λy.\ct{eat}(y, x)))(\ct{n})(\ct{p}) = (λx.(λy.\ct{cook}(y, x)))(\ct{n})(\ct{p}) = \false)$$
+
+We just have to evaluate the meanings of the two verbs themselves, each now applied to its two arguments.
+Let's take care of one of these meanings at a time, starting with the meaning of *ate*:
+
+$$¬((λx.(λy.\ct{eat}(y, x)))(\ct{n})(\ct{p}) = (λx.(λy.\ct{cook}(y, x)))(\ct{n})(\ct{p}) = \false)$$
+$$⇒ ¬((λy.\ct{eat}(y, \ct{n}))(\ct{p}) = (λx.(λy.\ct{cook}(y, x)))(\ct{n})(\ct{p}) = \false)$$
+$$⇒ ¬(\ct{eat}(\ct{p}, \ct{n}) = (λx.(λy.\ct{cook}(y, x)))(\ct{n})(\ct{p}) = \false)$$
+
+Finally, let's take care of the meaning of *cook*, applied to its arguments:
+
+$$¬(\ct{eat}(\ct{p}, \ct{n}) = (λx.(λy.\ct{cook}(y, x)))(\ct{n})(\ct{p}) = \false)$$
+$$⇒ ¬(\ct{eat}(\ct{p}, \ct{n}) = (λy.\ct{cook}(y, \ct{n}))(\ct{p}) = \false)$$
+$$⇒ ¬(\ct{eat}(\ct{p}, \ct{n}) = \ct{cook}(\ct{p}, \ct{n}) = \false)$$
+
+As we can see, (@ex-po-cooked-ate) is taken to have the value $\true$ just in case it isn't false both that Po ate noodles and that Po cooked noodles---that is, one of them has to be true.
+Seems about right!

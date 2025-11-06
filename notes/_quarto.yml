@@ -62,7 +62,10 @@ website:
     - section: "Coordinators"
       contents:
       - coordinators/overview.qmd
+      - coordinators/examples.qmd
       - coordinators/general_rule.qmd
+      - coordinators/coordinating_nps.qmd
+      - coordinators/assignment.qmd
     - section: "Adjectives"
     - section: "Pronouns"
     - section: "Quantification"

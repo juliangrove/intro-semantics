@@ -185,10 +185,10 @@ Available here:
 | Wed., Oct. 22  | Verbs and arguments redux                |                                                                   |                                              |
 | Fri., Oct. 24  | Verbs and arguments redux                |                                                                   |                                              |
 | Mon., Oct. 27  | Coordinators                             | @winter_elements_2016 (Ch. 3, pp. 74--80)                         |                                              |
-| Wed., Oct. 29  | Coordinators                             |                                                                   | [View](verbs/assignment.html)                                          |
+| Wed., Oct. 29  | Coordinators                             |                                                                   | [View](verbs/assignment.html)                |
 | Fri., Oct. 31  | Adjectives                               | @kennedy_adjectives_2012                                          |                                              |
 | Mon., Nov. 3   | Adjectives                               |                                                                   |                                              |
-| Wed., Nov. 5   | Adjectives                               |                                                                   | TBD                                          |
+| Wed., Nov. 5   | Adjectives                               |                                                                   | [View](coordinators/assignment.html)         |
 | Fri., Nov. 7   | Pronouns                                 |                                                                   |                                              |
 | Mon., Nov. 10  | Pronouns                                 |                                                                   |                                              |
 | Wed., Nov. 12  | Pronouns                                 |                                                                   | TBD                                          |
