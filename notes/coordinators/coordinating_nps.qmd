@@ -101,7 +101,7 @@ $$\begin{prooftree}
 \AxiomC{\(⟨\textit{Po}, (λf.f(\ct{p}))⟩ ⊢ (s/(np\backslash s))\)}
 \AxiomC{\(⟨\textit{and}_{(s/(np\backslash s))}, \ct{and}_{((e → t) → t)}⟩ ⊢ (((s/(np\backslash s))\backslash(s/(np\backslash s)))/(s/(np\backslash s)))\)}
 \AxiomC{\(⟨\textit{Tigress}, (λf.f(\ct{ti}))⟩ ⊢ (s/(np\backslash s))\)}
-\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{and Tigress}, \ct{and}_{((e → t) → t)}((λf.f(\ct{ti})))⟩ ⊢ ((s/(np\backslash s))\backslash(s/(np\backslash s)))\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{and\(_{(s/(np\backslash s))}\) Tigress}, \ct{and}_{((e → t) → t)}((λf.f(\ct{ti})))⟩ ⊢ ((s/(np\backslash s))\backslash(s/(np\backslash s)))\)}
 \RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po and\(_{(s/(np\backslash s))}\) Tigress}, \ct{and}_{((e → t) → t)}((λf.f(\ct{ti})))((λf.f(\ct{p})))⟩ ⊢ (s/(np\backslash s))\)}
 \AxiomC{\(⟨\textit{slept}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
 \RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{Po and\(_{(s/(np\backslash s))}\) Tigress slept}, \ct{and}_{((e → t) → t)}((λf.f(\ct{ti})))((λf.f(\ct{p})))((λx.\ct{sleep}(x)))⟩ ⊢ s\)}

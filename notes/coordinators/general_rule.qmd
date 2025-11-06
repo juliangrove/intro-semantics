@@ -52,8 +52,8 @@ What about coordinators of verb phrases, transitive verbs, etc.?
 We should define meanings for these coordinators that depend only on the semantic types of the expressions that they take as their arguments.
 Thus we can define totally generic meanings, as follows:
 
-$$\ct{and}_{(x → y)} = (λf.(λg.(λx.\ct{and}_{y}(f(x))(g(x)))))$$
-$$\ct{or}_{(x → y)} = (λf.(λg.(λx.\ct{or}_{y}(f(x))(g(x)))))$$
+$$\ct{and}_{(X → Y)} = (λf.(λg.(λx.\ct{and}_{Y}(f(x))(g(x)))))$$
+$$\ct{or}_{(X → Y)} = (λf.(λg.(λx.\ct{or}_{Y}(f(x))(g(x)))))$$
 
 #### Example: verb phrases
 
