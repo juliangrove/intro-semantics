@@ -1,0 +1,67 @@
+---
+title: "Examples of generalized quantifiers"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+Let's look at some more examples of generalized quantifiers.
+
+### Every dog
+
+When the generalized quantifier *every dog* combines with a verb phrase, it ensures that the meaning of the verb phrase is true of, well, every dog.
+We can encode this by saying that the set of dogs has to be a subset of the set of things characterized by the verb phrase.
+
+(@ex-every-dog-lex) $⟨\textit{every dog}, (λf.\ct{dog}_{SET} ⊆ f_{SET})⟩ ⊢ (s/(np\backslash s))$
+
+### No dogs
+
+What about *no dogs*?
+Here, we would like to ensure that, whatever verb phrase it combines with, the sentence that results is true just in case the verb phrase isn't true of any dogs.
+To get this result, we can assume *no dogs* has the meaning provided in (@ex-no-dogs-lex).
+
+(@ex-no-dogs-lex) $⟨\textit{no dogs}, (λf.\ct{dog}_{SET} ∩ f_{SET} = \varnothing)⟩ ⊢ (s/(np\backslash s))$
+
+### Three dogs
+
+What about *three dogs*?
+One idea might be that *three dogs vp* should be true just in case the number of dogs that *vp*'d is three.
+But, as we discussed, it is possible to have a felicitous discourse like (@ex-three-dogs-discourse).
+
+(@ex-three-dogs-discourse) Three dogs slept; in fact, four dogs did.
+
+If *three dogs slept* and *four dogs slept* are compatible, as (@ex-three-dogs-discourse) suggests they are, then we might assume that the usual "upper-bounded" interpretation we associate with numeral quantifiers such as *three dogs* actually arises from a conversational implicature---in particular, a quantity implicature.
+In any case, (@ex-three-dogs-discourse) suggests that a meaning for *three dogs* that ensures that the verb phrase it combines with is true of *exactly* three dogs might be too strong.
+
+Meanwhile, we can assume that *three dogs* has the weaker, lower-bounded meaning provided in (@ex-three-dogs-lex).
+
+(@ex-three-dogs-lex) $⟨\textit{three dogs}, (λf.|\ct{dog}_{SET} ∩ f_{SET}| ≥ 3)⟩ ⊢ (s/(np\backslash s))$
+
+Here, $|·|$ is the "cardinality function":
+it takes any set onto its cardinality, i.e., the number of elements it contains.
+Thus for example, $|\varnothing| = 0$ (the empty set has zero elements);
+$|\{\varnothing\}| = 1$ (the set containing the empty set has one element);
+and $|D_{t}| = 2$ (the set $\{\true, \false\}$ has two elements).
+
+Thus ultimately, (@ex-three-dogs-lex) says that the intersection of the set of dogs with the set characterized by the verb phrase that *three dogs* combines with has a cardinality of at least three.
+(At least three dogs have the property denoted by the verb phrase.)

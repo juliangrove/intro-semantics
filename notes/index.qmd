@@ -191,10 +191,10 @@ Available here:
 | Wed., Nov. 5   | Adjectives                               |                                                                   | [View](coordinators/assignment.html)         |
 | Fri., Nov. 7   | Pronouns                                 |                                                                   |                                              |
 | Mon., Nov. 10  | Pronouns                                 |                                                                   |                                              |
-| Wed., Nov. 12  | Pronouns                                 |                                                                   | TBD                                          |
-| Fri., Nov. 14  | Quantifiers                              | @winter_elements_2016 (Ch. 4, pp. 99--108)                        |                                              |
+| Wed., Nov. 12  | Pronouns                                 |                                                                   |                                              |
+| Fri., Nov. 14  | Quantifiers                              | @winter_elements_2016 (Ch. 4, pp. 99--108)                        | [View](quantifiers/assignment.html)          |
 | Mon., Nov. 17  | Quantifiers                              |                                                                   |                                              |
-| Wed., Nov. 19  | Quantifiers                              |                                                                   | TBD                                          |
-| Fri., Nov. 21  | Negative polarity items                  |                                                                   |                                              |
+| Wed., Nov. 19  | Quantifiers                              |                                                                   |                                              |
+| Fri., Nov. 21  | Negative polarity items                  |                                                                   | TBD                                          |
 | Mon., Dec. 1   | Quantifiers and binding                  |                                                                   |                                              |
 | Wed., Dec. 3   | Quantifiers and binding                  |                                                                   |                                              |

@@ -1,0 +1,62 @@
+---
+title: "Assignment"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+Due on Friday, November 21th.
+
+### Part 1
+
+Consider the sentence in (@ex-the-dog).
+
+(@ex-the-dog) The dog slept.
+
+This sentence appears to give rise to two inferences.
+First, it seems to imply that there is a unique dog.
+For example, while (@ex-the-dog) sounds okay following the sentence *there was a dog*, it sounds quite odd following the sentence *there were two dogs*.
+Second, it seems to imply that that dog---whichever one it was---slept.
+
+The first of these inferences seems to pattern like a presupposition---for instance, it projects through negation (*the dog didn't sleep*).
+But let's ignore this fact and pretend that the inference is, in fact, an entailment.
+
+Provide a lexical entry for *the dog* that helps explain these two inferences, assuming that it is a generalized quantifier.
+
+### Part 2
+
+Consider the sentence in (@ex-only-dogs).
+
+(@ex-only-dogs) Only dogs slept.
+
+What entailments does (@ex-only-dogs) seem to generate?
+Provide a lexical entry for *only dogs*, assuming that it is a generalized quantifier.
+
+### Part 3
+
+Recall the two readings of (@ex-two-readings) discussed in [the previous assignment](../coordinators/assignment.html#part-3).
+
+(@ex-two-readings) Tigress and Po jumped or slept.
+
+Is there a way to modify the lexical entries for *jumped* and *slept*---perhaps, including their syntactic categories---that helps to explain the existence of the *stronger* reading, Reading A?
+Note that if you modify the syntactic categories of the two verbs, you also have to modify their semantic types and meanings, along with the category and type (and meaning) of *or*.

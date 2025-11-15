@@ -71,8 +71,11 @@ website:
       - adjectives/overview.qmd
       - adjectives/subsectives.qmd
       - adjectives/non-subsectives.qmd
-      - adjectives/assignment.qmd
     - section: "Quantification"
+      contents:
+      - quantifiers/overview.qmd
+      - quantifiers/examples.qmd
+      - quantifiers/assignment.qmd
 
 format:
   html:
