@@ -33,13 +33,13 @@ Take (@ex-some), for example.
 What's interesting about quantifiers like *some dog* is that while they have the distribution of noun phrases, they apparently do not pick out entities.
 What (@ex-some) says, for example, is not that there is a particular dog, say Fido, who slept.
 Instead, the claim that (@ex-some) makes is much weaker than that.
-All it requires is that *some* dog slept---could be Fido, could be Bella, could be Lassie---and it is true just in case any one of these dogs slept.
+All it requires is that *some* dog slept---could be Fido, could be Bella, could be Lassie, or yet some other dog---and it is true just in case any one of these dogs slept.
 
 One way of thinking about what the noun phrase *some dog* does, semantically, is by considering it to denote a property of verb phrase meanings (i.e., characteristic functions of sets of entities).
 Specifically, it is *true* of any verb phrase meaning that is itself true of some or other dog, and it is false of any verb phrase meaning that is not true of any dogs.
-If we think of the meaning of *some dog* this way, then we can see how applying it to a verb phrase will give rise to a true sentence just in case the verb phrase is true of a dog---exactly what we want.
+If we think of the meaning of *some dog* this way, then we can see how applying it to a verb phrase will give rise to a true sentence just in case the verb phrase is true of some dog---exactly what we want.
 
-To carry this out, we might assume that *some dog* is kind of like a coordination of two noun phrases (e.g., *Po and Tigress*), insofar as it acts on a verb phrase, rather than allowing a verb phrase to act on *it* (see [Coordinating subject noun phrases](../coordinators/coordinating_nps.html)).
+To carry this out, we might assume that *some dog* is kind of like a coordination of two noun phrases (e.g., *Po and Tigress*), insofar as it acts on a verb phrase, rather than allowing a verb phrase to act on *it* (see [Coordinating subject noun phrases](../coordinators/coordinating_nps.html) for discussion).
 Thus we can assign it the meaning and syntactic category in (@ex-some-dog-lex).
 
 (@ex-some-dog-lex) $⟨\textit{some dog}, (λf.\ct{dog}_{SET} ∩ f_{SET} ≠ \varnothing)⟩ ⊢ (s/(np\backslash s))$
@@ -56,9 +56,9 @@ turning it into the set it characterizes and then back into a characteristic fun
 In this sense, we are really always talking about "the same thing" whenever we talk about a set versus its characteristic function---the difference between them is practically only notational.
 
 So what does (@ex-some-dog-lex) say about the meaning of *some dog*?
-Basically, that the set of dogs intersected with the set characterized by the verb phrase it combines with is not the empty set.
+Basically, that, whatever verb phrase it combines with, the set of dogs intersected with the set characterized by that verb phrase is not the empty set.
 For example, if that verb phrase is *slept*, then *some dog slept* will be true just in case the intersection of dogs with sleeping things isn't empty.
 
 Expressions like *some dog* are what are known as *generalized quantifiers*.
 They are a bit like the "universal" quantifier $∀$ ('for all') and the "existential" quantifier *∃* ('there exists') that one sees in predicate logic;
-but the semantic type of generalized quantifiers---$((e → t) → t)$---allow one to encode many more meanings than just those pertaining to universality and existence.
+but the semantic type of generalized quantifiers---$((e → t) → t)$---allows one to encode many more meanings than just those pertaining to universality and existence.

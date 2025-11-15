@@ -29,6 +29,21 @@ Due on Friday, November 21th.
 
 ### Part 1
 
+Consider the sentence in (@ex-fake-complex).
+
+(@ex-fake-complex) Jo is a fake tall linguist.
+
+Assume the following lexical entries for the copula *is* and the indefinite article *a* (and assume that the semantic type of the syntactic category $n_{pred}$ is $(e → t)$).
+
+(@ex-copula-indef-lex) a. $⟨\textit{is}, (λf.f)⟩ ⊢ ((np\backslash s)/np_{pred})$
+	b. $⟨\textit{a}, (λf.f)⟩ ⊢ (np_{pred}/n)$
+
+Provide a derivation of (@ex-fake-complex).
+Does the result you get predict that (@ex-fake-complex) entails that Jo isn't a linguist?
+Whatever your answer is, is that a good thing or a bad thing?
+
+### Part 2
+
 Consider the sentence in (@ex-the-dog).
 
 (@ex-the-dog) The dog slept.
@@ -36,21 +51,14 @@ Consider the sentence in (@ex-the-dog).
 This sentence appears to give rise to two inferences.
 First, it seems to imply that there is a unique dog.
 For example, while (@ex-the-dog) sounds okay following the sentence *there was a dog*, it sounds quite odd following the sentence *there were two dogs*.
-Second, it seems to imply that that dog---whichever one it was---slept.
+Second, it seems to imply that that dog---whichever one it is---slept.
 
 The first of these inferences seems to pattern like a presupposition---for instance, it projects through negation (*the dog didn't sleep*).
-But let's ignore this fact and pretend that the inference is, in fact, an entailment.
+But let's ignore this fact and pretend that both inferences are entailments.
 
-Provide a lexical entry for *the dog* that helps explain these two inferences, assuming that it is a generalized quantifier.
+Provide a lexical entry for *the dog* that helps explain these two inferences.
+That is, assume that it is a sort of complex generalized quantifier.
 
-### Part 2
-
-Consider the sentence in (@ex-only-dogs).
-
-(@ex-only-dogs) Only dogs slept.
-
-What entailments does (@ex-only-dogs) seem to generate?
-Provide a lexical entry for *only dogs*, assuming that it is a generalized quantifier.
 
 ### Part 3
 
@@ -58,5 +66,5 @@ Recall the two readings of (@ex-two-readings) discussed in [the previous assignm
 
 (@ex-two-readings) Tigress and Po jumped or slept.
 
-Is there a way to modify the lexical entries for *jumped* and *slept*---perhaps, including their syntactic categories---that helps to explain the existence of the *stronger* reading, Reading A?
-Note that if you modify the syntactic categories of the two verbs, you also have to modify their semantic types and meanings, along with the category and type (and meaning) of *or*.
+Is there a way to modify the lexical entries for *jumped* and *slept*---perhaps, including their syntactic categories---that would help to account for the existence of the *stronger* reading, Reading A?
+Note that if you modify the syntactic categories of the two verbs, you also have to modify their semantic types and meanings, as well as the syntactic category and semantic type (and meaning!) of *or*.

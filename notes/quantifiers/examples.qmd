@@ -29,7 +29,7 @@ Let's look at some more examples of generalized quantifiers.
 
 ### Every dog
 
-When the generalized quantifier *every dog* combines with a verb phrase, it ensures that the meaning of the verb phrase is true of, well, every dog.
+When the generalized quantifier *every dog* combines with a verb phrase, it should ensure that the meaning of this verb phrase is true of, well, every dog.
 We can encode this by saying that the set of dogs has to be a subset of the set of things characterized by the verb phrase.
 
 (@ex-every-dog-lex) $⟨\textit{every dog}, (λf.\ct{dog}_{SET} ⊆ f_{SET})⟩ ⊢ (s/(np\backslash s))$
@@ -46,11 +46,11 @@ To get this result, we can assume *no dogs* has the meaning provided in (@ex-no-
 
 What about *three dogs*?
 One idea might be that *three dogs vp* should be true just in case the number of dogs that *vp*'d is three.
-But, as we discussed, it is possible to have a felicitous discourse like (@ex-three-dogs-discourse).
+But, as we discussed, discourses like the following one are felicitous.
 
-(@ex-three-dogs-discourse) Three dogs slept; in fact, four dogs did.
+(@ex-three-dogs-discourse) Three dogs slept; in fact, four dogs slept.
 
-If *three dogs slept* and *four dogs slept* are compatible, as (@ex-three-dogs-discourse) suggests they are, then we might assume that the usual "upper-bounded" interpretation we associate with numeral quantifiers such as *three dogs* actually arises from a conversational implicature---in particular, a quantity implicature.
+If *three dogs slept* and *four dogs slept* are compatible, as (@ex-three-dogs-discourse) suggests that they are, then we might assume that the usual "upper-bounded" interpretation we associate with numeral quantifiers such as *three dogs* actually arises from a conversational implicature---in particular, a quantity implicature.
 In any case, (@ex-three-dogs-discourse) suggests that a meaning for *three dogs* that ensures that the verb phrase it combines with is true of *exactly* three dogs might be too strong.
 
 Meanwhile, we can assume that *three dogs* has the weaker, lower-bounded meaning provided in (@ex-three-dogs-lex).
@@ -59,9 +59,9 @@ Meanwhile, we can assume that *three dogs* has the weaker, lower-bounded meaning
 
 Here, $|·|$ is the "cardinality function":
 it takes any set onto its cardinality, i.e., the number of elements it contains.
-Thus for example, $|\varnothing| = 0$ (the empty set has zero elements);
+For example, $|\varnothing| = 0$ (the empty set has zero elements);
 $|\{\varnothing\}| = 1$ (the set containing the empty set has one element);
-and $|D_{t}| = 2$ (the set $\{\true, \false\}$ has two elements).
+and $|D_{t}| = 2$ (the set of truth values $\{\true, \false\}$ has two elements).
 
 Thus ultimately, (@ex-three-dogs-lex) says that the intersection of the set of dogs with the set characterized by the verb phrase that *three dogs* combines with has a cardinality of at least three.
 (At least three dogs have the property denoted by the verb phrase.)

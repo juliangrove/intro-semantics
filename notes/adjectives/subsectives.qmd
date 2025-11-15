@@ -35,11 +35,11 @@ Thus for example *ant* can be given the lexical entry in (@ex-ant).
 
 Because attributive adjectives modify nouns---and can apparently do so recursively (*silly fake purple... ant*)---we should give them a category that allows them to take a noun on their right and give back something of the same category.
 Thus they should have the syntactic category $(n/n)$.
-As a result, they must have semantic type $((e → t) → (e → t))$.
+As a result, they must have the semantic type $((e → t) → (e → t))$.
 
 ### Intersective adjectives
 
-Since we would like intersective adjectives to contribute both the entailment that the noun they modify is true of the predicated-of entity, *and* the entailment that they are true of the predicated-of entity on their own, we can assign them lexical entries like in (@ex-round-lex) for *round*.
+Since we would like intersective adjectives to contribute both the entailment that the noun they modify is true of the predicated-of entity, *and* the entailment that they themselves are true of the predicated-of entity when they occur predicatively, we can assign them lexical entries like in (@ex-round-lex) (for *round*).
 
 (@ex-round-lex) $⟨\textit{round}_{attr}, (λf.(λx.\ct{round}(x) ∧ f(x)))⟩ ⊢ (n/n)$
 
@@ -75,4 +75,4 @@ it will produce:
 
 $$⟨\textit{short basketball player}, (λx.\ct{short}((λx.\ct{bbp}(x)))(x) ∧ \ct{bbp}(x))⟩ ⊢ n$$
 
-This result helps us explain the entailment that arises from the sentence *Jo is a short basketball player*.
+This result helps us explain the entailment that arises from the sentence *Jo is a short basketball player*---that is, that Jo is a basketball player.

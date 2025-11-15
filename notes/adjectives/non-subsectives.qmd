@@ -26,24 +26,24 @@ $$
 :::
 
 Non-subsective adjectives can be fit into the same mold.
-Lets assume that they also have syntactic category $(n/n)$ and semantic type $((e → t) → (e → t))$.
+Thus let's assume that they also have syntactic category $(n/n)$ and semantic type $((e → t) → (e → t))$.
 
 ### Vanilla non-subsective adjectives
 
-As for non-subsective adjectives which aren't privative---e.g., *alleged*---we can have lexical entries like (@ex-alleged-lex).
+Non-subsective adjectives which aren't privative---e.g., *alleged*---can be given lexical entries like (@ex-alleged-lex).
 
 (@ex-alleged-lex) $⟨\textit{alleged}, (λf.(λx.\ct{alleged}(f)(x)))⟩ ⊢ (n/n)$
 
 This lexical entry helps get at the fact that we don't observe an entailment concerning Bo's anthood from the sentence *Bo is an alleged ant*;
-in particular, (@ex-alleged-lex) helps explain this fact by not including a '$∧ f(x)$' after '$\ct{alleged}(f)(x)$'.
+in particular, (@ex-alleged-lex) helps explain this fact by not including '$∧ f(x)$' after '$\ct{alleged}(f)(x)$'.
 
 ### Privative adjectives
 
 Privative adjectives contribute the entailment that the modified noun does *not* hold of an entity of which the whole noun phrase is predicated.
-To account for this, we can give a privative adjective like *fake* the lexical entry in (@ex-fake-lex).
+To account for this fact, we can give a privative adjective like *fake* the lexical entry in (@ex-fake-lex).
 
 (@ex-fake-lex) $⟨\textit{fake}, (λf.(λx.\ct{fake}(f)(x) ∧ ¬f(x)))⟩ ⊢ (n/n)$
 
 Now if we combine *fake* with basketball player, we get:
 
-$$⟨\textit{fake basketball player}, (λx.\ct{fake}((λx.\ct{bbp}(x))) ∧ ¬\ct{bbp}(x))⟩ ⊢ n$$
+$$⟨\textit{fake basketball player}, (λx.\ct{fake}((λx.\ct{bbp}(x)))(x) ∧ ¬\ct{bbp}(x))⟩ ⊢ n$$

@@ -32,7 +32,7 @@ subsective adjectives and non-subsective adjectives.
 
 Subsective adjectives include adjectives like *large*, *small*, *tall*, and *short*.^[
 	These four adjectives, besides being subsective, also have the property of being vague.
-	For example, what counts as *large* in some context might not be determinate---that is, there is apparently no strict cutoff point of size (say,as measured by volume of air displaced in cubic feet) before which an object of that size is not large, and after which an object of that size suddenly is large. 
+	For example, what counts as *large* in some context might not be determinate---that is, there is apparently no strict cutoff point of size (say,as measured by volume of air displaced in cubic feet) before which an object of that size is not large, and after which an object of that size suddenly *is* large. 
 ]
 When subsective adjectives occur attributively---that is, as prenominal modifiers---they give rise to the entailment that the noun which is being modified is true of whatever the entire nominal predicate itself is true of.
 Thus for example, (@ex-short) entails that Jo is a basketball player.
@@ -58,7 +58,7 @@ Besides *round*, the intersective adjectives include, e.g., other shape adjectiv
 	Thus a French linguist might be a linguist whose linguistic work is on French, rather than a linguist with French nationality.
 	In that case, it is subsective, but not intersective.
 	What can I say?
-	Some words are polysemous!
+	Some expressions are polysemous!
 ]
 
 #### Non-intersective adjectives
@@ -72,8 +72,8 @@ The sentence in (@ex-large) features another non-intersective subsective adjecti
 
 (@ex-large) Bo is a large ant.
 
-Indeed, (@ex-large) entails *Bo is an ant*, but it does not seem to entail *Bo is large*.
-He is only an ant, after all.
+While (@ex-large) entails *Bo is an ant*, it does not seem to entail *Bo is large*.
+He is only ant-sized, after all.
 
 ### Non-subsective adjectives
 
@@ -107,4 +107,4 @@ Take (@ex-fake), for example.
 
 What (@ex-fake) seems to entail is that Jo is, in fact, not a linguist.
 
-Other adjectives in this class include, e.g., *counterfeit*, *former* (eh?), *pretend*, and *virtual* (I think).
+Other adjectives in this class include, e.g., *counterfeit*, *former* (right?), *pretend*, and *virtual* (I think).
