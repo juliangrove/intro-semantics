@@ -128,14 +128,14 @@ $$\begin{prooftree}
 \AxiomC{\(⟨\textit{slept}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
 \AxiomC{\(⟨\textit{or}_{(np\backslash s)}, (λf.(λg.(λx.¬(f(x) = g(x) = \false))))⟩ ⊢ (((np\backslash s)\backslash(np\backslash s))/(np\backslash s))\)}
 \AxiomC{\(⟨\textit{jumped}, (λx.\ct{jump}(x))⟩ ⊢ (np\backslash s)\)}
-\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))⟩ ⊢  ((np\backslash s)\backslash(np\backslash s))\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{slept or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))⟩ ⊢ (np\backslash s)\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po slept or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))(\ct{p})⟩ ⊢ s\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false))))((λx.\ct{jump}(x)))⟩ ⊢  ((np\backslash s)\backslash(np\backslash s))\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{slept or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false))))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po slept or\(_{(np\backslash s)}\) jumped}, (λf.(λg.(λx.¬(f(x) = g(x) = \false))))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))(\ct{p})⟩ ⊢ s\)}
 \end{prooftree}$$
 
 Again, we should evaluate the result:
 
-$$(λf.(λg.(λx.¬(f(x) = g(x) = \false)))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))(\ct{p})$$
+$$(λf.(λg.(λx.¬(f(x) = g(x) = \false))))((λx.\ct{jump}(x)))((λx.\ct{sleep}(x)))(\ct{p})$$
 $$⇒ (λg.(λx.¬((λx.\ct{jump}(x))(x) = g(x) = \false)))((λx.\ct{sleep}(x)))(\ct{p})$$
 $$⇒ (λx.¬((λx.\ct{jump}(x))(x) = (λx.\ct{sleep}(x))(x) = \false))(\ct{p})$$
 $$⇒ ¬((λx.\ct{jump}(x))(\ct{p}) = (λx.\ct{sleep}(x))(\ct{p}) = \false)$$

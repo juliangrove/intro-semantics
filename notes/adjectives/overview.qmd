@@ -1,0 +1,110 @@
+---
+title: "Overview"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+We recently looked at two broad classes of adjectives:
+subsective adjectives and non-subsective adjectives.
+
+### Subsective adjectives
+
+Subsective adjectives include adjectives like *large*, *small*, *tall*, and *short*.^[
+	These four adjectives, besides being subsective, also have the property of being vague.
+	For example, what counts as *large* in some context might not be determinate---that is, there is apparently no strict cutoff point of size (say,as measured by volume of air displaced in cubic feet) before which an object of that size is not large, and after which an object of that size suddenly is large. 
+]
+When subsective adjectives occur attributively---that is, as prenominal modifiers---they give rise to the entailment that the noun which is being modified is true of whatever the entire nominal predicate itself is true of.
+Thus for example, (@ex-short) entails that Jo is a basketball player.
+
+(@ex-short) Jo is a short basketball player.
+
+Because *short* apparently always produces this entailment when it occurs with some noun (i.e., that the noun must hold of the subject), it is classified as subsective.
+
+#### Intersective adjectives
+
+Some subsective adjectives are also *intersective*.
+When they occur prenominally, intersective adjectives give rise to the entailment that the adjective by itself holds (e.g., of the subject).
+For example (@ex-round) has two notable entailments.
+
+(@ex-round) The chair is a round stool. <br>
+
+First, it entails that the chair is a stool;
+thus *round* is a subsective adjective.
+But (@ex-round) also entails that the chair is *round*, making it intersective.
+
+Besides *round*, the intersective adjectives include, e.g., other shape adjectives (*triangular*, *square*), color adjectives (*red*, *green*), and nationality adjectives (*American*, *Chinese*).^[
+	Note that nationality adjectives can sometimes be used in a way that doesn't seem to be intersective---for example, if they also happen to name languages.
+	Thus a French linguist might be a linguist whose linguistic work is on French, rather than a linguist with French nationality.
+	In that case, it is subsective, but not intersective.
+	What can I say?
+	Some words are polysemous!
+]
+
+#### Non-intersective adjectives
+
+Subsective adjectives that don't have this property are called *non-intersective*.
+The example in (@ex-short) features the non-intersective adjective *short*.
+Indeed, if Jo is a short basketball player, that doesn't necessarily mean that she is short *per se*.
+It seems just to mean that she is short compared to some standard associated with basketball players.
+
+The sentence in (@ex-large) features another non-intersective subsective adjective.
+
+(@ex-large) Bo is a large ant.
+
+Indeed, (@ex-large) entails *Bo is an ant*, but it does not seem to entail *Bo is large*.
+He is only an ant, after all.
+
+### Non-subsective adjectives
+
+Non-subsective adjectives do *not* give rise to the entailment that the noun holds true of an entity of which the entire noun phrase is predicated.
+There are two ways this might pan out:
+either these adjectives may not have anything to say one way or another about whether or not the noun holds true;
+or they may specifically entail that the noun does *not* hold true.
+
+#### Vanilla non-subsective adjectives
+
+Regular old, "vanilla" non-subsective adjectives don't take a stance on whether or not the noun they modify is true of the subject of which the entire noun phrase is predicated.
+Take (@ex-alleged), for example.
+
+(@ex-alleged) Bo is an alleged ant.
+
+The sentence in (@ex-alleged) does not entail that Bo is an ant.
+At the same time, it doesn't entail that he is not an ant either.
+Is Bo an ant?
+Who knows.
+Some are saying so.
+
+Other adjectives in this class include, e.g., *possible*, *potential*, *likely*, *unlikely*, *apparent*, *supposed*, *putative*, and *seeming*.
+
+#### Privative adjectives
+
+A class of non-subsective adjective that gives rise to stronger entailments is the class of privative adjectives.
+These adjectives go further than mere non-subsective adjectives by contributing the entailment that the noun being modified is false of the subject predicated of by the whole noun phrase.
+Take (@ex-fake), for example.
+
+(@ex-fake) Jo is a fake linguist.
+
+What (@ex-fake) seems to entail is that Jo is, in fact, not a linguist.
+
+Other adjectives in this class include, e.g., *counterfeit*, *former* (eh?), *pretend*, and *virtual* (I think).

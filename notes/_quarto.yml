@@ -67,7 +67,11 @@ website:
       - coordinators/coordinating_nps.qmd
       - coordinators/assignment.qmd
     - section: "Adjectives"
-    - section: "Pronouns"
+      contents:
+      - adjectives/overview.qmd
+      - adjectives/subsectives.qmd
+      - adjectives/non-subsectives.qmd
+      - adjectives/assignment.qmd
     - section: "Quantification"
 
 format:

@@ -1,0 +1,78 @@
+---
+title: "Subsective adjectives"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+How should we analyze attributive adjectives, in general?
+Well, first, we should assign nouns like *linguist* a syntactic category---call it $n$.
+Further, if we take nouns to denote properties (i.e., sets of entities---those to which the noun applies), then we can say that the semantic type associated with the syntactic category $n$ is the type $(e → t)$ of characteristic functions of entities.
+
+Thus for example *ant* can be given the lexical entry in (@ex-ant).
+
+(@ex-ant) $⟨\textit{ant}, (λx.\ct{ant}(x))⟩ ⊢ n$
+
+Because attributive adjectives modify nouns---and can apparently do so recursively (*silly fake purple... ant*)---we should give them a category that allows them to take a noun on their right and give back something of the same category.
+Thus they should have the syntactic category $(n/n)$.
+As a result, they must have semantic type $((e → t) → (e → t))$.
+
+### Intersective adjectives
+
+Since we would like intersective adjectives to contribute both the entailment that the noun they modify is true of the predicated-of entity, *and* the entailment that they are true of the predicated-of entity on their own, we can assign them lexical entries like in (@ex-round-lex) for *round*.
+
+(@ex-round-lex) $⟨\textit{round}_{attr}, (λf.(λx.\ct{round}(x) ∧ f(x)))⟩ ⊢ (n/n)$
+
+Note that, here, I'm using the abbreviation
+
+$$p ∧ q$$
+
+for
+
+$$p = q = \true$$
+
+In addition to this lexical entry, we should ensure that we also have a lexical entry for *round* when it occurs in predicative position, as in (@ex-round-predicative).
+
+(@ex-round-predicative) The chair is round.
+
+Crucially, (@ex-round-predicative) is entailed by the sentence *the chair is a round stool*.
+To account for the predicative use, we can assign *round* the additional lexical entry in (@ex-round-predicative-lex), according to which its syntactic category is $ap$ and its semantic type is thus $(e → t)$ (instead of $((e → t) → (e → t))$).
+
+(@ex-round-predicative-lex) $⟨\textit{round}_{pred}, (λx.\ct{round}(x))⟩ ⊢ ap$
+
+### Non-intersective adjectives
+
+Because they have a distribution similar to that of intersective adjectives---that is, they may modify nouns attributively---non-intersective adjectives should also have syntactic type $(n/n)$ and semantic type $((e → t) → (e → t))$.
+We can assign a lexical entry like (@ex-short-lex) to the adjective *short*.
+
+(@ex-short-lex) $⟨\textit{short}, (λf.(λx.\ct{short}(f)(x) ∧ f(x)))⟩$
+
+Thus when *short* combines with the noun *basketball player*,
+
+(@ex-bbp-lex) $⟨\textit{basketball player}, (λx.\ct{bbp}(x))⟩ ⊢ n$
+
+it will produce:
+
+$$⟨\textit{short basketball player}, (λx.\ct{short}((λx.\ct{bbp}(x)))(x) ∧ \ct{bbp}(x))⟩ ⊢ n$$
+
+This result helps us explain the entailment that arises from the sentence *Jo is a short basketball player*.
