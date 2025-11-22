@@ -1,0 +1,113 @@
+---
+title: "Quantificational determiners"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+We've now talked about quantifiers---expressions of syntactic category $(s/(np\backslash s))$ (at least, when they occur in subject position).
+
+Let's begin analyzing the quantificational determiners that quantifiers arise from.
+Quantificational determiners are expressions like *every*, *some*, and *no*---they combine with a noun (e.g.,*dog*), or a modified noun (e.g., *furry dog*), to their right, in order to produce a quantifier.
+Hence, the syntactic category of a quantificational determiner (at least, when it produces a quantifier that can occur in subject position) should be $((s/(np\backslash s))/n)$.
+
+Moreover, because quantificational determiners have this syntactic category, we also now know their semantic type:
+$((e → t) → ((e → t) → t))$.
+The noun (or modified noun) they combine with has semantic type $(e → t)$, as does the verb phrase they combine with next.
+The main function of a quantificational determiner is therefore to say something about the relation between the meaning of the noun and the meaning of the verb phrase;
+for example, maybe everything in the set characterized by the noun has to also be in the set characterized by the verb phrase, as in the case of the determiner *every*;
+or maybe, the two sets have to overlap---i.e., share some elements---as in the case of *some*;
+or not overlap at all, as in the case of *no*.
+
+### Every
+
+Recall that we provided the "lexical entry" for *every dog* given in (@ex-every-dog-lex).
+
+(@ex-every-dog-lex) $⟨\textit{every dog}, (λf.\ct{dog}_{SET} ⊆ f_{SET})⟩ ⊢ (s/(np\backslash s))$
+
+To get a lexical entry for *every* on its own, we only need to (a) adjust the syntactic category, and (b) *abstract* over the meaning of the noun (so to speak).
+That is, we should substitute a variable where $\ct{dog}$ went in the meaning of *every dog*, and then add a '$λ$' to the meaning representation which *binds* that variable.
+The goal here is just to allow the function denoted by *every* to take an additional argument of type $(e → t)$---one which the meaning of *dog* can get slotted in for when *every* combines with *dog*.
+
+(@ex-every-lex) $⟨\textit{every}, (λf.(λg.f_{SET} ⊆ g_{SET}))⟩ ⊢ ((s/(np\backslash s))/n)$
+
+Now we can see that *every* takes two characteristic functions---$f$ for the noun, and $g$ for the verb phrase---and it says that the set characterized by $f$ must be a subset of the set characterized by $g$.
+Thus *every* effectively says that everything in the noun set must also be in the verb phrase set.
+
+### No
+
+We can use the same strategy to give a meaning to *no*.
+Recall the "lexical entry" we provided for *no dogs*.
+
+(@ex-no-dogs-lex) $⟨\textit{no dogs}, (λf.\ct{dog}_{SET} ∩ f_{SET} = \varnothing)⟩ ⊢ (s/(np\backslash s))$
+
+In this case, if we change the syntactic category and abstract over the noun phrase meaning, we end up with the result in (@ex-no-lex).
+
+(@ex-no-lex) $⟨\textit{no}, (λf.(λg.f_{SET} ∩ g_{SET} = \varnothing)⟩ ⊢ ((s/(np\backslash s))/n)$
+
+Thus once *no* combines with the noun to its right, and then the verb phrase, it gives you a sentence whose value is $\true$ just in case the sets characterized by the noun and verb phrase, respectively, have an empty intersection.
+
+### Some
+
+We assigned *some dog* the "lexical entry" in (@ex-some-dog-lex).
+
+(@ex-some-dog-lex) $⟨\textit{some dog}, (λf.\ct{dog}_{SET} ∩ f_{SET} ≠ \varnothing)⟩ ⊢ (s/(np\backslash s))$
+
+Consistent with this analysis, we should assign (@ex-some-lex) the lexical entry in (@ex-some-lex).
+
+(@ex-some-lex) $⟨\textit{some}, (λf.(λg.f_{SET} ∩ g_{SET} ≠ \varnothing)⟩ ⊢ ((s/(np\backslash s))/n)$
+
+### Three
+
+Assuming we analyze *three dogs* as in (@ex-three-dogs-lex),
+
+(@ex-three-dog-lex) $⟨\textit{three dogs}, (λf.|\ct{dog}_{SET} ∩ f_{SET}| ≥ 3)⟩ ⊢ (s/(np\backslash s))$
+
+we should assign *three* the lexical entry in (@ex-three-lex).
+
+(@ex-three-lex) $⟨\textit{three}, (λf.(λg.|f_{SET} ∩ g_{SET}| ≥ 3))⟩ ⊢ ((s/(np\backslash s))/n)$
+
+### Example derivation
+
+Using lexical entries like the above, we can derive sentences such as (@ex-some-dog-example).
+
+(@ex-some-dog-example) Some dog slept.
+
+Here's a derivation for this sentence:
+
+$$\begin{prooftree}
+\AxiomC{\(⟨\textit{some}, (λf.(λg.f_{SET} ∩ g_{SET} ≠ \varnothing))⟩ ⊢ ((s/(np\backslash s))/n)\)}
+\AxiomC{\(⟨\textit{dog}, (λx.\ct{dog}(x))⟩ ⊢ n\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{some dog}, (λf.(λg.f_{SET} ∩ g_{SET} ≠ \varnothing))((λx.\ct{dog}(x)))⟩ ⊢ (s/(np\backslash s))\)}
+\RightLabel{\(/\)}\AxiomC{\(⟨\textit{slept}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
+\BinaryInfC{\(⟨\textit{some dog slept}, (λf.(λg.f_{SET} ∩ g_{SET} ≠ \varnothing))((λx.\ct{dog}(x)))((λx.\ct{sleep}(x)))⟩ ⊢ s\)}
+\end{prooftree}$$
+
+Evaluating the resulting meaning representation, we get:
+
+$$(λf.(λg.f_{SET} ∩ g_{SET} ≠ \varnothing))((λx.\ct{dog}(x)))((λx.\ct{sleep}(x)))$$
+$$⇒ (λg.(λx.\ct{dog}(x))_{SET} ∩ g_{SET} ≠ \varnothing)((λx.\ct{sleep}(x)))$$
+$$⇒ (λx.\ct{dog}(x))_{SET} ∩ (λx.\ct{sleep}(x))_{SET} ≠ \varnothing$$
+
+We can see that (@ex-some-dog-example) is predicted to be true (i.e., to denote the value $\true$) just in case intersecting the set of dogs with the set of sleeping things results in a set with at least one entity in it.
+Some dog has to have slept.

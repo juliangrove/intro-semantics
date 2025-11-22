@@ -76,6 +76,9 @@ website:
       - quantifiers/overview.qmd
       - quantifiers/examples.qmd
       - quantifiers/assignment.qmd
+      - quantifiers/quantificational_determiners.qmd
+      - quantifiers/conservativity.qmd
+      - quantifiers/npis.qmd
 
 format:
   html:
