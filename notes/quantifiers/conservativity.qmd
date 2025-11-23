@@ -25,3 +25,176 @@ $$
 $$
 :::
 
+In research on quantificational determiners across the world's languages, and in cross-linguistic semantic investigations more broadly, one of the generalizations that seems to have held up the best is the generalization that determiner meanings are *conservative* [@barwise_generalized_1981;@keenan_semantic_1986].
+For a determiner meaning to be conservative is for it to satisfy the definition in (@ex-conservativity-def).
+
+(@ex-conservativity-def) A function $R ∈ D_{((e → t) → ((e → t) → t))}$ is [*conservative*]{.underline} if, for any two characteristic functions $f$ and $g$ (i.e., any two elements of $D_{(e → t)}$), $R(f)(g) = \true$ if and only if $R(f)(f ∩ g) = \true$.
+
+(We are abusing notation slightly by denoting the intersection of the sets characterized by $f$ and $g$ as '$f ∩ g$', even though $f$ and $g$ are technically not sets, but characteristic functions of sets.
+That's okay---what is meant by '$f ∩ g$' is $\{x ∈ D_{e} ∣ f(x) = \true \text{ and } g(x) = \true\}_{CF}$---that is, the set of entities of which both $f$ and $g$ are true (their "intersection").)
+
+What does it mean, intuitively, for a determiner meaning to be conservative?
+Well, in practice, $f$ will be the meaning of our noun, and $g$ will be the meaning of our verb phrase.
+So, for a determiner meaning $R$ to be conservative is for $R(f)$ to be true of a verb phrase meaning $g$ whenever it is true of the noun meaning and verb phrase meaning intersected ($f ∩ g$).
+
+For example, consider the quantificational noun phrase *some dog*.
+When we combine this noun phrase with a verb phrase---*slept*---to get *some dog slept*, the resulting sentence is true if and only if the sentence *some dog is a dog that slept* is also true.
+And it doesn't matter what noun or verb phrase we use:
+*some cat purred*, *some glass broke*, and *some ship sank* all have this property, which you can test for yourself.
+
+Thus one way of saying intuitively what it means for a determiner meaning to be conservative is by saying that you will never have to look at any entities outside of the set denoted by the noun that the determiner combines with when you determine if the noun and verb phrase meanings are in the right relation with each other.
+When you check if *some dog slept* is true, for example, you don't care about the things that aren't dogs;
+specifically, you don't care about whether or not they slept---you only care about whether or not any of the dogs slept.
+The same is true for *every dog slept*---it doesn't matter here either what the non-dogs are doing.
+They could be sleeping, barking, you name it;
+all that matters is that all of the *dogs* slept.
+
+Here is a possible determiner that appears *not* to be conservative:
+*all-non*.
+Thus, say that *all-non dogs slept* just means that all of the non-dogs slept.
+This (hypothetical) determiner is intuitively non-conservative because checking if it gives a true sentence when it combines with a noun and a verb phrase requires checking what the non-dogs are doing.
+Indeed, you can check if it is conservative by performing the test from above.
+Does *all-non glasses broke* mean the same thing as *all-non glasses are glasses that broke*?
+Intuitively, no!
+The first sentences requires all of the things that aren't glasses to have broken, while the second sentence requires all of the non-glasses to additionally be glasses.
+This seems to be a contradiction!^[
+	Or it at least appears to require that everything be a glass, since that way, there aren't any non-glasses to speak of.
+]
+
+Another hypothetical determiner is the determiner *less-than*.
+Thus, say that *less-than dogs slept* means that the number of dogs is less than the number of things that slept.
+For example, it is true if there are three dogs, while four things---not necessarily dogs---slept.
+This hypothetical determiner appears to be non-conservative, since *less-than dogs slept* doesn't mean the same thing as *less-than dogs are dogs that slept*.
+The second sentence means that the number of dogs is less than the number of things which are dogs that slept---an impossibility!
+
+Let's go through our determiner meanings from earlier and show whether or not they satisfy the property defined in (@ex-conservativity-def).
+
+### Every
+
+(@ex-every-sem) $(λf.(λg.f_{SET} ⊆ g_{SET}))$
+
+For *every* to be conservative, it has to be the case that, for any characteristic functions $f$ and $g$,
+
+$$f_{SET} ⊆ g_{SET}$$
+
+is true [if and only if]{.underline}
+
+$$f_{SET} ⊆ f_{SET} ∩ g_{SET}$$
+
+is true.
+
+Does this hold up?
+Well, $f_{SET} ⊆ g_{SET}$ means that everyting in $f_{SET}$ is also in $g_{SET}$.
+Meanwhile, $f_{SET} ⊆ f_{SET} ∩ g_{SET}$ means that everything in $f_{SET}$ is both in $f_{SET}$ and in $g_{SET}$.
+Since everything in $f_{SET}$ is always in $f_{SET}$, no matter what $f_{SET}$ is, both statements boil down to the same thing---that everything in $f_{SET}$ is also in $g_{SET}$.
+So, yes, $f_{SET} ⊆ g_{SET}$ is true whenever $f_{SET} ⊆ f_{SET} ∩ g_{SET}$ is true, and vice versa.
+And as a result, the meaning of *every*---(@ex-every-sem)---is conservative.
+
+### Some
+
+(@ex-some-sem) $(λf.(λg.f_{SET} ∩ g_{SET} ≠ \varnothing))$
+
+For *some* to be conservative, it has to be the case that, for any characteristic functions $f$ and $g$,
+
+$$f_{SET} ∩ g_{SET} ≠ \varnothing$$
+
+is true [if and only if]{.underline}
+
+$$f_{SET} ∩ f_{SET} ∩ g_{SET} ≠ \varnothing$$
+
+is true.
+
+Note that in the second statement, we have intersected $g_{SET}$ with $f_{SET}$ twice:
+$f_{SET} ∩ f_{SET} ∩ g_{SET}$.
+This is the same as intersecting it only once, since once you've intersected a set with $f_{SET}$, you've already gotten rid of all the things that aren't in $f_{SET}$.
+So, $f_{SET} ∩ f_{SET} ∩ g_{SET}$ is the same set as $f_{SET} ∩ g_{SET}$, no matter what.
+So, saying one of them is not the empty set is the same thing as saying the other one is not the empty set, which is it what it takes for *some* to be conservative.
+So, yeah, *some* is conservative.
+
+### No
+
+(@ex-no-sem) $(λf.(λg.f_{SET} ∩ g_{SET} = \varnothing))$
+
+For *no* to be conservative, it has to be the case that, for any characteristic functions $f$ and $g$,
+
+$$f_{SET} ∩ g_{SET} = \varnothing$$
+
+is true [if and only if]{.underline}
+
+$$f_{SET} ∩ f_{SET} ∩ g_{SET} = \varnothing$$
+
+is true.
+
+The argument that *no* is conservative is therefore exactly the same as the argument that *some* is conservative, modulo the fact that, here, we are saying that intersecting the two sets *does* give you the empty set.
+
+### Three
+
+(@ex-three-sem) $(λf.(λg.|f_{SET} ∩ g_{SET}| ≥ 3))$
+
+For *three* to be conservative, it has to be the case that, for any characteristic functions $f$ and $g$,
+
+$$|f_{SET} ∩ g_{SET}| ≥ 3$$
+
+is true [if and only if]{.underline}
+
+$$|f_{SET} ∩ f_{SET} ∩ g_{SET}| ≥ 3$$
+
+is true.
+
+We can say it's conservative using essentially the same argument as we did for *some* and *no*.
+
+### All-non
+
+What about a hypothetical determiner, like *all-non*, which we claimed *not* to be conservative.
+Can we assign it a meaning that we can then reason about formally?
+Let's assign it the meaning in (@ex-all-non-sem).
+
+(@ex-all-non-sem) $(λf.(λg.(D - f_{SET}) ⊆ g_{SET}))$
+
+This meaning guarantees that when *all-non* combines with a noun and then a verb phrase, the sentence that results will be true just in case all of the entities in the model's domain ($D$) of which the noun is false are also in the set characterized by the verb phrase.
+E.g., *all-non dogs slept* will be true if all of the things in the domain which aren't in $\ct{dog}_{SET}$ *are* in $\ct{sleep}_{SET}$.
+
+Now, for the demonstration.
+For *all-non* to be conservative, it has to be the case that, for any characteristic functions $f$ and $g$,
+
+$$(D - f_{SET}) ⊆ g_{SET}$$
+
+is true [if and only if]{.underline}
+
+$$(D - f_{SET}) ⊆ (f_{SET} ∩ g_{SET})$$
+
+is true.
+
+Well, the first statement requires that everything in the domain not in $f_{SET}$ is in $g_{SET}$.
+Meanwhile, the second statement requires that everything in the domain not in $f_{SET}$ is in $f_{SET}$, as well as in $g_{SET}$.
+The second statement therefore makes a stronger requirement:
+it additionally requires that everything in the domain *not* in $f_{SET}$ *is* in $f_{SET}$.
+This can only be true if $f_{SET} ⊆ D$, so that $D - f_{SET} = \varnothing$.
+
+Since these two statements impose different requirements on $f_{SET}$ and $g_{SET}$, we can conclude that the hypothetical meaning in (@ex-all-nonsem) is *not* conservative.
+
+### Less-than
+
+What about the other hypothetical, apparently non-conservative determiner, *less-than*?
+Let's assign it the meaning in (@ex-less-than-sem).
+
+(@ex-less-than-sem) $(λf.(λg.|f_{SET}| < |g_{SET}|))$
+
+This meaning guarantees that when *less-than* combines with a noun and then a verb phrase, the sentence that results will be true just in case the number of entities of which the noun is true is less than the number of entities of which the verb phrase is true.
+E.g., *less-than ships sank* will be true if the number of ships is less than the number of things which sank.
+
+For *less* to be conservative, it has to be the case that, for any characteristic functions $f$ and $g$,
+
+$$|f_{SET}| < |g_{SET}|$$
+
+is true [if and only if]{.underline}
+
+$$|f_{SET}| < |f_{SET} ∩ g_{SET}|$$
+
+is true.
+
+Well, because $f_{SET} ∩ g_{SET}$ has to be a subset of $f_{SET}$---you are effectively just removing things from $f_{SET}$ that aren't in $g_{SET}$---it must be the case that $|f_{SET} ∩ g_{SET}| ≤ |f_{SET}|$.
+But it can't be the case that $|f_{SET}| < |f_{SET} ∩ g_{SET}|$.
+So, while the first statement above might or might not hold true, depending on the model, the second statement is a contradiction!
+Therefore, the two statements don't mean the same thing.
+As a result, we can conclude that the hypothetical determiner meaning in (@ex-less-than-sem) is not conservative.
