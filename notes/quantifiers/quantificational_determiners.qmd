@@ -29,10 +29,9 @@ We've now talked about quantifiers---expressions of syntactic category $(s/(np\b
 
 Let's begin analyzing the quantificational determiners that quantifiers arise from.
 Quantificational determiners are expressions like *every*, *some*, and *no*---they combine with a noun (e.g.,*dog*), or a modified noun (e.g., *furry dog*), to their right, in order to produce a quantifier.
-Hence, the syntactic category of a quantificational determiner (at least, when it produces a quantifier that can occur in subject position) should be $((s/(np\backslash s))/n)$.
+Hence, the syntactic category of a quantificational determiner---at least, when it gives rise to a quantifier that can occur in subject position---should be $((s/(np\backslash s))/n)$.
 
-Moreover, because quantificational determiners have this syntactic category, we also now know their semantic type:
-$((e → t) → ((e → t) → t))$.
+Moreover, because quantificational determiners have this syntactic category, we can also determine their semantic type to be $((e → t) → ((e → t) → t))$.
 The noun (or modified noun) they combine with has semantic type $(e → t)$, as does the verb phrase they combine with next.
 The main function of a quantificational determiner is therefore to say something about the relation between the meaning of the noun and the meaning of the verb phrase;
 for example, maybe everything in the set characterized by the noun has to also be in the set characterized by the verb phrase, as in the case of the determiner *every*;
@@ -45,7 +44,7 @@ Recall that we provided the "lexical entry" for *every dog* given in (@ex-every-
 
 (@ex-every-dog-lex) $⟨\textit{every dog}, (λf.\ct{dog}_{SET} ⊆ f_{SET})⟩ ⊢ (s/(np\backslash s))$
 
-To get a lexical entry for *every* on its own, we only need to (a) adjust the syntactic category, and (b) *abstract* over the meaning of the noun (so to speak).
+To get a lexical entry for *every*, i.e., on its own, we need only (a) adjust the syntactic category, and (b) *abstract* over the meaning of the noun, so that it is determined by the argument of a function.
 That is, we should substitute a variable where $\ct{dog}$ went in the meaning of *every dog*, and then add a '$λ$' to the meaning representation which *binds* that variable.
 The goal here is just to allow the function denoted by *every* to take an additional argument of type $(e → t)$---one which the meaning of *dog* can get slotted in for when *every* combines with *dog*.
 
@@ -56,7 +55,7 @@ Thus *every* effectively says that everything in the noun set must also be in th
 
 ### No
 
-We can use the same strategy to give a meaning to *no*.
+We can use the same strategy to give a meaning to the quantificational determiner *no*.
 Recall the "lexical entry" we provided for *no dogs*.
 
 (@ex-no-dogs-lex) $⟨\textit{no dogs}, (λf.\ct{dog}_{SET} ∩ f_{SET} = \varnothing)⟩ ⊢ (s/(np\backslash s))$
@@ -73,7 +72,7 @@ We assigned *some dog* the "lexical entry" in (@ex-some-dog-lex).
 
 (@ex-some-dog-lex) $⟨\textit{some dog}, (λf.\ct{dog}_{SET} ∩ f_{SET} ≠ \varnothing)⟩ ⊢ (s/(np\backslash s))$
 
-Consistent with this analysis, we should assign (@ex-some-lex) the lexical entry in (@ex-some-lex).
+Consistent with this analysis, we should assign *some* the lexical entry in (@ex-some-lex).
 
 (@ex-some-lex) $⟨\textit{some}, (λf.(λg.f_{SET} ∩ g_{SET} ≠ \varnothing)⟩ ⊢ ((s/(np\backslash s))/n)$
 
@@ -81,7 +80,7 @@ Consistent with this analysis, we should assign (@ex-some-lex) the lexical entry
 
 Assuming we analyze *three dogs* as in (@ex-three-dogs-lex),
 
-(@ex-three-dog-lex) $⟨\textit{three dogs}, (λf.|\ct{dog}_{SET} ∩ f_{SET}| ≥ 3)⟩ ⊢ (s/(np\backslash s))$
+(@ex-three-dogs-lex) $⟨\textit{three dogs}, (λf.|\ct{dog}_{SET} ∩ f_{SET}| ≥ 3)⟩ ⊢ (s/(np\backslash s))$
 
 we should assign *three* the lexical entry in (@ex-three-lex).
 
@@ -109,5 +108,5 @@ $$(λf.(λg.f_{SET} ∩ g_{SET} ≠ \varnothing))((λx.\ct{dog}(x)))((λx.\ct{sl
 $$⇒ (λg.(λx.\ct{dog}(x))_{SET} ∩ g_{SET} ≠ \varnothing)((λx.\ct{sleep}(x)))$$
 $$⇒ (λx.\ct{dog}(x))_{SET} ∩ (λx.\ct{sleep}(x))_{SET} ≠ \varnothing$$
 
-We can see that (@ex-some-dog-example) is predicted to be true (i.e., to denote the value $\true$) just in case intersecting the set of dogs with the set of sleeping things results in a set with at least one entity in it.
+We can see that (@ex-some-dog-example) is analyzed as true (i.e., as denoting the value $\true$) just in case intersecting the set of dogs with the set of sleeping things results in a set with at least one entity in it.
 Some dog has to have slept.

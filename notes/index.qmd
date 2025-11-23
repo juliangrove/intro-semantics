@@ -195,6 +195,6 @@ Available here:
 | Fri., Nov. 14  | Quantifiers                              | @winter_elements_2016 (Ch. 4, pp. 99--108)                        | [View](quantifiers/assignment.html)          |
 | Mon., Nov. 17  | Quantifiers                              |                                                                   |                                              |
 | Wed., Nov. 19  | Quantifiers                              |                                                                   |                                              |
-| Fri., Nov. 21  | Negative polarity items                  |                                                                   | TBD                                          |
-| Mon., Dec. 1   | Quantifiers and binding                  |                                                                   |                                              |
-| Wed., Dec. 3   | Quantifiers and binding                  |                                                                   |                                              |
+| Fri., Nov. 21  | Negative polarity items                  |                                                                   | [View](quantifiers/assignment2.html)         |
+| Mon., Dec. 1   | Quantifiers and scope                    |                                                                   |                                              |
+| Wed., Dec. 3   | Quantifiers and scope                    |                                                                   |                                              |

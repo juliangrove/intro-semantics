@@ -33,11 +33,11 @@ Provide a derivation of the sentence in (@ex-quantifier-adjective-example).
 
 (@ex-quantifier-adjective-example) No fake chair is round.
 
-(E.g., assume that *chair* is a noun that denotes a characteristic function of some subset of the relevant model's domain.)
+(Assume that *chair* is a noun that denotes a characteristic function of some subset of the relevant model's domain.)
 
 ### Part 2
 
-Let's hypothesize, at least for the sake of this exercise that, *only* is a quantificational determiner;
+Let's hypothesize, at least for the sake of this exercise that, that *only* is a quantificational determiner;
 that is, let's suppose that its syntactic category is $((s/(np\backslash s))/n)$.
 Propose a lexical entry for *only*, including a meaning.
 
