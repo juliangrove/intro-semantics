@@ -78,7 +78,7 @@ website:
       - quantifiers/assignment.qmd
       - quantifiers/quantificational_determiners.qmd
       - quantifiers/conservativity.qmd
-      - quantifiers/npis.qmd
+      - quantifiers/assignment2.qmd
 
 format:
   html:

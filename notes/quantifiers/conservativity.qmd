@@ -67,6 +67,11 @@ For example, it is true if there are three dogs, while four things---not necessa
 This hypothetical determiner appears to be non-conservative, since *less-than dogs slept* doesn't mean the same thing as *less-than dogs are dogs that slept*.
 The second sentence means that the number of dogs is less than the number of things which are dogs that slept---an impossibility!
 
+Indeed, a working hypothesis in linguistic semantics is that all natural language determiner meanings are conservative.
+
+(@ex-conservativity-hyp) Conservativity hypothesis:
+	all natural-language determiners are conservative.
+
 Let's go through our determiner meanings from earlier and show whether or not they satisfy the property defined in (@ex-conservativity-def).
 
 ### Every

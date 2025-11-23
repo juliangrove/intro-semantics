@@ -1,0 +1,48 @@
+---
+title: "Assignment"
+bibliography: ../../semantics.bib
+format:
+  html:
+    css: ../styles.css
+    html-math-method: mathjax
+    mathjax-config:
+      loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      tex:
+        packages: {'[+]': ['bussproofs','bbox','colorbox']}
+
+---
+
+::: {.hidden}
+$$
+\newcommand{\expr}[3]{\begin{array}{c}
+#1 \\
+\bbox[lightblue,5px]{#2}
+\end{array} ⊢ #3}
+\newcommand{\ct}[1]{\bbox[font-size: 0.8em]{\mathsf{#1}}}
+\newcommand{\abbr}[1]{\bbox[transform: scale(0.95)]{\mathtt{#1}}}
+\def\true{\ct{T}}
+\def\false{\ct{F}}
+$$
+:::
+
+Due on Wednesday, December 3rd.
+
+### Part 1
+
+Provide a derivation of the sentence in (@ex-quantifier-adjective-example).
+
+(@ex-quantifier-adjective-example) No fake chair is round.
+
+(E.g., assume that *chair* is a noun that denotes a characteristic function of some subset of the relevant model's domain.)
+
+### Part 2
+
+Let's hypothesize, at least for the sake of this exercise that, *only* is a quantificational determiner;
+that is, let's suppose that its syntactic category is $((s/(np\backslash s))/n)$.
+Propose a lexical entry for *only*, including a meaning.
+
+### Part 3
+
+Is the meaning you proposed for *only* in Part 2 conservative?
+Show whether it is or isn't, following the examples given in [Conservativity](conservativity.html).
+Make sure that your demonstration is completely general, in the sense that it holds for any two characteristic functions $f$ and $g$!
