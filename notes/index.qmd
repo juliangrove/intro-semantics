@@ -11,17 +11,17 @@ I'm [Julian Grove](https://juliangrove.github.io/) - I'm an Assistant Professor 
 Here is my contact info:
 
 - Office: 4108 Turlington
-- Phone: (352) 294-7456
+- Phone: 352.294.7456
 - Email: first name dot last name at ufl dot edu
-- Office hours: Thursdays, 3pm-4pm and by appointment
+- Office hours: Mondays, 1pm-2pm and by appointment
 
 Check out the [About](/about.html) page for more info about me and this site.
 
 Here are some facts about this course:
 
-- It takes place in [Matherly](https://campusmap.ufl.edu/#/index/0406) 0013.
+- It takes place in [Matherly](https://campusmap.ufl.edu/#/index/0406) 0115.
 - It happens on Mondays, Wednesdays, and Fridays.
-- It runs from 12:50pm - 1:40pm.
+- It runs from 10:40am - 11:30am.
 
 ## Bird's-eye view
 
@@ -42,7 +42,7 @@ The main acts will be verbs and their arguments, coordination, modification, ana
 ## Attendance and class participation
 
 Come to class!
-Attendance won't be graded, but you're likely to do better in the course if you come than if you don't.
+You're likely to do better in the course if you come than if you don't.
 
 When you're here, participate!
 You'll get more out of the class if you do, and it'll be more fun.
@@ -55,24 +55,26 @@ Your work in this course will consist of [nine (9) short written assignments]{.u
 Each written assignments will be a collection of responses to questions:
 some of these responses will have a mini-essay format, and some will be more like answers to problem sets (it'll be clear in any given case what the expectation is).
 Each assignment will be available on this site, at the end of the set of notes to which the assignment corresponds.
-Please turn in a physical copy of your responses at the beginning of the class on which the assignment is due.
+Please either turn in a physical copy of your responses the beginning of the class on which the assignment is due, or upload them to Canvas before class starts.
 
-The written assignments will be graded on a 5-point scale, using the following rubric:
+The written assignments will be graded on a 100-point scale, using the following rough rubric:
 
-- 5: you thoroughly engage with each question on the assignment.
+- 81-100: you thoroughly engage with each question on the assignment.
   This means that you justify each of your responses, as well point out its implications, if appropriate.
   For example, if the truth of your response is likely to have any unintuitive consequences, you should note and explain these.
   Doing this well will sometimes be challenging and require you to think a lot.
   
   If the assignment has questions requiring the application of analytical techniques that we have introduced in the course, "thorough engagement", for current purposes, means applying these techniques in the right way.
-- 4: you thoroughly engage with most, but not all, of the questions.
-- 3: you thoroughly engage with only a small part of the assignment and give shallow or cursory answers to most of it.
-- 2: you give shallow or cursory answers to all of the questions on the assignment.
-- 1: you barely do the assignment.
+- 61-80: you thoroughly engage with most, but not all, of the questions.
+- 41-60: you thoroughly engage with only a small part of the assignment and give shallow or cursory answers to most of it.
+- 21-40: you give shallow or cursory answers to all of the questions on the assignment.
+- 1-20: you barely do the assignment.
 - 0: you don't even barely do the assignment.
 
+The assignments themselves will have a more precise points breakdown.
+
 The written assignments will account for 90% of your grade, and the final exam, for 10%.
-The final will take place from 10am-12pm on December 10th (place TBD).
+The final will take place from 3pm-5pm on December 8th (place TBD).
 It will be formatted similarly to the assignments.
 
 The following grading scale will be used to determine course grades:
@@ -88,14 +90,18 @@ The following grading scale will be used to determine course grades:
 We'll talk about this in class.
 Basically:
 
-- Please actually do the readings yourself.
-- Please complete assignments yourself.
+- Actually do the readings yourself.
+- Complete the assignments yourself.
 - If you worked with someone else in the class (or a chatbot) on an assignment, please indicate that you did.
-  If you used a chatbot, please include a note with your assignment describing how you used it.
+  If you used a chatbot, include a note with your assignment describing how you used it.
+  Please specify:
+  - the prompt you used;
+  - the output produced.
 
 ### Missed or late work
 
-Late work will not be accepted unless you've arranged with me beforehand.
+Late work will be docked 10 points each day it is late.
+It will not be accepted once it is four days late.
 If you need an extension, ask for one---just do it prior to the due date.
 
 ### Extra credit
@@ -116,10 +122,12 @@ If you like, you can get extra credit, accounting for up to an additional 2% of 
 
 ## Zulip
 
-There is a Zulip site for this course at [uf-semantics-2025.zulipchat.com](https://uf-semantics-2025.zulipchat.com/).
-We'll use it to host discussions of the course material.
+There is a Zulip site for this course at [uf-semantics-2026.zulipchat.com](https://uf-semantics-2026.zulipchat.com/).
+All communication about the course should be done through Zulip.
+For example, rather than email me, please send me a message there.
+We'll also use Zulip to host discussions of the course material.
 You can post (and answer!) questions there.
-I will chime in, as well.
+(I may chime in, as well.)
 
 ## University Honesty Policy
 
@@ -156,45 +164,44 @@ Available here:
 
 ## Calendar
 
-| Date           | Topic                                    | Reading                                                           | Assignment                                   |
-|----------------|------------------------------------------|-------------------------------------------------------------------|----------------------------------------------|
-| Fri., Aug. 22  | Introduction                             | @frankfurt_bullshit_1986; @hicks_chatgpt_2024                     |                                              |
-| Mon., Aug. 25  | Convention                               | @lewis_languages_1975 (pp. 3--10)                                 |                                              |
-| Wed., Aug. 27  | Convention                               | @grice_meaning_1957                                               | [View](convention/assignment.html)           |
-| Fri., Aug. 29  | Speech acts                              | @bach_speech_2006 (pp. 147--155)                                  |                                              |
-| Wed., Sept. 3  | Speech acts                              |                                                                   |                                              |
-| Fri., Sept. 5  | Speaker meaning                          | @grice_logic_1975                                                 |                                              |
-| Mon., Sept. 8  | Speaker meaning                          |                                                                   |                                              |
-| Wed., Sept 10  | Diagnosing inference                     | @winter_elements_2016 (Ch. 2, pp. 12--16)                         |                                              |
-| Fri., Sept. 12 | Diagnosing inference                     | @coppock_invitation_2025 (Ch. 1, pp. 13--41; Ch. 8, pp. 315--322) |                                              |
-| Mon., Sept. 15 | Sets and set theory                      |                                                                   | [View](diagnosing_inference/assignment.html) |
-| Wed., Sept. 17 | Functions, relations, and languages      |                                                                   |                                              |
-| Fri., Sept. 19 | Models                                   | @winter_elements_2016 (Ch. 2, pp. 17--27)                         |                                              |
-| Mon., Sept. 22 | Arabic numeral arithmetic                |                                                                   | [View](formal_preliminaries/assignment.html) |
-| Wed., Sept. 24 | Arabic numeral arithmetic                |                                                                   |                                              |
-| Fri., Sept. 26 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 44--64)                         |                                              |
-| Mon., Sept. 29 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 64-72)                          |                                              |
-| Wed., Oct. 1   | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         |                                              |
-| Fri., Oct. 3   | Lambda notation and types                |                                                                   |                                              |
-| Mon., Oct. 6   | Lambda notation and types                |                                                                   | [View](models/assignment.html)               |
-| Wed., Oct. 8   | Transitive verbs                         |                                                                   |                                              |
-| Fri., Oct. 10  | Transitive verbs                         |                                                                   |                                              |
-| Mon., Oct. 13  | Applicative categorial grammar           | @jurafsky_speech_2025 (Appendix E)                                |                                              |
-| Wed., Oct. 15  | Applicative categorial grammar           |                                                                   |                                              |
-| Mon., Oct. 20  | Grammars and models                      |                                                                   | [View](applicative_cg/assignment.html)       |
-| Wed., Oct. 22  | Verbs and arguments redux                |                                                                   |                                              |
-| Fri., Oct. 24  | Verbs and arguments redux                |                                                                   |                                              |
-| Mon., Oct. 27  | Coordinators                             | @winter_elements_2016 (Ch. 3, pp. 74--80)                         |                                              |
-| Wed., Oct. 29  | Coordinators                             |                                                                   | [View](verbs/assignment.html)                |
-| Fri., Oct. 31  | Adjectives                               | @kennedy_adjectives_2012                                          |                                              |
-| Mon., Nov. 3   | Adjectives                               |                                                                   |                                              |
-| Wed., Nov. 5   | Adjectives                               |                                                                   | [View](coordinators/assignment.html)         |
-| Fri., Nov. 7   | Pronouns                                 |                                                                   |                                              |
-| Mon., Nov. 10  | Pronouns                                 |                                                                   |                                              |
-| Wed., Nov. 12  | Pronouns                                 |                                                                   |                                              |
-| Fri., Nov. 14  | Quantifiers                              | @winter_elements_2016 (Ch. 4, pp. 99--108)                        | [View](quantifiers/assignment.html)          |
-| Mon., Nov. 17  | Quantifiers                              |                                                                   |                                              |
-| Wed., Nov. 19  | Quantifiers                              |                                                                   |                                              |
-| Fri., Nov. 21  | Negative polarity items                  |                                                                   | [View](quantifiers/assignment2.html)         |
-| Mon., Dec. 1   | Quantifiers and scope                    |                                                                   |                                              |
-| Wed., Dec. 3   | Quantifiers and scope                    |                                                                   |                                              |
+| Date           | Topic                                    | Reading                                                           | Assignment |
+|----------------|------------------------------------------|-------------------------------------------------------------------|------------|
+| Fri., Aug. 21  | Introduction                             |                                                                   |            |
+| Mon., Aug. 24  | Convention                               | @lewis_languages_1975 (pp. 3--10)                                 |            |
+| Wed., Aug. 26  | Convention                               | @grice_meaning_1957                                               | View       |
+| Fri., Aug. 28  | Speech acts                              | @bach_speech_2006 (pp. 147--155)                                  |            |
+| Mon., Aug. 31  | Speech acts                              |                                                                   |            |
+| Wed., Sept. 2  | Speaker meaning                          | @grice_logic_1975                                                 |            |
+| Fri., Sept. 4  | Speaker meaning                          |                                                                   |            |
+| Wed., Sept. 9  | Diagnosing inference                     | @winter_elements_2016 (Ch. 2, pp. 12--16)                         |            |
+| Fri., Sept. 11 | Diagnosing inference                     | @coppock_invitation_2025 (Ch. 1, pp. 13--41; Ch. 8, pp. 315--322) | View       |
+| Mon., Sept. 14 | Sets and set theory                      |                                                                   |            |
+| Wed., Sept. 16 | Functions, relations, and languages      |                                                                   |            |
+| Fri., Sept. 18 | No class: Julian away                    |                                                                   |            |
+| Mon., Sept. 21 | Models                                   | @winter_elements_2016 (Ch. 2, pp. 17--27)                         | View       |
+| Wed., Sept. 23 | Arabic numeral arithmetic                |                                                                   |            |
+| Fri., Sept. 25 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 44--64)                         |            |
+| Mon., Sept. 28 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 64-72)                          |            |
+| Wed., Sept. 30 | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         | View       |
+| Fri., Oct. 2   | Lambda notation and types                |                                                                   |            |
+| Mon., Oct. 5   | Lambda notation and types                |                                                                   |            |
+| Wed., Oct. 7   | Transitive verbs                         |                                                                   |            |
+| Mon., Oct. 12  | Transitive verbs                         |                                                                   |            |
+| Wed., Oct. 14  | Applicative categorial grammar           | @jurafsky_speech_2025 (Appendix E)                                |            |
+| Fri., Oct. 16  | No class: Julian away                    |                                                                   |            |
+| Mon., Oct. 19  | Grammars and models                      |                                                                   | View       |
+| Wed., Oct. 21  | Verbs and arguments redux                |                                                                   |            |
+| Fri., Oct. 23  | Verbs and arguments redux                |                                                                   |            |
+| Mon., Oct. 26  | Coordinators                             | @winter_elements_2016 (Ch. 3, pp. 74--80)                         |            |
+| Wed., Oct. 28  | Coordinators                             |                                                                   | View       |
+| Fri., Oct. 30  | Adjectives                               | @kennedy_adjectives_2012                                          |            |
+| Mon., Nov. 2   | Adjectives                               |                                                                   |            |
+| Wed., Nov. 4   | Adjectives                               |                                                                   | View       |
+| Fri., Nov. 6   | Pronouns                                 |                                                                   |            |
+| Mon., Nov. 9   | Pronouns                                 |                                                                   |            |
+| Fri., Nov. 13  | Pronouns                                 |                                                                   |            |
+| Mon., Nov. 16  | Quantifiers                              | @winter_elements_2016 (Ch. 4, pp. 99--108)                        | View       |
+| Wed., Nov. 18  | Quantifiers                              |                                                                   |            |
+| Fri., Nov. 20  | Quantifiers                              |                                                                   |            |
+| Mon., Nov. 30  | Negative polarity items                  |                                                                   | View       |
+| Wed., Dec. 2   | Quantifiers and scope                    |                                                                   |            |

@@ -2,12 +2,12 @@
 title: "About"
 ---
 
-This site contains materials the course *Introduction to Semantics* given by [Julian Grove](http://juliangrove.github.io/) at the [University of Florida](https://lin.ufl.edu/) during the Fall 2025 semester.
+This site contains materials the course *Introduction to Semantics* given by [Julian Grove](http://juliangrove.github.io/) at the [University of Florida](https://lin.ufl.edu/) during the Fall 2026 semester.
 
 ## About the instructor
 
 [Julian Grove](http://juliangrove.github.io/) is an Assistant Professor in the [Linguistics Department](https://lin.ufl.edu/).
-Long story short, he is interested in combining computational tools from Bayesian data analysis and programming language theory and bringing them to semantics.
+He is interested in combining computational tools from Bayesian data analysis and programming language theory and bringing them to semantics.
 You can find out more about his research interests by checking out his [papers](https://juliangrove.github.io/papers.html), [slides](https://juliangrove.github.io/slides.html), or perhaps even his [cv](https://juliangrove.github.io/cv.html).
 
 ## About the site
