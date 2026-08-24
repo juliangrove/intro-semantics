@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: ../docs/slides
   render:
-    - aug21.qmd
+    - aug24.qmd
 
 format:
   revealjs:
