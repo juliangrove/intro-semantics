@@ -91,6 +91,19 @@ Lewis introduces a convention to define language use:
 
 ---
 
+## @lewis_languages_1975's criteria
+
+::: {.nonincremental}
+- Everyone conforms.
+- Everyone believes the others conform.
+- The others conforming provides a reason to conform.
+- Preference for conformity (as opposed to non-conformity).
+- Optional or arbitrary---there are possible alternatives.
+- Common knowledge of the above.
+:::
+
+---
+
 ## "Language use"
 
 These are *pragmatic* conventions.
