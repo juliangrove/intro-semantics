@@ -16,7 +16,7 @@ To help pump our intuitions about the distinct ways this word is used, he provid
 
 The differences among the uses of *mean* in (@ex-weather-@ex-beans) may not be obvious at a single glance, but Grice introduces a number of tests that seem to tease these uses apart.
 
-We'll go through these again now, starting with what I'll call the *contraction test*.
+We'll go through these again now, starting with what I'll call the *contradiction test*.
 
 #### The contradiction test
 
@@ -61,7 +61,7 @@ This test modifies the original sentences by combining *mean* with an agentive s
 
 (@ex-beans) Someone meant by "Bo devoured the beans" that Bo ate the beans aggressively.
 
-Hey check it out! (@ex-weather) again pulls apart from (@ex-gesture) and (@ex-beans).
+(@ex-weather) again pulls apart from (@ex-gesture) and (@ex-beans).
 
 ### So what?
 

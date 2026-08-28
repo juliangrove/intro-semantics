@@ -165,44 +165,44 @@ Available here:
 
 ## Calendar
 
-| Date           | Topic                                    | Reading                                                           | Assignment |
-|----------------|------------------------------------------|-------------------------------------------------------------------|------------|
-| Fri., Aug. 21  | Introduction                             |                                                                   |            |
-| Mon., Aug. 24  | Convention                               | @lewis_languages_1975 (pp. 3--10)                                 |            |
-| Wed., Aug. 26  | Convention                               | @grice_meaning_1957                                               | View       |
-| Fri., Aug. 28  | Speech acts                              | @bach_speech_2006 (pp. 147--155)                                  |            |
-| Mon., Aug. 31  | Speech acts                              |                                                                   |            |
-| Wed., Sept. 2  | Speaker meaning                          | @grice_logic_1975                                                 |            |
-| Fri., Sept. 4  | Speaker meaning                          |                                                                   |            |
-| Wed., Sept. 9  | Diagnosing inference                     | @winter_elements_2016 (Ch. 2, pp. 12--16)                         |            |
-| Fri., Sept. 11 | Diagnosing inference                     | @coppock_invitation_2025 (Ch. 1, pp. 13--41; Ch. 8, pp. 315--322) | View       |
-| Mon., Sept. 14 | Sets and set theory                      |                                                                   |            |
-| Wed., Sept. 16 | Functions, relations, and languages      |                                                                   |            |
-| Fri., Sept. 18 | No class: Julian away                    |                                                                   |            |
-| Mon., Sept. 21 | Models                                   | @winter_elements_2016 (Ch. 2, pp. 17--27)                         | View       |
-| Wed., Sept. 23 | Arabic numeral arithmetic                |                                                                   |            |
-| Fri., Sept. 25 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 44--64)                         |            |
-| Mon., Sept. 28 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 64-72)                          |            |
-| Wed., Sept. 30 | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         | View       |
-| Fri., Oct. 2   | Lambda notation and types                |                                                                   |            |
-| Mon., Oct. 5   | Lambda notation and types                |                                                                   |            |
-| Wed., Oct. 7   | Transitive verbs                         |                                                                   |            |
-| Mon., Oct. 12  | Transitive verbs                         |                                                                   |            |
-| Wed., Oct. 14  | Applicative categorial grammar           | @jurafsky_speech_2025 (Appendix E)                                |            |
-| Fri., Oct. 16  | No class: Julian away                    |                                                                   |            |
-| Mon., Oct. 19  | Grammars and models                      |                                                                   | View       |
-| Wed., Oct. 21  | Verbs and arguments redux                |                                                                   |            |
-| Fri., Oct. 23  | Verbs and arguments redux                |                                                                   |            |
-| Mon., Oct. 26  | Coordinators                             | @winter_elements_2016 (Ch. 3, pp. 74--80)                         |            |
-| Wed., Oct. 28  | Coordinators                             |                                                                   | View       |
-| Fri., Oct. 30  | Adjectives                               | @kennedy_adjectives_2012                                          |            |
-| Mon., Nov. 2   | Adjectives                               |                                                                   |            |
-| Wed., Nov. 4   | Adjectives                               |                                                                   | View       |
-| Fri., Nov. 6   | Pronouns                                 |                                                                   |            |
-| Mon., Nov. 9   | Pronouns                                 |                                                                   |            |
-| Fri., Nov. 13  | Pronouns                                 |                                                                   |            |
-| Mon., Nov. 16  | Quantifiers                              | @winter_elements_2016 (Ch. 4, pp. 99--108)                        | View       |
-| Wed., Nov. 18  | Quantifiers                              |                                                                   |            |
-| Fri., Nov. 20  | Quantifiers                              |                                                                   |            |
-| Mon., Nov. 30  | Negative polarity items                  |                                                                   | View       |
-| Wed., Dec. 2   | Quantifiers and scope                    |                                                                   |            |
+| Date           | Topic                                    | Reading                                                           | Assignment                         |
+|----------------|------------------------------------------|-------------------------------------------------------------------|------------------------------------|
+| Fri., Aug. 21  | Introduction                             |                                                                   |                                    |
+| Mon., Aug. 24  | Convention                               | @lewis_languages_1975 (pp. 3--10)                                 |                                    |
+| Wed., Aug. 26  | Convention                               | @grice_meaning_1957                                               | [View](convention/assignment.html) |
+| Fri., Aug. 28  | Speech acts                              | @bach_speech_2006 (pp. 147--155)                                  |                                    |
+| Mon., Aug. 31  | Speech acts                              |                                                                   |                                    |
+| Wed., Sept. 2  | Speaker meaning                          | @grice_logic_1975                                                 |                                    |
+| Fri., Sept. 4  | Speaker meaning                          |                                                                   |                                    |
+| Wed., Sept. 9  | Diagnosing inference                     | @winter_elements_2016 (Ch. 2, pp. 12--16)                         |                                    |
+| Fri., Sept. 11 | Diagnosing inference                     | @coppock_invitation_2025 (Ch. 1, pp. 13--41; Ch. 8, pp. 315--322) | View                               |
+| Mon., Sept. 14 | Sets and set theory                      |                                                                   |                                    |
+| Wed., Sept. 16 | Functions, relations, and languages      |                                                                   |                                    |
+| Fri., Sept. 18 | No class: Julian away                    |                                                                   |                                    |
+| Mon., Sept. 21 | Models                                   | @winter_elements_2016 (Ch. 2, pp. 17--27)                         | View                               |
+| Wed., Sept. 23 | Arabic numeral arithmetic                |                                                                   |                                    |
+| Fri., Sept. 25 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 44--64)                         |                                    |
+| Mon., Sept. 28 | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 64-72)                          |                                    |
+| Wed., Sept. 30 | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         | View                               |
+| Fri., Oct. 2   | Lambda notation and types                |                                                                   |                                    |
+| Mon., Oct. 5   | Lambda notation and types                |                                                                   |                                    |
+| Wed., Oct. 7   | Transitive verbs                         |                                                                   |                                    |
+| Mon., Oct. 12  | Transitive verbs                         |                                                                   |                                    |
+| Wed., Oct. 14  | Applicative categorial grammar           | @jurafsky_speech_2025 (Appendix E)                                |                                    |
+| Fri., Oct. 16  | No class: Julian away                    |                                                                   |                                    |
+| Mon., Oct. 19  | Grammars and models                      |                                                                   | View                               |
+| Wed., Oct. 21  | Verbs and arguments redux                |                                                                   |                                    |
+| Fri., Oct. 23  | Verbs and arguments redux                |                                                                   |                                    |
+| Mon., Oct. 26  | Coordinators                             | @winter_elements_2016 (Ch. 3, pp. 74--80)                         |                                    |
+| Wed., Oct. 28  | Coordinators                             |                                                                   | View                               |
+| Fri., Oct. 30  | Adjectives                               | @kennedy_adjectives_2012                                          |                                    |
+| Mon., Nov. 2   | Adjectives                               |                                                                   |                                    |
+| Wed., Nov. 4   | Adjectives                               |                                                                   | View                               |
+| Fri., Nov. 6   | Pronouns                                 |                                                                   |                                    |
+| Mon., Nov. 9   | Pronouns                                 |                                                                   |                                    |
+| Fri., Nov. 13  | Pronouns                                 |                                                                   |                                    |
+| Mon., Nov. 16  | Quantifiers                              | @winter_elements_2016 (Ch. 4, pp. 99--108)                        | View                               |
+| Wed., Nov. 18  | Quantifiers                              |                                                                   |                                    |
+| Fri., Nov. 20  | Quantifiers                              |                                                                   |                                    |
+| Mon., Nov. 30  | Negative polarity items                  |                                                                   | View                               |
+| Wed., Dec. 2   | Quantifiers and scope                    |                                                                   |                                    |

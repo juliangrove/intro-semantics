@@ -3,7 +3,7 @@ title: "Assignment"
 bibliography: ../../semantics.bib
 ---
 
-Due on Friday, September 5th.
+Due on Wednesday, September 2nd.
 
 ### Part 1
 
@@ -20,11 +20,10 @@ Whatever practice you choose need not be well-known, and we need not generally b
 It just needs to be something that people do within some community with which you're familiar.
 (Please don't use one of the ones that @lewis_languages_1975 mentions, e.g., driving on a particular side of the road in a particular country.)
 You might use the discussion in these notes of 'brushing your teeth' as a model.
-Note---following those notes---that some aspects of the practice might appear to be conventional, while other aspects might seem less so.
+Note---following those notes---that *some* aspects of the practice might appear to be conventional, while *other* aspects might seem less so.
 If you notice that this is true of the practice you analyze, please point it out.
 
-Please consider and provide a response to the following question:
-is your analysis of the practice you've chosen consistent with your own intuitions about whether or not the practice is a convention?
+Please consider and provide a response to the following: [is your analysis of the practice you've chosen consistent with your own intuitions about whether or not the practice is a convention?]{.underline}
 
 ### Part 2
 
@@ -47,7 +46,7 @@ in this case, we draw an inference about Jo's attitude toward her laptop.
 This use of the word *damn*, which causes the frustration inference, appears, in some sense to *mean* that Jo is frustrated.
 Do you think that this notion of meaning is meaning$_{N}$ or meaning$_{NN}$?
 That is, which of these relates utterances of (@ex-jo-damn)---or sentences containing the word *damn*, more generally---to inferences about frustration?
-Explain why, using the criteria for meaning$_{NN}$ that Grice discusses.
+Explain why you think this, using the criteria for meaning$_{NN}$ that Grice discusses.
 
 ### Part 3
 
