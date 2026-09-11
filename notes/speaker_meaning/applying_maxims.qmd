@@ -13,18 +13,18 @@ Here's one:
 
 (@ex-manner-1) Bo walked to his desk, sat down, and got up.
 
-This sentence, when uttered, appears to imply that Bo first walked to his desk, then sat down, and then got up, rather than that he might have done these things in some other order;
-though, people tend to say that (@ex-manner-1) is still *true*, even if he did.
+This sentence, when uttered, appears to imply that Bo first walked to his desk, then sat down, and then got up, rather than that he might have done these things in some other order.
+(That said, people tend to say that (@ex-manner-1) is still *true*, even if he did do them in another order.)
 This inference might be viewed as arising from the maxim of Manner, insofar as this maxim prescribes that the order in which predicates describing events are conjoined should mirror the order in which the events described are implied to have transpired.
 
 Why would the maxim of Manner prescribe this?
 Not totally obvious, perhaps;
 but one idea might be that understanding an event description involves, in some sense, constructing a mental representation of the event which is being described.
-And it might be easier for people to update mental representations of sequences of events with new events that are hypothesized to occur *later* in time than any events currently in the sequence than it is for people to update such sequences with new events that are hypothesized to occur earlier in time than some events currently in the sequence.
-If this is true, and people (implicitly) know that it is true, then they might try to make their utterances easier to understand, in view of this general fact;
-that is, they might try to utter event descriptions in an order that allows people to more easily update their existing mental representation with a representation of a new event.
+And it might be easier for people to update mental representations of sequences of events with new events that are hypothesized to occur *later* in time than any events already in the sequence than it is for people to update such sequences with new events that are hypothesized to occur earlier in time than some events already in the sequence.
+If this is true, and people (implicitly) know that it is true, then they might try to make their utterances easier to understand, in view of this general fact.
+That is, they might try to utter event descriptions in an order that allows people to more easily update their existing mental representation with a representation of a new event.
 
-To be sure, the above unruly musings should actually be clarified and spelled out---ideally in terms of some precise cognitive architecture and theory of language processing (e.g., stated in the [ACT-R](http://act-r.psy.cmu.edu/) framework).
+To be sure, this is mostly word vomit and should be spelled out---ideally in terms of some precise cognitive architecture and theory of language processing (e.g., stated in the [ACT-R](http://act-r.psy.cmu.edu/) framework).
 
 ### Quantity
 
@@ -35,19 +35,19 @@ Here's an example which appears to rely on Quantity:
 An utterance of this sentence seems to imply that Jo did not do all of the readings.
 One might reason about why this inference is produced as follows:
 
- - The person making the utterance usually follows Quantity, and therefore provides as much information as needed (say, given the QUD).
- - They opted not to make the [stronger]{.underline} statement that Jo did all of the readings.^[
-   When I say that *Jo did all of the readings* is stronger than *Jo did some of the readings*, what I mean is that the first sentence entails the second sentence, but the second does not entail the first.
-   Viewing things from the other direction, one can say that *Jo did some of the readings* is [weaker]{.underline} than *Jo did all of the readings*.
+ 1. If the speaker is following the Maxim of Quantity, and if they believe that Jo did all of the readings, then they should say that Jo did all of the readings.^[
+	Meanwhile, the Maxim of Quality dictates that the speaker should say that Jo did all of the readings *only if* they believe it to be true.
+	Thus even if Quantity produces a preference for 'all' over 'some', this preference can only be indulged if Quality isn't violated in the process.
  ]
- - Therefore, another principle---in particular, Quality (which they also follow)---must have prevented them from uttering this stronger sentence:
-   they must not have enough evidence that Jo did all of the readings;
-   perhaps they believe it is false.
+ 2. The speaker didn't say that Jo did all of the readings.
+ 3. Therefore (by 1 and 2), either (a) the speaker isn't following the Maxim of Quantity, or (b) it isn't the case that they believe that Jo did all of the readings.
+ 4. Because of Grice's Cooperative Principle, we should assume that the speaker is following the Maxim of Quantity.
+ 5. Therefore (by 3 and 4), it isn't the case that the speaker believes that Jo did all of the readings.
 
-In case the inference made from this reasoning is merely that the speaker doesn't have enough evidence to use *all* instead of *some*, one would conclude that there is an intended *ignorance implicature*:
+At this point, we've said enough to derive the inference that *it is not the case that* the speaker thinks that Jo did all of the readings.
+If we additionally assume that the speaker is opinionated on this matter---i.e., either they believe Jo did all of the readings or they believe Jo didn't do all of the readings---then we can derive the conversational implicature that (the speaker believes that) Jo didn't do all of the readings.
+If instead, we concluded that the speaker doesn't have enough evidence to use *all* instead of *some*---i.e., that they aren't necessarily opinionated---then one would conclude that there is an intended *ignorance implicature*:
 the speaker doesn't know whether or not Jo did all of the readings, which is why they opted for the weaker *some*.
-In case the inference made is that the speaker believes it is false that Jo did all of the readings, one draws a *scalar* implicature:
-the speaker believes Jo did *not* do all of the readings, which is why they opted for the weaker *some*.
 
 Note that this situation seems to differ slightly from one in which Bo makes the utterance in (@ex-ignorance).
 

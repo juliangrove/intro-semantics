@@ -5,6 +5,7 @@ project:
     - about.qmd
     - index.qmd
     - convention/*
+    - speaker_meaning/*
 
 website:
   title: "Introduction to semantics"
@@ -22,6 +23,9 @@ website:
         - convention/assignment.qmd
     - section: "Speech acts"
     - section: "Speaker meaning"
+      contents:
+        - speaker_meaning/maxims.qmd
+        - speaker_meaning/applying_maxims.qmd
     - section: "Diagnosing inference"
     - section: "Formal preliminaries"
     - section: "Models"
