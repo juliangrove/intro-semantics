@@ -175,8 +175,8 @@ Available here:
 | Wed., Sept. 2  | Speaker meaning                          | @grice_logic_1975                                                 |                                    |
 | Fri., Sept. 4  | Speaker meaning                          |                                                                   |                                    |
 | Wed., Sept. 9  | Diagnosing inference                     | @winter_elements_2016 (Ch. 2, pp. 12--16)                         |                                    |
-| Fri., Sept. 11 | Diagnosing inference                     | @coppock_invitation_2025 (Ch. 1, pp. 13--41; Ch. 8, pp. 315--322) | View                               |
-| Mon., Sept. 14 | Sets and set theory                      |                                                                   |                                    |
+| Fri., Sept. 11 | Diagnosing inference                     | @coppock_invitation_2025 (Ch. 1, pp. 13--41; Ch. 8, pp. 315--322) |                                    |
+| Mon., Sept. 14 | Sets and set theory                      |                                                                   | View                                   |
 | Wed., Sept. 16 | Functions, relations, and languages      |                                                                   |                                    |
 | Fri., Sept. 18 | No class: Julian away                    |                                                                   |                                    |
 | Mon., Sept. 21 | Models                                   | @winter_elements_2016 (Ch. 2, pp. 17--27)                         | View                               |

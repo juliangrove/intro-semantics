@@ -1,0 +1,346 @@
+---
+title: "Intro. to Semantics"
+bibliography: ../semantics.bib
+format:
+  revealjs:
+    css: styles.css
+    # html-math-method: mathjax
+    # mathjax-config:
+      # loader: {load: ['[tex]/bussproofs','[tex]/bbox','[tex]/colorbox']}
+      # tex:
+        # packages: {'[+]': ['bussproofs','bbox','colorbox']}
+---
+
+## Summary
+
+- **Speech acts**:
+  utterances that use a particular locution with a conventional meaning to achieve a certain social effect.
+- **Conversational implicatures**:
+  inferences tied to particular speech acts, based on:
+  - general principles of rational, cooperative communication [@grice_logic_1975];
+  - [conventional meanings]{.gb-blue}.
+
+---
+
+## Where do we go next?
+
+::: {.fragment}
+→ conventional meaning
+:::
+
+<br>
+
+- First, we need to develop methods for observing and classifying inference types.
+- Then, we can focus on the conventional stuff:
+  - study how it is encoded in linguistic expressions.
+
+---
+
+## Defining inference
+
+What is an inference?
+
+- A relation between expressions of a language.
+  - $E_{1} ↝ E_{2}$
+	- Typically, $E_{2}$ is a declarative sentence.
+
+(@ex-quantity) Jo did some of the readings. <br>
+	↝ Jo didn't do all of the readings.
+	
+(@ex-definite) Could you bring the dog inside? <br>
+	↝ There is a dog.
+
+## Data collection
+
+Where do inferences come from?
+
+- Speakers of the language!
+  - Your friends.
+  - Laboratory experiments.
+  - Large crowd-sourced inference judgment studies.
+
+## This class
+
+[Semantics]{.gb-blue} is the study of conventional meaning in natural language.
+
+- Goal:
+  give a ridiculously precise account of the inferences that linguistic expressions trigger.
+- If we can do this, then we have captured what these expressions *mean*$_{NN}$.
+
+## A taxonomy of inference types
+
+::: {.fragment}
+Some types of inference observable in natural language:
+
+- entailment
+- conversational implicature
+- presupposition
+- conventional implicature
+:::
+
+---
+
+## Entailment
+
+- A relationship between declarative sentences.
+- If $S_{1}$ entails $S_{2}$, then whenever $S_{1}$ is true, $S_{2}$ *must* be true.
+  (@ex-at-least) Jo has at least three siblings. <br>
+	  ↝ Jo has at least two siblings.
+- Entailments are **non-defeasible**.
+	  
+---
+
+## Non-defeasibility of entailments
+
+(@ex-at-least-contd) \#Jo has at least three siblings, {and, but} she doesn't have at least two siblings.
+
+(@ex-reflexive-pred) \# Jo is Bo's sibling, {and, but} Jo and Bo aren't siblings.
+
+(@ex-no-one) \#No one came to class, {and, but} it's not the case that Julian didn't come to class.
+
+---
+
+## Conversational implicature
+
+- Typically a relationship between utterances of declarative sentences.
+- If an utterance of $S_{1}$ *conversationally implicates* $S_{2}$, then the utterance *means*$_{NN}$ $S_{2}$.
+- Conversational implicatures are **defeasible**.
+
+---
+
+## Defeasibility of conversational implicatures
+
+(@ex-quantity-canceled) Jo did some of the readings. In fact, she did all of them.
+
+(@ex-ignorance-canceled) I want something with lots of caffeine. In fact, I want a matcha latte.
+
+(@ex-relation-canceled) **Context**: Jo is writing a letter of rec. for Bo for the ling. instructor position. <br>
+	**Jo**: Bo is very punctual. He has great handwriting. Last, but not least, he'd be a great ling. instructor!
+
+---
+
+## Presupposition
+
+- A relationship between an expression and a declarative sentence.
+- If $E$ presupposes $S$, then whenever an utterance of $E$ is felicitous, $S$ is true.
+  (@ex-stop) Jo stopped smoking. <br>
+	  ↝ Jo used to smoke.
+- Presuppositions are **non-defeasible**.
+
+---
+
+## Non-defeasibility of presuppositions
+
+(@ex-stop-contd) \#Jo stopped smoking, {and, but} she didn't used to smoke.
+
+(@ex-factive) \#Jo loves that it's raining, {and, but} it's not raining.
+
+(@ex-definite) \#Bo failed the assignment, {and, but} there isn't an assignment.
+
+(@ex-iterative) \#Bo failed the assignment again, {and, but} he hasn't failed it before.
+
+---
+
+## Summary
+
+|                 | entailment | conv. impl. | presupposition   |
+|-----------------|------------|-------------|------------------|
+| **between**     | sentences  | utterances  | expr. + sentence |
+| **defeasible?** | no         | yes         | no               |
+
+---
+
+## Things to address
+
+- Difference between entailment and presupposition.
+- Conventional implicature versus the other inference types.
+
+---
+
+## Entailment vs. presupposition
+
+First pass:
+
+- Presuppositions encode background information, needed to make sense of some expression.
+  - Express what must already be in the common ground [@stalnaker_assertion_1978].
+- Entailments encode information about what is said.
+  - Express information, e.g., which is being added to the common ground.
+
+---
+
+## The negation test
+
+Second pass:
+
+- Presuppositions **project**, whereas entailments do not.
+
+(@ex-believe-love) a. Jo [[demonstrated]{.gb-blue}]{.gb-blue} that she's good at Go. <br>
+	b. Jo [loves]{.gb-orange} that she's good at Go.
+	
+(@ex-believe-love-not) a. Jo didn't [demonstrate]{.gb-blue} that she's good at Go. <br>
+	b. Jo doesn't [love]{.gb-orange} that she's good at Go.
+	
+---
+
+## More!
+
+(@ex-indef-def) a. Bo brought [a dog]{.gb-blue} to his place of work. <br>
+	b. Bo brought [the dog]{.gb-orange} to his place of work.
+	
+(@ex-indef-def-not) a. Bo didn't bring [a dog]{.gb-blue} to his place of work. <br>
+	b. Bo didn't bring [the dog]{.gb-orange} to his place of work.
+
+---
+
+## The question test
+
+(@ex-believe-love-q) a. Did Jo [demonstrate]{.gb-blue} that she's good at Go?
+	b. Does Jo [love]{.gb-orange} that she's good at Go?
+	
+(@ex-indef-def-q) a. Did Jo bring [a dog]{.gb-blue} to his place of work? <br>
+	b. Did Jo bring [the dog]{.gb-orange} to his place of work?
+
+---
+
+## The conditional test
+
+(@ex-believe-love-cond) a. If Jo [[demonstrated]{.gb-blue}]{.gb-blue} that she's good at Go, she'll have to join the Go league. <br>
+	b. If Jo [loves]{.gb-orange} that she's good at Go, she'll have to join the Go league.
+
+(@ex-indef-def-cond) a. If Bo brought [a dog]{.gb-blue} to his place of work, the boss will be mad. <br>
+	b. If Bo brought [the dog]{.gb-orange} to his place of work, the boss will be mad.
+
+---
+
+## Families of sentences
+
+These tests are known as **family-of-sentence** tests [@chierchia_meaning_1990].
+
+::: {.fragment}
+Given a sentence $S_{1}$, from which you can infer $S_{2}$:
+
+- negate $S_{1}$;
+- question $S_{1}$;
+- put $S_{1}$ into the antecedent of a conditional.
+:::
+
+::: {.fragment}
+If $S_{2}$ survives (i.e., **projects**), probably a presupposition.
+:::
+
+---
+
+## Hey, wait a minute!
+
+The **hey, wait a minute** test [@von_fintel_would_2004].
+
+(@ex-hwam-test) **Bo**: You [love]{.gb-orange} that you're good at Go. <br>
+	**Jo**: <span class="fragment">Hey, wait a minute! I'm not good at Go!</span>
+
+(@ex-hwam-test-fail) **Bo**: You [demonstrated]{.gb-blue} that you're good at Go! <br>
+	<span class="fragment">**Jo**: \#Hey, wait a minute! I'm not good at Go!</span> <br>
+    <span class="fragment">**Jo**: No, I didn't!</span>
+	
+---
+
+## Hey, wait a minute!
+
+(@ex-hwam-test2) **Jo**: You brought [the dog]{.gb-orange} to your place of work! <br>
+	<span class="fragment">**Bo**: Hey, wait a minute! There isn't a dog!</span>
+
+---
+
+## Interim summary
+
+Distinguishing entailments and presuppositions from conversational implicatures:
+
+- defeasibility/contradiction test
+
+::: {.fragment}
+Distinguishing entailments from presuppositions:
+
+- family-of-sentence tests
+- "hey wait a minute" test
+:::
+
+---
+
+## Now you try it!
+
+(@ex-pretend) Mo forgot that he went to class. <br>
+	↝ Mo went to class.
+	
+<br>	
+
+(@ex-pretend) Mo forgot to eat breakfast. <br>
+	↝ Mo didn't eat breakfast.
+
+---
+
+## Question
+
+<br>
+
+Why do presuppositions "project"?
+
+---
+
+## Disappearing presuppositions
+
+(@ex-def-conditional) If Bo has a dog, he brought [the dog]{.gb-orange} to his place of work.
+
+(@ex-love-conditional) If Jo is actually good at Go, she [loves]{.gb-orange} that she's good at Go.
+
+<br>
+
+(@ex-def-negated) It's not true that Bo has a dog and that he brought [the dog]{.gb-orange} to his place of work.
+
+(@ex-love-conditional) It's not true that Jo is good at Go and that she [loves]{.gb-orange} that she's good at Go.
+
+---
+
+## Changing presuppositions
+
+(@ex-def-conditionalized) If Jo has any friends in Gainesville, she loves that she gets to see them. <br>
+	<span class="fragment">↝ If Jo has any friends in Gainesville, she gets to see them.</span>
+
+---
+
+## Conventional implicatures
+
+(@ex-nrrc) The class is taught by Julian[, who enjoys syntax]{.gb-red}. <br>
+	<span class="fragment">↝ Julian enjoys syntax.</span>
+	
+(@ex-nrrc-negated) The class isn't taught by Julian[, who enjoys syntax]{.gb-red}. <br>
+	<span class="fragment">↝ Julian enjoys syntax.</span>
+	
+---
+
+## Can they disappear?
+
+(@ex-nrrc-conditional) \#If Julian enjoys syntax, then the class is taught by Julian[, who enjoys syntax]{.gb-red}.
+
+---
+
+## Summary
+
+::: {.nonincremental}
+[Distinguishing entailments/presuppositions from conv. implicatures:]{.smaller}
+
+- [defeasibility/contradiction test]{.smaller}
+
+[Distinguishing entailments from presuppositions:]{.smaller}
+
+- [family-of-sentence tests]{.smaller}
+- ["hey wait a minute" test]{.smaller}
+:::
+
+::: {.fragment}
+[Distinguishing presuppositions from conventional implicatures:]{.smaller}
+
+- [conventional implicatures always project (?)]{.smaller}
+:::
+
+---
+
+### References
