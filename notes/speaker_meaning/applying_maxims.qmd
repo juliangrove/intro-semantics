@@ -45,7 +45,7 @@ One might reason about why this inference is produced as follows:
  5. Therefore (by 3 and 4), it isn't the case that the speaker believes that Jo did all of the readings.
 
 At this point, we've said enough to derive the inference that *it is not the case that* the speaker thinks that Jo did all of the readings.
-If we additionally assume that the speaker is opinionated on this matter---i.e., either they believe Jo did all of the readings or they believe Jo didn't do all of the readings---then we can derive the conversational implicature that (the speaker believes that) Jo didn't do all of the readings.
+If we additionally assume that the speaker is opinionated on this matter---i.e., either they believe Jo did all of the readings or they believe Jo didn't do all of the readings---then we can derive the conversational implicature---specifically, a *scalar* or *quantity* implicature---that (the speaker believes that) Jo didn't do all of the readings.
 If instead, we concluded that the speaker doesn't have enough evidence to use *all* instead of *some*---i.e., that they aren't necessarily opinionated---then one would conclude that there is an intended *ignorance implicature*:
 the speaker doesn't know whether or not Jo did all of the readings, which is why they opted for the weaker *some*.
 

@@ -3,7 +3,7 @@ title: "Overview"
 bibliography: ../../semantics.bib
 ---
 
-The data we tend to be interested in in semantics is inference judgment data.
+When doing semantics, we are usually interested in inference judgment data.
 We can view an inference as being a pair of expressions of the language (or *utterances* of such expressions)---$E_{1}$ and $E_{2}$---where $E_{2}$ is generally a declarative sentence.
 In that case, we can ask if using $E_{1}$ triggers an inference that $E_{2}$ is true.
 If it does, then we say that [$E_{2}$ is an inference of $E_{1}$ (or of an utterance of $E_{1}$)]{.underline}.
@@ -18,6 +18,6 @@ These are:
 
 Each of these kinds of inference can itself be viewed as a relation between expressions, or utterances of expressions.
 For example, we can say that sentence 1 *entails* sentence 2, or that it conversationally implicates it.
-Strictly speaking, it is really an *utterance* of a sentence that would trigger a conversational implicature---one wherefrom it is assumed that the person making the utterance is following certain conversational principles---but linguists often say that a sentence triggers a conversational implicature as a shorthand to mean that utterances of the sentence tend to give rise to the implicature.
+Strictly speaking, it is really an *utterance* of a sentence that would trigger a conversational implicature---one wherefrom it is assumed that the person making the utterance is following certain conversational principles---but linguists often say that a sentence triggers a conversational implicature as a *shorthand* to mean that utterances of the sentence tend to give rise to the implicature.
 
 Likewise, expressions of different syntactic categories can presuppose certain sentences, or they can conventionally implicate them.

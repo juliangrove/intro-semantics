@@ -6,6 +6,7 @@ project:
     - index.qmd
     - convention/*
     - speaker_meaning/*
+    - diagnosing_inference/*
 
 website:
   title: "Introduction to semantics"
@@ -27,6 +28,12 @@ website:
         - speaker_meaning/maxims.qmd
         - speaker_meaning/applying_maxims.qmd
     - section: "Diagnosing inference"
+      contents:
+        - diagnosing_inference/overview.qmd
+        - diagnosing_inference/entailments_conv_impl.qmd
+        - diagnosing_inference/presuppositions_entailments.qmd
+        - diagnosing_inference/conventional_implicatures_presuppositions.qmd
+        - diagnosing_inference/assignment.qmd
     - section: "Formal preliminaries"
     - section: "Models"
     - section: "Applicative categorial grammar"
