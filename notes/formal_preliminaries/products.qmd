@@ -12,7 +12,7 @@ $$⟨x, y⟩_{2} = y$$
 
 The following statement is also true:
 $$⟨x_{1}, x_{2}⟩ = x$$
-That is, if you take the first and second components of a pair and pair them back up, you haven't done anything!
+That is, if you take the first and second components of a pair and then pair them back up, you haven't created anything new!
 	
 We can generalize binary products to $n$-ary products by considering the former to correspond to the special case where $n = 2$.
 For the general case $$A₁ × ... × A_{n-1} × Aₙ$$ we can encode this product as $$(...(A₁ × ... × A_{n-1}) × Aₙ)$$
