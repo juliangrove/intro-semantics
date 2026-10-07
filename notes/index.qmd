@@ -184,10 +184,10 @@ Available here:
 | Fri., Sept. 25 | Class canceled                           |                                                                   |                                              |
 | Mon., Sept. 28 | Functions, relations, and languages      |                                                                   |                                              |
 | Wed., Sept. 30 | Arabic numeral arithmetic                | @winter_elements_2016 (Ch. 2, pp. 17--27)                         |                                              |
-| Fri., Oct. 2   | Arabic numeral arithmetic                |                                                                   | View                                         |
+| Fri., Oct. 2   | Arabic numeral arithmetic                |                                                                   |                                              |
 | Mon., Oct. 5   | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 44--64)                         |                                              |
 | Wed., Oct. 7   | Intransitive verbs                       | @winter_elements_2016 (Ch. 3, pp. 64-72)                          |                                              |
-| Mon., Oct. 12  | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         |                                              |
+| Mon., Oct. 12  | What should go into a theory of meaning? | @bach_meaning_2006; @szabo_compositionality_2020 (§§3--4)         | View                                         |
 | Wed., Oct. 14  | Lambda notation and types                |                                                                   |                                              |
 | Fri., Oct. 16  | Lambda notation and types                |                                                                   |                                              |
 | Mon., Oct. 19  | Transitive verbs                         |                                                                   | View                                         |
