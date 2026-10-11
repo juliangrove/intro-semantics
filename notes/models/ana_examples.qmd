@@ -30,7 +30,7 @@ It's example time.
 
 ### Example 1
 
-For the first example let's show that $⌜537⌝$ is an $np$ (and that it has a particular interpretation in $\mathcal{M}_{ANA}$).
+For the first example let's show that $⌜537⌝$ is an $exp$ (and that it has a particular interpretation in $\mathcal{M}_{ANA}$).
 
 \begin{prooftree}
 \AxiomC{$⟨⌜5⌝, I_{ANA}(⌜5⌝)⟩ ⊢ atom$}
@@ -39,26 +39,29 @@ For the first example let's show that $⌜537⌝$ is an $np$ (and that it has a 
 \RightLabel{Rule 2}\UnaryInfC{$⟨⌜3⌝, I_{ANA}(⌜3⌝)⟩ ⊢ n$}
 \AxiomC{$⟨⌜7⌝, I_{ANA}(⌜7⌝)⟩ ⊢ atom$}
 \RightLabel{Rule 2}\UnaryInfC{$⟨⌜7⌝, I_{ANA}(⌜7⌝)⟩ ⊢ n$}
-\RightLabel{Rule 3}\BinaryInfC{$⟨⌜37⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ n$}
-\RightLabel{Rule 3}\BinaryInfC{$⟨⌜537⌝, I_{ANA}(⌜5⌝) * 10^{length(⌜37⌝)} + I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ n$}
-\RightLabel{Rule 4}\UnaryInfC{$⟨⌜537⌝, I_{ANA}(⌜5⌝) * 10^{length(⌜37⌝)} + I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ np$}
+\RightLabel{Rule 2}\BinaryInfC{$⟨⌜37⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ n$}
+\RightLabel{Rule 2}\BinaryInfC{$⟨⌜537⌝, I_{ANA}(⌜5⌝) * 10^{length(⌜37⌝)} + I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ n$}
+\RightLabel{Rule 3}\UnaryInfC{$⟨⌜537⌝, I_{ANA}(⌜5⌝) * 10^{length(⌜37⌝)} + I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ exp$}
 \end{prooftree}
 
 What's proved is the statement in the very last line of this derivation:
 that the string $⌜537⌝$ has the interpretation
 $$I_{ANA}(⌜5⌝) * 10^{length(⌜37⌝)} + I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)$$
-and the category $np$.
+and the category $exp$.
 Since we know that
 
 - $I_{ANA}(⌜5⌝) = 5$,
 - $I_{ANA}(⌜3⌝) = 3$, and
 - $I_{ANA}(⌜7⌝) = 7$
 
-as well as what $length(⌜37⌝)$ and $length(⌜7⌝)$ are---$2$ and $1$, respectively---the very last line of this proof/derivation can be rewritten as
+as well as what $length(⌜37⌝)$ and $length(⌜7⌝)$ are---$2$ and $1$, respectively---the interpretation in the very last line of this proof/derivation can be rewritten as
 
 $$5 * 10^{2} + 3 * 10^{1} + 7$$
 
 which, of course, is $537$.
+Thus the full judgment ultimately simplifies to:
+
+$$⟨⌜537⌝, 537⟩ ⊢ exp$$
 
 ### Example 2
 
@@ -69,23 +72,23 @@ For the second example, we'll show that $⌜((37 + 1) × 0) = 5⌝$ is an $s$, a
 \RightLabel{Rule 2}\UnaryInfC{$⟨⌜3⌝, I_{ANA}(⌜3⌝)⟩ ⊢ n$}
 \AxiomC{$⟨⌜7⌝, I_{ANA}(⌜7⌝)⟩ ⊢ atom$}
 \RightLabel{Rule 2}\UnaryInfC{$⟨⌜7⌝, I_{ANA}(⌜7⌝)⟩ ⊢ n$}
-\RightLabel{Rule 3}\BinaryInfC{$⟨⌜37⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ n$}
-\RightLabel{Rule 4}\UnaryInfC{$⟨⌜37⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ np$}
+\RightLabel{Rule 2}\BinaryInfC{$⟨⌜37⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ n$}
+\RightLabel{Rule 3}\UnaryInfC{$⟨⌜37⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝)⟩ ⊢ exp$}
 \AxiomC{$⟨⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ atom$}
-\RightLabel{Rule 2}\UnaryInfC{$⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ n$}
-\RightLabel{Rule 4}\UnaryInfC{$⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ np$}
-\RightLabel{Rule 5}\BinaryInfC{$⟨⌜(37 + 1)⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)⟩ ⊢ np$}
+\RightLabel{Rule 2}\UnaryInfC{$⟨⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ n$}
+\RightLabel{Rule 3}\UnaryInfC{$⟨⌜1⌝, I_{ANA}(⌜1⌝)⟩ ⊢ exp$}
+\RightLabel{Rule 3}\BinaryInfC{$⟨⌜(37 + 1)⌝, I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)⟩ ⊢ exp$}
 \AxiomC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ atom$}
 \RightLabel{Rule 2}\UnaryInfC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ n$}
-\RightLabel{Rule 4}\UnaryInfC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ np$}
-\RightLabel{Rule 5}\BinaryInfC{$⟨⌜((37 + 1) × 0)⌝, (I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)) * I_{ANA}(⌜0⌝)⟩ ⊢ np$}
+\RightLabel{Rule 3}\UnaryInfC{$⟨⌜0⌝, I_{ANA}(⌜0⌝)⟩ ⊢ exp$}
+\RightLabel{Rule 3}\BinaryInfC{$⟨⌜((37 + 1) × 0)⌝, (I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)) * I_{ANA}(⌜0⌝)⟩ ⊢ exp$}
 \AxiomC{$⟨⌜5⌝, I_{ANA}(⌜5⌝)⟩ ⊢ atom$}
 \RightLabel{Rule 2}\UnaryInfC{$⟨⌜5⌝, I_{ANA}(⌜5⌝)⟩ ⊢ n$}
-\RightLabel{Rule 4}\UnaryInfC{$⟨⌜5⌝, I_{ANA}(⌜5⌝)⟩ ⊢ np$}
-\RightLabel{Rule 6}\BinaryInfC{$⟨⌜((37 + 1) × 0) = 5⌝, (I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)) * I_{ANA}(⌜0⌝) = I_{ANA}(⌜5⌝)⟩ ⊢ s$}
+\RightLabel{Rule 3}\UnaryInfC{$⟨⌜5⌝, I_{ANA}(⌜5⌝)⟩ ⊢ exp$}
+\RightLabel{Rule 4}\BinaryInfC{$⟨⌜((37 + 1) × 0) = 5⌝, (I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)) * I_{ANA}(⌜0⌝) = I_{ANA}(⌜5⌝)⟩ ⊢ s$}
 \end{prooftree}
 
-Indeed, we've proved that $⌜((37 + 1) × 0 = 5⌝$ is an $s$.
+Indeed, we've proved that $⌜((37 + 1) × 0) = 5⌝$ is an $s$.
 What we've also shown is that the interpretation of this $s$ is $\True$ just in case
 
 $$(I_{ANA}(⌜3⌝) * 10^{length(⌜7⌝)} + I_{ANA}(⌜7⌝) + I_{ANA}(⌜1⌝)) * I_{ANA}(⌜0⌝)$$

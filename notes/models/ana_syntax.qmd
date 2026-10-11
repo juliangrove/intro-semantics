@@ -26,7 +26,7 @@ $$
 :::
 
 As our first case study, we will look at the language of Arabic numeral arithmetic ('$L_{ANA}$', for short).
-This language has expressions like $⌜5⌝$, $⌜(1 + 2)⌝$, $⌜(37 = 43)⌝$, $⌜(3 × 5) = 15⌝$, and so on.
+This language has expressions like $⌜5⌝$, $⌜(1 + 2)⌝$, $⌜37 = 43⌝$, $⌜(3 × 5) = 15⌝$, and so on.
 
 Note that I'm using the corner brackets ($⌜$ and $⌝$), here, in order to distinguish *object language* expressions (i.e., of Arabic numeral arithmetic) from actual numbers, like $1$ and $2$.
 The first are just symbols, currently meaningless, while the second are elements of the set $ℕ$ of natural numbers.
@@ -43,36 +43,36 @@ These are strings containing the "equals" symbol, like $⌜37 = (5 × 6)⌝$.
 
 The syntax of $L_{ANA}$ can be described by the rules in (@ex-ana-syntax) (based on the alphabet in (@ex-ana-alphabet)).
 Note that we have four categories total:
-$atom$, $n$, $np$, and $s$.
+$atom$, $n$, $exp$, and $s$.
 
 First, the alphabet:
 
-(@ex-ana-alphabet) $Σ_{ANA} = \{⌜0⌝, ..., ⌜9⌝, ⌜(⌝, ⌜)⌝, ⌜+⌝, ⌜×⌝\}$
+(@ex-ana-alphabet) $Σ_{ANA} = \{⌜0⌝, ..., ⌜9⌝, ⌜(⌝, ⌜)⌝, ⌜+⌝, ⌜×⌝, ⌜=⌝\}$
 
 Now, for the syntax:
 
 (@ex-ana-syntax) Rule 1. $atom = \{⌜0⌝, ..., ⌜9⌝\}$. <br>
-	Rule 2. $atom ⊆ n$. <br>
-	Rule 3. If $x, y ∈ n$, then $x^{⌢}y ∈ n$. <br>
-	Rule 4. $n ⊆ np$. <br>
-	Rule 5. If $x, y ∈ np$, then $⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝, ⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝ ∈ np$. <br>
-	Rule 6. If $x, y ∈ np$, then $x^{⌢}⌜{=}⌝^{⌢}y ∈ s$. <br>
-	Rule 7. Closure clause:
-		nothing else is in $n$, $np$, or $s$.
+	Rule 2. $atom ⊆ n$, <br>
+		$\hspace{1cm}$ and if $x ∈ n$ and $y ∈ n$, then $x^{⌢}y ∈ n$. <br>
+	Rule 3. $n ⊆ exp$, <br>
+		$\hspace{1cm}$ and if $x ∈ exp$ and $y ∈ exp$, <br>
+		$\hspace{1cm}$ then $⌜(⌝^{⌢}x^{⌢}⌜+⌝^{⌢}y^{⌢}⌜)⌝ ∈ exp$ and $⌜(⌝^{⌢}x^{⌢}⌜×⌝^{⌢}y^{⌢}⌜)⌝ ∈ exp$. <br>
+	Rule 4. If $x ∈ exp$ and $y ∈ exp$, then $x^{⌢}⌜{=}⌝^{⌢}y ∈ s$. <br>
+	Rule 5. Closure clause:
+		nothing else is in $n$, $exp$, or $s$.
 
 In words, these rules say (respectively):
 
-- that the atoms are $⌜1⌝$ through $⌜9⌝$;
-- that any atoms are also numerals;
-- that you can always take two numerals and concatenate them to make another numeral;
-- that any numerals are also noun phrases;
-- that you can always take two noun phrases and concatenate them around the addition or multiplication symbol (with parentheses) to make another noun phrase;
-- that you can always take two noun phrases and concatenate them around the equals symbol to make a sentence;
+- that the atoms are $⌜0⌝$ through $⌜9⌝$;
+- that any atoms are also numerals and that you can always take two numerals and concatenate them to make another numeral;
+- that any numerals are also expressions and that you can always take two expressions and concatenate them around the addition or multiplication symbol (with parentheses) to make another expression;
+- that you can always take two expressions and concatenate them around the "equals" symbol to make a sentence;
 - and finally (the closure clause), that those things *exhaust* what you're allowed to do---nothing else is in the language!
 
 We can define the language of Arabic numeral arithmetic itself as follows:
 
-- $L_{ANA} = s ∪ np$:
+- $L_{ANA} = s ∪ exp$:
 
-So, it's just the set of sentences unioned with the set of noun phrases;
-in plain English, something is in the language if and only if it is a sentence or a noun phrase.
+So, it's just the set of sentences unioned with the set of expressions;
+in plain English:
+something is in the language if and only if it is a sentence or an expression.

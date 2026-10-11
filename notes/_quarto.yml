@@ -8,6 +8,7 @@ project:
     - speaker_meaning/*
     - diagnosing_inference/*
     - formal_preliminaries/*
+    - models/*
 
 website:
   title: "Introduction to semantics"
@@ -45,6 +46,10 @@ website:
         - formal_preliminaries/examples.qmd
         - formal_preliminaries/assignment.qmd
     - section: "Models"
+      contents:
+        - models/ana_syntax.qmd
+        - models/ana_semantics.qmd
+        - models/ana_examples.qmd
     - section: "Applicative categorial grammar"
     - section: "Verbs"
     - section: "Coordinators"
