@@ -34,7 +34,10 @@ in another, the interpretation of *runs* might be the set containing Bo and Mo (
 in yet another, maybe nobody runs ($\varnothing$);
 and so on.
 
-Technically, a model $\mathcal{M}$ is a structure that consists of a pair of a *domain* $D$ and an interpretation function $I$---something which takes *atoms* (i.e., the most basic expressions, whatever those are) of the language onto elements of a set $M$ ('$M$' for "meanings"):
+Technically, a model $\mathcal{M}$ is a tuple of:
+a *domain* $D$;
+the set $\{\True, \False\}$ of truth values ('True' and 'False');
+and an interpretation function $I$---something which takes *atoms* (i.e., the most basic expressions, whatever those are) of the language onto elements of a set $M$ ('$M$' for "meanings"):
 
 (@ex-model-def) Definition: <br> 
 	a model $\mathcal{M}$ is a tuple $⟨D, \{\True, \False\}, I⟩$ of a non-empty set $D$, the set of truth values $\True$ and $\False$, and a function $I : atom → M$.
@@ -47,5 +50,5 @@ or it might be $D ∪ 2^{D}$ (the set containing as members both all of the elem
 or it might be something else more complicated.
 
 Further, the way the set $atom$ is chosen will also vary by case.
-For example, if we are defining a language $L$ over some alphaet $Σ$, $atom$ might be chosen to be $Σ$ itself---or perhaps some subset of $Σ$.
+For example, if we are defining a language $L$ over some alphabet $Σ$, $atom$ might be chosen to be $Σ$ itself---or perhaps some subset of $Σ$.
 The way we decide what $atom$ is depends on how we decide we want to construct the interpretations of more complex expressions of the language out of the meanings of more basic expressions.

@@ -71,7 +71,7 @@ In words, these rules say (respectively):
 
 We can define the language of Arabic numeral arithmetic itself as follows:
 
-- $L_{ANA} = s ∪ exp$:
+- $L_{ANA} = s ∪ exp$
 
 So, it's just the set of sentences unioned with the set of expressions;
 in plain English:
