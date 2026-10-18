@@ -2,6 +2,15 @@ project:
   type: website
   output-dir: ../docs/slides
   render:
+    - aug21.qmd
+    - aug24.qmd
+    - aug26.qmd
+    - aug28.qmd
+    - aug31.qmd
+    - sept2.qmd
+    - sept4.qmd
+    - sept9.qmd
+    - sept11.qmd
     - sept14.qmd
 
 format:
