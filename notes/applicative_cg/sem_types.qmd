@@ -81,7 +81,7 @@ Specifically, it is the set of functions from the domain of the type on the left
 
 ##### Example
 
-Let's look at an example of how the rule (@ex-function-domains) applies in practice, for the semantic types $(e → t)$.
+Let's look at an example of how the rule (@ex-function-domains) applies in practice, for the semantic type $(e → t)$.
 By (@ex-function-domains), $D_{(e → t)}$ is the following set of functions:
 
 $$D_{(e → t)} = \{f\ |\ \text{$f$ is a function from $D_{e}$ to $D_{t}$}\}$$

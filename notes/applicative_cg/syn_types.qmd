@@ -71,7 +71,7 @@ Take the transitive verb *saw* as an example, as in (@ex-saw).
 (@ex-saw) Jo saw Bo.
 
 This verb [first]{.underline} takes a noun phrase to its right (*saw [Bo]{.underline}*);
-and [second]{.underline}, it takes a noun phrase to its left (*[Jo]{.underline} saw Bo*);
+and [second]{.underline}, it takes a noun phrase to its left (*[Jo]{.underline} saw Bo*).
 The verb *saw* therefore has the following syntactic category, in tree form:
 
 ```
