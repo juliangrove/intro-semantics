@@ -25,9 +25,10 @@ $$
 $$
 :::
 
-Due on Wednesday, October 29th.
+Due on Monday, October 26th.
 
 ### Part 1
+(50 points)
 
 In the following exercise, I will describe the behavior of an expression in English---that is, what it can combine with, and what it makes as a result.
 Based on my description, I want you to:
@@ -39,29 +40,33 @@ Based on my description, I want you to:
 
 (1) This expression takes a transitive verb to its left, and then a noun phrase to its left, to form a sentence.
 
-(2) This expression combines with a preposition to its right, and then a verb phrase to its left, to form a transitive verb.
+(2) This expression combines with a noun phrase to its right, and then a verb phrase to its left, to form a transitive verb.
 
-(3) This expression combines with an expression $X$ to its right, where $X$ is something that takes a preposition on its left to form a verb phrase, and together with $X$, it forms a preposition.
+(3) This expression combines with an expression $X$ to its right, where $X$ is something that takes a noun phrase on its left to form a verb phrase, and together with $X$, it forms a noun phrase.
 
 ### Part 2
+(50 points)
 
 Recall that in [A first approximation of English](../models/english.html) of the Models module, we assigned the connective *and* the category $con$ in order to account for sentences like (@ex-and).
 
-(@ex-and) Ziggy runs and jumps.
+(@ex-and) Jo runs and jumps.
 
 Provide a new lexical entry for *and* that uses the syntactic category system defined in [Syntactic categories](syn_types.html).
 Provide lexical entries for *runs* and *jumps* (including their meanings), and give a derivation of the sentence in (@ex-and).
 
-### Part 3
+<!-- ### Part 3 -->
+<!-- (25 points) -->
 
-Consider the following sentence, which features an adjective in predicate position.
+<!-- Consider the following sentence, which features an adjective in predicate position. -->
 
-(@ex-fast) Ziggy is fast.
+<!-- (@ex-fast) Jo is fast. -->
 
-Assume that there is a new base category for adjective phrases---call it $ap$---which is the syntactic category of the adjective *fast*.
+<!-- Assume that there is a new base category for adjective phrases---call it $ap$---which is the syntactic category of the adjective *fast*. -->
 
-What semantic type do you think this category should be associated with?
-Keep in mind that this semantic type doesn't have to be $e$ or $t$---it can be something more complex!
+<!-- What semantic type do you think this category should be associated with? -->
+<!-- Keep in mind that this semantic type doesn't have to be $e$ or $t$---it can be something more complex! -->
 
-What syntactic category should the copula *is* have?
-Given this syntactic category, what is the semantic type of *is*?
+<!-- What syntactic category should the copula *is* have? -->
+<!-- Given this syntactic category, what is the semantic type of *is*? -->
+
+<!-- (Please justify your answers.) -->
