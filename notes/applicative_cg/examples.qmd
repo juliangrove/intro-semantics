@@ -26,7 +26,7 @@ $$
 :::
 
 [The assignment](assignment.html) asks you to determine syntactic categories and their corresponding semantic types based on English descriptions of how expressions having those categories behave (and the general procedure we have for converting syntactic categories into their corresponding semantic types).
-Let's look at a few examples of this.
+Let's look at a couple examples of this.
 
 ## First example
 
