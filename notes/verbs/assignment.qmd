@@ -25,7 +25,7 @@ $$
 $$
 :::
 
-Due on Wednesday, November 5th.
+Due on Wednesday, November 4th.
 
 ### Part 1
 
@@ -52,11 +52,11 @@ Again, I will describe the behavior of an expression in English---what it can co
 English has a syntactic *voice* distinction between *active* verbs and *passive* verbs.
 This means that in addition to sentences like (@ex-eat-active), where we see the transitive verb *ate*,
 
-(@ex-eat-active) Tigress ate noodles.
+(@ex-eat-active) Sam ate the ring.
 
 it is also possible to form sentences like (@ex-eat-passive), in which the very same verb has been passivized.
 
-(@ex-eat-passive) Noodles were eaten.
+(@ex-eat-passive) The Ring were eaten.
 
 To analyze sentences with passive verbs in them, let's assume that we have another base syntactic category:
 
@@ -85,7 +85,7 @@ Provide a lexical entry for the auxiliary verb *were* that allows you to derive 
 
 ### Part 3
 
-Assume, as usual, that Tigress is a noun phrase whose interpretation is $\ct{ti}$, and that *noodles* is a noun phrase whose interpretation is $\ct{n}$.
+Assume, as usual, that Sam is a noun phrase whose interpretation is $\ct{s}$, and that *the ring* is a noun phrase whose interpretation is $\ct{n}$.
 Provide a derivation of the sentence in (@ex-eat-active).
 Use your lexical entry for *were* to provide a derivation for the sentence in (@ex-eat-passive).
 Do the meanings you obtain for the two sentences help explain the fact that (@ex-eat-active) *entails* (@ex-eat-passive)?

@@ -10,6 +10,7 @@ project:
     - formal_preliminaries/*
     - models/*
     - applicative_cg/*
+    - verbs/*
 
 website:
   title: "Introduction to semantics"
@@ -63,6 +64,12 @@ website:
         - applicative_cg/examples.qmd
         - applicative_cg/assignment.qmd
     - section: "Verbs"
+      contents:
+        - verbs/intransitives.qmd
+        - verbs/transitives.qmd
+        - verbs/ditransitives.qmd
+        - verbs/note.qmd
+        - verbs/assignment.qmd
     - section: "Coordinators"
     - section: "Adjectives"
     - section: "Quantification"

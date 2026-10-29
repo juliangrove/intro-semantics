@@ -25,42 +25,42 @@ $$
 $$
 :::
 
-Transitive verbs like *punches* increase the number of syntactic and semantic arguments of intransitives by one.
-To analyze the sentence in (@ex-punches),
+Transitive verbs like *saw* increase the number of syntactic and semantic arguments of intransitives by one.
+To analyze the sentence in (@ex-saw),
 
-(@ex-punches) Tigress punches Po.
+(@ex-saw) Sam saw Frodo.
 
 we can assign a lexical entry like the one in (@ex-lexicon) to this verb.
 
-(@ex-lexicon) $⟨\textit{punches}, (λx.(λy.\ct{punch}(y, x)))⟩ ⊢ ((np\backslash s)/np)$
+(@ex-lexicon) $⟨\textit{saw}, (λx.(λy.\ct{see}(y, x)))⟩ ⊢ ((np\backslash s)/np)$
 
 In this case, we have a function of the following type:
 
-$$(λx.(λy.\ct{punch}(y, x))) : D_{e} → D_{e} → \{\true, \false\}$$
+$$(λx.(λy.\ct{see}(y, x))) : D_{e} → D_{e} → \{\true, \false\}$$
 
-This function is defined in terms of a relation on entities, $\ct{punch}$.
-That is, given two entities $x$ and $y$, $\ct{punch}(y, x)$ is some truth value.
+This function is defined in terms of a relation on entities, $\ct{see}$.
+That is, given two entities $x$ and $y$, $\ct{see}(y, x)$ is some truth value.
 
-Then, given the lexical entry for *Tigress* where it denotes $\ct{ti}$, we can derive the meaning and syntactic category of the sentence in (@ex-punches):
+Then, given the lexical entry for *Sam* on which its interpretation is $\ct{s}$, we can derive the meaning and syntactic category of the sentence in (@ex-saw):
 
 $$\begin{prooftree}
-\AxiomC{\(⟨\textit{Tigress}, \ct{ti}⟩ ⊢ np\)}
-\AxiomC{\(⟨\textit{punches}, (λx.(λy.\ct{punch}(y, x)))⟩ ⊢ (np\backslash s)/np\)}
-\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np\)}
-\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{punches Po}, (λx.(λy.\ct{punch}(y, x)))(\ct{p})⟩ ⊢ (np\backslash s)\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Tigress punches Po}, (λx.(λy.\ct{punch}(y, x)))(\ct{p})(\ct{ti})⟩ ⊢ s\)}
+\AxiomC{\(⟨\textit{Sam}, \ct{s}⟩ ⊢ np\)}
+\AxiomC{\(⟨\textit{saw}, (λx.(λy.\ct{see}(y, x)))⟩ ⊢ (np\backslash s)/np\)}
+\AxiomC{\(⟨\textit{Frodo}, \ct{f}⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{saw Frodo}, (λx.(λy.\ct{see}(y, x)))(\ct{f})⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Sam saw Frodo}, (λx.(λy.\ct{see}(y, x)))(\ct{f})(\ct{s})⟩ ⊢ s\)}
 \end{prooftree}$$
 
-Since $(λx.(λy.\ct{punch}(y, x)))$ takes two entities in order, we can get a function takes *one* entity by applying it first to $\ct{p}$:
+Since $(λx.(λy.\ct{see}(y, x)))$ takes two entities in order, we can obtain a function that takes *one* entity by applying it first to $\ct{f}$:
 
-$$(λx.(λy.\ct{punch}(y, x)))(\ct{p})$$
-$$⇒ (λy.\ct{punch}(y, \ct{p}))$$
+$$(λx.(λy.\ct{see}(y, x)))(\ct{f})$$
+$$⇒ (λy.\ct{see}(y, \ct{f}))$$
 
-This function is itself a characteristic function of a set of entities in $D_{e}$.
-As a result, if we apply it to *two* entities, we get a truth value:
+The resulting function is a characteristic function of a set of entities.
+Thus if we apply the original function to *two* entities, we get a truth value:
 
-$$(λx.(λy.\ct{punch}(y, x)))(\ct{p})(\ct{ti})$$
-$$⇒ (λy.\ct{punch}(x, \ct{p}))(\ct{ti})$$
-$$⇒ \ct{punch}(\ct{ti}, \ct{p})$$
+$$(λx.(λy.\ct{see}(y, x)))(\ct{f})(\ct{s})$$
+$$⇒ (λy.\ct{see}(x, \ct{f}))(\ct{s})$$
+$$⇒ \ct{see}(\ct{s}, \ct{f})$$
 
-This result, $\ct{punch}(\ct{ti}, \ct{p})$, will be $\true$ or $\false$, depending on the model.
+This result, $\ct{see}(\ct{s}, \ct{f})$, will be $\true$ or $\false$, depending on the model.

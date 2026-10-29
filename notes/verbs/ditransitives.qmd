@@ -27,8 +27,8 @@ $$
 
 Let's consider the two sentences in (@ex-showed), which, arguably, entail each other.
 
-(@ex-showed) a. Po showed noodles to Tigress. <br>
-	b. Po showed Tigress noodles.
+(@ex-showed) a. Frodo showed the ring to Sam. <br>
+	b. Frodo showed Sam the ring.
 
 To capture this mutual entailment, we might assign the ditransitive verb *showed* two distinct lexical entries, as in (@ex-showed-lexicon).
 
@@ -49,45 +49,45 @@ and then the subject, yielding, e.g., (@ex-showed\-b).
 A derivation of the (@ex-showed\-a) sentence would go:
 
 $$\begin{prooftree}
-\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np⟩\)}
+\AxiomC{\(⟨\textit{Frodo}, \ct{f}⟩ ⊢ np⟩\)}
 \AxiomC{\(⟨\textit{showed}_{1}, (λx.(λy.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/pp)/np)\)}
-\AxiomC{\(⟨\textit{noodles}, \ct{n}⟩ ⊢ np\)}
-\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{1}\) noodles}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{n})⟩ ⊢ ((np\backslash s)/pp)\)}
+\AxiomC{\(⟨\textit{the ring}, \ct{r}⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{1}\) the ring}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{r})⟩ ⊢ ((np\backslash s)/pp)\)}
 \AxiomC{\(⟨\textit{to}, (λx.x)⟩ ⊢ (pp/np)\)}
-\AxiomC{\(\textit{Tigress}, \ct{ti} ⟩ ⊢ np\)}
-\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{to Tigress}, (λx.x)(\ct{ti})⟩ ⊢ pp\)}
-\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{1}\) noodles to Tigress}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{n})((λx.x)(\ct{ti}))⟩ ⊢ (np\backslash s)\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po showed\(_{1}\) noodles to Tigress}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{n})((λx.x)(\ct{ti}))(\ct{p})⟩ ⊢ s\)}
+\AxiomC{\(\textit{Sam}, \ct{s} ⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{to Sam}, (λx.x)(\ct{s})⟩ ⊢ pp\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{1}\) the ring to Sam}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{r})((λx.x)(\ct{s}))⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Frodo showed\(_{1}\) the ring to Sam}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{r})((λx.x)(\ct{s}))(\ct{f})⟩ ⊢ s\)}
 \end{prooftree}$$
 
 At the end of the day, we end up with the following truth value as the meaning of this sentence:
 
-$$(λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{n})((λx.x)(\ct{ti}))(\ct{p})$$
-$$⇒ (λy.(λz.\ct{show}(z, \ct{n}, y))))((λx.x)(\ct{ti}))(\ct{p})$$
-$$⇒ (λz.\ct{show}(z, \ct{n}, (λx.x)(\ct{ti})))(\ct{p})$$
-$$⇒ \ct{show}(\ct{p}, \ct{n}, (λx.x)(\ct{ti}))$$
-$$⇒ \ct{show}(\ct{p}, \ct{n}, \ct{ti})$$
+$$(λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{r})((λx.x)(\ct{s}))(\ct{f})$$
+$$⇒ (λy.(λz.\ct{show}(z, \ct{r}, y))))((λx.x)(\ct{s}))(\ct{f})$$
+$$⇒ (λz.\ct{show}(z, \ct{r}, (λx.x)(\ct{s})))(\ct{f})$$
+$$⇒ \ct{show}(\ct{f}, \ct{r}, (λx.x)(\ct{s}))$$
+$$⇒ \ct{show}(\ct{f}, \ct{r}, \ct{s})$$
 
 (It can be helpful to check and make sure you understand each line as the above metalanguage expression is evaluated.)
 
 Meanwhile, a derivation of (@ex-showed\-b) would go:
 
 $$\begin{prooftree}
-\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np⟩\)}
+\AxiomC{\(⟨\textit{Frodo}, \ct{f}⟩ ⊢ np⟩\)}
 \AxiomC{\(⟨\textit{showed}_{2}, (λy.(λx.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/np)/np)\)}
-\AxiomC{\(⟨\textit{Tigress}, \ct{ti}⟩ ⊢ np\)}
-\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{2}\) Tigress}, (λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{ti})⟩ ⊢ ((np\backslash s)/np)\)}
-\AxiomC{\(⟨\textit{noodles}, \ct{n} ⟩ ⊢ np\)}
-\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{2}\) Tigress noodles}, (λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{ti})(\ct{n})⟩ ⊢ (np\backslash s)\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po showed\(_{2}\) Tigress noodles}, (λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{ti})(\ct{n})(\ct{p})⟩ ⊢ s\)}
+\AxiomC{\(⟨\textit{Sam}, \ct{s}⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{2}\) Sam}, (λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{s})⟩ ⊢ ((np\backslash s)/np)\)}
+\AxiomC{\(⟨\textit{the ring}, \ct{r} ⟩ ⊢ np\)}
+\RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{2}\) Sam the ring}, (λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{s})(\ct{r})⟩ ⊢ (np\backslash s)\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Frodo showed\(_{2}\) Sam the ring}, (λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{s})(\ct{r})(\ct{f})⟩ ⊢ s\)}
 \end{prooftree}$$
 
 If we evaluate the result, we get:
 
-$$(λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{ti})(\ct{n})(\ct{p})$$
-$$⇒ (λx.(λz.\ct{show}(z, x, \ct{ti})))(\ct{n})(\ct{p})$$
-$$⇒ (λz.\ct{show}(z, \ct{n}, \ct{ti}))(\ct{p})$$
-$$⇒ \ct{show}(\ct{p}, \ct{n}, \ct{ti})$$
+$$(λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{s})(\ct{r})(\ct{f})$$
+$$⇒ (λx.(λz.\ct{show}(z, x, \ct{s})))(\ct{r})(\ct{f})$$
+$$⇒ (λz.\ct{show}(z, \ct{r}, \ct{s}))(\ct{f})$$
+$$⇒ \ct{show}(\ct{f}, \ct{r}, \ct{s})$$
 
 (Again, check each line! :)
 

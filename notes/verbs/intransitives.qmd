@@ -32,15 +32,15 @@ they take an entity as their semantic argument, and they produce a truth value--
 
 Take the verb *sleeps* as an example.
 
-(@ex-sleeps) Po sleeps.
+(@ex-sleeps) Frodo sleeps.
 
-To derive the sentence in (@ex-sleeps), we can assign *Po* and *sleeps* the lexical entries in (@ex-lexicon).
+To derive the sentence in (@ex-sleeps), we can assign *Frodo* and *sleeps* the lexical entries in (@ex-lexicon).
 
-(@ex-lexicon) $⟨\textit{Po}, \ct{p}⟩ ⊢ np$ <br>
+(@ex-lexicon) $⟨\textit{Frodo}, \ct{f}⟩ ⊢ np$ <br>
 	$⟨\textit{sleeps}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)$
 
-As usual, $\ct{p}$ is an entity---some element of the domain of whatever model we happen to be considering:
-$$\ct{p} ∈ D_{e}$$
+As usual, $\ct{f}$ is an entity---some element of the domain of whatever model we happen to be considering:
+$$\ct{f} ∈ D_{e}$$
 Meanwhile, $\ct{sleep}$ is a characteristic function of a set of elements of this very same domain:
 $$\ct{sleep} : D_{e} → \{\true, \false\}$$
 It takes an entity, and it gives you back a truth value ($\true$ or $\false$).
@@ -49,16 +49,16 @@ Which characteristic function is it?
 Who knows.
 Or rather, we're just using the expression '$\ct{sleep}$' to stand for $I_{\mathcal{M}}(\textit{sleeps})$, for whatever the model $\mathcal{M}$ happens to be.
 
-Using the lexical entries for *Po* and *sleeps*, we can now derive the sentence in (@ex-sleeps):
+Using the lexical entries for *Frodo* and *sleeps*, we can derive the sentence in (@ex-sleeps):
 
 $$\begin{prooftree}
-\AxiomC{\(⟨\textit{Po}, \ct{p}⟩ ⊢ np\)}
+\AxiomC{\(⟨\textit{Frodo}, \ct{f}⟩ ⊢ np\)}
 \AxiomC{\(⟨\textit{sleeps}, (λx.\ct{sleep}(x))⟩ ⊢ (np\backslash s)\)}
-\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Po sleeps}, (λx.\ct{sleep}(x))(\ct{p})⟩ ⊢ s\)}
+\RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Frodo sleeps}, (λx.\ct{sleep}(x))(\ct{f})⟩ ⊢ s\)}
 \end{prooftree}$$
-As we'd expect from the semantic type of $s$, the meaning derived for the entire sentence,
+As we'd expect, given the semantic type of $s$ (i.e., $t$), the meaning derived for the entire sentence,
 
-$$(λx.\ct{sleep}(x))(\ct{p})$$
-$$⇒ \ct{sleep}(\ct{p})$$
+$$(λx.\ct{sleep}(x))(\ct{f})$$
+$$⇒ \ct{sleep}(\ct{f})$$
 
-is a truth value---$\true$ or $\false$, depending on which of these values $\ct{sleep}$ maps $\ct{p}$ to.
+is a truth value---$\true$ or $\false$, depending on which of these values $\ct{sleep}$ maps $\ct{f}$ to.
