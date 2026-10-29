@@ -36,7 +36,7 @@ we can assign a lexical entry like the one in (@ex-lexicon) to this verb.
 
 In this case, we have a function of the following type:
 
-$$(λx.(λy.\ct{see}(y, x))) : D_{e} → D_{e} → \{\true, \false\}$$
+$$(λx.(λy.\ct{see}(y, x))) : (e → (e → t))$$
 
 This function is defined in terms of a relation on entities, $\ct{see}$.
 That is, given two entities $x$ and $y$, $\ct{see}(y, x)$ is some truth value.
@@ -60,7 +60,7 @@ The resulting function is a characteristic function of a set of entities.
 Thus if we apply the original function to *two* entities, we get a truth value:
 
 $$(λx.(λy.\ct{see}(y, x)))(\ct{f})(\ct{s})$$
-$$⇒ (λy.\ct{see}(x, \ct{f}))(\ct{s})$$
+$$⇒ (λy.\ct{see}(y, \ct{f}))(\ct{s})$$
 $$⇒ \ct{see}(\ct{s}, \ct{f})$$
 
 This result, $\ct{see}(\ct{s}, \ct{f})$, will be $\true$ or $\false$, depending on the model.

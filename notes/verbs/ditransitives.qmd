@@ -35,11 +35,16 @@ To capture this mutual entailment, we might assign the ditransitive verb *showed
 (@ex-showed-lexicon) $⟨\textit{showed}_{1}, (λx.(λy.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/pp)/np)$ <br>
 	$⟨\textit{showed}_{2}, (λy.(λx.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/np)/np)$
 
-We can also assign a lexical entry to the preposition *to*, according to which it is interpreted as the identity function $(λx.x)$.
+We can also assign a lexical entry to the preposition *to*, according to which it is interpreted as the *identity function* $(λx.x)$.
+This interpretation for the preposition makes it *semantically vacuous*:
+it simply takes an entity argument ($x$) and spits it right back out.
 
 (@ex-to-lexicon) $⟨\textit{to}, (λx.x)⟩ ⊢ (pp/np)$
 
-According to the first of these lexical entries, the verb *showed* combines with an object noun phrase;
+Recall that the semantic type of prepositional phrases ($pp$) is $e$.
+As a result, the semantic type of *to* is $(e → e)$.
+
+According to the first lexical entry for *showed*, the verb combines with an object noun phrase;
 then it combines with a prepositional phrase;
 and then it combines with a subject noun phrase, yielding, e.g., (@ex-showed\-a).
 According to the second, it combines with an indirect-object noun phrase;
@@ -49,12 +54,12 @@ and then the subject, yielding, e.g., (@ex-showed\-b).
 A derivation of the (@ex-showed\-a) sentence would go:
 
 $$\begin{prooftree}
-\AxiomC{\(⟨\textit{Frodo}, \ct{f}⟩ ⊢ np⟩\)}
+\AxiomC{\(⟨\textit{Frodo}, \ct{f}⟩ ⊢ np\)}
 \AxiomC{\(⟨\textit{showed}_{1}, (λx.(λy.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/pp)/np)\)}
 \AxiomC{\(⟨\textit{the ring}, \ct{r}⟩ ⊢ np\)}
 \RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{1}\) the ring}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{r})⟩ ⊢ ((np\backslash s)/pp)\)}
 \AxiomC{\(⟨\textit{to}, (λx.x)⟩ ⊢ (pp/np)\)}
-\AxiomC{\(\textit{Sam}, \ct{s} ⟩ ⊢ np\)}
+\AxiomC{\(⟨\textit{Sam}, \ct{s} ⟩ ⊢ np\)}
 \RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{to Sam}, (λx.x)(\ct{s})⟩ ⊢ pp\)}
 \RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{1}\) the ring to Sam}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{r})((λx.x)(\ct{s}))⟩ ⊢ (np\backslash s)\)}
 \RightLabel{\(\backslash\)}\BinaryInfC{\(⟨\textit{Frodo showed\(_{1}\) the ring to Sam}, (λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{r})((λx.x)(\ct{s}))(\ct{f})⟩ ⊢ s\)}
@@ -63,17 +68,17 @@ $$\begin{prooftree}
 At the end of the day, we end up with the following truth value as the meaning of this sentence:
 
 $$(λx.(λy.(λz.\ct{show}(z, x, y))))(\ct{r})((λx.x)(\ct{s}))(\ct{f})$$
-$$⇒ (λy.(λz.\ct{show}(z, \ct{r}, y))))((λx.x)(\ct{s}))(\ct{f})$$
+$$⇒ (λy.(λz.\ct{show}(z, \ct{r}, y)))((λx.x)(\ct{s}))(\ct{f})$$
 $$⇒ (λz.\ct{show}(z, \ct{r}, (λx.x)(\ct{s})))(\ct{f})$$
 $$⇒ \ct{show}(\ct{f}, \ct{r}, (λx.x)(\ct{s}))$$
 $$⇒ \ct{show}(\ct{f}, \ct{r}, \ct{s})$$
 
-(It can be helpful to check and make sure you understand each line as the above metalanguage expression is evaluated.)
+(It can be helpful to check and make sure you understand each line, as the above expression in our metalanguage is evaluated.)
 
 Meanwhile, a derivation of (@ex-showed\-b) would go:
 
 $$\begin{prooftree}
-\AxiomC{\(⟨\textit{Frodo}, \ct{f}⟩ ⊢ np⟩\)}
+\AxiomC{\(⟨\textit{Frodo}, \ct{f}⟩ ⊢ np\)}
 \AxiomC{\(⟨\textit{showed}_{2}, (λy.(λx.(λz.\ct{show}(z, x, y))))⟩ ⊢ (((np\backslash s)/np)/np)\)}
 \AxiomC{\(⟨\textit{Sam}, \ct{s}⟩ ⊢ np\)}
 \RightLabel{\(/\)}\BinaryInfC{\(⟨\textit{showed\(_{2}\) Sam}, (λy.(λx.(λz.\ct{show}(z, x, y))))(\ct{s})⟩ ⊢ ((np\backslash s)/np)\)}
@@ -89,11 +94,12 @@ $$⇒ (λx.(λz.\ct{show}(z, x, \ct{s})))(\ct{r})(\ct{f})$$
 $$⇒ (λz.\ct{show}(z, \ct{r}, \ct{s}))(\ct{f})$$
 $$⇒ \ct{show}(\ct{f}, \ct{r}, \ct{s})$$
 
-(Again, check each line! :)
+(Again, it is helpful to check each line.)
 
-Thankfully, the resulting interpretation is the same in both cases.
+Thankfully, the sentence interpretation that results is the same in both cases.
 Why "thankfully"?
-Well, because as we saw, the two sentences entail each other!
+As we saw, the two sentences entail each other.
+To account for this fact, we should make sure they both end up true or false in the same situations---i.e., they should be given the same interpretation, regardless of what model we're considering.
 
-And importantly, our analysis derives this result precisely because of how we designed the lexical enries for prepositional-dative *show* and double-object dative *show*.
+And importantly, the analysis above derives this result precisely due to how we designed the lexical entries for prepositional-dative *show* and double-object dative *show*.
 In particular, how we designed their meanings.

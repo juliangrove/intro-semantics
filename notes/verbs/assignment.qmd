@@ -28,6 +28,7 @@ $$
 Due on Wednesday, November 4th.
 
 ### Part 1
+(40 points)
 
 This exercise is basically just like [Part 1](../applicative_cg/assignment.html#part-1) of [the previous assignment](../applicative_cg/assignment.html).
 I want you to have a chance to practice a bit more figuring out what syntactic category and semantic type something has, based on a description of its distribution.
@@ -41,51 +42,72 @@ Again, I will describe the behavior of an expression in English---what it can co
 - say what its semantic type is, assuming the category-type correspondence discussed in [Syntactic categories](../applicative_cg/syn_types.html) of the previous module.
   As before, you can use either the usual notation or the "tree" notation for semantic types here.
 
-(1) This expression takes a preposition to its left, and then a ditransitive verb to its right, to form a noun phrase.
+(1) This expression takes a preposition to its left, and then a prepositional-dative ditransitive verb to its right, to form a noun phrase.
 
 (2) This expression combines with a coordinator of verb phrases to its right (e.g., *and*), and then a preposition to its left, to form a sentence.
 
 (3) This expression combines with an expression $X$ to its left, where $X$ is something that takes a coordinator of sentences on its left to form a verb phrase, and together with $X$, it forms a preposition.
 
 ### Part 2
+(30 points)
 
 English has a syntactic *voice* distinction between *active* verbs and *passive* verbs.
-This means that in addition to sentences like (@ex-eat-active), where we see the transitive verb *ate*,
+This means that in addition to sentences like (@ex-see-active), where we see the transitive verb *saw*,
 
-(@ex-eat-active) Sam ate the ring.
+(@ex-see-active) Sam saw Frodo.
 
-it is also possible to form sentences like (@ex-eat-passive), in which the very same verb has been passivized.
+it is also possible to form sentences like (@ex-see-passive), in which the very same verb has been passivized.
 
-(@ex-eat-passive) The Ring were eaten.
+(@ex-see-passive) Frodo was seen.
 
-To analyze sentences with passive verbs in them, let's assume that we have another base syntactic category:
+To analyze sentences with passive verbs in them, let's assume that we have another basic syntactic category:
 
 $$v_{\textit{pass.}}$$
 
-Assume that this base category is associated with the following semantic type:
+Assume that this basic category is associated with the following semantic type:
 
 $$(e → t)$$
 
-Thus *semantically*, $v_{\textit{pass.}}$ is just like the syntactic category $(np\backslash s)$ of verb phrases!
+Thus *semantically*, $v_{\textit{pass.}}$ is just like the syntactic category $(np\backslash s)$ of verb phrases.
 
-Further, let's assume that *ate* has the following lexical entry:
+Further, let's assume that *saw* has the following lexical entry:
 
-$$⟨\textit{ate}, (λx.(λy.\ct{eat}(y, x)))⟩ ⊢ ((np\backslash s)/np)$$
+$$⟨\textit{saw}, (λx.(λy.\ct{see}(y, x)))⟩ ⊢ ((np\backslash s)/np)$$
 
-It takes two semantic arguments, one corresponding to the direct object and one corresponding to the subject, and it gives back $\true$ if the second argument eats the first argument (and it gives back $\false$, otherwise).
+It takes two semantic arguments, one corresponding to the direct object and one corresponding to the subject, and it gives back $\true$ if the second argument sees the first argument (and it gives back $\false$, otherwise).
 
-To analyze the passive verb *eaten*, let's assume that it has the following lexical entry:
+To analyze the passive verb *seen*, let's assume that it has the following lexical entry:
 
-$$⟨\textit{eaten}, (λx.\{y ∣ \ct{eat}(y, x)\} ≠ \varnothing)⟩ ⊢ v_{\textit{pass.}}$$
+$$⟨\textit{seen}, (λx.\{y ∣ \ct{see}(y, x)\} ≠ \varnothing)⟩ ⊢ v_{\textit{pass.}}$$
 
-In words, the interpretation of *eaten* is a characteristic function of some set of entities.
-Specifically, it is the characteristic function of the set of entities such that the set of things that eat them is *not* the empty set.
+In words, the interpretation of *seen* is a characteristic function of some set of entities.
+Specifically, it is the characteristic function of the set of entities such that the set of things that see them is *not* the empty set.
 
-Provide a lexical entry for the auxiliary verb *were* that allows you to derive the sentence in (@ex-eat-passive).
+Provide a lexical entry for the auxiliary verb *was* that allows you to derive the sentence in (@ex-see-passive).
+Note that it has the following behavior:
+it combines with a passive verb on its right;
+then it combines with a noun phrase on its left to form a sentence.
+You can use this information to derive both the syntactic category of *was* and its semantic type.
+Note that the interpretation you provide for it can be *semantically vacuous*, in the same way that the interpretation for *to* was.
+
+Assume, as before, that Sam is a noun phrase whose interpretation is $\ct{s}$, and that *Frodo* is a noun phrase whose interpretation is $\ct{f}$.
+Provide a derivation of the sentence in (@ex-see-active).
+Use your lexical entry for *was* to provide a derivation for the sentence in (@ex-see-passive).
+Do the meanings you obtain for the two sentences help explain the fact that (@ex-see-active) *entails* (@ex-see-passive)?
 
 ### Part 3
+(30 points)
 
-Assume, as usual, that Sam is a noun phrase whose interpretation is $\ct{s}$, and that *the ring* is a noun phrase whose interpretation is $\ct{n}$.
-Provide a derivation of the sentence in (@ex-eat-active).
-Use your lexical entry for *were* to provide a derivation for the sentence in (@ex-eat-passive).
-Do the meanings you obtain for the two sentences help explain the fact that (@ex-eat-active) *entails* (@ex-eat-passive)?
+Consider the following sentence, which features an adjective in predicate position.
+
+(@ex-fast) Frodo is fast.
+
+Assume that there is a new basic category for adjective phrases---call it $ap$---which is the syntactic category of the adjective *fast*.
+
+What semantic type do you think this category should be associated with?
+Keep in mind that this semantic type doesn't have to be $e$ or $t$---it can be something more complex!
+
+What syntactic category should the copula *is* have?
+Given this syntactic category, what is the semantic type of *is*?
+
+(Please justify your answers.)
